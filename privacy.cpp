@@ -24,7 +24,7 @@
 #include <qpushbutton.h>
 #include <qtabwidget.h>
 #include <qtooltip.h>
-#include <q3whatsthis.h>
+
 //Added by qt3to4:
 #include <QVBoxLayout>
 #include <QBoxLayout>
@@ -112,8 +112,8 @@ Privacy::Privacy(QWidget *parent, const char *name)
   clearFavIcons = new Q3CheckListItem(webbrowsingCLI,
       i18n("Favorite Icons"),Q3CheckListItem::CheckBox);
 
-  Q3WhatsThis::add(sw, i18n("Check all cleanup actions you would like to perform. These will be executed by pressing the button below"));
-  Q3WhatsThis::add(cleaningDialog->cleanupButton, i18n("Immediately performs the cleanup actions selected above"));
+  sw->setWhatsThis( i18n("Check all cleanup actions you would like to perform. These will be executed by pressing the button below"));
+  cleaningDialog->cleanupButton->setWhatsThis( i18n("Immediately performs the cleanup actions selected above"));
 
   clearThumbnails->setText(1, i18n("Clears all cached thumbnails"));
   clearRunCommandHistory->setText(1, i18n("Clears the history of commands run through the Run Command tool on the desktop"));
