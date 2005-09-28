@@ -1,7 +1,5 @@
 /**
-  * privacy.h
-  *
-  * Copyright (c) 2003 Ralf Hoelzer <ralf@well.com>
+  * Copyright (c) 2003-2005 Ralf Hoelzer <ralf@well.com>
   *
   *  This program is free software; you can redistribute it and/or modify
   *  it under the terms of the GNU Lesser General Public License as published
@@ -18,10 +16,10 @@
   *  Foundation, Inc., 51 Franklin Steet, Fifth Floor, Boston, MA  02110-1301, USA.
   */
 
-#ifndef _PRIVACY_H_
-#define _PRIVACY_H_
+#ifndef PRIVACY_H
+#define PRIVACY_H
 
-#include <kcmodule.h>
+#include <kdialog.h>
 #include <klistview.h>
 
 #include "kcmprivacydialog.h"
@@ -30,12 +28,16 @@
 //Added by qt3to4:
 #include <Q3PtrList>
 
-class Privacy: public KCModule
+class Privacy: public KDialog
 {
     Q_OBJECT
 
+signals:
+    // TODO remove
+    void changed(bool);
+        
 public:
-    Privacy( QWidget *parent=0, const char *name=0 );
+    Privacy( QWidget *parent=0 );
     ~Privacy();
 
     virtual void load();

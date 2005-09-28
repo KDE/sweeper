@@ -1,7 +1,5 @@
 /**
-  * privacy.cpp
-  *
-  * Copyright (c) 2003 Ralf Hoelzer <ralf@well.com>
+  * Copyright (c) 2003-2005 Ralf Hoelzer <ralf@well.com>
   *
   *  This program is free software; you can redistribute it and/or modify
   *  it under the terms of the GNU Lesser General Public License as published
@@ -29,7 +27,6 @@
 #include <QVBoxLayout>
 #include <QBoxLayout>
 
-#include <kaboutdata.h>
 #include <kconfig.h>
 #include <kdialog.h>
 #include <kglobal.h>
@@ -40,22 +37,10 @@
 
 #include "privacy.h"
 
-Privacy::Privacy(QWidget *parent, const char *name)
-    : KCModule(parent, name)
+Privacy::Privacy(QWidget *parent)
+    : KDialog(parent)
 {
-  setQuickHelp( i18n("The privacy module allows a user to erase traces which KDE leaves on "
-              "the system, such as command histories or browser caches."));
-
-  setButtons( KCModule::Default|KCModule::Apply|KCModule::Help );
-
-  KAboutData *about =
-    new KAboutData(I18N_NOOP("kcm_privacy"), I18N_NOOP("KDE Privacy Control Module"),
-                  0, 0, KAboutData::License_GPL,
-                  I18N_NOOP("(c) 2003 Ralf Hoelzer"));
-
-  about->addAuthor("Ralf Hoelzer", 0, "ralf@well.com");
-  about->addAuthor("Benjamin Meyer", I18N_NOOP("Thumbnail Cache"), "ben+kdeprivacy@meyerhome.net");
-  setAboutData( about );
+  //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
 
   m_privacymanager = new KPrivacyManager();
 
@@ -303,16 +288,6 @@ void Privacy::cleanup()
 
   cleaningDialog->statusTextEdit->append(i18n("Clean up finished."));
 
-}
-
-extern "C"
-{
-
-  KDE_EXPORT KCModule *create_privacy(QWidget *parent, const char * /*name*/)
-  {
-    KGlobal::locale()->insertCatalogue("privacy");
-    return new Privacy(parent, "Privacy");
-  }
 }
 
 #include "privacy.moc"

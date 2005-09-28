@@ -1,10 +1,16 @@
 AM_CPPFLAGS    = $(all_includes)
-kde_module_LTLIBRARIES = kcm_privacy.la
 
-kcm_privacy_la_SOURCES = privacy.cpp kprivacysettings.ui kcmprivacydialog.ui kprivacymanager.cpp
+bin_PROGRAMS = privacy
 
-kcm_privacy_la_LDFLAGS = -module -avoid-version $(all_libraries) -no-undefined
-kcm_privacy_la_LIBADD = $(LIB_KDEUI) -lkio
+privacy_SOURCES = main.cpp privacy.cpp kprivacysettings.ui kcmprivacydialog.ui kprivacymanager.cpp
+
+INCLUDES = $(all_includes)
+
+AM_LDFLAGS   = $(all_libraries) $(KDE_RPATH)
+LDADD =  $(LIB_KFILE) $(LIB_KDEPRINT)
+
+privacy_LDFLAGS = $(all_libraries)
+privacy_LIBADD = $(LIB_KDEUI) $(LIB_KDECORE) -lkio
 
 METASOURCES = AUTO
 
