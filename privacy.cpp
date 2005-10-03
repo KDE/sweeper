@@ -211,20 +211,20 @@ void Privacy::save()
 
 void Privacy::selectAll()
 {
-  Q3CheckListItem *item;
+  QLinkedList<Q3CheckListItem*>::iterator itr;
 
-  for ( item  = checklist.first(); item; item = checklist.next() )
-    item->setOn(true);
+  for (itr = checklist.begin(); itr != checklist.end(); ++itr)
+    (*itr)->setOn(true);
 
   emit changed(true);
 }
 
 void Privacy::selectNone()
 {
-  Q3CheckListItem *item;
+  QLinkedList<Q3CheckListItem*>::iterator itr;
 
-  for ( item  = checklist.first(); item; item = checklist.next() )
-    item->setOn(false);
+  for (itr = checklist.begin(); itr != checklist.end(); ++itr)
+    (*itr)->setOn(false);
 
   emit changed(true);
 }
@@ -237,49 +237,50 @@ void Privacy::cleanup()
   cleaningDialog->statusTextEdit->clear();
   cleaningDialog->statusTextEdit->setText(i18n("Starting cleanup..."));
 
-  Q3CheckListItem *item;
   bool error = false;
 
-  for ( item  = checklist.first(); item; item = checklist.next() )
+  QLinkedList<Q3CheckListItem*>::const_iterator itr;
+
+  for (itr = checklist.begin(); itr != checklist.end(); ++itr)
   {
-    if(item->isOn())
+    if((*itr)->isOn())
     {
-      QString statusText = i18n("Clearing %1...").arg(item->text());
+      QString statusText = i18n("Clearing %1...").arg((*itr)->text());
       cleaningDialog->statusTextEdit->append(statusText);
 
-      if(item == clearThumbnails)
+      if((*itr) == clearThumbnails)
         error = m_privacymanager->clearThumbnails();
 
-      if(item == clearRunCommandHistory)
+      if((*itr) == clearRunCommandHistory)
         error = !m_privacymanager->clearRunCommandHistory();
 
-      if(item == clearSavedClipboardContents)
+      if((*itr) == clearSavedClipboardContents)
         error = !m_privacymanager->clearSavedClipboardContents();
 
-      if(item == clearAllCookies)
+      if((*itr) == clearAllCookies)
         error = !m_privacymanager->clearAllCookies();
 
-      if(item == clearFormCompletion)
+      if((*itr) == clearFormCompletion)
         error = !m_privacymanager->clearFormCompletion();
 
-      if(item == clearWebCache)
+      if((*itr) == clearWebCache)
         error = !m_privacymanager->clearWebCache();
 
-      if(item == clearWebHistory)
+      if((*itr) == clearWebHistory)
         error = !m_privacymanager->clearWebHistory();
 
-      if(item == clearRecentDocuments)
+      if((*itr) == clearRecentDocuments)
         error = !m_privacymanager->clearRecentDocuments();
 
-      if(item == clearQuickStartMenu)
+      if((*itr) == clearQuickStartMenu)
         error = !m_privacymanager->clearQuickStartMenu();
 
-      if(item == clearFavIcons)
+      if((*itr) == clearFavIcons)
         error = m_privacymanager->clearFavIcons();
 
       if(error)
       {
-        QString errorText =  i18n("Clearing of %1 failed").arg(item->text());
+        QString errorText =  i18n("Clearing of %1 failed").arg((*itr)->text());
         cleaningDialog->statusTextEdit->append(errorText);
       }
     }

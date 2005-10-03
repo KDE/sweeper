@@ -22,11 +22,11 @@
 #include <kdialog.h>
 #include <klistview.h>
 
+#include <QLinkedList>
+
 #include "kcmprivacydialog.h"
 #include "kprivacymanager.h"
 #include "kprivacysettings.h"
-//Added by qt3to4:
-#include <Q3PtrList>
 
 class Privacy: public KDialog
 {
@@ -54,7 +54,7 @@ private:
     KPrivacySettings  *p3pSettings;
     KPrivacyManager *m_privacymanager;
 
-    Q3PtrList<Q3CheckListItem> checklist;
+    QLinkedList<Q3CheckListItem*> checklist;
 
     KListViewItem *generalCLI;
     KListViewItem *webbrowsingCLI;
