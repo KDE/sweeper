@@ -90,31 +90,29 @@
                 </widget>
             </hbox>
         </widget>
-        <widget class="QLayoutWidget" row="0" column="0">
+        <widget class="QSplitter" row="0" column="0">
             <property name="name">
-                <cstring>layout3</cstring>
+                <cstring>splitter1</cstring>
             </property>
-            <vbox>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <widget class="KListView">
                 <property name="name">
-                    <cstring>unnamed</cstring>
+                    <cstring>privacyListView</cstring>
                 </property>
-                <widget class="KListView">
-                    <property name="name">
-                        <cstring>privacyListView</cstring>
-                    </property>
-                    <property name="itemsMovable">
-                        <bool>false</bool>
-                    </property>
-                </widget>
-                <widget class="KTextEdit">
-                    <property name="name">
-                        <cstring>statusTextEdit</cstring>
-                    </property>
-                    <property name="readOnly">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-            </vbox>
+                <property name="itemsMovable">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <widget class="KTextEdit">
+                <property name="name">
+                    <cstring>statusTextEdit</cstring>
+                </property>
+                <property name="readOnly">
+                    <bool>true</bool>
+                </property>
+            </widget>
         </widget>
     </grid>
 </widget>
