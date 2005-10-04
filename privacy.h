@@ -20,6 +20,7 @@
 #define PRIVACY_H
 
 #include <kdialog.h>
+#include <kmainwindow.h>
 #include <klistview.h>
 
 #include <QLinkedList>
@@ -28,7 +29,7 @@
 #include "kprivacymanager.h"
 #include "kprivacysettings.h"
 
-class Privacy: public KDialog
+class Privacy: public KMainWindow
 {
     Q_OBJECT
 
@@ -37,7 +38,7 @@ signals:
     void changed(bool);
         
 public:
-    Privacy( QWidget *parent=0 );
+    Privacy(const char *name = 0);
     ~Privacy();
 
     virtual void load();

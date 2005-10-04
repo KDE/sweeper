@@ -27,6 +27,9 @@
 #include <QVBoxLayout>
 #include <QBoxLayout>
 
+#include <kapplication.h>
+#include <kmenu.h>
+#include <kmenubar.h>
 #include <kconfig.h>
 #include <kdialog.h>
 #include <kglobal.h>
@@ -34,25 +37,22 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <ktextedit.h>
+#include <kmainwindow.h>
 
 #include "privacy.h"
 
-Privacy::Privacy(QWidget *parent)
-    : KDialog(parent)
+Privacy::Privacy(const char *name)
+    : KMainWindow(0, name)
 {
   //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
 
   m_privacymanager = new KPrivacyManager();
-
-  QBoxLayout *top = new QVBoxLayout(this, 0, KDialog::spacingHint());
 
   // add this once the P3P stuff is finished
   //QTabWidget *privacyTabs = new QTabWidget(this, "privacytabs");
 
   cleaningDialog = new KPrivacyDialog(this);
   //p3pSettings    = new KPrivacySettings(this);
-
-  top->addWidget(cleaningDialog);
 
   //top->addWidget(privacyTabs);
   //privacyTabs->addTab(cleaningDialog, i18n("Cleanup"));
@@ -68,7 +68,10 @@ Privacy::Privacy(QWidget *parent)
   sw->setTooltipColumn(1);
   sw->setColumnWidthMode(0, Q3ListView::Maximum);
 
+  KMenuBar *menu = menuBar();
 
+  KMenu *helpmenu = helpMenu();
+  menu->insertItem(i18n("&Help"), helpmenu);
 
   generalCLI     = new KListViewItem(sw, i18n("General") );
   webbrowsingCLI = new KListViewItem(sw, i18n("Web Browsing") );
@@ -129,7 +132,7 @@ Privacy::Privacy(QWidget *parent)
   connect(cleaningDialog->selectAllButton, SIGNAL(clicked()), SLOT(selectAll()));
   connect(cleaningDialog->selectNoneButton, SIGNAL(clicked()), SLOT(selectNone()));
 
-  load();
+  setCentralWidget(cleaningDialog);
 }
 
 
