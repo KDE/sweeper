@@ -2,7 +2,7 @@ AM_CPPFLAGS    = $(all_includes)
 
 bin_PROGRAMS = privacy
 
-privacy_SOURCES = main.cpp privacy.cpp kprivacysettings.ui kcmprivacydialog.ui kprivacymanager.cpp
+privacy_SOURCES = main.cpp privacy.cpp kprivacysettings.ui kprivacydialog.ui kprivacymanager.cpp
 
 INCLUDES = $(all_includes)
 

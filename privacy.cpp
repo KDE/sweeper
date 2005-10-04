@@ -49,7 +49,7 @@ Privacy::Privacy(QWidget *parent)
   // add this once the P3P stuff is finished
   //QTabWidget *privacyTabs = new QTabWidget(this, "privacytabs");
 
-  cleaningDialog = new KCMPrivacyDialog(this);
+  cleaningDialog = new KPrivacyDialog(this);
   //p3pSettings    = new KPrivacySettings(this);
 
   top->addWidget(cleaningDialog);

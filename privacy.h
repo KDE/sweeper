@@ -24,7 +24,7 @@
 
 #include <QLinkedList>
 
-#include "kcmprivacydialog.h"
+#include "kprivacydialog.h"
 #include "kprivacymanager.h"
 #include "kprivacysettings.h"
 
@@ -50,7 +50,7 @@ public slots:
     void selectNone();
 
 private:
-    KCMPrivacyDialog  *cleaningDialog;
+    KPrivacyDialog  *cleaningDialog;
     KPrivacySettings  *p3pSettings;
     KPrivacyManager *m_privacymanager;
 
