@@ -27,7 +27,6 @@
 
 #include "kprivacydialog.h"
 #include "kprivacymanager.h"
-#include "kprivacysettings.h"
 
 class Privacy: public KMainWindow
 {
@@ -52,7 +51,6 @@ public slots:
 
 private:
     KPrivacyDialog  *cleaningDialog;
-    KPrivacySettings  *p3pSettings;
     KPrivacyManager *m_privacymanager;
 
     QLinkedList<Q3CheckListItem*> checklist;
