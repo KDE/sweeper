@@ -48,6 +48,8 @@ public slots:
     void cleanup();
     void selectAll();
     void selectNone();
+    
+    void slotSaveFaviconsToggle(bool);
 
 private:
     KPrivacyDialog  *cleaningDialog;

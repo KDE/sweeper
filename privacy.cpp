@@ -38,6 +38,8 @@
 #include <kmessagebox.h>
 #include <ktextedit.h>
 #include <kmainwindow.h>
+#include <kaction.h>
+#include <kdebug.h>
 
 #include "privacy.h"
 
@@ -68,10 +70,13 @@ Privacy::Privacy(const char *name)
   sw->setTooltipColumn(1);
   sw->setColumnWidthMode(0, Q3ListView::Maximum);
 
-  KMenuBar *menu = menuBar();
-
-  KMenu *helpmenu = helpMenu();
-  menu->insertItem(i18n("&Help"), helpmenu);
+  KToggleAction *actionSaveFavis = new KToggleAction(i18n("Save Bookmark &Favicons"), 0,
+					    actionCollection(), "save_favis");
+  connect(actionSaveFavis, SIGNAL(toggled(bool)), SLOT(slotSaveFaviconsToggle(bool)));
+  actionSaveFavis->setChecked(true);
+  m_privacymanager->setSaveFavicons(true);
+  
+  createGUI("privacyui.rc");
 
   generalCLI     = new KListViewItem(sw, i18n("General") );
   webbrowsingCLI = new KListViewItem(sw, i18n("Web Browsing") );
@@ -232,6 +237,12 @@ void Privacy::selectNone()
   emit changed(true);
 }
 
+void Privacy::slotSaveFaviconsToggle(bool toggle) {
+  kdDebug() << "save favicons: " << toggle << endl;
+  m_privacymanager->setSaveFavicons(toggle);
+  
+  emit changed(true);
+}
 
 void Privacy::cleanup()
 {

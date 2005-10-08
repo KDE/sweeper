@@ -29,6 +29,7 @@
 #include <kdebug.h>
 #include <krecentdocument.h>
 #include <kstandarddirs.h>
+#include <kbookmarkmanager.h>
 
 #include <qstringlist.h>
 #include <qfile.h>
@@ -144,13 +145,48 @@ bool KPrivacyManager::clearWebHistory()
 bool KPrivacyManager::clearFavIcons()
 {
   QDir favIconDir(KGlobal::dirs()->saveLocation( "cache", "favicons/" ));
+  QStringList saveTheseFavicons;
+  KBookmarkManager* konqiBookmarkMgr;
+  
+  if (m_savefavis) {
+    konqiBookmarkMgr = 
+      KBookmarkManager::managerForFile(locateLocal("data",
+            QLatin1String("konqueror/bookmarks.xml")), false);
+    kdDebug() << "saving the favicons that are in konqueror bookmarks" << endl;
+    kdDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() << endl;
+  
+    // get the entire slew of bookmarks
+    KBookmarkGroup konqiBookmarks = konqiBookmarkMgr->root();
+    
+    // walk through the bookmarks, if they have a favicon we should keep it
+    KBookmark bookmark = konqiBookmarks.first();
+  
+    while (!bookmark.isNull()) {
+      if ((bookmark.icon()).startsWith("favicons/")) {
+        // pick out the name, throw .png on the end, and store the filename
+        QRegExp regex("favicons/(.*)");
+        regex.indexIn(bookmark.icon(), 0);
+        kdDebug() << "will save " << (regex.cap(1) + ".png") << endl;
+        saveTheseFavicons << (regex.cap(1) + ".png");
+      }
+      bookmark = konqiBookmarks.next(bookmark);
+    }
+  } else {
+    kdDebug() << "all favicons will be deleted" << endl;
+  }
+  
   favIconDir.setFilter( QDir::Files );
   
   QStringList entries = favIconDir.entryList();
 
-  // erase all files in favicon directory
+  // erase all files in favicon directory...
   for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it)
-    if(!favIconDir.remove(*it)) m_error = true;
+    // ...if we're not supposed to save them, of course
+    if (!saveTheseFavicons.contains(*it)) {
+      kdDebug() << "removing " << *it << endl;
+      if(!favIconDir.remove(*it)) m_error = true;
+    }
+  
   return m_error;
 }
 

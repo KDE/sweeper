@@ -20,3 +20,6 @@ messages: rc.cpp
 	$(XGETTEXT) *.cpp -o $(podir)/privacy.pot
 
 xdg_apps_DATA = privacy.desktop
+
+rcdir = $(kde_datadir)/privacy
+rc_DATA = privacyui.rc

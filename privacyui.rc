@@ -1,0 +1,8 @@
+<!DOCTYPE kpartgui>
+<kpartgui name="privacy" version="1">
+<MenuBar>
+  <Menu name="settings" noMerge="1"><text>&amp;Settings</text>
+    <Action name="save_favis"/>
+  </Menu>
+</MenuBar>
+</kpartgui>

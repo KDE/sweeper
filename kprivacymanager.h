@@ -45,10 +45,13 @@ public:
     bool clearQuickStartMenu() const;
     bool clearRecentDocuments() const;
     bool clearFavIcons();
+    
+    void setSaveFavicons(bool toggle) { m_savefavis = toggle; }
 
 private:
     bool isApplicationRegistered(const QString &appName);
     bool m_error;
+    bool m_savefavis;
 
 };
 
