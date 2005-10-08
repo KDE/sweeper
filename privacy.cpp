@@ -69,6 +69,8 @@ Privacy::Privacy(const char *name)
   sw->setRootIsDecorated(true);
   sw->setTooltipColumn(1);
   sw->setColumnWidthMode(0, Q3ListView::Maximum);
+  
+  KStdAction::quit(kapp, SLOT(quit()), actionCollection());
 
   KToggleAction *actionSaveFavis = new KToggleAction(i18n("Save Bookmark &Favicons"), 0,
 					    actionCollection(), "save_favis");
