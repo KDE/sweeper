@@ -41,9 +41,9 @@
 #include <kaction.h>
 #include <kdebug.h>
 
-#include "privacy.h"
+#include "sweeper.h"
 
-Privacy::Privacy(const char *name)
+Sweeper::Sweeper(const char *name)
     : KMainWindow(0, name)
 {
   //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
@@ -53,7 +53,7 @@ Privacy::Privacy(const char *name)
   // add this once the P3P stuff is finished
   //QTabWidget *privacyTabs = new QTabWidget(this, "privacytabs");
 
-  cleaningDialog = new KPrivacyDialog(this);
+  cleaningDialog = new SweeperDialog(this);
   //p3pSettings    = new KPrivacySettings(this);
 
   //top->addWidget(privacyTabs);
@@ -78,7 +78,7 @@ Privacy::Privacy(const char *name)
   actionSaveFavis->setChecked(true);
   m_privacymanager->setSaveFavicons(true);
   
-  createGUI("privacyui.rc");
+  createGUI("sweeperui.rc");
 
   generalCLI     = new KListViewItem(sw, i18n("General") );
   webbrowsingCLI = new KListViewItem(sw, i18n("Web Browsing") );
@@ -143,13 +143,13 @@ Privacy::Privacy(const char *name)
 }
 
 
-Privacy::~Privacy()
+Sweeper::~Sweeper()
 {
     delete m_privacymanager;
 }
 
 
-void Privacy::load()
+void Sweeper::load()
 {
   KConfig *c = new KConfig("kprivacyrc", false, false);
 
@@ -181,14 +181,14 @@ void Privacy::load()
 }
 
 
-void Privacy::defaults()
+void Sweeper::defaults()
 {
   selectNone();
   emit changed(true);
 }
 
 
-void Privacy::save()
+void Sweeper::save()
 {
   KConfig *c = new KConfig("kprivacyrc", false, false);
   {
@@ -219,7 +219,7 @@ void Privacy::save()
 
 }
 
-void Privacy::selectAll()
+void Sweeper::selectAll()
 {
   QLinkedList<Q3CheckListItem*>::iterator itr;
 
@@ -229,7 +229,7 @@ void Privacy::selectAll()
   emit changed(true);
 }
 
-void Privacy::selectNone()
+void Sweeper::selectNone()
 {
   QLinkedList<Q3CheckListItem*>::iterator itr;
 
@@ -239,14 +239,14 @@ void Privacy::selectNone()
   emit changed(true);
 }
 
-void Privacy::slotSaveFaviconsToggle(bool toggle) {
+void Sweeper::slotSaveFaviconsToggle(bool toggle) {
   kdDebug() << "save favicons: " << toggle << endl;
   m_privacymanager->setSaveFavicons(toggle);
   
   emit changed(true);
 }
 
-void Privacy::cleanup()
+void Sweeper::cleanup()
 {
   if (KMessageBox::warningContinueCancel(this, i18n("You are deleting data that is potentially valuable to you. Are you sure?")) != KMessageBox::Continue) return;
 
@@ -307,4 +307,4 @@ void Privacy::cleanup()
 
 }
 
-#include "privacy.moc"
+#include "sweeper.moc"

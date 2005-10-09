@@ -17,13 +17,13 @@
   */
 
 #include <kapplication.h>
-#include "privacy.h"
+#include "sweeper.h"
 #include <kcmdlineargs.h>
 #include <kaboutdata.h>
 #include <klocale.h>
 
 int main(int argc, char *argv[]){
-  KAboutData aboutData("privacy", I18N_NOOP("KDE Privacy Tool"), "1.0",
+  KAboutData aboutData("sweeper", I18N_NOOP("Sweeper"), "1.0",
     I18N_NOOP("Helps clean unwanted traces the user leaves on the system."), KAboutData::License_LGPL, "(c) 2003-2005, Ralf Hoelzer", 0);
     aboutData.addAuthor("Ralf Hoelzer", I18N_NOOP("Original author"), "ralf@well.com");
     aboutData.addAuthor("Brian S. Stephan", I18N_NOOP("Maintainer"), "bssteph@irtonline.org");
@@ -32,7 +32,7 @@ int main(int argc, char *argv[]){
   // command line
   KCmdLineArgs::init(argc, argv, &aboutData);
   KApplication a(argc, argv);
-  Privacy *app = new Privacy();
+  Sweeper *app = new Sweeper();
   a.setMainWidget(app);
 
   app->show();

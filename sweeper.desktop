@@ -1,14 +1,14 @@
 [Desktop Entry]
 Encoding=UTF-8
-DocPath=kjots/index.html
+DocPath=sweeper/index.html
 Icon=trashcan_empty
-Exec=kcmshell privacy
+Exec=sweeper
 Type=Application
 Terminal=false
 X-KDE-StartupNotify=true
 X-DCOP-ServiceType=Multi
 Categories=Qt;KDE;Utility;X-KDE-More;
-Name=Privacy
+Name=Sweeper
 Name[ar]=الخصوصية
 Name[az]=Gizlilik
 Name[be]=Прыватнасьць

@@ -16,8 +16,8 @@
   *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   */
 
-#ifndef PRIVACY_H
-#define PRIVACY_H
+#ifndef SWEEPER_H
+#define SWEEPER_H
 
 #include <kdialog.h>
 #include <kmainwindow.h>
@@ -25,10 +25,10 @@
 
 #include <QLinkedList>
 
-#include "kprivacydialog.h"
+#include "sweeperdialog.h"
 #include "kprivacymanager.h"
 
-class Privacy: public KMainWindow
+class Sweeper: public KMainWindow
 {
     Q_OBJECT
 
@@ -37,8 +37,8 @@ signals:
     void changed(bool);
         
 public:
-    Privacy(const char *name = 0);
-    ~Privacy();
+    Sweeper(const char *name = 0);
+    ~Sweeper();
 
     virtual void load();
     virtual void save();
@@ -52,7 +52,7 @@ public slots:
     void slotSaveFaviconsToggle(bool);
 
 private:
-    KPrivacyDialog  *cleaningDialog;
+    SweeperDialog  *cleaningDialog;
     KPrivacyManager *m_privacymanager;
 
     QLinkedList<Q3CheckListItem*> checklist;

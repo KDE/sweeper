@@ -1,25 +1,25 @@
 AM_CPPFLAGS    = $(all_includes)
 
-bin_PROGRAMS = privacy
+bin_PROGRAMS = sweeper
 
-privacy_SOURCES = main.cpp privacy.cpp kprivacydialog.ui kprivacymanager.cpp
+sweeper_SOURCES = main.cpp sweeper.cpp sweeperdialog.ui kprivacymanager.cpp
 
 INCLUDES = $(all_includes)
 
 AM_LDFLAGS   = $(all_libraries) $(KDE_RPATH)
 LDADD =  $(LIB_KFILE) $(LIB_KDEPRINT)
 
-privacy_LDFLAGS = $(all_libraries)
-privacy_LIBADD = $(LIB_KDEUI) $(LIB_KDECORE) -lkio
+sweeper_LDFLAGS = $(all_libraries)
+sweeper_LIBADD = $(LIB_KDEUI) $(LIB_KDECORE) -lkio
 
 METASOURCES = AUTO
 
-noinst_HEADERS = privacy.h
+noinst_HEADERS = sweeper.h
 
 messages: rc.cpp
-	$(XGETTEXT) *.cpp -o $(podir)/privacy.pot
+	$(XGETTEXT) *.cpp -o $(podir)/sweeper.pot
 
-xdg_apps_DATA = privacy.desktop
+xdg_apps_DATA = sweeper.desktop
 
-rcdir = $(kde_datadir)/privacy
-rc_DATA = privacyui.rc
+rcdir = $(kde_datadir)/sweeper
+rc_DATA = sweeperui.rc
