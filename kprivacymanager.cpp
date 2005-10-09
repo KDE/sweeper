@@ -148,31 +148,27 @@ bool KPrivacyManager::clearFavIcons()
   QStringList saveTheseFavicons;
   KBookmarkManager* konqiBookmarkMgr;
   
-  if (m_savefavis) {
-    konqiBookmarkMgr = 
-      KBookmarkManager::managerForFile(locateLocal("data",
-            QLatin1String("konqueror/bookmarks.xml")), false);
-    kdDebug() << "saving the favicons that are in konqueror bookmarks" << endl;
-    kdDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() << endl;
+  konqiBookmarkMgr = 
+    KBookmarkManager::managerForFile(locateLocal("data",
+          QLatin1String("konqueror/bookmarks.xml")), false);
+  kdDebug() << "saving the favicons that are in konqueror bookmarks" << endl;
+  kdDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() << endl;
   
-    // get the entire slew of bookmarks
-    KBookmarkGroup konqiBookmarks = konqiBookmarkMgr->root();
-    
-    // walk through the bookmarks, if they have a favicon we should keep it
-    KBookmark bookmark = konqiBookmarks.first();
+  // get the entire slew of bookmarks
+  KBookmarkGroup konqiBookmarks = konqiBookmarkMgr->root();
   
-    while (!bookmark.isNull()) {
-      if ((bookmark.icon()).startsWith("favicons/")) {
-        // pick out the name, throw .png on the end, and store the filename
-        QRegExp regex("favicons/(.*)");
-        regex.indexIn(bookmark.icon(), 0);
-        kdDebug() << "will save " << (regex.cap(1) + ".png") << endl;
-        saveTheseFavicons << (regex.cap(1) + ".png");
-      }
-      bookmark = konqiBookmarks.next(bookmark);
+  // walk through the bookmarks, if they have a favicon we should keep it
+  KBookmark bookmark = konqiBookmarks.first();
+     
+  while (!bookmark.isNull()) {
+    if ((bookmark.icon()).startsWith("favicons/")) {
+      // pick out the name, throw .png on the end, and store the filename
+      QRegExp regex("favicons/(.*)");
+      regex.indexIn(bookmark.icon(), 0);
+      kdDebug() << "will save " << (regex.cap(1) + ".png") << endl;
+      saveTheseFavicons << (regex.cap(1) + ".png");
     }
-  } else {
-    kdDebug() << "all favicons will be deleted" << endl;
+    bookmark = konqiBookmarks.next(bookmark);
   }
   
   favIconDir.setFilter( QDir::Files );

@@ -71,12 +71,6 @@ Sweeper::Sweeper(const char *name)
   sw->setColumnWidthMode(0, Q3ListView::Maximum);
   
   KStdAction::quit(kapp, SLOT(quit()), actionCollection());
-
-  KToggleAction *actionSaveFavis = new KToggleAction(i18n("Save Bookmark &Favicons"), 0,
-					    actionCollection(), "save_favis");
-  connect(actionSaveFavis, SIGNAL(toggled(bool)), SLOT(slotSaveFaviconsToggle(bool)));
-  actionSaveFavis->setChecked(true);
-  m_privacymanager->setSaveFavicons(true);
   
   createGUI("sweeperui.rc");
 
@@ -239,12 +233,6 @@ void Sweeper::selectNone()
   emit changed(true);
 }
 
-void Sweeper::slotSaveFaviconsToggle(bool toggle) {
-  kdDebug() << "save favicons: " << toggle << endl;
-  m_privacymanager->setSaveFavicons(toggle);
-  
-  emit changed(true);
-}
 
 void Sweeper::cleanup()
 {
