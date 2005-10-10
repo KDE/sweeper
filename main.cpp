@@ -16,11 +16,12 @@
   *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   */
 
-#include <kapplication.h>
-#include "sweeper.h"
-#include <kcmdlineargs.h>
 #include <kaboutdata.h>
+#include <kapplication.h>
+#include <kcmdlineargs.h>
 #include <klocale.h>
+
+#include "sweeper.h"
 
 int main(int argc, char *argv[]){
   KAboutData aboutData("sweeper", I18N_NOOP("Sweeper"), "1.0",

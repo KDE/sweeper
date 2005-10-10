@@ -16,30 +16,12 @@
   *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   */
 
-#include <qcheckbox.h>
-#include <qlayout.h>
-#include <q3ptrlist.h>
-#include <qpushbutton.h>
-#include <qtabwidget.h>
-#include <qtooltip.h>
-
-//Added by qt3to4:
-#include <QVBoxLayout>
-#include <QBoxLayout>
-
+#include <kaction.h>
 #include <kapplication.h>
-#include <kmenu.h>
-#include <kmenubar.h>
 #include <kconfig.h>
-#include <kdialog.h>
-#include <kglobal.h>
-#include <klistview.h>
+#include <kdebug.h>
 #include <klocale.h>
 #include <kmessagebox.h>
-#include <ktextedit.h>
-#include <kmainwindow.h>
-#include <kaction.h>
-#include <kdebug.h>
 
 #include "sweeper.h"
 

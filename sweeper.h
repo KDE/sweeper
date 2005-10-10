@@ -19,9 +19,8 @@
 #ifndef SWEEPER_H
 #define SWEEPER_H
 
-#include <kdialog.h>
-#include <kmainwindow.h>
 #include <klistview.h>
+#include <kmainwindow.h>
 
 #include <QLinkedList>
 
