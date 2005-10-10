@@ -21,15 +21,14 @@
 #ifndef KPRIVACYMANAGER_H
 #define KPRIVACYMANAGER_H
 
-#include <qobject.h>
+#include <QString>
 
 /**
 @author Ralf Hoelzer
 */
 
-class KPrivacyManager : public QObject
+class KPrivacyManager
 {
-Q_OBJECT
 public:
     KPrivacyManager();
 
@@ -48,7 +47,6 @@ public:
 
 private:
     bool isApplicationRegistered(const QString &appName);
-    bool m_error;
 
 };
 
