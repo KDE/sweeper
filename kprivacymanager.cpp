@@ -199,4 +199,3 @@ bool KPrivacyManager::isApplicationRegistered(const QString &appName)
   return false;
 }
 
-#include "kprivacymanager.moc"
