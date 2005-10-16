@@ -23,14 +23,14 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 
+#include "privacyfunctions.h"
+
 #include "sweeper.h"
 
 Sweeper::Sweeper(const char *name)
     : KMainWindow(0, name)
 {
   //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
-
-  m_privacymanager = new KPrivacyManager();
 
   // add this once the P3P stuff is finished
   //QTabWidget *privacyTabs = new QTabWidget(this, "privacytabs");
@@ -125,7 +125,6 @@ Sweeper::Sweeper(const char *name)
 
 Sweeper::~Sweeper()
 {
-    delete m_privacymanager;
 }
 
 
@@ -239,37 +238,37 @@ void Sweeper::cleanup()
       cleaningDialog->statusTextEdit->append(statusText);
 
       if((*itr) == clearThumbnails)
-        error = m_privacymanager->clearThumbnails();
+        error = PrivacyFunctions::clearThumbnails();
 
       if((*itr) == clearRunCommandHistory)
-        error = !m_privacymanager->clearRunCommandHistory();
+        error = !PrivacyFunctions::clearRunCommandHistory();
 
       if((*itr) == clearSavedClipboardContents)
-        error = !m_privacymanager->clearSavedClipboardContents();
+        error = !PrivacyFunctions::clearSavedClipboardContents();
 
       if((*itr) == clearAllCookies)
-        error = !m_privacymanager->clearAllCookies();
+        error = !PrivacyFunctions::clearAllCookies();
 
       if((*itr) == clearFormCompletion)
-        error = !m_privacymanager->clearFormCompletion();
+        error = !PrivacyFunctions::clearFormCompletion();
 
       if((*itr) == clearWebCache)
-        error = !m_privacymanager->clearWebCache();
+        error = !PrivacyFunctions::clearWebCache();
 
       if((*itr) == clearWebHistory)
-        error = !m_privacymanager->clearWebHistory();
+        error = !PrivacyFunctions::clearWebHistory();
 
       if((*itr) == clearRecentDocuments)
-        error = !m_privacymanager->clearRecentDocuments();
+        error = !PrivacyFunctions::clearRecentDocuments();
 
       if((*itr) == clearQuickStartMenu)
-        error = !m_privacymanager->clearQuickStartMenu();
+        error = !PrivacyFunctions::clearQuickStartMenu();
 
       if((*itr) == clearFavIcons)
-        error = m_privacymanager->clearFavIcons();
+        error = PrivacyFunctions::clearFavIcons();
       
       if((*itr) == clearAllCookiePolicies)
-        error = !m_privacymanager->clearAllCookiePolicies();
+        error = !PrivacyFunctions::clearAllCookiePolicies();
 
       if(error)
       {

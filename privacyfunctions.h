@@ -18,8 +18,8 @@
   *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   */
 
-#ifndef KPRIVACYMANAGER_H
-#define KPRIVACYMANAGER_H
+#ifndef PRIVACYFUNCTIONS_H
+#define PRIVACYFUNCTIONS_H
 
 #include <QString>
 
@@ -27,28 +27,23 @@
 @author Ralf Hoelzer
 */
 
-class KPrivacyManager
+namespace PrivacyFunctions
 {
-public:
-    KPrivacyManager();
 
-    ~KPrivacyManager();
-
-    bool clearAllCookies() const;
+    bool clearAllCookies();
     bool clearAllCookiePolicies();
     bool clearSavedClipboardContents();
     bool clearThumbnails();
-    bool clearRunCommandHistory() const;
-    bool clearFormCompletion() const;
+    bool clearRunCommandHistory();
+    bool clearFormCompletion();
     bool clearWebHistory();
-    bool clearWebCache() const;
-    bool clearQuickStartMenu() const;
-    bool clearRecentDocuments() const;
+    bool clearWebCache();
+    bool clearQuickStartMenu();
+    bool clearRecentDocuments();
     bool clearFavIcons();
 
-private:
     bool isApplicationRegistered(const QString &appName);
 
-};
+}
 
 #endif

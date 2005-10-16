@@ -18,7 +18,6 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "kprivacymanager.h"
 #include <ktoolinvocation.h>
 #include <dcopclient.h>
 #include <kconfig.h>
@@ -35,18 +34,12 @@
 #include <qfile.h>
 #include <qdir.h>
 
-KPrivacyManager::KPrivacyManager()
+#include "privacyfunctions.h"
+
+namespace PrivacyFunctions
 {
-  if (!kapp->dcopClient()->isAttached())
-    kapp->dcopClient()->attach();
-}
 
-
-KPrivacyManager::~KPrivacyManager()
-{
-}
-
-bool KPrivacyManager::clearThumbnails()
+bool clearThumbnails()
 {
   // http://freedesktop.org/Standards/Home
   // http://triq.net/~jens/thumbnail-spec/index.html
@@ -74,17 +67,17 @@ bool KPrivacyManager::clearThumbnails()
   return error;
 }
 
-bool KPrivacyManager::clearRunCommandHistory() const
+bool clearRunCommandHistory()
 {
   return kapp->dcopClient()->send( "kdesktop", "KDesktopIface", "clearCommandHistory()", QString("") );
 }
 
-bool KPrivacyManager::clearAllCookies() const
+bool clearAllCookies()
 {
   return kapp->dcopClient()->send( "kded", "kcookiejar", "deleteAllCookies()", QString("") );
 }
 
-bool KPrivacyManager::clearAllCookiePolicies()
+bool clearAllCookiePolicies()
 {
   // load the config file and section
   KConfig cfg("kcookiejarrc");
@@ -100,9 +93,9 @@ bool KPrivacyManager::clearAllCookiePolicies()
   return true;
 }
 
-bool KPrivacyManager::clearSavedClipboardContents()
+bool clearSavedClipboardContents()
 {
-  if(!isApplicationRegistered("klipper"))
+  if(!PrivacyFunctions::isApplicationRegistered("klipper"))
   {
     KConfig *c = new KConfig("klipperrc", false, false);
 
@@ -118,37 +111,37 @@ bool KPrivacyManager::clearSavedClipboardContents()
   return kapp->dcopClient()->send( "klipper", "klipper", "clearClipboardHistory()", QString ("") );
 }
 
-bool KPrivacyManager::clearFormCompletion() const
+bool clearFormCompletion()
 {
   QFile completionFile(locateLocal("data", "khtml/formcompletions"));
 
   return completionFile.remove();
 }
 
-bool KPrivacyManager::clearWebCache() const
+bool clearWebCache()
 {
     KProcess process;
     process << "kio_http_cache_cleaner" << "--clear-all";
     return process.start(KProcess::DontCare);
 }
 
-bool KPrivacyManager::clearRecentDocuments() const
+bool clearRecentDocuments()
 {
   KRecentDocument::clear();
   return KRecentDocument::recentDocuments().isEmpty();
 }
 
-bool KPrivacyManager::clearQuickStartMenu() const
+bool clearQuickStartMenu()
 {
   return kapp->dcopClient()->send( "kicker", "kicker", "clearQuickStartMenu()", QString ("") );
 }
 
-bool KPrivacyManager::clearWebHistory()
+bool clearWebHistory()
 {
   QStringList args("--preload");
 
   // preload Konqueror if it is not running
-  if(!isApplicationRegistered("konqueror"))
+  if(!PrivacyFunctions::isApplicationRegistered("konqueror"))
   {
     kdDebug() << "couldn't find Konqueror instance, preloading." << endl;
     KToolInvocation::kdeinitExec("konqueror", args, 0,0);
@@ -158,7 +151,7 @@ bool KPrivacyManager::clearWebHistory()
                                    "notifyClear(QCString)", QString ("") );
 }
 
-bool KPrivacyManager::clearFavIcons()
+bool clearFavIcons()
 {
   bool error = false;
   
@@ -205,7 +198,7 @@ bool KPrivacyManager::clearFavIcons()
 }
 
 
-bool KPrivacyManager::isApplicationRegistered(const QString &appName)
+bool isApplicationRegistered(const QString &appName)
 {
   DCOPCStringList regApps = kapp->dcopClient()->registeredApplications();
 
@@ -215,3 +208,4 @@ bool KPrivacyManager::isApplicationRegistered(const QString &appName)
   return false;
 }
 
+}

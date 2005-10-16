@@ -25,7 +25,6 @@
 #include <QLinkedList>
 
 #include "sweeperdialog.h"
-#include "kprivacymanager.h"
 
 class Sweeper: public KMainWindow
 {
@@ -50,7 +49,6 @@ public slots:
 
 private:
     SweeperDialog  *cleaningDialog;
-    KPrivacyManager *m_privacymanager;
 
     QLinkedList<Q3CheckListItem*> checklist;
 
