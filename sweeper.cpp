@@ -82,6 +82,8 @@ Sweeper::Sweeper(const char *name)
       i18n("Quick Start Menu"),Q3CheckListItem::CheckBox);
   clearFavIcons = new Q3CheckListItem(webbrowsingCLI,
       i18n("Favorite Icons"),Q3CheckListItem::CheckBox);
+  clearAllCookiePolicies = new Q3CheckListItem(webbrowsingCLI,
+      i18n("Cookie Policies"), Q3CheckListItem::CheckBox);
 
   sw->setWhatsThis( i18n("Check all cleanup actions you would like to perform. These will be executed by pressing the button below"));
   cleaningDialog->cleanupButton->setWhatsThis( i18n("Immediately performs the cleanup actions selected above"));
@@ -96,6 +98,7 @@ Sweeper::Sweeper(const char *name)
   clearRecentDocuments->setText(1, i18n("Clears the list of recently used documents from the KDE applications menu"));
   clearQuickStartMenu->setText(1, i18n("Clears the entries from the list of recently started applications"));
   clearFavIcons->setText(1, i18n("Clears the FavIcons cached from visited websites"));
+  clearAllCookiePolicies->setText(1, i18n("Clears the cookie policies for all visited websites"));
 
   connect(sw, SIGNAL(selectionChanged()), SLOT(changed()));
 
@@ -103,6 +106,7 @@ Sweeper::Sweeper(const char *name)
   checklist.append(clearThumbnails);
   checklist.append(clearRunCommandHistory);
   checklist.append(clearAllCookies);
+  checklist.append(clearAllCookiePolicies);
   checklist.append(clearSavedClipboardContents);
   checklist.append(clearWebHistory);
   checklist.append(clearWebCache);
@@ -263,6 +267,9 @@ void Sweeper::cleanup()
 
       if((*itr) == clearFavIcons)
         error = m_privacymanager->clearFavIcons();
+      
+      if((*itr) == clearAllCookiePolicies)
+        error = !m_privacymanager->clearAllCookiePolicies();
 
       if(error)
       {

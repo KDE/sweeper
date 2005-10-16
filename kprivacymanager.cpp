@@ -84,6 +84,22 @@ bool KPrivacyManager::clearAllCookies() const
   return kapp->dcopClient()->send( "kded", "kcookiejar", "deleteAllCookies()", QString("") );
 }
 
+bool KPrivacyManager::clearAllCookiePolicies()
+{
+  // load the config file and section
+  KConfig cfg("kcookiejarrc");
+  cfg.setGroup("Cookie Policy");
+  
+  kdDebug() << "removing all saved cookie policies" << endl;
+  cfg.deleteEntry("CookieDomainAdvice");
+  cfg.sync();
+  
+  // inform the cookie jar we pillaged it
+  kapp->dcopClient()->send("kded", "kcookiejar", "reloadPolicy()", QString(""));
+  
+  return true;
+}
+
 bool KPrivacyManager::clearSavedClipboardContents()
 {
   if(!isApplicationRegistered("klipper"))

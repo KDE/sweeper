@@ -35,6 +35,7 @@ public:
     ~KPrivacyManager();
 
     bool clearAllCookies() const;
+    bool clearAllCookiePolicies();
     bool clearSavedClipboardContents();
     bool clearThumbnails();
     bool clearRunCommandHistory() const;

@@ -67,6 +67,7 @@ private:
     Q3CheckListItem *clearRecentDocuments;
     Q3CheckListItem *clearQuickStartMenu;
     Q3CheckListItem *clearFavIcons;
+    Q3CheckListItem *clearAllCookiePolicies;
     //QCheckListItem *clearFileDialogHistory;
 
 
