@@ -37,7 +37,11 @@ void PrivacyAction::setDescription(QString desc)
 
 bool PrivacyAction::doAction() const
 {
-    return (*func)();
+    if (func) {
+        return (*func)();
+    }
+    
+    return false;
 }
 
 // kate: space-indent on; indent-width 4; indent-mode cstyle;
