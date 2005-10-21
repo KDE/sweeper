@@ -24,6 +24,7 @@
 
 #include <QLinkedList>
 
+#include "privacyaction.h"
 #include "sweeperdialog.h"
 
 class Sweeper: public KMainWindow
@@ -50,22 +51,22 @@ public slots:
 private:
     SweeperDialog  *cleaningDialog;
 
-    QLinkedList<Q3CheckListItem*> checklist;
+    QLinkedList<PrivacyAction*> checklist;
 
     KListViewItem *generalCLI;
     KListViewItem *webbrowsingCLI;
 
-    Q3CheckListItem *clearThumbnails;	
-    Q3CheckListItem *clearRunCommandHistory;
-    Q3CheckListItem *clearAllCookies;
-    Q3CheckListItem *clearSavedClipboardContents;
-    Q3CheckListItem *clearWebHistory;
-    Q3CheckListItem *clearWebCache;
-    Q3CheckListItem *clearFormCompletion;
-    Q3CheckListItem *clearRecentDocuments;
-    Q3CheckListItem *clearQuickStartMenu;
-    Q3CheckListItem *clearFavIcons;
-    Q3CheckListItem *clearAllCookiePolicies;
+    PrivacyAction *clearThumbnails;	
+    PrivacyAction *clearRunCommandHistory;
+    PrivacyAction *clearAllCookies;
+    PrivacyAction *clearSavedClipboardContents;
+    PrivacyAction *clearWebHistory;
+    PrivacyAction *clearWebCache;
+    PrivacyAction *clearFormCompletion;
+    PrivacyAction *clearRecentDocuments;
+    PrivacyAction *clearQuickStartMenu;
+    PrivacyAction *clearFavIcons;
+    PrivacyAction *clearAllCookiePolicies;
     //QCheckListItem *clearFileDialogHistory;
 
 

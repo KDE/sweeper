@@ -62,43 +62,42 @@ Sweeper::Sweeper(const char *name)
   generalCLI->setOpen(true);
   webbrowsingCLI->setOpen(true);
 
-  clearThumbnails = new Q3CheckListItem(generalCLI,
-      i18n("Thumbnail Cache"),Q3CheckListItem::CheckBox);
-  clearRunCommandHistory = new Q3CheckListItem(generalCLI,
-      i18n("Run Command History"),Q3CheckListItem::CheckBox);
-  clearAllCookies = new Q3CheckListItem(webbrowsingCLI,
-      i18n("Cookies"),Q3CheckListItem::CheckBox);
-  clearSavedClipboardContents = new Q3CheckListItem(generalCLI,
-      i18n("Saved Clipboard Contents"),Q3CheckListItem::CheckBox);
-  clearWebHistory = new Q3CheckListItem(webbrowsingCLI,
-      i18n("Web History"),Q3CheckListItem::CheckBox);
-  clearWebCache = new Q3CheckListItem(webbrowsingCLI,
-      i18n("Web Cache"),Q3CheckListItem::CheckBox);
-  clearFormCompletion = new Q3CheckListItem(webbrowsingCLI,
-      i18n("Form Completion Entries"),Q3CheckListItem::CheckBox);
-  clearRecentDocuments = new Q3CheckListItem(generalCLI,
-      i18n("Recent Documents"),Q3CheckListItem::CheckBox);
-  clearQuickStartMenu = new Q3CheckListItem(generalCLI,
-      i18n("Quick Start Menu"),Q3CheckListItem::CheckBox);
-  clearFavIcons = new Q3CheckListItem(webbrowsingCLI,
-      i18n("Favorite Icons"),Q3CheckListItem::CheckBox);
-  clearAllCookiePolicies = new Q3CheckListItem(webbrowsingCLI,
-      i18n("Cookie Policies"), Q3CheckListItem::CheckBox);
+  clearThumbnails = new PrivacyAction(generalCLI, i18n("Thumbnail Cache"),
+                                      PrivacyFunctions::clearThumbnails,
+                                      i18n("Clears all cached thumbnails"));
+  clearRunCommandHistory = new PrivacyAction(generalCLI, i18n("Run Command History"),
+                                             PrivacyFunctions::clearRunCommandHistory,
+                                             i18n("Clears the history of commands run through the Run Command tool on the desktop"));
+  clearAllCookies = new PrivacyAction(webbrowsingCLI, i18n("Cookies"),
+                                      PrivacyFunctions::clearAllCookies,
+                                      i18n("Clears all stored cookies set by websites"));
+  clearSavedClipboardContents = new PrivacyAction(generalCLI, i18n("Saved Clipboard Contents"),
+                                                  PrivacyFunctions::clearSavedClipboardContents,
+                                                  i18n("Clears the clipboard contents stored by Klipper"));
+  clearWebHistory = new PrivacyAction(webbrowsingCLI, i18n("Web History"),
+                                      PrivacyFunctions::clearWebHistory,
+                                      i18n("Clears the history of visited websites"));
+  clearWebCache = new PrivacyAction(webbrowsingCLI, i18n("Web Cache"),
+                                    PrivacyFunctions::clearWebCache,
+                                    i18n("Clears the temporary cache of websites visited"));
+  clearFormCompletion = new PrivacyAction(webbrowsingCLI, i18n("Form Completion Entries"),
+                                          PrivacyFunctions::clearFormCompletion,
+                                          i18n("Clears values which were entered into forms on websites"));
+  clearRecentDocuments = new PrivacyAction(generalCLI, i18n("Recent Documents"),
+                                           PrivacyFunctions::clearRecentDocuments,
+                                           i18n("Clears the list of recently used documents from the KDE applications menu"));
+  clearQuickStartMenu = new PrivacyAction(generalCLI, i18n("Quick Start Menu"),
+                                          PrivacyFunctions::clearQuickStartMenu,
+                                          i18n("Clears the entries from the list of recently started applications"));
+  clearFavIcons = new PrivacyAction(webbrowsingCLI, i18n("Favorite Icons"),
+                                    PrivacyFunctions::clearFavIcons,
+                                    i18n("Clears the FavIcons cached from visited websites"));
+  clearAllCookiePolicies = new PrivacyAction(webbrowsingCLI, i18n("Cookie Policies"),
+                                             PrivacyFunctions::clearAllCookiePolicies,
+                                             i18n("Clears the cookie policies for all visited websites"));
 
   sw->setWhatsThis( i18n("Check all cleanup actions you would like to perform. These will be executed by pressing the button below"));
   cleaningDialog->cleanupButton->setWhatsThis( i18n("Immediately performs the cleanup actions selected above"));
-
-  clearThumbnails->setText(1, i18n("Clears all cached thumbnails"));
-  clearRunCommandHistory->setText(1, i18n("Clears the history of commands run through the Run Command tool on the desktop"));
-  clearAllCookies->setText(1, i18n("Clears all stored cookies set by websites"));
-  clearWebHistory->setText(1, i18n("Clears the history of visited websites"));
-  clearSavedClipboardContents->setText(1, i18n("Clears the clipboard contents stored by Klipper"));
-  clearWebCache->setText(1, i18n("Clears the temporary cache of websites visited"));
-  clearFormCompletion->setText(1, i18n("Clears values which were entered into forms on websites"));
-  clearRecentDocuments->setText(1, i18n("Clears the list of recently used documents from the KDE applications menu"));
-  clearQuickStartMenu->setText(1, i18n("Clears the entries from the list of recently started applications"));
-  clearFavIcons->setText(1, i18n("Clears the FavIcons cached from visited websites"));
-  clearAllCookiePolicies->setText(1, i18n("Clears the cookie policies for all visited websites"));
 
   connect(sw, SIGNAL(selectionChanged()), SLOT(changed()));
 
@@ -200,7 +199,7 @@ void Sweeper::save()
 
 void Sweeper::selectAll()
 {
-  QLinkedList<Q3CheckListItem*>::iterator itr;
+  QLinkedList<PrivacyAction*>::iterator itr;
 
   for (itr = checklist.begin(); itr != checklist.end(); ++itr)
     (*itr)->setOn(true);
@@ -210,7 +209,7 @@ void Sweeper::selectAll()
 
 void Sweeper::selectNone()
 {
-  QLinkedList<Q3CheckListItem*>::iterator itr;
+  QLinkedList<PrivacyAction*>::iterator itr;
 
   for (itr = checklist.begin(); itr != checklist.end(); ++itr)
     (*itr)->setOn(false);
@@ -228,7 +227,7 @@ void Sweeper::cleanup()
 
   bool error = false;
 
-  QLinkedList<Q3CheckListItem*>::const_iterator itr;
+  QLinkedList<PrivacyAction*>::const_iterator itr;
 
   for (itr = checklist.begin(); itr != checklist.end(); ++itr)
   {
@@ -237,38 +236,7 @@ void Sweeper::cleanup()
       QString statusText = i18n("Clearing %1...").arg((*itr)->text());
       cleaningDialog->statusTextEdit->append(statusText);
 
-      if((*itr) == clearThumbnails)
-        error = PrivacyFunctions::clearThumbnails();
-
-      if((*itr) == clearRunCommandHistory)
-        error = !PrivacyFunctions::clearRunCommandHistory();
-
-      if((*itr) == clearSavedClipboardContents)
-        error = !PrivacyFunctions::clearSavedClipboardContents();
-
-      if((*itr) == clearAllCookies)
-        error = !PrivacyFunctions::clearAllCookies();
-
-      if((*itr) == clearFormCompletion)
-        error = !PrivacyFunctions::clearFormCompletion();
-
-      if((*itr) == clearWebCache)
-        error = !PrivacyFunctions::clearWebCache();
-
-      if((*itr) == clearWebHistory)
-        error = !PrivacyFunctions::clearWebHistory();
-
-      if((*itr) == clearRecentDocuments)
-        error = !PrivacyFunctions::clearRecentDocuments();
-
-      if((*itr) == clearQuickStartMenu)
-        error = !PrivacyFunctions::clearQuickStartMenu();
-
-      if((*itr) == clearFavIcons)
-        error = PrivacyFunctions::clearFavIcons();
-      
-      if((*itr) == clearAllCookiePolicies)
-        error = !PrivacyFunctions::clearAllCookiePolicies();
+      error = (*itr)->doAction();
 
       if(error)
       {
