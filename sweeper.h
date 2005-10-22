@@ -49,6 +49,18 @@ public slots:
     void selectNone();
 
 private:
+    /**
+     * methods
+     */
+    
+    /**
+     * Set up all the actions we are going to manage.
+     */
+    void InitActions();
+    
+    /**
+     * attributes
+     */
     SweeperDialog  *cleaningDialog;
 
     QLinkedList<PrivacyAction*> checklist;
@@ -56,17 +68,6 @@ private:
     KListViewItem *generalCLI;
     KListViewItem *webbrowsingCLI;
 
-    PrivacyAction *clearThumbnails;	
-    PrivacyAction *clearRunCommandHistory;
-    PrivacyAction *clearAllCookies;
-    PrivacyAction *clearSavedClipboardContents;
-    PrivacyAction *clearWebHistory;
-    PrivacyAction *clearWebCache;
-    PrivacyAction *clearFormCompletion;
-    PrivacyAction *clearRecentDocuments;
-    PrivacyAction *clearQuickStartMenu;
-    PrivacyAction *clearFavIcons;
-    PrivacyAction *clearAllCookiePolicies;
     //QCheckListItem *clearFileDialogHistory;
 
 
