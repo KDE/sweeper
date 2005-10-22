@@ -43,7 +43,7 @@ Sweeper::Sweeper(const char *name)
   sw->setTooltipColumn(1);
   sw->setColumnWidthMode(0, Q3ListView::Maximum);
   
-  KStdAction::quit(kapp, SLOT(quit()), actionCollection());
+  KStdAction::quit(this, SLOT(close()), actionCollection());
   
   createGUI("sweeperui.rc");
 
@@ -70,10 +70,8 @@ Sweeper::Sweeper(const char *name)
 
 Sweeper::~Sweeper()
 {
-  QLinkedList<PrivacyAction*>::iterator itr;
-
-  for (itr = checklist.begin(); itr != checklist.end(); ++itr)
-    delete (*itr);
+    // cleanup pointers
+    qDeleteAll(checklist.begin(), checklist.end());
 }
 
 

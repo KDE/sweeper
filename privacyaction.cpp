@@ -28,6 +28,7 @@ PrivacyAction::PrivacyAction(KListViewItem * parent, QString name, bool (*action
 
 PrivacyAction::~PrivacyAction()
 {
+    // nothing to do
 }
 
 void PrivacyAction::setDescription(QString desc)
