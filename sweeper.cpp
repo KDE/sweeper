@@ -32,16 +32,7 @@ Sweeper::Sweeper(const char *name)
 {
   //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
 
-  // add this once the P3P stuff is finished
-  //QTabWidget *privacyTabs = new QTabWidget(this, "privacytabs");
-
   cleaningDialog = new SweeperDialog(this);
-  //p3pSettings    = new KPrivacySettings(this);
-
-  //top->addWidget(privacyTabs);
-  //privacyTabs->addTab(cleaningDialog, i18n("Cleanup"));
-  //privacyTabs->addTab(p3pSettings, i18n("Privacy Settings"));
-
 
   KListView *sw = cleaningDialog->privacyListView;
 
@@ -100,12 +91,6 @@ void Sweeper::load()
       (*itr)->setOn(c->readBoolEntry((*itr)->text(), true));
   }
 
-  {
-    KConfigGroupSaver saver(c, "P3P");
-
-    // TODO: add P3P settings here
-  }
-
   delete c;
   emit changed(false);
 
@@ -129,12 +114,6 @@ void Sweeper::save()
 
     for (itr = checklist.begin(); itr != checklist.end(); ++itr)
       c->writeEntry((*itr)->text(), (*itr)->isOn());
-  }
-
-  {
-    KConfigGroupSaver saver(c, "P3P");
-
-    // TODO: add settings for P3P
   }
 
   c->sync();

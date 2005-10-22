@@ -67,10 +67,6 @@ private:
 
     KListViewItem *generalCLI;
     KListViewItem *webbrowsingCLI;
-
-    //QCheckListItem *clearFileDialogHistory;
-
-
 };
 
 #endif

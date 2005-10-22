@@ -1,0 +1,9 @@
+Stuff to do
+-----------
+ - action to clear file dialog history
+ - action to clear recent files (maybe be same as above)
+   - this might suck, each app maintains its own list of recent files
+ 
+ - P3P
+   - http://www.w3.org/P3P/
+   - needs investigation
