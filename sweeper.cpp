@@ -81,12 +81,12 @@ void Sweeper::load()
 
   // get general privacy settings
   {
-    KConfigGroupSaver saver(c, "Cleaning");
+    KConfigGroup group(c, "Cleaning");
     
     QLinkedList<PrivacyAction*>::iterator itr;
 
     for (itr = checklist.begin(); itr != checklist.end(); ++itr)
-      (*itr)->setOn(c->readBoolEntry((*itr)->text(), true));
+      (*itr)->setOn(group.readBoolEntry((*itr)->text(), true));
   }
 
   delete c;
@@ -106,12 +106,12 @@ void Sweeper::save()
 {
   KConfig *c = new KConfig("kprivacyrc", false, false);
   {
-    KConfigGroupSaver saver(c, "Cleaning");
+    KConfigGroup group(c, "Cleaning");
     
     QLinkedList<PrivacyAction*>::iterator itr;
 
     for (itr = checklist.begin(); itr != checklist.end(); ++itr)
-      c->writeEntry((*itr)->text(), (*itr)->isOn());
+      group.writeEntry((*itr)->text(), (*itr)->isOn());
   }
 
   c->sync();

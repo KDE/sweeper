@@ -100,8 +100,8 @@ bool clearSavedClipboardContents()
     KConfig *c = new KConfig("klipperrc", false, false);
 
     {
-      KConfigGroupSaver saver(c, "General");
-      c->deleteEntry("ClipboardData");
+      KConfigGroup group(c, "General");
+      group.deleteEntry("ClipboardData");
       c->sync();
     }
     delete c;
