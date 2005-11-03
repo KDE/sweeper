@@ -162,7 +162,8 @@ void Sweeper::cleanup()
       QString statusText = i18n("Clearing %1...").arg((*itr)->text());
       cleaningDialog->statusTextEdit->append(statusText);
 
-      error = (*itr)->doAction();
+      // actions return whether they were successful
+      error = !(*itr)->doAction();
 
       if(error)
       {

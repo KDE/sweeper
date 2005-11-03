@@ -44,27 +44,26 @@ bool clearThumbnails()
   // http://freedesktop.org/Standards/Home
   // http://triq.net/~jens/thumbnail-spec/index.html
   
-  bool error = false;
-
   QDir thumbnailDir( QDir::homePath() + "/.thumbnails/normal");
   thumbnailDir.setFilter( QDir::Files );
   QStringList entries = thumbnailDir.entryList();
   for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it)
-    if(!thumbnailDir.remove(*it)) error = true;
-  if(error) return error;
+    if(!thumbnailDir.remove(*it))
+      return false;
 
   thumbnailDir.setPath(QDir::homePath() + "/.thumbnails/large");
   entries = thumbnailDir.entryList();
   for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it)
-    if(!thumbnailDir.remove(*it)) error = true;
-  if(error) return error;
+    if(!thumbnailDir.remove(*it))
+      return false;
 
   thumbnailDir.setPath(QDir::homePath() + "/.thumbnails/fail");
   entries = thumbnailDir.entryList();
   for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it)
-    if(!thumbnailDir.remove(*it)) error = true;
+    if(!thumbnailDir.remove(*it))
+      return false;
   
-  return error;
+  return true;
 }
 
 bool clearRunCommandHistory()
@@ -113,9 +112,13 @@ bool clearSavedClipboardContents()
 
 bool clearFormCompletion()
 {
+  bool status;
+  
+  // try to delete the file, if it exists
   QFile completionFile(locateLocal("data", "khtml/formcompletions"));
-
-  return completionFile.remove();
+  (completionFile.exists() ? status = completionFile.remove() : status = true);
+  
+  return status;
 }
 
 bool clearWebCache()
@@ -153,8 +156,6 @@ bool clearWebHistory()
 
 bool clearFavIcons()
 {
-  bool error = false;
-  
   QDir favIconDir(KGlobal::dirs()->saveLocation( "cache", "favicons/" ));
   QStringList saveTheseFavicons;
   KBookmarkManager* konqiBookmarkMgr;
@@ -191,10 +192,11 @@ bool clearFavIcons()
     // ...if we're not supposed to save them, of course
     if (!saveTheseFavicons.contains(*it)) {
       kdDebug() << "removing " << *it << endl;
-      if(!favIconDir.remove(*it)) error = true;
+      if(!favIconDir.remove(*it))
+        return false;
     }
   
-  return error;
+  return true;
 }
 
 }
