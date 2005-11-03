@@ -2,7 +2,8 @@ AM_CPPFLAGS    = $(all_includes)
 
 bin_PROGRAMS = sweeper
 
-sweeper_SOURCES = main.cpp sweeper.cpp sweeperdialog.ui privacyfunctions.cpp privacyaction.cpp
+sweeper_SOURCES = main.cpp sweeper.cpp sweeperdialog.ui privacyfunctions.cpp \
+		  privacyaction.cpp dcopinterface.h dcopinterface.skel
 
 INCLUDES = $(all_includes)
 

@@ -26,8 +26,9 @@
 
 #include "privacyaction.h"
 #include "sweeperdialog.h"
+#include "dcopinterface.h"
 
-class Sweeper: public KMainWindow
+class Sweeper: public KMainWindow, virtual public DCOPInterface
 {
     Q_OBJECT
 

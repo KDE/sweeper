@@ -22,13 +22,15 @@
 #include <kdebug.h>
 #include <klocale.h>
 #include <kmessagebox.h>
+#include <dcopclient.h>
 
 #include "privacyfunctions.h"
 
 #include "sweeper.h"
 
 Sweeper::Sweeper(const char *name)
-    : KMainWindow(0, name)
+    : DCOPObject("Actions"),
+      KMainWindow(0, name)
 {
   //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
 
