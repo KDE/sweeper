@@ -42,8 +42,6 @@ namespace PrivacyFunctions
     bool clearRecentDocuments();
     bool clearFavIcons();
 
-    bool isApplicationRegistered(const QString &appName);
-
 }
 
 #endif

@@ -95,7 +95,7 @@ bool clearAllCookiePolicies()
 
 bool clearSavedClipboardContents()
 {
-  if(!PrivacyFunctions::isApplicationRegistered("klipper"))
+  if(!kapp->dcopClient()->isApplicationRegistered("klipper"))
   {
     KConfig *c = new KConfig("klipperrc", false, false);
 
@@ -141,7 +141,7 @@ bool clearWebHistory()
   QStringList args("--preload");
 
   // preload Konqueror if it is not running
-  if(!PrivacyFunctions::isApplicationRegistered("konqueror"))
+  if(!kapp->dcopClient()->isApplicationRegistered("konqueror"))
   {
     kdDebug() << "couldn't find Konqueror instance, preloading." << endl;
     KToolInvocation::kdeinitExec("konqueror", args, 0,0);
@@ -195,17 +195,6 @@ bool clearFavIcons()
     }
   
   return error;
-}
-
-
-bool isApplicationRegistered(const QString &appName)
-{
-  DCOPCStringList regApps = kapp->dcopClient()->registeredApplications();
-
-  for ( DCOPCStringList::Iterator it = regApps.begin(); it != regApps.end(); ++it )
-    if((*it).find(appName.latin1()) != -1) return true;
-
-  return false;
 }
 
 }
