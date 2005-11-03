@@ -29,7 +29,6 @@
 
 namespace PrivacyFunctions
 {
-
     bool clearAllCookies();
     bool clearAllCookiePolicies();
     bool clearSavedClipboardContents();
@@ -41,7 +40,8 @@ namespace PrivacyFunctions
     bool clearQuickStartMenu();
     bool clearRecentDocuments();
     bool clearFavIcons();
-
 }
 
 #endif
+
+// kate: tab-width 4; indent-mode cstyle; replace-tabs true;

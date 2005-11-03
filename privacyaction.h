@@ -24,16 +24,16 @@
 
 class PrivacyAction : public Q3CheckListItem
 {
-    public:
-        PrivacyAction(KListViewItem * parent, QString name, bool (*action)() = NULL, QString desc = QString::null);
-        ~PrivacyAction();
-        
-        void setDescription(QString desc);
-        
-        bool doAction() const;
-        
-    private:
-        bool (*func)();
+public:
+    PrivacyAction(KListViewItem * parent, QString name, bool (*action)() = NULL, QString desc = QString::null);
+    ~PrivacyAction();
+    
+    void setDescription(QString desc);
+    
+    bool doAction() const;
+    
+private:
+    bool (*func)();
 };
 
-// kate: space-indent on; indent-width 4; indent-mode cstyle;
+// kate: tab-width 4; indent-mode cstyle; replace-tabs true;

@@ -31,24 +31,24 @@
 class Sweeper: public KMainWindow, virtual public DCOPInterface
 {
     Q_OBJECT
-
+    
 signals:
     // TODO remove
     void changed(bool);
-        
+    
 public:
     Sweeper(const char *name = 0);
     ~Sweeper();
-
+    
     virtual void load();
     virtual void save();
     virtual void defaults();
-
+    
 public slots:
     void cleanup();
     void selectAll();
     void selectNone();
-
+    
 private:
     /**
      * methods
@@ -63,11 +63,13 @@ private:
      * attributes
      */
     SweeperDialog  *cleaningDialog;
-
+    
     QLinkedList<PrivacyAction*> checklist;
-
+    
     KListViewItem *generalCLI;
     KListViewItem *webbrowsingCLI;
 };
 
 #endif
+
+// kate: tab-width 4; indent-mode cstyle; replace-tabs true;

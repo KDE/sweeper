@@ -41,84 +41,88 @@ namespace PrivacyFunctions
 
 bool clearThumbnails()
 {
-  // http://freedesktop.org/Standards/Home
-  // http://triq.net/~jens/thumbnail-spec/index.html
-  
-  QDir thumbnailDir( QDir::homePath() + "/.thumbnails/normal");
-  thumbnailDir.setFilter( QDir::Files );
-  QStringList entries = thumbnailDir.entryList();
-  for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it)
-    if(!thumbnailDir.remove(*it))
-      return false;
-
-  thumbnailDir.setPath(QDir::homePath() + "/.thumbnails/large");
-  entries = thumbnailDir.entryList();
-  for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it)
-    if(!thumbnailDir.remove(*it))
-      return false;
-
-  thumbnailDir.setPath(QDir::homePath() + "/.thumbnails/fail");
-  entries = thumbnailDir.entryList();
-  for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it)
-    if(!thumbnailDir.remove(*it))
-      return false;
-  
-  return true;
+    // http://freedesktop.org/Standards/Home
+    // http://triq.net/~jens/thumbnail-spec/index.html
+    
+    QDir thumbnailDir( QDir::homePath() + "/.thumbnails/normal");
+    thumbnailDir.setFilter( QDir::Files );
+    QStringList entries = thumbnailDir.entryList();
+    for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it) {
+        if(!thumbnailDir.remove(*it)) {
+            return false;
+        }
+    }
+    
+    thumbnailDir.setPath(QDir::homePath() + "/.thumbnails/large");
+    entries = thumbnailDir.entryList();
+    for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it) {
+        if(!thumbnailDir.remove(*it)) {
+            return false;
+        }
+    }
+    
+    thumbnailDir.setPath(QDir::homePath() + "/.thumbnails/fail");
+    entries = thumbnailDir.entryList();
+    for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it) {
+        if(!thumbnailDir.remove(*it)) {
+            return false;
+        }
+    }
+    
+    return true;
 }
 
 bool clearRunCommandHistory()
 {
-  return kapp->dcopClient()->send( "kdesktop", "KDesktopIface", "clearCommandHistory()", QString("") );
+    return kapp->dcopClient()->send( "kdesktop", "KDesktopIface", "clearCommandHistory()", QString("") );
 }
 
 bool clearAllCookies()
 {
-  return kapp->dcopClient()->send( "kded", "kcookiejar", "deleteAllCookies()", QString("") );
+    return kapp->dcopClient()->send( "kded", "kcookiejar", "deleteAllCookies()", QString("") );
 }
 
 bool clearAllCookiePolicies()
 {
-  // load the config file and section
-  KConfig cfg("kcookiejarrc");
-  cfg.setGroup("Cookie Policy");
-  
-  kdDebug() << "removing all saved cookie policies" << endl;
-  cfg.deleteEntry("CookieDomainAdvice");
-  cfg.sync();
-  
-  // inform the cookie jar we pillaged it
-  kapp->dcopClient()->send("kded", "kcookiejar", "reloadPolicy()", QString(""));
-  
-  return true;
+    // load the config file and section
+    KConfig cfg("kcookiejarrc");
+    cfg.setGroup("Cookie Policy");
+    
+    kdDebug() << "removing all saved cookie policies" << endl;
+    cfg.deleteEntry("CookieDomainAdvice");
+    cfg.sync();
+    
+    // inform the cookie jar we pillaged it
+    kapp->dcopClient()->send("kded", "kcookiejar", "reloadPolicy()", QString(""));
+    
+    return true;
 }
 
 bool clearSavedClipboardContents()
 {
-  if(!kapp->dcopClient()->isApplicationRegistered("klipper"))
-  {
-    KConfig *c = new KConfig("klipperrc", false, false);
-
-    {
-      KConfigGroup group(c, "General");
-      group.deleteEntry("ClipboardData");
-      c->sync();
+    if(!kapp->dcopClient()->isApplicationRegistered("klipper")) {
+        KConfig *c = new KConfig("klipperrc", false, false);
+        
+        KConfigGroup group(c, "General");
+        group.deleteEntry("ClipboardData");
+        c->sync();
+        
+        delete c;
+        return true;
     }
-    delete c;
-    return true;
-  }
-
-  return kapp->dcopClient()->send( "klipper", "klipper", "clearClipboardHistory()", QString ("") );
+    
+    return kapp->dcopClient()->send( "klipper", "klipper", "clearClipboardHistory()", QString ("") );
 }
 
 bool clearFormCompletion()
 {
-  bool status;
-  
-  // try to delete the file, if it exists
-  QFile completionFile(locateLocal("data", "khtml/formcompletions"));
-  (completionFile.exists() ? status = completionFile.remove() : status = true);
-  
-  return status;
+    bool status;
+    
+    // try to delete the file, if it exists
+    QFile completionFile(locateLocal("data", "khtml/formcompletions"));
+    (completionFile.exists() ? status = completionFile.remove() : status = true);
+    
+    return status;
 }
 
 bool clearWebCache()
@@ -130,73 +134,76 @@ bool clearWebCache()
 
 bool clearRecentDocuments()
 {
-  KRecentDocument::clear();
-  return KRecentDocument::recentDocuments().isEmpty();
+    KRecentDocument::clear();
+    return KRecentDocument::recentDocuments().isEmpty();
 }
 
 bool clearQuickStartMenu()
 {
-  return kapp->dcopClient()->send( "kicker", "kicker", "clearQuickStartMenu()", QString ("") );
+    return kapp->dcopClient()->send( "kicker", "kicker", "clearQuickStartMenu()", QString ("") );
 }
 
 bool clearWebHistory()
 {
-  QStringList args("--preload");
-
-  // preload Konqueror if it is not running
-  if(!kapp->dcopClient()->isApplicationRegistered("konqueror"))
-  {
-    kdDebug() << "couldn't find Konqueror instance, preloading." << endl;
-    KToolInvocation::kdeinitExec("konqueror", args, 0,0);
-  }
-
-  return kapp->dcopClient()->send( "konqueror*", "KonqHistoryManager",
-                                   "notifyClear(QCString)", QString ("") );
+    QStringList args("--preload");
+    
+    // preload Konqueror if it is not running
+    if(!kapp->dcopClient()->isApplicationRegistered("konqueror")) {
+        kdDebug() << "couldn't find Konqueror instance, preloading." << endl;
+        KToolInvocation::kdeinitExec("konqueror", args, 0,0);
+    }
+    
+    return kapp->dcopClient()->send("konqueror*", "KonqHistoryManager",
+                                    "notifyClear(QCString)", QString (""));
 }
 
 bool clearFavIcons()
 {
-  QDir favIconDir(KGlobal::dirs()->saveLocation( "cache", "favicons/" ));
-  QStringList saveTheseFavicons;
-  KBookmarkManager* konqiBookmarkMgr;
-  
-  konqiBookmarkMgr = 
-    KBookmarkManager::managerForFile(locateLocal("data",
-          QLatin1String("konqueror/bookmarks.xml")), false);
-  kdDebug() << "saving the favicons that are in konqueror bookmarks" << endl;
-  kdDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() << endl;
-  
-  // get the entire slew of bookmarks
-  KBookmarkGroup konqiBookmarks = konqiBookmarkMgr->root();
-  
-  // walk through the bookmarks, if they have a favicon we should keep it
-  KBookmark bookmark = konqiBookmarks.first();
-     
-  while (!bookmark.isNull()) {
-    if ((bookmark.icon()).startsWith("favicons/")) {
-      // pick out the name, throw .png on the end, and store the filename
-      QRegExp regex("favicons/(.*)");
-      regex.indexIn(bookmark.icon(), 0);
-      kdDebug() << "will save " << (regex.cap(1) + ".png") << endl;
-      saveTheseFavicons << (regex.cap(1) + ".png");
+    QDir favIconDir(KGlobal::dirs()->saveLocation( "cache", "favicons/" ));
+    QStringList saveTheseFavicons;
+    KBookmarkManager* konqiBookmarkMgr;
+    
+    konqiBookmarkMgr = 
+        KBookmarkManager::managerForFile(locateLocal("data",
+            QLatin1String("konqueror/bookmarks.xml")), false);
+    kdDebug() << "saving the favicons that are in konqueror bookmarks" << endl;
+    kdDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() << endl;
+    
+    // get the entire slew of bookmarks
+    KBookmarkGroup konqiBookmarks = konqiBookmarkMgr->root();
+    
+    // walk through the bookmarks, if they have a favicon we should keep it
+    KBookmark bookmark = konqiBookmarks.first();
+        
+    while (!bookmark.isNull()) {
+        if ((bookmark.icon()).startsWith("favicons/")) {
+            // pick out the name, throw .png on the end, and store the filename
+            QRegExp regex("favicons/(.*)");
+            regex.indexIn(bookmark.icon(), 0);
+            kdDebug() << "will save " << (regex.cap(1) + ".png") << endl;
+            saveTheseFavicons << (regex.cap(1) + ".png");
+        }
+        bookmark = konqiBookmarks.next(bookmark);
     }
-    bookmark = konqiBookmarks.next(bookmark);
-  }
-  
-  favIconDir.setFilter( QDir::Files );
-  
-  QStringList entries = favIconDir.entryList();
-
-  // erase all files in favicon directory...
-  for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it)
-    // ...if we're not supposed to save them, of course
-    if (!saveTheseFavicons.contains(*it)) {
-      kdDebug() << "removing " << *it << endl;
-      if(!favIconDir.remove(*it))
-        return false;
+    
+    favIconDir.setFilter( QDir::Files );
+    
+    QStringList entries = favIconDir.entryList();
+    
+    // erase all files in favicon directory...
+    for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it) {
+        // ...if we're not supposed to save them, of course
+        if (!saveTheseFavicons.contains(*it)) {
+            kdDebug() << "removing " << *it << endl;
+            if(!favIconDir.remove(*it)) {
+                return false;
+            }
+        }
     }
-  
-  return true;
+    
+    return true;
 }
 
 }
+
+// kate: tab-width 4; indent-mode cstyle; replace-tabs true;

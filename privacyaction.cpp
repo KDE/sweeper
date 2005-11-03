@@ -45,4 +45,4 @@ bool PrivacyAction::doAction() const
     return false;
 }
 
-// kate: space-indent on; indent-width 4; indent-mode cstyle;
+// kate: tab-width 4; indent-mode cstyle; replace-tabs true;
