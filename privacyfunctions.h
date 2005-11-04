@@ -21,6 +21,8 @@
 #ifndef PRIVACYFUNCTIONS_H
 #define PRIVACYFUNCTIONS_H
 
+#include <klocale.h>
+
 #include <QString>
 
 #include "privacyaction.h"
