@@ -32,11 +32,12 @@ class PrivacyAction : public Q3CheckListItem
       ~PrivacyAction();
       
       void setDescription(QString desc);
+      QString getErrMsg() { return errMsg; }
       
       virtual bool action();
       
-   private:
-      
+   protected:
+      QString errMsg;
 };
 
 #endif

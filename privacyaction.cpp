@@ -24,6 +24,8 @@ PrivacyAction::PrivacyAction(KListViewItem * parent, QString name, QString desc)
    if (!desc.isNull()) {
       this->setText(1, desc);
    }
+   
+   errMsg = "No error provided.";
 }
 
 PrivacyAction::~PrivacyAction()

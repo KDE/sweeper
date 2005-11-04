@@ -29,6 +29,7 @@
 #include <krecentdocument.h>
 #include <kstandarddirs.h>
 #include <kbookmarkmanager.h>
+#include <klocale.h>
 
 #include <qstringlist.h>
 #include <qfile.h>
@@ -46,6 +47,7 @@ bool ClearThumbnailsAction::action()
    QStringList entries = thumbnailDir.entryList();
    for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it) {
       if(!thumbnailDir.remove(*it)) {
+         errMsg = i18n("A thumbnail could not be removed.");
          return false;
       }
    }
@@ -54,6 +56,7 @@ bool ClearThumbnailsAction::action()
    entries = thumbnailDir.entryList();
    for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it) {
       if(!thumbnailDir.remove(*it)) {
+         errMsg = i18n("A thumbnail could not be removed.");
          return false;
       }
    }
@@ -62,6 +65,7 @@ bool ClearThumbnailsAction::action()
    entries = thumbnailDir.entryList();
    for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it) {
       if(!thumbnailDir.remove(*it)) {
+         errMsg = i18n("A thumbnail could not be removed.");
          return false;
       }
    }
@@ -118,6 +122,10 @@ bool ClearFormCompletionAction::action()
    // try to delete the file, if it exists
    QFile completionFile(locateLocal("data", "khtml/formcompletions"));
    (completionFile.exists() ? status = completionFile.remove() : status = true);
+   
+   if (!status) {
+      errMsg = i18n("The file exists but could not be removed.");
+   }
    
    return status;
 }
@@ -193,6 +201,7 @@ bool ClearFaviconsAction::action()
       if (!saveTheseFavicons.contains(*it)) {
          kdDebug() << "removing " << *it << endl;
          if(!favIconDir.remove(*it)) {
+            errMsg = i18n("A favicon could not be removed.");
             return false;
          }
       }
