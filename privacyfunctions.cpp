@@ -36,10 +36,7 @@
 
 #include "privacyfunctions.h"
 
-namespace PrivacyFunctions
-{
-
-bool clearThumbnails()
+bool ClearThumbnailsAction::action()
 {
     // http://freedesktop.org/Standards/Home
     // http://triq.net/~jens/thumbnail-spec/index.html
@@ -72,17 +69,17 @@ bool clearThumbnails()
     return true;
 }
 
-bool clearRunCommandHistory()
+bool ClearRunCommandHistoryAction::action()
 {
     return kapp->dcopClient()->send( "kdesktop", "KDesktopIface", "clearCommandHistory()", QString("") );
 }
 
-bool clearAllCookies()
+bool ClearAllCookiesAction::action()
 {
     return kapp->dcopClient()->send( "kded", "kcookiejar", "deleteAllCookies()", QString("") );
 }
 
-bool clearAllCookiePolicies()
+bool ClearAllCookiesPoliciesAction::action()
 {
     // load the config file and section
     KConfig cfg("kcookiejarrc");
@@ -98,7 +95,7 @@ bool clearAllCookiePolicies()
     return true;
 }
 
-bool clearSavedClipboardContents()
+bool ClearSavedClipboardContentsAction::action()
 {
     if(!kapp->dcopClient()->isApplicationRegistered("klipper")) {
         KConfig *c = new KConfig("klipperrc", false, false);
@@ -114,7 +111,7 @@ bool clearSavedClipboardContents()
     return kapp->dcopClient()->send( "klipper", "klipper", "clearClipboardHistory()", QString ("") );
 }
 
-bool clearFormCompletion()
+bool ClearFormCompletionAction::action()
 {
     bool status;
     
@@ -125,25 +122,25 @@ bool clearFormCompletion()
     return status;
 }
 
-bool clearWebCache()
+bool ClearWebCacheAction::action()
 {
     KProcess process;
     process << "kio_http_cache_cleaner" << "--clear-all";
     return process.start(KProcess::DontCare);
 }
 
-bool clearRecentDocuments()
+bool ClearRecentDocumentsAction::action()
 {
     KRecentDocument::clear();
     return KRecentDocument::recentDocuments().isEmpty();
 }
 
-bool clearQuickStartMenu()
+bool ClearQuickStartMenuAction::action()
 {
     return kapp->dcopClient()->send( "kicker", "kicker", "clearQuickStartMenu()", QString ("") );
 }
 
-bool clearWebHistory()
+bool ClearWebHistoryAction::action()
 {
     QStringList args("--preload");
     
@@ -157,7 +154,7 @@ bool clearWebHistory()
                                     "notifyClear(QCString)", QString (""));
 }
 
-bool clearFavIcons()
+bool ClearFaviconsAction::action()
 {
     QDir favIconDir(KGlobal::dirs()->saveLocation( "cache", "favicons/" ));
     QStringList saveTheseFavicons;
@@ -202,8 +199,6 @@ bool clearFavIcons()
     }
     
     return true;
-}
-
 }
 
 // kate: tab-width 4; indent-mode cstyle; replace-tabs true;

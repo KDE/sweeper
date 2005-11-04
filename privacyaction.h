@@ -16,6 +16,9 @@
   *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   */
 
+#ifndef PRIVACYACTION_H
+#define PRIVACYACTION_H
+
 #include <klistview.h>
 
 #include <QString>
@@ -25,15 +28,17 @@
 class PrivacyAction : public Q3CheckListItem
 {
 public:
-    PrivacyAction(KListViewItem * parent, QString name, bool (*action)() = NULL, QString desc = QString::null);
+    PrivacyAction(KListViewItem * parent, QString name, QString desc = QString::null);
     ~PrivacyAction();
     
     void setDescription(QString desc);
     
-    bool doAction() const;
+    virtual bool action();
     
 private:
-    bool (*func)();
+    
 };
+
+#endif
 
 // kate: tab-width 4; indent-mode cstyle; replace-tabs true;

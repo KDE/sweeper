@@ -18,8 +18,8 @@
 
 #include "privacyaction.h"
 
-PrivacyAction::PrivacyAction(KListViewItem * parent, QString name, bool (*action)(), QString desc)
-    : Q3CheckListItem(parent, name, Q3CheckListItem::CheckBox), func(action)
+PrivacyAction::PrivacyAction(KListViewItem * parent, QString name, QString desc)
+    : Q3CheckListItem(parent, name, Q3CheckListItem::CheckBox)
 {
     if (!desc.isNull()) {
         this->setText(1, desc);
@@ -36,12 +36,8 @@ void PrivacyAction::setDescription(QString desc)
     this->setText(1, desc);
 }
 
-bool PrivacyAction::doAction() const
+bool PrivacyAction::action()
 {
-    if (func) {
-        return (*func)();
-    }
-    
     return false;
 }
 

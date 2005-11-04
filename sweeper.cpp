@@ -152,7 +152,7 @@ void Sweeper::cleanup()
     cleaningDialog->statusTextEdit->clear();
     cleaningDialog->statusTextEdit->setText(i18n("Starting cleanup..."));
     
-    QLinkedList<PrivacyAction*>::const_iterator itr;
+    QLinkedList<PrivacyAction*>::iterator itr;
     
     for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
         if((*itr)->isOn()) {
@@ -160,7 +160,7 @@ void Sweeper::cleanup()
             cleaningDialog->statusTextEdit->append(statusText);
             
             // actions return whether they were successful
-            if(!(*itr)->doAction()) {
+            if(!(*itr)->action()) {
                 QString errorText =  i18n("Clearing of %1 failed").arg((*itr)->text());
                 cleaningDialog->statusTextEdit->append(errorText);
             }
@@ -173,49 +173,17 @@ void Sweeper::cleanup()
 
 void Sweeper::InitActions() {
     // store all entries in a list for easy access later on
-    checklist.append(new PrivacyAction(generalCLI, i18n("Thumbnail Cache"),
-                     PrivacyFunctions::clearThumbnails,
-                     i18n("Clears all cached thumbnails")));
-    
-    checklist.append(new PrivacyAction(generalCLI, i18n("Run Command History"),
-                     PrivacyFunctions::clearRunCommandHistory,
-                     i18n("Clears the history of commands run through the Run Command tool on the desktop")));
-    
-    checklist.append(new PrivacyAction(webbrowsingCLI, i18n("Cookies"),
-                     PrivacyFunctions::clearAllCookies,
-                     i18n("Clears all stored cookies set by websites")));
-    
-    checklist.append(new PrivacyAction(webbrowsingCLI, i18n("Cookie Policies"),
-                     PrivacyFunctions::clearAllCookiePolicies,
-                     i18n("Clears the cookie policies for all visited websites")));
-    
-    checklist.append(new PrivacyAction(generalCLI, i18n("Saved Clipboard Contents"),
-                     PrivacyFunctions::clearSavedClipboardContents,
-                     i18n("Clears the clipboard contents stored by Klipper")));
-    
-    checklist.append(new PrivacyAction(webbrowsingCLI, i18n("Web History"),
-                     PrivacyFunctions::clearWebHistory,
-                     i18n("Clears the history of visited websites")));
-    
-    checklist.append(new PrivacyAction(webbrowsingCLI, i18n("Web Cache"),
-                     PrivacyFunctions::clearWebCache,
-                     i18n("Clears the temporary cache of websites visited")));
-    
-    checklist.append(new PrivacyAction(webbrowsingCLI, i18n("Form Completion Entries"),
-                     PrivacyFunctions::clearFormCompletion,
-                     i18n("Clears values which were entered into forms on websites")));
-    
-    checklist.append(new PrivacyAction(generalCLI, i18n("Recent Documents"),
-                     PrivacyFunctions::clearRecentDocuments,
-                     i18n("Clears the list of recently used documents from the KDE applications menu")));
-    
-    checklist.append(new PrivacyAction(generalCLI, i18n("Quick Start Menu"),
-                     PrivacyFunctions::clearQuickStartMenu,
-                     i18n("Clears the entries from the list of recently started applications")));
-    
-    checklist.append(new PrivacyAction(webbrowsingCLI, i18n("Favorite Icons"),
-                     PrivacyFunctions::clearFavIcons,
-                     i18n("Clears the FavIcons cached from visited websites")));
+   checklist.append(new ClearAllCookiesAction(webbrowsingCLI));
+   checklist.append(new ClearFaviconsAction(webbrowsingCLI));
+   checklist.append(new ClearWebHistoryAction(webbrowsingCLI));
+   checklist.append(new ClearWebCacheAction(webbrowsingCLI));
+   checklist.append(new ClearFormCompletionAction(webbrowsingCLI));
+   checklist.append(new ClearAllCookiesPoliciesAction(webbrowsingCLI));
+   checklist.append(new ClearSavedClipboardContentsAction(generalCLI));
+   checklist.append(new ClearRecentDocumentsAction(generalCLI));
+   checklist.append(new ClearQuickStartMenuAction(generalCLI));
+   checklist.append(new ClearRunCommandHistoryAction(generalCLI));
+   checklist.append(new ClearThumbnailsAction(generalCLI));
 }
 
 #include "sweeper.moc"
