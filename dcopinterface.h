@@ -20,10 +20,10 @@
 
 class DCOPInterface : virtual public DCOPObject
 {
-    K_DCOP
-    
-k_dcop:
-    virtual void cleanup() = 0;
+   K_DCOP
+   
+   k_dcop:
+      virtual void cleanup() = 0;
 };
 
-// kate: tab-width 4; indent-mode cstyle; replace-tabs true;
+// kate: tab-width 3; indent-mode cstyle; replace-tabs true;

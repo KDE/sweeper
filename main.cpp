@@ -26,26 +26,26 @@
 
 int main(int argc, char *argv[])
 {
-    KAboutData aboutData("sweeper", I18N_NOOP("Sweeper"), "1.0",
-                         I18N_NOOP("Helps clean unwanted traces the user leaves on the system."),
-                         KAboutData::License_LGPL, "(c) 2003-2005, Ralf Hoelzer", 0);
-    
-    aboutData.addAuthor("Ralf Hoelzer", I18N_NOOP("Original author"), "ralf@well.com");
-    aboutData.addAuthor("Brian S. Stephan", I18N_NOOP("Maintainer"), "bssteph@irtonline.org");
-    aboutData.addAuthor("Benjamin Meyer", I18N_NOOP("Thumbnail Cache"), "ben+kdeprivacy@meyerhome.net");
-    
-    // command line
-    KCmdLineArgs::init(argc, argv, &aboutData);
-    KApplication a(argc, argv);
-    Sweeper *app = new Sweeper();
-    a.setMainWidget(app);
-    
-    // register with DCOP
-    a.dcopClient()->registerAs(a.name(), false);
-    a.dcopClient()->setDefaultObject(app->objId());
-    
-    app->show();
-    return a.exec();
+   KAboutData aboutData("sweeper", I18N_NOOP("Sweeper"), "1.0",
+                        I18N_NOOP("Helps clean unwanted traces the user leaves on the system."),
+                        KAboutData::License_LGPL, "(c) 2003-2005, Ralf Hoelzer", 0);
+   
+   aboutData.addAuthor("Ralf Hoelzer", I18N_NOOP("Original author"), "ralf@well.com");
+   aboutData.addAuthor("Brian S. Stephan", I18N_NOOP("Maintainer"), "bssteph@irtonline.org");
+   aboutData.addAuthor("Benjamin Meyer", I18N_NOOP("Thumbnail Cache"), "ben+kdeprivacy@meyerhome.net");
+   
+   // command line
+   KCmdLineArgs::init(argc, argv, &aboutData);
+   KApplication a(argc, argv);
+   Sweeper *app = new Sweeper();
+   a.setMainWidget(app);
+   
+   // register with DCOP
+   a.dcopClient()->registerAs(a.name(), false);
+   a.dcopClient()->setDefaultObject(app->objId());
+   
+   app->show();
+   return a.exec();
 }
 
-// kate: tab-width 4; indent-mode cstyle; replace-tabs true;
+// kate: tab-width 3; indent-mode cstyle; replace-tabs true;

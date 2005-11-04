@@ -19,26 +19,26 @@
 #include "privacyaction.h"
 
 PrivacyAction::PrivacyAction(KListViewItem * parent, QString name, QString desc)
-    : Q3CheckListItem(parent, name, Q3CheckListItem::CheckBox)
+   : Q3CheckListItem(parent, name, Q3CheckListItem::CheckBox)
 {
-    if (!desc.isNull()) {
-        this->setText(1, desc);
-    }
+   if (!desc.isNull()) {
+      this->setText(1, desc);
+   }
 }
 
 PrivacyAction::~PrivacyAction()
 {
-    // nothing to do
+   // nothing to do
 }
 
 void PrivacyAction::setDescription(QString desc)
 {
-    this->setText(1, desc);
+   this->setText(1, desc);
 }
 
 bool PrivacyAction::action()
 {
-    return false;
+   return false;
 }
 
-// kate: tab-width 4; indent-mode cstyle; replace-tabs true;
+// kate: tab-width 3; indent-mode cstyle; replace-tabs true;
