@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
    
    // command line
    KCmdLineArgs::init(argc, argv, &aboutData);
-   KApplication a(argc, argv);
+   KApplication a(true);
    Sweeper *app = new Sweeper();
    a.setMainWidget(app);
    
