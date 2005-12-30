@@ -60,7 +60,6 @@ Sweeper::Sweeper(const char *name)
    
    this->InitActions();
    
-   connect(sw, SIGNAL(selectionChanged()), SLOT(changed()));
    
    connect(cleaningDialog->cleanupButton, SIGNAL(clicked()), SLOT(cleanup()));
    connect(cleaningDialog->selectAllButton, SIGNAL(clicked()), SLOT(selectAll()));
@@ -91,14 +90,12 @@ void Sweeper::load()
    }
    
    delete c;
-   emit changed(false);
 }
 
 
 void Sweeper::defaults()
 {
    selectNone();
-   emit changed(true);
 }
 
 
@@ -117,7 +114,6 @@ void Sweeper::save()
    c->sync();
    
    delete c;
-   emit changed(false);
 }
 
 void Sweeper::selectAll()
@@ -128,7 +124,6 @@ void Sweeper::selectAll()
       (*itr)->setOn(true);
    }
    
-   emit changed(true);
 }
 
 void Sweeper::selectNone()
@@ -139,7 +134,6 @@ void Sweeper::selectNone()
       (*itr)->setOn(false);
    }
    
-   emit changed(true);
 }
 
 

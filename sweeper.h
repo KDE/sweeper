@@ -32,10 +32,6 @@ class Sweeper: public KMainWindow, virtual public DCOPInterface
 {
    Q_OBJECT
    
-   signals:
-      // TODO remove
-      void changed(bool);
-      
    public:
       Sweeper(const char *name = 0);
       ~Sweeper();
