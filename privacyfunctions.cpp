@@ -89,7 +89,7 @@ bool ClearAllCookiesPoliciesAction::action()
    KConfig cfg("kcookiejarrc");
    cfg.setGroup("Cookie Policy");
    
-   kdDebug() << "removing all saved cookie policies" << endl;
+   kDebug() << "removing all saved cookie policies" << endl;
    cfg.deleteEntry("CookieDomainAdvice");
    cfg.sync();
    
@@ -154,7 +154,7 @@ bool ClearWebHistoryAction::action()
    
    // preload Konqueror if it is not running
    if(!kapp->dcopClient()->isApplicationRegistered("konqueror")) {
-      kdDebug() << "couldn't find Konqueror instance, preloading." << endl;
+      kDebug() << "couldn't find Konqueror instance, preloading." << endl;
       KToolInvocation::kdeinitExec("konqueror", args, 0,0);
    }
    
@@ -171,8 +171,8 @@ bool ClearFaviconsAction::action()
    konqiBookmarkMgr = 
       KBookmarkManager::managerForFile(locateLocal("data",
             QLatin1String("konqueror/bookmarks.xml")), false);
-   kdDebug() << "saving the favicons that are in konqueror bookmarks" << endl;
-   kdDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() << endl;
+   kDebug() << "saving the favicons that are in konqueror bookmarks" << endl;
+   kDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() << endl;
    
    // get the entire slew of bookmarks
    KBookmarkGroup konqiBookmarks = konqiBookmarkMgr->root();
@@ -185,7 +185,7 @@ bool ClearFaviconsAction::action()
          // pick out the name, throw .png on the end, and store the filename
          QRegExp regex("favicons/(.*)");
          regex.indexIn(bookmark.icon(), 0);
-         kdDebug() << "will save " << (regex.cap(1) + ".png") << endl;
+         kDebug() << "will save " << (regex.cap(1) + ".png") << endl;
          saveTheseFavicons << (regex.cap(1) + ".png");
       }
       bookmark = konqiBookmarks.next(bookmark);
@@ -199,7 +199,7 @@ bool ClearFaviconsAction::action()
    for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it) {
       // ...if we're not supposed to save them, of course
       if (!saveTheseFavicons.contains(*it)) {
-         kdDebug() << "removing " << *it << endl;
+         kDebug() << "removing " << *it << endl;
          if(!favIconDir.remove(*it)) {
             errMsg = i18n("A favicon could not be removed.");
             return false;
