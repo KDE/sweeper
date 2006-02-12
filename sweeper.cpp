@@ -86,7 +86,7 @@ void Sweeper::load()
    QLinkedList<PrivacyAction*>::iterator itr;
    
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
-      (*itr)->setOn(group.readBoolEntry((*itr)->text(), true));
+      (*itr)->setOn(group.readEntry((*itr)->text(), true));
    }
    
    delete c;
