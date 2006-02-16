@@ -13,7 +13,7 @@
             <height>480</height>
         </rect>
     </property>
-    <property name="caption">
+    <property name="windowTitle">
         <string>Form1</string>
     </property>
     <grid>

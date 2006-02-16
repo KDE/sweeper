@@ -17,7 +17,7 @@ Derived from AT&amp;T's Privacy Bird settings panel screenshot originally.
             <height>724</height>
         </rect>
     </property>
-    <property name="caption">
+    <property name="windowTitle">
         <string>Privacy Settings</string>
     </property>
     <grid>
