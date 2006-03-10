@@ -14,7 +14,7 @@ set(sweeper_SRCS
 
 kde4_automoc(${sweeper_SRCS})
 
-kde4_add_ui_files(sweeper_SRCS sweeperdialog.ui )
+kde4_add_ui3_files(sweeper_SRCS sweeperdialog.ui )
 
 kde4_add_dcop_skels(sweeper_SRCS dcopinterface.h )
 
