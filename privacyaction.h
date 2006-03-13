@@ -19,7 +19,7 @@
 #ifndef PRIVACYACTION_H
 #define PRIVACYACTION_H
 
-#include <klistview.h>
+#include <k3listview.h>
 
 #include <QString>
 
@@ -28,7 +28,7 @@
 class PrivacyAction : public Q3CheckListItem
 {
    public:
-      PrivacyAction(KListViewItem * parent, QString name, QString desc = QString::null);
+      PrivacyAction(K3ListViewItem * parent, QString name, QString desc = QString::null);
       ~PrivacyAction();
       
       void setDescription(QString desc);

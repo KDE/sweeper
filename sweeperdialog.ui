@@ -97,7 +97,7 @@
             <property name="orientation">
                 <enum>Vertical</enum>
             </property>
-            <widget class="KListView">
+            <widget class="K3ListView">
                 <property name="name">
                     <cstring>privacyListView</cstring>
                 </property>

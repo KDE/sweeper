@@ -36,7 +36,7 @@ Sweeper::Sweeper(const char *name)
    
    cleaningDialog = new SweeperDialog(this);
    
-   KListView *sw = cleaningDialog->privacyListView;
+   K3ListView *sw = cleaningDialog->privacyListView;
    
    sw->addColumn(i18n("Privacy Settings"));
    sw->addColumn(i18n("Description"));
@@ -49,8 +49,8 @@ Sweeper::Sweeper(const char *name)
    
    createGUI("sweeperui.rc");
    
-   generalCLI     = new KListViewItem(sw, i18n("General"));
-   webbrowsingCLI = new KListViewItem(sw, i18n("Web Browsing"));
+   generalCLI     = new K3ListViewItem(sw, i18n("General"));
+   webbrowsingCLI = new K3ListViewItem(sw, i18n("Web Browsing"));
    
    generalCLI->setOpen(true);
    webbrowsingCLI->setOpen(true);

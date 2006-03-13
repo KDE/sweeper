@@ -19,7 +19,7 @@
 #ifndef SWEEPER_H
 #define SWEEPER_H
 
-#include <klistview.h>
+#include <k3listview.h>
 #include <kmainwindow.h>
 
 #include <QLinkedList>
@@ -62,8 +62,8 @@ class Sweeper: public KMainWindow, virtual public DCOPInterface
       
       QLinkedList<PrivacyAction*> checklist;
       
-      KListViewItem *generalCLI;
-      KListViewItem *webbrowsingCLI;
+      K3ListViewItem *generalCLI;
+      K3ListViewItem *webbrowsingCLI;
 };
 
 #endif
