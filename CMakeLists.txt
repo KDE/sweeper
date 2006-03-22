@@ -20,7 +20,7 @@ kde4_add_dcop_skels(sweeper_SRCS dcopinterface.h )
 
 kde4_add_executable(sweeper ${sweeper_SRCS})
 
-target_link_libraries(sweeper  ${QT_AND_KDECORE_LIBS} kdeui kio )
+target_link_libraries(sweeper  ${KDE4_KDECORE_LIBS} kdeui kio )
 
 install_targets(/bin sweeper )
 
