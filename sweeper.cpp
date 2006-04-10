@@ -150,12 +150,12 @@ void Sweeper::cleanup()
    
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       if((*itr)->isOn()) {
-         QString statusText = i18n("Clearing %1...").arg((*itr)->text());
+         QString statusText = i18n("Clearing %1...", (*itr)->text());
          cleaningDialog->statusTextEdit->append(statusText);
          
          // actions return whether they were successful
          if(!(*itr)->action()) {
-            QString errorText =  i18n("Clearing of %1 failed: %2").arg((*itr)->text(), (*itr)->getErrMsg());
+            QString errorText =  i18n("Clearing of %1 failed: %2", (*itr)->text(), (*itr)->getErrMsg());
             cleaningDialog->statusTextEdit->append(errorText);
          }
       }
