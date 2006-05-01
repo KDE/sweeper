@@ -17,8 +17,6 @@ METASOURCES = AUTO
 
 noinst_HEADERS = sweeper.h
 
-messages: rc.cpp
-	$(XGETTEXT) *.cpp -o $(podir)/sweeper.pot
 
 xdg_apps_DATA = sweeper.desktop
 
