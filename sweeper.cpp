@@ -17,6 +17,7 @@
   */
 
 #include <kaction.h>
+#include <kstdaction.h>
 #include <kapplication.h>
 #include <kconfig.h>
 #include <kdebug.h>
