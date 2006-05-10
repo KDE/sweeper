@@ -32,8 +32,8 @@
 #include <klocale.h>
 
 #include <qstringlist.h>
-#include <qfile.h>
-#include <qdir.h>
+#include <QFile>
+#include <QDir>
 
 #include "privacyfunctions.h"
 
