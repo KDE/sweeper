@@ -1,4 +1,3 @@
-kde4_header()
 
 
 
@@ -30,7 +29,6 @@ install_targets(/bin sweeper )
 install_files( ${XDG_APPS_DIR} FILES sweeper.desktop )
 install_files( ${DATA_INSTALL_DIR}/sweeper FILES sweeperui.rc )
 
-kde4_footer()
 
 
 
