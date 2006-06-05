@@ -23,15 +23,14 @@
 #include <kdebug.h>
 #include <klocale.h>
 #include <kmessagebox.h>
-#include <dcopclient.h>
-
+#include <dbus/qdbus.h>
 #include "privacyfunctions.h"
 
 #include "sweeper.h"
+#include "sweeperadaptor.h"
 
 Sweeper::Sweeper(const char *name)
-   : DCOPObject("Actions"),
-     KMainWindow(0, name)
+   : KMainWindow(0, name)
 {
    //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
    
@@ -67,6 +66,8 @@ Sweeper::Sweeper(const char *name)
    connect(cleaningDialog->selectNoneButton, SIGNAL(clicked()), SLOT(selectNone()));
    
    setCentralWidget(cleaningDialog);
+   new KsweeperAdaptor(this);
+   QDBus::sessionBus().registerObject("/ksweeper", this);
 }
 
 

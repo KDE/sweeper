@@ -20,7 +20,6 @@
 #include <kapplication.h>
 #include <kcmdlineargs.h>
 #include <klocale.h>
-#include <dcopclient.h>
 
 #include "sweeper.h"
 
@@ -39,10 +38,6 @@ int main(int argc, char *argv[])
    KApplication a(true);
    Sweeper *app = new Sweeper();
    a.setMainWidget(app);
-   
-   // register with DCOP
-   a.dcopClient()->registerAs(a.name(), false);
-   a.dcopClient()->setDefaultObject(app->objId());
    
    app->show();
    return a.exec();

@@ -19,7 +19,6 @@
  */
 
 #include <ktoolinvocation.h>
-#include <dcopclient.h>
 #include <kconfig.h>
 #include <ksimpleconfig.h>
 #include <kprocess.h>
@@ -30,6 +29,7 @@
 #include <kstandarddirs.h>
 #include <kbookmarkmanager.h>
 #include <klocale.h>
+#include <dbus/qdbus.h>
 
 #include <qstringlist.h>
 #include <QFile>
@@ -75,6 +75,7 @@ bool ClearThumbnailsAction::action()
 
 bool ClearRunCommandHistoryAction::action()
 {
+   
    return kapp->dcopClient()->send( "kdesktop", "KDesktopIface", "clearCommandHistory()", QString("") );
 }
 
@@ -94,7 +95,8 @@ bool ClearAllCookiesPoliciesAction::action()
    cfg.sync();
    
    // inform the cookie jar we pillaged it
-   kapp->dcopClient()->send("kded", "kcookiejar", "reloadPolicy()", QString(""));
+   QDBusInterfacePtr mediamanager("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
+   mediamanager->call("reloadPolicy");
    
    return true;
 }

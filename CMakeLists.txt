@@ -4,22 +4,19 @@
 
 ########### next target ###############
 
-set(sweeper_SRCS 
+set(sweeper_SRCS  sweeperadaptor.cpp
    main.cpp 
    sweeper.cpp 
    privacyfunctions.cpp 
-   privacyaction.cpp 
-   dcopinterface.h )
+   privacyaction.cpp ) 
 
 kde4_automoc(${sweeper_SRCS})
 
 kde4_add_ui3_files(sweeper_SRCS sweeperdialog.ui )
 
-kde4_add_dcop_skels(sweeper_SRCS dcopinterface.h )
-
 kde4_add_executable(sweeper ${sweeper_SRCS})
 
-target_link_libraries(sweeper  ${KDE4_KDECORE_LIBS} kdeui kio )
+target_link_libraries(sweeper  ${KDE4_KIO_LIBS} )
 
 install_targets(/bin sweeper )
 
