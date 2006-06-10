@@ -75,13 +75,16 @@ bool ClearThumbnailsAction::action()
 
 bool ClearRunCommandHistoryAction::action()
 {
-   
-   return kapp->dcopClient()->send( "kdesktop", "KDesktopIface", "clearCommandHistory()", QString("") );
+   QDBusInterfacePtr kdesktop("org.kde.kdesktop", "/KDesktop", "org.kde.kdesktop.Desktop");
+   QDBusReply<bool> reply = kdesktop->call("clearCommandHistory");
+   return reply.isSuccess();
 }
 
 bool ClearAllCookiesAction::action()
 {
-   return kapp->dcopClient()->send( "kded", "kcookiejar", "deleteAllCookies()", QString("") );
+   QDBusInterfacePtr mediamanager("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
+   QDBusReply<bool> reply = mediamanager->call("deleteAllCookies");
+   return reply.isSuccess();
 }
 
 bool ClearAllCookiesPoliciesAction::action()
@@ -113,8 +116,9 @@ bool ClearSavedClipboardContentsAction::action()
       delete c;
       return true;
    }
-   
-   return kapp->dcopClient()->send( "klipper", "klipper", "clearClipboardHistory()", QString ("") );
+   QDBusInterfacePtr klipper("org.kde.klipper", "/Klipper", "org.kde.klipper.klipper");
+   QDBusReply<bool> reply = klipper->call("clearClipboardHistory");
+   return reply.isSuccess();
 }
 
 bool ClearFormCompletionAction::action()
