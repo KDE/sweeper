@@ -98,8 +98,8 @@ bool ClearAllCookiesPoliciesAction::action()
    cfg.sync();
    
    // inform the cookie jar we pillaged it
-   QDBusInterfacePtr mediamanager("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
-   mediamanager->call("reloadPolicy");
+   QDBusInterfacePtr kcookiejar("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
+   kcookiejar->call("reloadPolicy");
    
    return true;
 }
@@ -151,7 +151,9 @@ bool ClearRecentDocumentsAction::action()
 
 bool ClearQuickStartMenuAction::action()
 {
-   return kapp->dcopClient()->send( "kicker", "kicker", "clearQuickStartMenu()", QString ("") );
+	QDBusInterfacePtr kicker("org.kde.kicker", "/Kicker", "org.kde.kicker.Kicker");
+	QDBusReply<bool> reply = kicker->call("clearQuickStartMenu");
+	return reply;
 }
 
 bool ClearWebHistoryAction::action()
