@@ -165,12 +165,8 @@ bool ClearWebHistoryAction::action()
       kDebug() << "couldn't find Konqueror instance, preloading." << endl;
       KToolInvocation::kdeinitExec("konqueror", args, 0,0);
    }
-#warning "kde4: port it to dbus"
-#if 0
-   return kapp->dcopClient()->send("konqueror*", "KonqHistoryManager",
-                                   "notifyClear(QCString)", QString (""));
-#endif
-   return false;
+   QDBusMessage message = QDBusMessage::signal("/KonqHistoryManager", "org.kde.libkonq.KonqHistoryManager", "notifyClear");
+   return QDBus::sessionBus().send(message);
 }
 
 bool ClearFaviconsAction::action()
