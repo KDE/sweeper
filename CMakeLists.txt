@@ -4,12 +4,15 @@
 
 ########### next target ###############
 
-set(sweeper_SRCS  sweeperadaptor.cpp
+set(sweeper_SRCS 
    main.cpp 
    sweeper.cpp 
    privacyfunctions.cpp 
    privacyaction.cpp ) 
 
+
+qt4_add_dbus_adaptors( sweeper_SRCS org.kde.sweeper.xml)
+		
 kde4_automoc(${sweeper_SRCS})
 
 kde4_add_ui3_files(sweeper_SRCS sweeperdialog.ui )
