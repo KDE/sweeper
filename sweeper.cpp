@@ -23,7 +23,7 @@
 #include <kdebug.h>
 #include <klocale.h>
 #include <kmessagebox.h>
-#include <dbus/qdbus.h>
+#include <QtDBus>
 #include "privacyfunctions.h"
 
 #include "sweeper.h"

@@ -29,7 +29,7 @@
 #include <kstandarddirs.h>
 #include <kbookmarkmanager.h>
 #include <klocale.h>
-#include <dbus/qdbus.h>
+#include <QtDBus>
 
 #include <qstringlist.h>
 #include <QFile>

@@ -13,7 +13,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QMetaObject>
 #include <QtCore/QVariant>
-#include <dbus/qdbus.h>
+#include <QtDBus>
 #include <QtCore/QByteArray>
 #include <QtCore/QList>
 #include <QtCore/QMap>
