@@ -11,7 +11,7 @@ set(sweeper_SRCS
    privacyaction.cpp ) 
 
 
-qt4_add_dbus_adaptors( sweeper_SRCS org.kde.sweeper.xml)
+qt4_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
 		
 kde4_automoc(${sweeper_SRCS})
 
