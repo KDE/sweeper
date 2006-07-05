@@ -75,16 +75,16 @@ bool ClearThumbnailsAction::action()
 
 bool ClearRunCommandHistoryAction::action()
 {
-   QDBusInterfacePtr kdesktop("org.kde.kdesktop", "/KDesktop", "org.kde.kdesktop.Desktop");
-   QDBusReply<bool> reply = kdesktop->call("clearCommandHistory");
-   return reply.isSuccess();
+   QDBusInterface kdesktop("org.kde.kdesktop", "/KDesktop", "org.kde.kdesktop.Desktop");
+   QDBusReply<bool> reply = kdesktop.call("clearCommandHistory");
+   return reply;
 }
 
 bool ClearAllCookiesAction::action()
 {
-   QDBusInterfacePtr mediamanager("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
-   QDBusReply<bool> reply = mediamanager->call("deleteAllCookies");
-   return reply.isSuccess();
+   QDBusInterface mediamanager("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
+   QDBusReply<bool> reply = mediamanager.call("deleteAllCookies");
+   return reply;
 }
 
 bool ClearAllCookiesPoliciesAction::action()
@@ -98,10 +98,10 @@ bool ClearAllCookiesPoliciesAction::action()
    cfg.sync();
 
    // inform the cookie jar we pillaged it
-   QDBusInterfacePtr kcookiejar("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
-   kcookiejar->call("reloadPolicy");
+   QDBusInterface kcookiejar("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
+   QDBusReply<bool> reply = kcookiejar.call("reloadPolicy");
 
-   return true;
+   return reply;
 }
 
 bool ClearSavedClipboardContentsAction::action()
@@ -116,9 +116,9 @@ bool ClearSavedClipboardContentsAction::action()
       delete c;
       return true;
    }
-   QDBusInterfacePtr klipper("org.kde.klipper", "/Klipper", "org.kde.klipper.klipper");
-   QDBusReply<bool> reply = klipper->call("clearClipboardHistory");
-   return reply.isSuccess();
+   QDBusInterface klipper("org.kde.klipper", "/Klipper", "org.kde.klipper.klipper");
+   QDBusReply<bool> reply = klipper.call("clearClipboardHistory");
+   return reply;
 }
 
 bool ClearFormCompletionAction::action()
@@ -126,7 +126,7 @@ bool ClearFormCompletionAction::action()
    bool status;
 
    // try to delete the file, if it exists
-   QFile completionFile(locateLocal("data", "khtml/formcompletions"));
+   QFile completionFile(KStandardDirs::locateLocal("data", "khtml/formcompletions"));
    (completionFile.exists() ? status = completionFile.remove() : status = true);
 
    if (!status) {
@@ -151,8 +151,8 @@ bool ClearRecentDocumentsAction::action()
 
 bool ClearQuickStartMenuAction::action()
 {
-	QDBusInterfacePtr kicker("org.kde.kicker", "/Kicker", "org.kde.kicker.Kicker");
-	QDBusReply<bool> reply = kicker->call("clearQuickStartMenu");
+	QDBusInterface kicker("org.kde.kicker", "/Kicker", "org.kde.kicker.Kicker");
+	QDBusReply<bool> reply = kicker.call("clearQuickStartMenu");
 	return reply;
 }
 
@@ -165,7 +165,7 @@ bool ClearWebHistoryAction::action()
       kDebug() << "couldn't find Konqueror instance, preloading." << endl;
       KToolInvocation::kdeinitExec("konqueror", args, 0,0);
    }
-   QDBusMessage message = QDBusMessage::signal("/KonqHistoryManager", "org.kde.libkonq.KonqHistoryManager", "notifyClear");
+   QDBusMessage message = QDBusMessage::signal("/KonqHistoryManager", "org.kde.libkonq.KonqHistoryManager", "notifyClear", QDBus::sessionBus());
    return QDBus::sessionBus().send(message);
 }
 
@@ -176,7 +176,7 @@ bool ClearFaviconsAction::action()
    KBookmarkManager* konqiBookmarkMgr;
 
    konqiBookmarkMgr =
-      KBookmarkManager::managerForFile(locateLocal("data",
+      KBookmarkManager::managerForFile(KStandardDirs::locateLocal("data",
             QLatin1String("konqueror/bookmarks.xml")), false);
    kDebug() << "saving the favicons that are in konqueror bookmarks" << endl;
    kDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() << endl;
