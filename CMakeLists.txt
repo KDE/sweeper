@@ -21,13 +21,13 @@ kde4_add_executable(sweeper ${sweeper_SRCS})
 
 target_link_libraries(sweeper  ${KDE4_KIO_LIBS} )
 
-install_targets(/bin sweeper )
+install(TARGETS sweeper  DESTINATION ${BIN_INSTALL_DIR} )
 
 
 ########### install files ###############
 
-install_files( ${XDG_APPS_DIR} FILES sweeper.desktop )
-install_files( ${DATA_INSTALL_DIR}/sweeper FILES sweeperui.rc )
+install( FILES sweeper.desktop  DESTINATION ${XDG_APPS_DIR})
+install( FILES sweeperui.rc  DESTINATION ${DATA_INSTALL_DIR}/sweeper)
 
 
 
