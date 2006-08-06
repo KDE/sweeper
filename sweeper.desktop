@@ -9,4 +9,6 @@ X-KDE-StartupNotify=true
 X-DCOP-ServiceType=Multi
 Categories=Qt;KDE;Utility;X-KDE-More;
 Name=Sweeper
+Name[x-test]=xxSweeperxx
 GenericName=System Cleaner
+GenericName[x-test]=xxSystem Cleanerxx
