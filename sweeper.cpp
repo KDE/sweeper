@@ -67,7 +67,7 @@ Sweeper::Sweeper(const char *name)
    
    setCentralWidget(cleaningDialog);
    new KsweeperAdaptor(this);
-   QDBus::sessionBus().registerObject("/ksweeper", this);
+   QDBusConnection::sessionBus().registerObject("/ksweeper", this);
 }
 
 
