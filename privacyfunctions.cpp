@@ -106,7 +106,7 @@ bool ClearAllCookiesPoliciesAction::action()
 
 bool ClearSavedClipboardContentsAction::action()
 {
-   if(!QDBus::sessionBus().interface()->isServiceRegistered("klipper")) {
+   if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("klipper")) {
       KConfig *c = new KConfig("klipperrc", false, false);
 
       KConfigGroup group(c, "General");
@@ -161,12 +161,12 @@ bool ClearWebHistoryAction::action()
    QStringList args("--preload");
 
    // preload Konqueror if it is not running
-   if(!QDBus::sessionBus().interface()->isServiceRegistered("konqueror")) {
+   if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("konqueror")) {
       kDebug() << "couldn't find Konqueror instance, preloading." << endl;
       KToolInvocation::kdeinitExec("konqueror", args, 0,0);
    }
-   QDBusMessage message = QDBusMessage::signal("/KonqHistoryManager", "org.kde.libkonq.KonqHistoryManager", "notifyClear", QDBus::sessionBus());
-   return QDBus::sessionBus().send(message);
+   QDBusMessage message = QDBusMessage::createSignal("/KonqHistoryManager", "org.kde.libkonq.KonqHistoryManager", "notifyClear", QDBusConnection::sessionBus());
+   return QDBusConnection::sessionBus().send(message);
 }
 
 bool ClearFaviconsAction::action()
