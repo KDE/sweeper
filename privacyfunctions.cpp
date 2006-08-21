@@ -165,7 +165,7 @@ bool ClearWebHistoryAction::action()
       kDebug() << "couldn't find Konqueror instance, preloading." << endl;
       KToolInvocation::kdeinitExec("konqueror", args, 0,0);
    }
-   QDBusMessage message = QDBusMessage::createSignal("/KonqHistoryManager", "org.kde.libkonq.KonqHistoryManager", "notifyClear", QDBusConnection::sessionBus());
+   QDBusMessage message = QDBusMessage::createSignal("/KonqHistoryManager", "org.kde.libkonq.KonqHistoryManager", "notifyClear" );
    return QDBusConnection::sessionBus().send(message);
 }
 
