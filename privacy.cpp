@@ -150,10 +150,16 @@ Privacy::~Privacy()
     delete m_privacymanager;
 }
 
-
 void Privacy::load()
 {
+	load( false );
+}
+
+void Privacy::load(bool useDefaults)
+{
   KConfig *c = new KConfig("kprivacyrc", false, false);
+
+  c->setReadDefaults( useDefaults );
 
   // get general privacy settings
   {
@@ -178,15 +184,13 @@ void Privacy::load()
   }
 
   delete c;
-  emit changed(false);
-
+  emit changed( useDefaults );
 }
 
 
 void Privacy::defaults()
 {
-  selectNone();
-  emit changed(true);
+  load( true );
 }
 
 

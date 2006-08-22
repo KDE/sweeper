@@ -37,6 +37,7 @@ public:
     ~Privacy();
 
     virtual void load();
+    virtual void load(bool useDefaults);
     virtual void save();
     virtual void defaults();
 
