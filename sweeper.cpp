@@ -30,8 +30,9 @@
 #include "sweeperadaptor.h"
 
 Sweeper::Sweeper(const char *name)
-   : KMainWindow(0, name)
+   : KMainWindow(0)
 {
+   setObjectName( name );
    //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
    
    cleaningDialog = new SweeperDialog(this);
