@@ -1,127 +1,112 @@
-<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
-<class>SweeperDialog</class>
-<author>Brian S. Stephan</author>
-<widget class="QWidget">
-    <property name="name">
-        <cstring>SweeperDialog</cstring>
+<ui version="4.0" stdsetdef="1" >
+  <author>Brian S. Stephan</author>
+  <comment></comment>
+  <exportmacro></exportmacro>
+  <class>SweeperDialog</class>
+  <widget class="QWidget" name="SweeperDialog" >
+    <property name="geometry" >
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>600</width>
+        <height>480</height>
+      </rect>
     </property>
-    <property name="geometry">
-        <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>600</width>
-            <height>480</height>
-        </rect>
+    <property name="windowTitle" >
+      <string>Form1</string>
     </property>
-    <property name="windowTitle">
-        <string>Form1</string>
-    </property>
-    <grid>
-        <property name="name">
-            <cstring>unnamed</cstring>
-        </property>
-        <widget class="QLayoutWidget" row="1" column="0">
-            <property name="name">
-                <cstring>layout2</cstring>
-            </property>
-            <hbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="QLayoutWidget">
-                    <property name="name">
-                        <cstring>layout1</cstring>
-                    </property>
-                    <hbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>selectAllButton</cstring>
-                            </property>
-                            <property name="text">
-                                <string>Select &amp;All</string>
-                            </property>
-                            <property name="accel">
-                                <string>Alt+A</string>
-                            </property>
-                        </widget>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>selectNoneButton</cstring>
-                            </property>
-                            <property name="text">
-                                <string>Select &amp;None</string>
-                            </property>
-                            <property name="accel">
-                                <string>Alt+N</string>
-                            </property>
-                        </widget>
-                    </hbox>
+    <layout class="QGridLayout" >
+      <item row="1" column="0" >
+        <layout class="QHBoxLayout" >
+          <property name="margin" >
+            <number>0</number>
+          </property>
+          <item>
+            <layout class="QHBoxLayout" >
+              <property name="margin" >
+                <number>0</number>
+              </property>
+              <item>
+                <widget class="KPushButton" name="selectAllButton" >
+                  <property name="text" >
+                    <string>Select &amp;All</string>
+                  </property>
+                  <property name="shortcut" >
+                    <string>Alt+A</string>
+                  </property>
                 </widget>
-                <spacer>
-                    <property name="name">
-                        <cstring>spacer1</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>41</width>
-                            <height>20</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="KPushButton">
-                    <property name="name">
-                        <cstring>cleanupButton</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Clean Up</string>
-                    </property>
-                    <property name="accel">
-                        <string>Alt+C</string>
-                    </property>
+              </item>
+              <item>
+                <widget class="KPushButton" name="selectNoneButton" >
+                  <property name="text" >
+                    <string>Select &amp;None</string>
+                  </property>
+                  <property name="shortcut" >
+                    <string>Alt+N</string>
+                  </property>
                 </widget>
-            </hbox>
-        </widget>
-        <widget class="QSplitter" row="0" column="0">
-            <property name="name">
-                <cstring>splitter1</cstring>
-            </property>
-            <property name="orientation">
-                <enum>Vertical</enum>
-            </property>
-            <widget class="K3ListView">
-                <property name="name">
-                    <cstring>privacyListView</cstring>
-                </property>
-                <property name="itemsMovable">
-                    <bool>false</bool>
-                </property>
+              </item>
+            </layout>
+          </item>
+          <item>
+            <spacer name="spacer1" >
+              <property name="sizeHint" >
+                <size>
+                  <width>41</width>
+                  <height>20</height>
+                </size>
+              </property>
+              <property name="sizeType" >
+                <enum>Expanding</enum>
+              </property>
+              <property name="orientation" >
+                <enum>Horizontal</enum>
+              </property>
+            </spacer>
+          </item>
+          <item>
+            <widget class="KPushButton" name="cleanupButton" >
+              <property name="text" >
+                <string>&amp;Clean Up</string>
+              </property>
+              <property name="shortcut" >
+                <string>Alt+C</string>
+              </property>
             </widget>
-            <widget class="KTextEdit">
-                <property name="name">
-                    <cstring>statusTextEdit</cstring>
-                </property>
-                <property name="readOnly">
-                    <bool>true</bool>
-                </property>
-            </widget>
+          </item>
+        </layout>
+      </item>
+      <item row="0" column="0" >
+        <widget class="QSplitter" name="splitter1" >
+          <property name="orientation" >
+            <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="K3ListView" name="privacyListView" >
+            <property name="itemsMovable" >
+              <bool>false</bool>
+            </property>
+          </widget>
+          <widget class="KTextEdit" name="statusTextEdit" >
+            <property name="readOnly" >
+              <bool>true</bool>
+            </property>
+          </widget>
         </widget>
-    </grid>
-</widget>
-<layoutdefaults spacing="6" margin="11"/>
-<includehints>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>k3listview.h</includehint>
-    <includehint>ktextedit.h</includehint>
-</includehints>
-</UI>
+      </item>
+    </layout>
+  </widget>
+  <layoutdefault spacing="6" margin="11" />
+  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+  <customwidgets>
+    <customwidget>
+      <class>K3ListView</class>
+      <extends>Q3ListView</extends>
+      <header>k3listview.h</header>
+    </customwidget>
+  </customwidgets>
+  <includes>
+    <include location="local" >kpushbutton.h</include>
+    <include location="local" >k3listview.h</include>
+    <include location="local" >ktextedit.h</include>
+  </includes>
+</ui>

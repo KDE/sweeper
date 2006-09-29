@@ -25,7 +25,16 @@
 #include <QLinkedList>
 
 #include "privacyaction.h"
-#include "sweeperdialog.h"
+#include "ui_sweeperdialog.h"
+
+class SweeperDialog : public QWidget, public Ui::SweeperDialog
+{
+public:
+  SweeperDialog( QWidget *parent ) : QWidget( parent ) {
+    setupUi( this );
+  }
+};
+
 
 class Sweeper: public KMainWindow
 {

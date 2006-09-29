@@ -15,7 +15,7 @@ qt4_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
 		
 kde4_automoc(${sweeper_SRCS})
 
-kde4_add_ui3_files(sweeper_SRCS sweeperdialog.ui )
+kde4_add_ui_files(sweeper_SRCS sweeperdialog.ui )
 
 kde4_add_executable(sweeper ${sweeper_SRCS})
 
