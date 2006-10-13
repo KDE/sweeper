@@ -13,7 +13,7 @@ set(sweeper_SRCS
 
 qt4_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
 		
-kde4_automoc(${sweeper_SRCS})
+kde4_automoc(sweeper ${sweeper_SRCS})
 
 kde4_add_ui_files(sweeper_SRCS sweeperdialog.ui )
 
