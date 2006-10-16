@@ -177,7 +177,7 @@ bool ClearFaviconsAction::action()
 
    konqiBookmarkMgr =
       KBookmarkManager::managerForFile(KStandardDirs::locateLocal("data",
-            QLatin1String("konqueror/bookmarks.xml")), false);
+            QLatin1String("konqueror/bookmarks.xml")), "konqueror", false);
    kDebug() << "saving the favicons that are in konqueror bookmarks" << endl;
    kDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() << endl;
 
