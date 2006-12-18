@@ -106,9 +106,8 @@ bool ClearAllCookiesPoliciesAction::action()
 
 bool ClearSavedClipboardContentsAction::action()
 {
-   if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("klipper")) {
+   if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.klipper")) {
       KConfig *c = new KConfig("klipperrc", false, false);
-
       KConfigGroup group(c, "General");
       group.deleteEntry("ClipboardData");
       c->sync();
@@ -159,7 +158,9 @@ bool ClearQuickStartMenuAction::action()
 bool ClearWebHistoryAction::action()
 {
    QStringList args("--preload");
-
+#ifdef __GNUC__
+#warning "kde4 need to fix it"
+#endif
    // preload Konqueror if it is not running
    if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("konqueror")) {
       kDebug() << "couldn't find Konqueror instance, preloading." << endl;
