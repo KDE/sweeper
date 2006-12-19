@@ -17,7 +17,7 @@
   */
 
 #include <kaction.h>
-#include <kstdaction.h>
+#include <kstandardaction.h>
 #include <kapplication.h>
 #include <kconfig.h>
 #include <kdebug.h>
@@ -46,7 +46,7 @@ Sweeper::Sweeper(const char *name)
    sw->setTooltipColumn(1);
    sw->setColumnWidthMode(0, Q3ListView::Maximum);
    
-   KStdAction::quit(this, SLOT(close()), actionCollection());
+   KStandardAction::quit(this, SLOT(close()), actionCollection());
    
    createGUI("sweeperui.rc");
    
