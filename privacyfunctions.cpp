@@ -75,7 +75,7 @@ bool ClearThumbnailsAction::action()
 
 bool ClearRunCommandHistoryAction::action()
 {
-   QDBusInterface kdesktop("org.kde.kdesktop", "/KDesktop", "org.kde.kdesktop.Desktop");
+   QDBusInterface kdesktop("org.kde.kdesktop", "/Desktop", "org.kde.kdesktop.Desktop");
    QDBusReply<bool> reply = kdesktop.call("clearCommandHistory");
    return reply;
 }
