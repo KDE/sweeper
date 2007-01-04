@@ -162,7 +162,7 @@ bool ClearWebHistoryAction::action()
 #warning "kde4 need to fix it"
 #endif
    // preload Konqueror if it is not running
-   if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("konqueror")) {
+   if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.konqueror")) {
       kDebug() << "couldn't find Konqueror instance, preloading." << endl;
       KToolInvocation::kdeinitExec("konqueror", args, 0,0);
    }
