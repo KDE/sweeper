@@ -33,7 +33,7 @@ PrivacyAction::~PrivacyAction()
    // nothing to do
 }
 
-void PrivacyAction::setDescription(QString desc)
+void PrivacyAction::setDescription(const QString &desc)
 {
    this->setText(1, desc);
 }
