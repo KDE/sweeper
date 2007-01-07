@@ -31,8 +31,8 @@ class PrivacyAction : public Q3CheckListItem
       PrivacyAction(K3ListViewItem * parent, QString name, QString desc = QString::null);
       ~PrivacyAction();
       
-      void setDescription(QString desc);
-      QString getErrMsg() { return errMsg; }
+      void setDescription(const QString &desc);
+      QString getErrMsg() const { return errMsg; }
       
       virtual bool action();
       
