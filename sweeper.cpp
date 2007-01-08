@@ -25,7 +25,7 @@
 #include <kmessagebox.h>
 #include <QtDBus>
 #include "privacyfunctions.h"
-
+#include <kactioncollection.h>
 #include "sweeper.h"
 #include "sweeperadaptor.h"
 
