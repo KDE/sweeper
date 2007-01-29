@@ -34,6 +34,7 @@
 #include <qstringlist.h>
 #include <QFile>
 #include <QDir>
+#include <kconfiggroup.h>
 
 #include "privacyfunctions.h"
 

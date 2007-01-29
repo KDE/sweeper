@@ -26,6 +26,7 @@
 #include <QtDBus>
 #include "privacyfunctions.h"
 #include <kactioncollection.h>
+#include <kconfiggroup.h>
 #include "sweeper.h"
 #include "sweeperadaptor.h"
 
