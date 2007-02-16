@@ -20,7 +20,6 @@
 
 #include <ktoolinvocation.h>
 #include <kconfig.h>
-#include <ksimpleconfig.h>
 #include <kprocess.h>
 #include <kglobal.h>
 #include <kapplication.h>
