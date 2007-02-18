@@ -90,8 +90,8 @@ bool ClearAllCookiesAction::action()
 bool ClearAllCookiesPoliciesAction::action()
 {
    // load the config file and section
-   KConfig cfg("kcookiejarrc");
-   cfg.setGroup("Cookie Policy");
+   KConfig _cfg( "kcookiejarrc" );
+   KConfigGroup cfg(&_cfg, "Cookie Policy");
 
    kDebug() << "removing all saved cookie policies" << endl;
    cfg.deleteEntry("CookieDomainAdvice");
