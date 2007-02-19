@@ -82,7 +82,7 @@ Sweeper::~Sweeper()
 
 void Sweeper::load()
 {
-   KConfig *c = new KConfig("kprivacyrc", false, false);
+   KConfig *c = new KConfig("kprivacyrc", KConfig::NoGlobals);
    
    // get general privacy settings
    KConfigGroup group(c, "Cleaning");
@@ -105,7 +105,7 @@ void Sweeper::defaults()
 
 void Sweeper::save()
 {
-   KConfig *c = new KConfig("kprivacyrc", false, false);
+   KConfig *c = new KConfig("kprivacyrc", KConfig::NoGlobals);
    
    KConfigGroup group(c, "Cleaning");
    
