@@ -35,38 +35,38 @@ Sweeper::Sweeper(const char *name)
 {
    setObjectName( name );
    //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
-   
+
    cleaningDialog = new SweeperDialog(this);
-   
+
    K3ListView *sw = cleaningDialog->privacyListView;
-   
+
    sw->addColumn(i18n("Privacy Settings"));
    sw->addColumn(i18n("Description"));
-   
+
    sw->setRootIsDecorated(true);
    sw->setTooltipColumn(1);
    sw->setColumnWidthMode(0, Q3ListView::Maximum);
-   
+
    KStandardAction::quit(this, SLOT(close()), actionCollection());
-   
+
    createGUI("sweeperui.rc");
-   
+
    generalCLI     = new K3ListViewItem(sw, i18n("General"));
    webbrowsingCLI = new K3ListViewItem(sw, i18n("Web Browsing"));
-   
+
    generalCLI->setOpen(true);
    webbrowsingCLI->setOpen(true);
-   
+
    sw->setWhatsThis( i18n("Check all cleanup actions you would like to perform. These will be executed by pressing the button below"));
    cleaningDialog->cleanupButton->setWhatsThis( i18n("Immediately performs the cleanup actions selected above"));
-   
+
    this->InitActions();
-   
-   
+
+
    connect(cleaningDialog->cleanupButton, SIGNAL(clicked()), SLOT(cleanup()));
    connect(cleaningDialog->selectAllButton, SIGNAL(clicked()), SLOT(selectAll()));
    connect(cleaningDialog->selectNoneButton, SIGNAL(clicked()), SLOT(selectNone()));
-   
+
    setCentralWidget(cleaningDialog);
    new KsweeperAdaptor(this);
    QDBusConnection::sessionBus().registerObject("/ksweeper", this);
@@ -82,17 +82,17 @@ Sweeper::~Sweeper()
 
 void Sweeper::load()
 {
-   KConfig *c = new KConfig("kprivacyrc", false, false);
-   
+   KConfig *c = new KConfig("kprivacyrc", KConfig::NoGlobals);
+
    // get general privacy settings
    KConfigGroup group(c, "Cleaning");
-   
+
    QLinkedList<PrivacyAction*>::iterator itr;
-   
+
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       (*itr)->setOn(group.readEntry((*itr)->text(), true));
    }
-   
+
    delete c;
 }
 
@@ -105,39 +105,35 @@ void Sweeper::defaults()
 
 void Sweeper::save()
 {
-   KConfig *c = new KConfig("kprivacyrc", false, false);
-   
-   KConfigGroup group(c, "Cleaning");
-   
+   KConfigGroup group(KSharedConfig::openConfig("kprivacyrc", KConfig::NoGlobals) , "Cleaning");
+
    QLinkedList<PrivacyAction*>::iterator itr;
-   
+
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       group.writeEntry((*itr)->text(), (*itr)->isOn());
    }
-   
-   c->sync();
-   
-   delete c;
+
+   group.sync();
 }
 
 void Sweeper::selectAll()
 {
    QLinkedList<PrivacyAction*>::iterator itr;
-   
+
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       (*itr)->setOn(true);
    }
-   
+
 }
 
 void Sweeper::selectNone()
 {
    QLinkedList<PrivacyAction*>::iterator itr;
-   
+
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       (*itr)->setOn(false);
    }
-   
+
 }
 
 
@@ -146,17 +142,17 @@ void Sweeper::cleanup()
    if (KMessageBox::warningContinueCancel(this, i18n("You are deleting data that is potentially valuable to you. Are you sure?")) != KMessageBox::Continue) {
       return;
    }
-   
+
    cleaningDialog->statusTextEdit->clear();
    cleaningDialog->statusTextEdit->setText(i18n("Starting cleanup..."));
-   
+
    QLinkedList<PrivacyAction*>::iterator itr;
-   
+
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       if((*itr)->isOn()) {
          QString statusText = i18n("Clearing %1...", (*itr)->text());
          cleaningDialog->statusTextEdit->append(statusText);
-         
+
          // actions return whether they were successful
          if(!(*itr)->action()) {
             QString errorText =  i18n("Clearing of %1 failed: %2", (*itr)->text(), (*itr)->getErrMsg());
@@ -164,7 +160,7 @@ void Sweeper::cleanup()
          }
       }
    }
-   
+
    cleaningDialog->statusTextEdit->append(i18n("Clean up finished."));
 }
 

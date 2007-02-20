@@ -20,7 +20,6 @@
 
 #include <ktoolinvocation.h>
 #include <kconfig.h>
-#include <ksimpleconfig.h>
 #include <kprocess.h>
 #include <kglobal.h>
 #include <kapplication.h>
@@ -108,7 +107,7 @@ bool ClearAllCookiesPoliciesAction::action()
 bool ClearSavedClipboardContentsAction::action()
 {
    if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.klipper")) {
-      KConfig *c = new KConfig("klipperrc", false, false);
+      KConfig *c = new KConfig("klipperrc", KConfig::NoGlobals);
       KConfigGroup group(c, "General");
       group.deleteEntry("ClipboardData");
       c->sync();
