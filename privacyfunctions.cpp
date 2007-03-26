@@ -20,7 +20,7 @@
 
 #include <ktoolinvocation.h>
 #include <kconfig.h>
-#include <kprocess.h>
+#include <k3process.h>
 #include <kglobal.h>
 #include <kapplication.h>
 #include <kdebug.h>
@@ -137,9 +137,9 @@ bool ClearFormCompletionAction::action()
 
 bool ClearWebCacheAction::action()
 {
-   KProcess process;
+   K3Process process;
    process << "kio_http_cache_cleaner" << "--clear-all";
-   return process.start(KProcess::DontCare);
+   return process.start(K3Process::DontCare);
 }
 
 bool ClearRecentDocumentsAction::action()
