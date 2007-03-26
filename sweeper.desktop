@@ -11,4 +11,5 @@ Categories=Qt;KDE;Utility;X-KDE-More;
 Name=Sweeper
 Name[x-test]=xxSweeperxx
 GenericName=System Cleaner
+GenericName[es]=Limpiador del sistema
 GenericName[x-test]=xxSystem Cleanerxx
