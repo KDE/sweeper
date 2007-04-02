@@ -19,7 +19,7 @@ kde4_add_ui_files(sweeper_SRCS sweeperdialog.ui )
 
 kde4_add_executable(sweeper ${sweeper_SRCS})
 
-target_link_libraries(sweeper  ${KDE4_KIO_LIBS} )
+target_link_libraries(sweeper ${KDE4_KIO_LIBS} ${KDE4_KFILE_LIBS})
 
 install(TARGETS sweeper  DESTINATION ${BIN_INSTALL_DIR} )
 
