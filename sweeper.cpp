@@ -31,7 +31,7 @@
 #include "sweeperadaptor.h"
 
 Sweeper::Sweeper(const char *name)
-   : KMainWindow(0)
+   : KXmlGuiWindow(0)
 {
    setObjectName( name );
    //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );

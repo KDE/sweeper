@@ -20,7 +20,7 @@
 #define SWEEPER_H
 
 #include <k3listview.h>
-#include <kmainwindow.h>
+#include <kxmlguiwindow.h>
 
 #include <QLinkedList>
 
@@ -36,7 +36,7 @@ public:
 };
 
 
-class Sweeper: public KMainWindow
+class Sweeper: public KXmlGuiWindow
 {
    Q_OBJECT
    
