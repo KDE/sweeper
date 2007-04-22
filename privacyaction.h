@@ -21,7 +21,7 @@
 
 #include <k3listview.h>
 
-#include <QString>
+
 
 #include <Q3CheckListItem>
 

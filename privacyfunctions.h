@@ -23,7 +23,7 @@
 
 #include <klocale.h>
 
-#include <QString>
+
 
 #include "privacyaction.h"
 
