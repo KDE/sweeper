@@ -20,7 +20,6 @@
 
 #include <ktoolinvocation.h>
 #include <kconfig.h>
-#include <k3process.h>
 #include <kglobal.h>
 #include <kapplication.h>
 #include <kdebug.h>
@@ -34,6 +33,7 @@
 #include <QFile>
 #include <QDir>
 #include <kconfiggroup.h>
+#include <QProcess>
 
 #include "privacyfunctions.h"
 
@@ -91,10 +91,10 @@ bool ClearAllCookiesPoliciesAction::action()
 {
    // load the config file and section
    KConfig cfg("kcookiejarrc");
-   cfg.setGroup("Cookie Policy");
+   KConfigGroup group = cfg.group("Cookie Policy");
 
    kDebug() << "removing all saved cookie policies" << endl;
-   cfg.deleteEntry("CookieDomainAdvice");
+   group.deleteEntry("CookieDomainAdvice");
    cfg.sync();
 
    // inform the cookie jar we pillaged it
@@ -137,9 +137,9 @@ bool ClearFormCompletionAction::action()
 
 bool ClearWebCacheAction::action()
 {
-   K3Process process;
-   process << "kio_http_cache_cleaner" << "--clear-all";
-   return process.start(K3Process::DontCare);
+   QStringList lst;
+   lst << "--clear-all";
+   return QProcess::startDetached("kio_http_cache_cleaner",lst);
 }
 
 bool ClearRecentDocumentsAction::action()
