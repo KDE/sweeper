@@ -1,2 +1,2 @@
 #! /bin/sh
-$XGETTEXT *.cpp -o $podir/sweeper.pot
+$XGETTEXT *.cpp *.h -o $podir/sweeper.pot
