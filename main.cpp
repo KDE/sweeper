@@ -25,13 +25,13 @@
 
 int main(int argc, char *argv[])
 {
-   KAboutData aboutData("sweeper", I18N_NOOP("Sweeper"), "1.0",
-                        I18N_NOOP("Helps clean unwanted traces the user leaves on the system."),
-                        KAboutData::License_LGPL, "(c) 2003-2005, Ralf Hoelzer", 0);
+   KAboutData aboutData("sweeper", 0, ki18n("Sweeper"), "1.0",
+                        ki18n("Helps clean unwanted traces the user leaves on the system."),
+                        KAboutData::License_LGPL, ki18n("(c) 2003-2005, Ralf Hoelzer"));
    
-   aboutData.addAuthor("Ralf Hoelzer", I18N_NOOP("Original author"), "ralf@well.com");
-   aboutData.addAuthor("Brian S. Stephan", I18N_NOOP("Maintainer"), "bssteph@irtonline.org");
-   aboutData.addAuthor("Benjamin Meyer", I18N_NOOP("Thumbnail Cache"), "ben+kdeprivacy@meyerhome.net");
+   aboutData.addAuthor(ki18n("Ralf Hoelzer"), ki18n("Original author"), "ralf@well.com");
+   aboutData.addAuthor(ki18n("Brian S. Stephan"), ki18n("Maintainer"), "bssteph@irtonline.org");
+   aboutData.addAuthor(ki18n("Benjamin Meyer"), ki18n("Thumbnail Cache"), "ben+kdeprivacy@meyerhome.net");
    
    // command line
    KCmdLineArgs::init(argc, argv, &aboutData);
