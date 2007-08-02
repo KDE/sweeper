@@ -93,7 +93,7 @@ bool ClearAllCookiesPoliciesAction::action()
    KConfig cfg("kcookiejarrc");
    KConfigGroup group = cfg.group("Cookie Policy");
 
-   kDebug() << "removing all saved cookie policies" << endl;
+   kDebug() << "removing all saved cookie policies" ;
    group.deleteEntry("CookieDomainAdvice");
    cfg.sync();
 
@@ -163,7 +163,7 @@ bool ClearWebHistoryAction::action()
 #endif
    // preload Konqueror if it is not running
    if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.konqueror")) {
-      kDebug() << "couldn't find Konqueror instance, preloading." << endl;
+      kDebug() << "couldn't find Konqueror instance, preloading." ;
       KToolInvocation::kdeinitExec("konqueror", args, 0,0);
    }
    QDBusMessage message = QDBusMessage::createSignal("/KonqHistoryManager", "org.kde.libkonq.KonqHistoryManager", "notifyClear" );
@@ -179,8 +179,8 @@ bool ClearFaviconsAction::action()
    konqiBookmarkMgr =
       KBookmarkManager::managerForFile(KStandardDirs::locateLocal("data",
             QLatin1String("konqueror/bookmarks.xml")), "konqueror");
-   kDebug() << "saving the favicons that are in konqueror bookmarks" << endl;
-   kDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() << endl;
+   kDebug() << "saving the favicons that are in konqueror bookmarks" ;
+   kDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() ;
 
    // get the entire slew of bookmarks
    KBookmarkGroup konqiBookmarks = konqiBookmarkMgr->root();
@@ -193,7 +193,7 @@ bool ClearFaviconsAction::action()
          // pick out the name, throw .png on the end, and store the filename
          QRegExp regex("favicons/(.*)");
          regex.indexIn(bookmark.icon(), 0);
-         kDebug() << "will save " << (regex.cap(1) + ".png") << endl;
+         kDebug() << "will save " << (regex.cap(1) + ".png") ;
          saveTheseFavicons << (regex.cap(1) + ".png");
       }
       bookmark = konqiBookmarks.next(bookmark);
@@ -207,7 +207,7 @@ bool ClearFaviconsAction::action()
    for( QStringList::Iterator it = entries.begin() ; it != entries.end() ; ++it) {
       // ...if we're not supposed to save them, of course
       if (!saveTheseFavicons.contains(*it)) {
-         kDebug() << "removing " << *it << endl;
+         kDebug() << "removing " << *it ;
          if(!favIconDir.remove(*it)) {
             errMsg = i18n("A favicon could not be removed.");
             return false;
