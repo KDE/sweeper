@@ -28,7 +28,7 @@
 class PrivacyAction : public Q3CheckListItem
 {
    public:
-      PrivacyAction(K3ListViewItem * parent, QString name, QString desc = QString::null);
+      PrivacyAction(K3ListViewItem * parent, QString name, QString desc = QString::null);	//krazy:exclude=nullstrassign for old broken gcc
       ~PrivacyAction();
       
       void setDescription(const QString &desc);
