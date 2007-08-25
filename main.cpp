@@ -16,12 +16,12 @@
   *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   */
 
+#include "sweeper.h"
+
 #include <kaboutdata.h>
 #include <kapplication.h>
 #include <kcmdlineargs.h>
 #include <klocale.h>
-
-#include "sweeper.h"
 
 int main(int argc, char *argv[])
 {
@@ -37,8 +37,7 @@ int main(int argc, char *argv[])
    KCmdLineArgs::init(argc, argv, &aboutData);
    KApplication a(true);
    Sweeper *app = new Sweeper();
-   a.setMainWidget(app);
-   
+
    app->show();
    return a.exec();
 }

@@ -16,6 +16,9 @@
   *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   */
 
+#include "sweeper.h"
+#include "sweeperadaptor.h"
+
 #include <kaction.h>
 #include <kstandardaction.h>
 #include <kapplication.h>
@@ -27,8 +30,6 @@
 #include "privacyfunctions.h"
 #include <kactioncollection.h>
 #include <kconfiggroup.h>
-#include "sweeper.h"
-#include "sweeperadaptor.h"
 
 Sweeper::Sweeper(const char *name)
    : KXmlGuiWindow(0)
@@ -51,8 +52,8 @@ Sweeper::Sweeper(const char *name)
 
    createGUI("sweeperui.rc");
 
-   generalCLI     = new K3ListViewItem(sw, i18n("General"));
-   webbrowsingCLI = new K3ListViewItem(sw, i18n("Web Browsing"));
+   generalCLI     = new K3ListViewItem(sw, i18nc("General system content", "General"));
+   webbrowsingCLI = new K3ListViewItem(sw, i18nc("Web browsing content", "Web Browsing"));
 
    generalCLI->setOpen(true);
    webbrowsingCLI->setOpen(true);

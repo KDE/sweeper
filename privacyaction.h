@@ -28,7 +28,7 @@
 class PrivacyAction : public Q3CheckListItem
 {
    public:
-      PrivacyAction(K3ListViewItem * parent, QString name, QString desc = QString());
+      PrivacyAction(K3ListViewItem * parent, const QString &name, const QString &desc = QString());
       ~PrivacyAction();
       
       void setDescription(const QString &desc);

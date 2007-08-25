@@ -18,6 +18,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+#include "privacyfunctions.h"
+
 #include <ktoolinvocation.h>
 #include <kconfig.h>
 #include <kglobal.h>
@@ -34,8 +36,6 @@
 #include <QDir>
 #include <kconfiggroup.h>
 #include <QProcess>
-
-#include "privacyfunctions.h"
 
 bool ClearThumbnailsAction::action()
 {

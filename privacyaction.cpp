@@ -18,7 +18,7 @@
 
 #include "privacyaction.h"
 
-PrivacyAction::PrivacyAction(K3ListViewItem * parent, QString name, QString desc)
+PrivacyAction::PrivacyAction(K3ListViewItem * parent, const QString &name, const QString &desc)
    : Q3CheckListItem(parent, name, Q3CheckListItem::CheckBox)
 {
    if (!desc.isNull()) {
