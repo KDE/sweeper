@@ -18,12 +18,14 @@
 
 #include "privacyaction.h"
 
-PrivacyAction::PrivacyAction(K3ListViewItem * parent, const QString &name, const QString &desc)
-   : Q3CheckListItem(parent, name, Q3CheckListItem::CheckBox)
+PrivacyAction::PrivacyAction(QTreeWidgetItem * parent, const QString &name, const QString &desc)
+   : QTreeWidgetItem(parent)
 {
+   setText(0, name);
    if (!desc.isNull()) {
       this->setText(1, desc);
    }
+   setCheckState(0, Qt::Unchecked);
    
    errMsg = "No error provided.";
 }

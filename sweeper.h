@@ -19,13 +19,14 @@
 #ifndef SWEEPER_H
 #define SWEEPER_H
 
-#include <k3listview.h>
 #include <kxmlguiwindow.h>
 
 #include <QLinkedList>
 
 #include "privacyaction.h"
 #include "ui_sweeperdialog.h"
+
+class QTreeWidgetItem;
 
 class SweeperDialog : public QWidget, public Ui::SweeperDialog
 {
@@ -70,8 +71,8 @@ class Sweeper: public KXmlGuiWindow
       
       QLinkedList<PrivacyAction*> checklist;
       
-      K3ListViewItem *generalCLI;
-      K3ListViewItem *webbrowsingCLI;
+      QTreeWidgetItem *generalCLI;
+      QTreeWidgetItem *webbrowsingCLI;
 };
 
 #endif

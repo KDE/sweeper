@@ -1,8 +1,6 @@
 project(sweeper)
 
 
-add_definitions (-DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS)
-
 ########### next target ###############
 
 set(sweeper_SRCS 
@@ -19,7 +17,7 @@ kde4_add_ui_files(sweeper_SRCS sweeperdialog.ui )
 
 kde4_add_executable(sweeper ${sweeper_SRCS})
 
-target_link_libraries(sweeper ${KDE4_KFILE_LIBS})
+target_link_libraries(sweeper ${KDE4_KIO_LIBS})
 
 install(TARGETS sweeper  DESTINATION ${BIN_INSTALL_DIR} )
 

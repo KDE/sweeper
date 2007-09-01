@@ -19,16 +19,12 @@
 #ifndef PRIVACYACTION_H
 #define PRIVACYACTION_H
 
-#include <k3listview.h>
+#include <QTreeWidgetItem>
 
-
-
-#include <Q3CheckListItem>
-
-class PrivacyAction : public Q3CheckListItem
+class PrivacyAction : public QTreeWidgetItem
 {
    public:
-      PrivacyAction(K3ListViewItem * parent, const QString &name, const QString &desc = QString());
+      PrivacyAction(QTreeWidgetItem * parent, const QString &name, const QString &desc = QString());
       ~PrivacyAction();
       
       void setDescription(const QString &desc);

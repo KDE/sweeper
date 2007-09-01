@@ -39,27 +39,19 @@ Sweeper::Sweeper(const char *name)
 
    cleaningDialog = new SweeperDialog(this);
 
-   K3ListView *sw = cleaningDialog->privacyListView;
-
-   sw->addColumn(i18n("Privacy Settings"));
-   sw->addColumn(i18n("Description"));
-
-   sw->setRootIsDecorated(true);
-   sw->setTooltipColumn(1);
-   sw->setColumnWidthMode(0, Q3ListView::Maximum);
+   QTreeWidget *sw = cleaningDialog->privacyListView;
 
    KStandardAction::quit(this, SLOT(close()), actionCollection());
 
    createGUI("sweeperui.rc");
 
-   generalCLI     = new K3ListViewItem(sw, i18nc("General system content", "General"));
-   webbrowsingCLI = new K3ListViewItem(sw, i18nc("Web browsing content", "Web Browsing"));
+   generalCLI     = new QTreeWidgetItem(QStringList() << i18nc("General system content", "General"));
+   sw->addTopLevelItem(generalCLI);
+   webbrowsingCLI = new QTreeWidgetItem(QStringList() << i18nc("Web browsing content", "Web Browsing"));
+   sw->addTopLevelItem(webbrowsingCLI);
 
-   generalCLI->setOpen(true);
-   webbrowsingCLI->setOpen(true);
-
-   sw->setWhatsThis( i18n("Check all cleanup actions you would like to perform. These will be executed by pressing the button below"));
-   cleaningDialog->cleanupButton->setWhatsThis( i18n("Immediately performs the cleanup actions selected above"));
+   generalCLI->setExpanded(true);
+   webbrowsingCLI->setExpanded(true);
 
    this->InitActions();
 
@@ -76,8 +68,6 @@ Sweeper::Sweeper(const char *name)
 
 Sweeper::~Sweeper()
 {
-   // cleanup pointers
-   qDeleteAll(checklist.begin(), checklist.end());
 }
 
 
@@ -91,7 +81,7 @@ void Sweeper::load()
    QLinkedList<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
-      (*itr)->setOn(group.readEntry((*itr)->text(), true));
+      (*itr)->setCheckState(0, group.readEntry((*itr)->text(0), true) ? Qt::Checked : Qt::Unchecked);
    }
 
    delete c;
@@ -111,7 +101,7 @@ void Sweeper::save()
    QLinkedList<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
-      group.writeEntry((*itr)->text(), (*itr)->isOn());
+      group.writeEntry((*itr)->text(0), (*itr)->checkState(0) == Qt::Checked);
    }
 
    group.sync();
@@ -122,7 +112,7 @@ void Sweeper::selectAll()
    QLinkedList<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
-      (*itr)->setOn(true);
+      (*itr)->setCheckState(0, Qt::Checked);
    }
 
 }
@@ -132,7 +122,7 @@ void Sweeper::selectNone()
    QLinkedList<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
-      (*itr)->setOn(false);
+      (*itr)->setCheckState(0, Qt::Unchecked);
    }
 
 }
@@ -150,13 +140,13 @@ void Sweeper::cleanup()
    QLinkedList<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
-      if((*itr)->isOn()) {
-         QString statusText = i18n("Clearing %1...", (*itr)->text());
+      if((*itr)->checkState(0) == Qt::Checked) {
+         QString statusText = i18n("Clearing %1...", (*itr)->text(0));
          cleaningDialog->statusTextEdit->append(statusText);
 
          // actions return whether they were successful
          if(!(*itr)->action()) {
-            QString errorText =  i18n("Clearing of %1 failed: %2", (*itr)->text(), (*itr)->getErrMsg());
+            QString errorText =  i18n("Clearing of %1 failed: %2", (*itr)->text(0), (*itr)->getErrMsg());
             cleaningDialog->statusTextEdit->append(errorText);
          }
       }
@@ -180,6 +170,8 @@ void Sweeper::InitActions() {
    checklist.append(new ClearRunCommandHistoryAction(generalCLI));
 #endif
    checklist.append(new ClearThumbnailsAction(generalCLI));
+
+   cleaningDialog->privacyListView->resizeColumnToContents(0);
 }
 
 #include "sweeper.moc"
