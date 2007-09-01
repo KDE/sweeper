@@ -30,10 +30,9 @@
 #include <kactioncollection.h>
 #include <kconfiggroup.h>
 
-Sweeper::Sweeper(const char *name)
+Sweeper::Sweeper()
    : KXmlGuiWindow(0)
 {
-   setObjectName( name );
    //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
 
    cleaningDialog = new SweeperDialog(this);

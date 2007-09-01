@@ -42,7 +42,7 @@ class Sweeper: public KXmlGuiWindow
    Q_OBJECT
    
    public:
-      Sweeper(const char *name = 0);
+      Sweeper();
       ~Sweeper();
       
       virtual void load();
