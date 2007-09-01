@@ -23,7 +23,6 @@
 #include <ktoolinvocation.h>
 #include <kconfig.h>
 #include <kglobal.h>
-#include <kapplication.h>
 #include <kdebug.h>
 #include <krecentdocument.h>
 #include <kstandarddirs.h>
