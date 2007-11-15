@@ -1,6 +1,5 @@
 [Desktop Entry]
-Encoding=UTF-8
-DocPath=sweeper/index.html
+X-DocPath=sweeper/index.html
 Icon=trashcan_empty
 Exec=sweeper
 Type=Application
