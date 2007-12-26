@@ -156,17 +156,14 @@ bool ClearQuickStartMenuAction::action()
 
 bool ClearWebHistoryAction::action()
 {
-   QStringList args("--preload");
-#ifdef __GNUC__
-#warning "kde4 need to fix it"
-#endif
-   // preload Konqueror if it is not running
-   if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.konqueror")) {
-      kDebug() << "couldn't find Konqueror instance, preloading." ;
-      KToolInvocation::kdeinitExec("konqueror", args, 0,0);
-   }
-   QDBusMessage message = QDBusMessage::createSignal("/KonqHistoryManager", "org.kde.libkonq.KonqHistoryManager", "notifyClear" );
-   return QDBusConnection::sessionBus().send(message);
+   // Clear the history from the memory of the running konquerors
+   QDBusMessage message = QDBusMessage::createSignal("/KonqHistoryManager", "org.kde.Konqueror.HistoryManager", "notifyClear" );
+   (void) QDBusConnection::sessionBus().send(message);
+
+   // Delete the file
+   const QString file = KStandardDirs::locateLocal("data", QLatin1String("konqueror/konq_history"));
+   QFile::remove(file);
+   return true;
 }
 
 bool ClearFaviconsAction::action()
