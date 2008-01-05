@@ -158,7 +158,6 @@ void Sweeper::InitActions() {
    checklist.append(new ClearSavedClipboardContentsAction(generalCLI));
    checklist.append(new ClearRecentDocumentsAction(generalCLI));
 #ifdef Q_WS_X11
-   checklist.append(new ClearQuickStartMenuAction(generalCLI));
    checklist.append(new ClearRunCommandHistoryAction(generalCLI));
 #endif
    checklist.append(new ClearThumbnailsAction(generalCLI));

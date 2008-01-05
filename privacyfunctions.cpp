@@ -147,13 +147,6 @@ bool ClearRecentDocumentsAction::action()
    return KRecentDocument::recentDocuments().isEmpty();
 }
 
-bool ClearQuickStartMenuAction::action()
-{
-	QDBusInterface kicker("org.kde.kicker", "/Kicker", "org.kde.kicker.Kicker");
-	QDBusReply<bool> reply = kicker.call("clearQuickStartMenu");
-	return reply;
-}
-
 bool ClearWebHistoryAction::action()
 {
    // Clear the history from the memory of the running konquerors
