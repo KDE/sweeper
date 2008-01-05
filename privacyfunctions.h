@@ -104,15 +104,6 @@ class ClearWebCacheAction : public PrivacyAction
       bool action();
 };
 
-class ClearQuickStartMenuAction : public PrivacyAction
-{
-   public:
-      ClearQuickStartMenuAction(QTreeWidgetItem * parent)
-         : PrivacyAction(parent, i18n("Quick Start Menu"),
-                         i18n("Clears the entries from the list of recently started applications")) { }
-      bool action();
-};
-
 class ClearRecentDocumentsAction : public PrivacyAction
 {
    public:
