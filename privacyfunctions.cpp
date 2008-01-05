@@ -114,9 +114,9 @@ bool ClearSavedClipboardContentsAction::action()
       delete c;
       return true;
    }
-   QDBusInterface klipper("org.kde.klipper", "/Klipper", "org.kde.klipper.klipper");
-   QDBusReply<bool> reply = klipper.call("clearClipboardHistory");
-   return reply;
+   QDBusInterface klipper("org.kde.klipper", "/klipper", "org.kde.klipper.klipper");
+   QDBusReply<void> reply = klipper.call("clearClipboardHistory");
+   return reply.isValid();
 }
 
 bool ClearFormCompletionAction::action()
