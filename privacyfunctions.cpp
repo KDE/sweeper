@@ -82,8 +82,8 @@ bool ClearRunCommandHistoryAction::action()
 bool ClearAllCookiesAction::action()
 {
    QDBusInterface mediamanager("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
-   QDBusReply<bool> reply = mediamanager.call("deleteAllCookies");
-   return reply;
+   QDBusReply<void> reply = mediamanager.call("deleteAllCookies");
+   return reply.isValid();
 }
 
 bool ClearAllCookiesPoliciesAction::action()
@@ -98,9 +98,9 @@ bool ClearAllCookiesPoliciesAction::action()
 
    // inform the cookie jar we pillaged it
    QDBusInterface kcookiejar("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
-   QDBusReply<bool> reply = kcookiejar.call("reloadPolicy");
+   QDBusReply<void> reply = kcookiejar.call("reloadPolicy");
 
-   return reply;
+   return reply.isValid();
 }
 
 bool ClearSavedClipboardContentsAction::action()
