@@ -138,7 +138,7 @@ bool ClearWebCacheAction::action()
 {
    QStringList lst;
    lst << "--clear-all";
-   return QProcess::startDetached("kio_http_cache_cleaner",lst);
+   return QProcess::startDetached(KStandardDirs::findExe("kio_http_cache_cleaner"),lst);
 }
 
 bool ClearRecentDocumentsAction::action()
