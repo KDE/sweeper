@@ -28,7 +28,7 @@
 #include <kstandarddirs.h>
 #include <kbookmarkmanager.h>
 #include <klocale.h>
-#include <QtDBus>
+#include <QtDBus/QtDBus>
 
 #include <qstringlist.h>
 #include <QFile>

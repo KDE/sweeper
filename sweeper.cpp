@@ -25,7 +25,7 @@
 #include <kdebug.h>
 #include <klocale.h>
 #include <kmessagebox.h>
-#include <QtDBus>
+#include <QtDBus/QtDBus>
 #include "privacyfunctions.h"
 #include <kactioncollection.h>
 #include <kconfiggroup.h>
