@@ -207,4 +207,14 @@ bool ClearFaviconsAction::action()
    return true;
 }
 
+bool ClearRecentApplicationAction::action()
+{
+    QDBusMessage message =
+        QDBusMessage::createSignal("/kickoff/RecentAppDoc", "org.kde.plasma", "cleanRecentDocumentsAndDocuments");
+    QDBusConnection::sessionBus().send(message);
+
+    return true;
+}
+
+
 // kate: tab-width 3; indent-mode cstyle; replace-tabs true;

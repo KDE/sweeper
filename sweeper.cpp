@@ -159,9 +159,10 @@ void Sweeper::InitActions() {
    checklist.append(new ClearRecentDocumentsAction(generalCLI));
 #ifdef Q_WS_X11
    checklist.append(new ClearRunCommandHistoryAction(generalCLI));
+   checklist.append( new ClearRecentApplicationAction( generalCLI ) );
 #endif
    checklist.append(new ClearThumbnailsAction(generalCLI));
-   
+
    checklist.append(new ClearAllCookiesAction(webbrowsingCLI));
    checklist.append(new ClearFaviconsAction(webbrowsingCLI));
    checklist.append(new ClearWebHistoryAction(webbrowsingCLI));

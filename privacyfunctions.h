@@ -37,7 +37,7 @@ class ClearAllCookiesAction : public PrivacyAction
       ClearAllCookiesAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Cookies"),
                          i18n("Clears all stored cookies set by websites")) { }
-      
+
       bool action();
 };
 
@@ -121,6 +121,16 @@ class ClearFaviconsAction : public PrivacyAction
                          i18n("Clears the FavIcons cached from visited websites")) { }
       bool action();
 };
+
+class ClearRecentApplicationAction : public PrivacyAction
+{
+   public:
+      ClearRecentApplicationAction(QTreeWidgetItem * parent)
+         : PrivacyAction(parent, i18n("Recent Applications"),
+                         i18n("Clears the list of recently used applications from KDE menu")) { }
+      bool action();
+};
+
 
 #endif
 
