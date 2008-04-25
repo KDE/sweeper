@@ -87,7 +87,7 @@ void Sweeper::load()
    QLinkedList<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
-      (*itr)->setCheckState(0, group.readEntry((*itr)->text(0), true) ? Qt::Checked : Qt::Unchecked);
+      (*itr)->setCheckState(0, group.readEntry((*itr)->configKey(), true) ? Qt::Checked : Qt::Unchecked);
    }
 
    delete c;
@@ -107,7 +107,7 @@ void Sweeper::save()
    QLinkedList<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
-      group.writeEntry((*itr)->text(0), (*itr)->checkState(0) == Qt::Checked);
+      group.writeEntry((*itr)->configKey(), (*itr)->checkState(0) == Qt::Checked);
    }
 
    group.sync();

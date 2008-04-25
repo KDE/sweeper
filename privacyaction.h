@@ -31,6 +31,7 @@ class PrivacyAction : public QTreeWidgetItem
       QString getErrMsg() const { return errMsg; }
       
       virtual bool action();
+      virtual QString configKey() const = 0;
       
    protected:
       QString errMsg;
