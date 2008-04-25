@@ -23,9 +23,9 @@
 
 #include <QLinkedList>
 
-#include "privacyaction.h"
 #include "ui_sweeperdialog.h"
 
+class PrivacyAction;
 class QTreeWidgetItem;
 
 class Sweeper: public KXmlGuiWindow

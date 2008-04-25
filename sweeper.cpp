@@ -17,6 +17,9 @@
   */
 
 #include "sweeper.h"
+
+#include "privacyaction.h"
+#include "privacyfunctions.h"
 #include "sweeperadaptor.h"
 
 #include <kaction.h>
@@ -26,7 +29,6 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <QtDBus/QtDBus>
-#include "privacyfunctions.h"
 #include <kactioncollection.h>
 #include <kconfiggroup.h>
 
