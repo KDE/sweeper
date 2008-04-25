@@ -61,11 +61,14 @@ Sweeper::Sweeper()
    setCentralWidget(cleaningDialog);
    new KsweeperAdaptor(this);
    QDBusConnection::sessionBus().registerObject("/ksweeper", this);
+
+   load();
 }
 
 
 Sweeper::~Sweeper()
 {
+   save();
 }
 
 
