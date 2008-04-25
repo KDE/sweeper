@@ -27,10 +27,9 @@ class PrivacyAction : public QTreeWidgetItem
       PrivacyAction(QTreeWidgetItem * parent, const QString &name, const QString &desc = QString());
       ~PrivacyAction();
       
-      void setDescription(const QString &desc);
       QString getErrMsg() const { return errMsg; }
       
-      virtual bool action();
+      virtual bool action() = 0;
       virtual QString configKey() const = 0;
       
    protected:

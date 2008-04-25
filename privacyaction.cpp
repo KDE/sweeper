@@ -22,27 +22,15 @@ PrivacyAction::PrivacyAction(QTreeWidgetItem * parent, const QString &name, cons
    : QTreeWidgetItem(parent)
 {
    setText(0, name);
-   if (!desc.isNull()) {
-      this->setText(1, desc);
+   if (!desc.isEmpty()) {
+      setText(1, desc);
    }
    setCheckState(0, Qt::Unchecked);
-   
-   errMsg = "No error provided.";
 }
 
 PrivacyAction::~PrivacyAction()
 {
    // nothing to do
-}
-
-void PrivacyAction::setDescription(const QString &desc)
-{
-   this->setText(1, desc);
-}
-
-bool PrivacyAction::action()
-{
-   return false;
 }
 
 // kate: tab-width 3; indent-mode cstyle; replace-tabs true;
