@@ -37,12 +37,10 @@ class Sweeper: public KXmlGuiWindow
       Sweeper();
       ~Sweeper();
       
-      virtual void load();
-      virtual void save();
-      virtual void defaults();
-      
    public slots:
       void cleanup();
+      
+   private slots:
       void selectAll();
       void selectNone();
       
@@ -50,6 +48,8 @@ class Sweeper: public KXmlGuiWindow
       /**
        * methods
        */
+      void load();
+      void save();
       
       /**
        * Set up all the actions we are going to manage.

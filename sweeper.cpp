@@ -35,8 +35,6 @@ Sweeper::Sweeper()
    : KXmlGuiWindow(0)
    , m_privacyConfGroup(KSharedConfig::openConfig("kprivacyrc", KConfig::NoGlobals), "Cleaning")
 {
-   //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
-
    QWidget *mainWidget = new QWidget(this);
    ui.setupUi(mainWidget);
    setCentralWidget(mainWidget);
@@ -85,13 +83,6 @@ void Sweeper::load()
       (*itr)->setCheckState(0, m_privacyConfGroup.readEntry((*itr)->configKey(), true) ? Qt::Checked : Qt::Unchecked);
    }
 }
-
-
-void Sweeper::defaults()
-{
-   selectNone();
-}
-
 
 void Sweeper::save()
 {
