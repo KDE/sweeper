@@ -30,10 +30,10 @@
 #include <kmessagebox.h>
 #include <QtDBus/QtDBus>
 #include <kactioncollection.h>
-#include <kconfiggroup.h>
 
 Sweeper::Sweeper()
    : KXmlGuiWindow(0)
+   , m_privacyConfGroup(KSharedConfig::openConfig("kprivacyrc", KConfig::NoGlobals), "Cleaning")
 {
    //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
 
@@ -79,18 +79,11 @@ Sweeper::~Sweeper()
 
 void Sweeper::load()
 {
-   KConfig *c = new KConfig("kprivacyrc", KConfig::NoGlobals);
-
-   // get general privacy settings
-   KConfigGroup group(c, "Cleaning");
-
    QLinkedList<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
-      (*itr)->setCheckState(0, group.readEntry((*itr)->configKey(), true) ? Qt::Checked : Qt::Unchecked);
+      (*itr)->setCheckState(0, m_privacyConfGroup.readEntry((*itr)->configKey(), true) ? Qt::Checked : Qt::Unchecked);
    }
-
-   delete c;
 }
 
 
@@ -102,15 +95,13 @@ void Sweeper::defaults()
 
 void Sweeper::save()
 {
-   KConfigGroup group(KSharedConfig::openConfig("kprivacyrc", KConfig::NoGlobals) , "Cleaning");
-
    QLinkedList<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
-      group.writeEntry((*itr)->configKey(), (*itr)->checkState(0) == Qt::Checked);
+      m_privacyConfGroup.writeEntry((*itr)->configKey(), (*itr)->checkState(0) == Qt::Checked);
    }
 
-   group.sync();
+   m_privacyConfGroup.sync();
 }
 
 void Sweeper::selectAll()

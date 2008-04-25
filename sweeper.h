@@ -19,6 +19,7 @@
 #ifndef SWEEPER_H
 #define SWEEPER_H
 
+#include <kconfiggroup.h>
 #include <kxmlguiwindow.h>
 
 #include <QLinkedList>
@@ -64,6 +65,8 @@ class Sweeper: public KXmlGuiWindow
       
       QTreeWidgetItem *generalCLI;
       QTreeWidgetItem *webbrowsingCLI;
+
+      KConfigGroup m_privacyConfGroup;
 };
 
 #endif
