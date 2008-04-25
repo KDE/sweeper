@@ -35,9 +35,11 @@ Sweeper::Sweeper()
 {
    //setButtons( KDialogBase::Default|KDialogBase::Apply|KDialogBase::Help );
 
-   cleaningDialog = new SweeperDialog(this);
+   QWidget *mainWidget = new QWidget(this);
+   ui.setupUi(mainWidget);
+   setCentralWidget(mainWidget);
 
-   QTreeWidget *sw = cleaningDialog->privacyListView;
+   QTreeWidget *sw = ui.privacyListView;
 
    KStandardAction::quit(this, SLOT(close()), actionCollection());
 
@@ -56,11 +58,10 @@ Sweeper::Sweeper()
    this->InitActions();
 
 
-   connect(cleaningDialog->cleanupButton, SIGNAL(clicked()), SLOT(cleanup()));
-   connect(cleaningDialog->selectAllButton, SIGNAL(clicked()), SLOT(selectAll()));
-   connect(cleaningDialog->selectNoneButton, SIGNAL(clicked()), SLOT(selectNone()));
+   connect(ui.cleanupButton, SIGNAL(clicked()), SLOT(cleanup()));
+   connect(ui.selectAllButton, SIGNAL(clicked()), SLOT(selectAll()));
+   connect(ui.selectNoneButton, SIGNAL(clicked()), SLOT(selectNone()));
 
-   setCentralWidget(cleaningDialog);
    new KsweeperAdaptor(this);
    QDBusConnection::sessionBus().registerObject("/ksweeper", this);
 
@@ -137,25 +138,25 @@ void Sweeper::cleanup()
       return;
    }
 
-   cleaningDialog->statusTextEdit->clear();
-   cleaningDialog->statusTextEdit->setText(i18n("Starting cleanup..."));
+   ui.statusTextEdit->clear();
+   ui.statusTextEdit->setText(i18n("Starting cleanup..."));
 
    QLinkedList<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       if((*itr)->checkState(0) == Qt::Checked) {
          QString statusText = i18n("Clearing %1...", (*itr)->text(0));
-         cleaningDialog->statusTextEdit->append(statusText);
+         ui.statusTextEdit->append(statusText);
 
          // actions return whether they were successful
          if(!(*itr)->action()) {
             QString errorText =  i18n("Clearing of %1 failed: %2", (*itr)->text(0), (*itr)->getErrMsg());
-            cleaningDialog->statusTextEdit->append(errorText);
+            ui.statusTextEdit->append(errorText);
          }
       }
    }
 
-   cleaningDialog->statusTextEdit->append(i18n("Clean up finished."));
+   ui.statusTextEdit->append(i18n("Clean up finished."));
 }
 
 void Sweeper::InitActions() {
@@ -175,7 +176,7 @@ void Sweeper::InitActions() {
    checklist.append(new ClearFormCompletionAction(webbrowsingCLI));
    checklist.append(new ClearAllCookiesPoliciesAction(webbrowsingCLI));
 
-   cleaningDialog->privacyListView->resizeColumnToContents(0);
+   ui.privacyListView->resizeColumnToContents(0);
 }
 
 #include "sweeper.moc"

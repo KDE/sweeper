@@ -28,15 +28,6 @@
 
 class QTreeWidgetItem;
 
-class SweeperDialog : public QWidget, public Ui::SweeperDialog
-{
-public:
-  SweeperDialog( QWidget *parent ) : QWidget( parent ) {
-    setupUi( this );
-  }
-};
-
-
 class Sweeper: public KXmlGuiWindow
 {
    Q_OBJECT
@@ -67,7 +58,7 @@ class Sweeper: public KXmlGuiWindow
       /**
        * attributes
        */
-      SweeperDialog  *cleaningDialog;
+      Ui::SweeperDialog ui;
       
       QLinkedList<PrivacyAction*> checklist;
       
