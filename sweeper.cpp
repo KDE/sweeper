@@ -43,6 +43,8 @@ Sweeper::Sweeper()
 
    createGUI("sweeperui.rc");
 
+   setAutoSaveSettings();
+
    generalCLI     = new QTreeWidgetItem(QStringList() << i18nc("General system content", "General"));
    sw->addTopLevelItem(generalCLI);
    webbrowsingCLI = new QTreeWidgetItem(QStringList() << i18nc("Web browsing content", "Web Browsing"));
