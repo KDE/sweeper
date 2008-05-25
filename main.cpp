@@ -32,7 +32,9 @@ int main(int argc, char *argv[])
    aboutData.addAuthor(ki18n("Ralf Hoelzer"), ki18n("Original author"), "ralf@well.com");
    aboutData.addAuthor(ki18n("Brian S. Stephan"), ki18n("Maintainer"), "bssteph@irtonline.org");
    aboutData.addAuthor(ki18n("Benjamin Meyer"), ki18n("Thumbnail Cache"), "ben+kdeprivacy@meyerhome.net");
-   
+
+   aboutData.setProgramIconName("trash-empty");
+
    // command line
    KCmdLineArgs::init(argc, argv, &aboutData);
    KApplication a(true);
