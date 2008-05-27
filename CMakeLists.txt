@@ -19,7 +19,7 @@ kde4_add_executable(sweeper ${sweeper_SRCS})
 
 target_link_libraries(sweeper ${KDE4_KIO_LIBS})
 
-install(TARGETS sweeper  DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS sweeper  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### install files ###############
