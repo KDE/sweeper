@@ -25,10 +25,11 @@
 
 int main(int argc, char *argv[])
 {
-   KAboutData aboutData("sweeper", 0, ki18n("Sweeper"), "1.0",
+   KAboutData aboutData("sweeper", 0, ki18n("Sweeper"), "1.2",
                         ki18n("Helps clean unwanted traces the user leaves on the system."),
-                        KAboutData::License_LGPL, ki18n("(c) 2003-2005, Ralf Hoelzer"));
-   
+                        KAboutData::License_LGPL, ki18n("(c) 2003-2005, Ralf Hoelzer"), KLocalizedString(),
+                        "http://utils.kde.org/projects/sweeper");
+
    aboutData.addAuthor(ki18n("Ralf Hoelzer"), ki18n("Original author"), "ralf@well.com");
    aboutData.addAuthor(ki18n("Brian S. Stephan"), ki18n("Maintainer"), "bssteph@irtonline.org");
    aboutData.addAuthor(ki18n("Benjamin Meyer"), ki18n("Thumbnail Cache"), "ben+kdeprivacy@meyerhome.net");
