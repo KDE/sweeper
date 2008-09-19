@@ -43,7 +43,7 @@ bool ClearThumbnailsAction::action()
 
    QDir thumbnailDir( QDir::homePath() + "/.thumbnails/normal");
    thumbnailDir.setFilter( QDir::Files );
-   QStringList entries = thumbnailDir.entryList();
+   const QStringList entries = thumbnailDir.entryList();
    for( QStringList::const_iterator it = entries.begin() ; it != entries.end() ; ++it) {
       if(!thumbnailDir.remove(*it)) {
          errMsg = i18n("A thumbnail could not be removed.");
@@ -52,8 +52,8 @@ bool ClearThumbnailsAction::action()
    }
 
    thumbnailDir.setPath(QDir::homePath() + "/.thumbnails/large");
-   entries = thumbnailDir.entryList();
-   for( QStringList::const_iterator it = entries.begin() ; it != entries.end() ; ++it) {
+   const QStringList entries2 = thumbnailDir.entryList();
+   for( QStringList::const_iterator it = entries2.begin() ; it != entries2.end() ; ++it) {
       if(!thumbnailDir.remove(*it)) {
          errMsg = i18n("A thumbnail could not be removed.");
          return false;
@@ -61,8 +61,8 @@ bool ClearThumbnailsAction::action()
    }
 
    thumbnailDir.setPath(QDir::homePath() + "/.thumbnails/fail");
-   entries = thumbnailDir.entryList();
-   for( QStringList::const_iterator it = entries.begin() ; it != entries.end() ; ++it) {
+   const QStringList entries3 = thumbnailDir.entryList();
+   for( QStringList::const_iterator it = entries3.begin() ; it != entries3.end() ; ++it) {
       if(!thumbnailDir.remove(*it)) {
          errMsg = i18n("A thumbnail could not be removed.");
          return false;
@@ -190,7 +190,7 @@ bool ClearFaviconsAction::action()
 
    favIconDir.setFilter( QDir::Files );
 
-   QStringList entries = favIconDir.entryList();
+   const QStringList entries = favIconDir.entryList();
 
    // erase all files in favicon directory...
    for( QStringList::const_iterator it = entries.begin() ; it != entries.end() ; ++it) {
