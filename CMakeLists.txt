@@ -12,6 +12,7 @@ set(sweeper_SRCS
 
 qt4_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
 		
+kde4_add_app_icon(sweeper_SRCS "${KDE4_INSTALL_DIR}/share/icons/oxygen/*/actions/trash-empty.png")
 
 kde4_add_ui_files(sweeper_SRCS sweeperdialog.ui )
 
