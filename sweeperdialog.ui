@@ -24,7 +24,7 @@
      </property>
      <widget class="QTreeWidget" name="privacyListView" >
       <property name="whatsThis" >
-       <string>Check all cleanup actions you would like to perform. These will be executed by pressing the button below</string>
+       <string>Check all cleanup actions you would like to perform. These will be executed by pressing the button below.</string>
       </property>
       <property name="alternatingRowColors" >
        <bool>true</bool>
