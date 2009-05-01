@@ -35,6 +35,7 @@
 #include <QDir>
 #include <kconfiggroup.h>
 #include <QProcess>
+#include <QLatin1String>
 
 bool ClearThumbnailsAction::action()
 {
@@ -178,7 +179,7 @@ bool ClearFaviconsAction::action()
    KBookmark bookmark = konqiBookmarks.first();
 
    while (!bookmark.isNull()) {
-      if ((bookmark.icon()).startsWith("favicons/")) {
+      if ((bookmark.icon()).startsWith(QLatin1String("favicons/"))) {
          // pick out the name, throw .png on the end, and store the filename
          QRegExp regex("favicons/(.*)");
          regex.indexIn(bookmark.icon(), 0);
