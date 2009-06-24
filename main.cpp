@@ -25,7 +25,7 @@
 
 int main(int argc, char *argv[])
 {
-   KAboutData aboutData("sweeper", 0, ki18n("Sweeper"), "1.3",
+   KAboutData aboutData("sweeper", 0, ki18n("Sweeper"), "1.4",
                         ki18n("Helps clean unwanted traces the user leaves on the system."),
                         KAboutData::License_LGPL, ki18n("(c) 2003-2005, Ralf Hoelzer"), KLocalizedString(),
                         "http://utils.kde.org/projects/sweeper");
