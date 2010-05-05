@@ -38,10 +38,20 @@ int main(int argc, char *argv[])
 
    // command line
    KCmdLineArgs::init(argc, argv, &aboutData);
-   KApplication a(true);
-   Sweeper *app = new Sweeper();
+   KCmdLineOptions options;
+   options.add("automatic", ki18n("Sweeps without user interaction"));
+   KCmdLineArgs::addCmdLineOptions(options);
+   KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 
-   app->show();
+   // Application 
+   KApplication a(true);
+   Sweeper *app;
+   if(args->isSet("automatic")) {
+      app = new Sweeper(true);
+   } else {
+      app = new Sweeper(false);
+      app->show();
+   }   
    return a.exec();
 }
 

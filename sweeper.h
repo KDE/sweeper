@@ -34,7 +34,8 @@ class Sweeper: public KXmlGuiWindow
    Q_OBJECT
    
    public:
-      Sweeper();
+      // if automatic is true, no user interaction is required
+      Sweeper(bool automatic);
       ~Sweeper();
       
    public slots:
@@ -67,6 +68,8 @@ class Sweeper: public KXmlGuiWindow
       QTreeWidgetItem *webbrowsingCLI;
 
       KConfigGroup m_privacyConfGroup;
+
+      bool m_automatic;
 };
 
 #endif

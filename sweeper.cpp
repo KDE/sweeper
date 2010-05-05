@@ -31,9 +31,10 @@
 #include <QtDBus/QtDBus>
 #include <kactioncollection.h>
 
-Sweeper::Sweeper()
+Sweeper::Sweeper(bool automatic)
    : KXmlGuiWindow(0)
    , m_privacyConfGroup(KSharedConfig::openConfig("kprivacyrc", KConfig::NoGlobals), "Cleaning")
+   , m_automatic(automatic)
 {
    QWidget *mainWidget = new QWidget(this);
    ui.setupUi(mainWidget);
@@ -66,6 +67,11 @@ Sweeper::Sweeper()
    QDBusConnection::sessionBus().registerObject("/ksweeper", this);
 
    load();
+
+   if(automatic) {
+      cleanup();
+      close();
+   }
 }
 
 
@@ -118,8 +124,10 @@ void Sweeper::selectNone()
 
 void Sweeper::cleanup()
 {
-   if (KMessageBox::warningContinueCancel(this, i18n("You are deleting data that is potentially valuable to you. Are you sure?")) != KMessageBox::Continue) {
-      return;
+   if (!m_automatic) {
+      if (KMessageBox::warningContinueCancel(this, i18n("You are deleting data that is potentially valuable to you. Are you sure?")) != KMessageBox::Continue) {
+         return;
+      }
    }
 
    ui.statusTextEdit->clear();
