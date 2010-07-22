@@ -3,7 +3,7 @@
 
   <!ENTITY sweeper "<application>Sweeper</application>">
   <!ENTITY kappname "&ksweeper;">
-  <!ENTITY package "kdebase">
+  <!ENTITY package "kdeutils">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE">
 ]>
