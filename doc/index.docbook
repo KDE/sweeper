@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+
+  <!ENTITY sweeper "<application>Sweeper</application>">
+  <!ENTITY kappname "&ksweeper;">
+  <!ENTITY package "kdeutils">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+
+<article lang="&language;">
+
+<articleinfo>
+<title>Sweeper</title>
+<authorgroup>
+<author>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
+
+<date>2010-07-23</date>
+<releaseinfo>&kde; 4.5</releaseinfo>
+
+<keywordset>
+<keyword>KDE</keyword>
+<keyword>privacy</keyword>
+<keyword>security</keyword>
+</keywordset>
+</articleinfo>
+
+<para>&sweeper; helps to clean unwanted traces users leave on the system.</para>
+
+<para>
+<screenshot>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="sweeper.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para>
+Check all cleanup actions you would like to perform using the <guibutton>Select All</guibutton>
+and <guibutton>Select None</guibutton> buttons or by selecting/deselecting individual
+items from the two groups <guilabel>General</guilabel> and <guilabel>Web Browsing</guilabel>
+</para>
+
+<para>
+If you are satisfied with your selection click the <guibutton>Clean Up</guibutton> button, 
+which immediately performs the cleanup actions you selected.
+</para>
+
+<note><para>
+&sweeper; deletes the cached data used by &kde; applications from the &kde; cache folder. 
+To see the location of this folder enter <userinput><command>kde4-config</command> 
+<option>--path cache</option></userinput> in &konsole;. Cleaning up your cached data with
+&sweeper; makes it only impossible to read them &eg; using a filemanager, but it is possible  
+to read the raw data, which is still on the disk, using a low level disk tool.
+</para>
+</note>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
