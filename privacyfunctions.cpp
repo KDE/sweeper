@@ -211,7 +211,7 @@ bool ClearFaviconsAction::action()
 bool ClearRecentApplicationAction::action()
 {
     QDBusMessage message =
-        QDBusMessage::createSignal("/kickoff/RecentAppDoc", "org.kde.plasma", "cleanRecentDocumentsAndDocuments");
+        QDBusMessage::createSignal("/kickoff/RecentAppDoc", "org.kde.plasma", "clearRecentDocumentsAndApplications");
     QDBusConnection::sessionBus().send(message);
 
     return true;
