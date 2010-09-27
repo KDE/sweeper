@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
    aboutData.addAuthor(ki18n("Brian S. Stephan"), ki18n("Maintainer"), "bssteph@irtonline.org");
    aboutData.addAuthor(ki18n("Benjamin Meyer"), ki18n("Thumbnail Cache"), "ben+kdeprivacy@meyerhome.net");
 
-   aboutData.setProgramIconName("trash-empty");
+   aboutData.setProgramIconName(QLatin1String( "trash-empty" ));
 
    // command line
    KCmdLineArgs::init(argc, argv, &aboutData);
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
    KCmdLineArgs::addCmdLineOptions(options);
    KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 
-   // Application 
+   // Application
    KApplication a(true);
    Sweeper *app;
    if(args->isSet("automatic")) {
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
    } else {
       app = new Sweeper(false);
       app->show();
-   }   
+   }
    return a.exec();
 }
 

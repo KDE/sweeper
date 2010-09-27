@@ -33,7 +33,7 @@
 
 Sweeper::Sweeper(bool automatic)
    : KXmlGuiWindow(0)
-   , m_privacyConfGroup(KSharedConfig::openConfig("kprivacyrc", KConfig::NoGlobals), "Cleaning")
+   , m_privacyConfGroup(KSharedConfig::openConfig(QLatin1String( "kprivacyrc" ), KConfig::NoGlobals), "Cleaning")
    , m_automatic(automatic)
 {
    QWidget *mainWidget = new QWidget(this);
@@ -44,7 +44,7 @@ Sweeper::Sweeper(bool automatic)
 
    KStandardAction::quit(this, SLOT(close()), actionCollection());
 
-   createGUI("sweeperui.rc");
+   createGUI(QLatin1String( "sweeperui.rc" ));
 
    setAutoSaveSettings();
 
@@ -64,7 +64,7 @@ Sweeper::Sweeper(bool automatic)
    connect(ui.selectNoneButton, SIGNAL(clicked()), SLOT(selectNone()));
 
    new KsweeperAdaptor(this);
-   QDBusConnection::sessionBus().registerObject("/ksweeper", this);
+   QDBusConnection::sessionBus().registerObject(QLatin1String( "/ksweeper" ), this);
 
    load();
 

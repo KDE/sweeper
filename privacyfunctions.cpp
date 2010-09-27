@@ -42,7 +42,7 @@ bool ClearThumbnailsAction::action()
    // http://freedesktop.org/Standards/Home
    // http://triq.net/~jens/thumbnail-spec/index.html
 
-   QDir thumbnailDir( QDir::homePath() + "/.thumbnails/normal");
+   QDir thumbnailDir( QDir::homePath() + QLatin1String( "/.thumbnails/normal" ));
    thumbnailDir.setFilter( QDir::Files );
    const QStringList entries = thumbnailDir.entryList();
    for( QStringList::const_iterator it = entries.begin() ; it != entries.end() ; ++it) {
@@ -52,7 +52,7 @@ bool ClearThumbnailsAction::action()
       }
    }
 
-   thumbnailDir.setPath(QDir::homePath() + "/.thumbnails/large");
+   thumbnailDir.setPath(QDir::homePath() + QLatin1String( "/.thumbnails/large" ));
    const QStringList entries2 = thumbnailDir.entryList();
    for( QStringList::const_iterator it = entries2.begin() ; it != entries2.end() ; ++it) {
       if(!thumbnailDir.remove(*it)) {
@@ -61,7 +61,7 @@ bool ClearThumbnailsAction::action()
       }
    }
 
-   thumbnailDir.setPath(QDir::homePath() + "/.thumbnails/fail");
+   thumbnailDir.setPath(QDir::homePath() + QLatin1String( "/.thumbnails/fail" ));
    const QStringList entries3 = thumbnailDir.entryList();
    for( QStringList::const_iterator it = entries3.begin() ; it != entries3.end() ; ++it) {
       if(!thumbnailDir.remove(*it)) {
@@ -75,22 +75,22 @@ bool ClearThumbnailsAction::action()
 
 bool ClearRunCommandHistoryAction::action()
 {
-   QDBusInterface krunner("org.kde.krunner", "/Interface", "org.kde.krunner.Interface");
-   QDBusReply<void> reply = krunner.call("clearHistory");
+   QDBusInterface krunner(QLatin1String( "org.kde.krunner" ), QLatin1String( "/Interface" ), QLatin1String( "org.kde.krunner.Interface" ));
+   QDBusReply<void> reply = krunner.call(QLatin1String( "clearHistory" ));
    return reply.isValid();
 }
 
 bool ClearAllCookiesAction::action()
 {
-   QDBusInterface mediamanager("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
-   QDBusReply<void> reply = mediamanager.call("deleteAllCookies");
+   QDBusInterface mediamanager(QLatin1String( "org.kde.kded" ), QLatin1String( "/modules/kcookiejar" ), QLatin1String( "org.kde.KCookieServer" ));
+   QDBusReply<void> reply = mediamanager.call(QLatin1String( "deleteAllCookies" ));
    return reply.isValid();
 }
 
 bool ClearAllCookiesPoliciesAction::action()
 {
    // load the config file and section
-   KConfig cfg("kcookiejarrc");
+   KConfig cfg(QLatin1String( "kcookiejarrc" ));
    KConfigGroup group = cfg.group("Cookie Policy");
 
    kDebug() << "removing all saved cookie policies" ;
@@ -98,16 +98,16 @@ bool ClearAllCookiesPoliciesAction::action()
    cfg.sync();
 
    // inform the cookie jar we pillaged it
-   QDBusInterface kcookiejar("org.kde.kded", "/modules/kcookiejar", "org.kde.KCookieServer");
-   QDBusReply<void> reply = kcookiejar.call("reloadPolicy");
+   QDBusInterface kcookiejar(QLatin1String( "org.kde.kded" ), QLatin1String( "/modules/kcookiejar" ), QLatin1String( "org.kde.KCookieServer" ));
+   QDBusReply<void> reply = kcookiejar.call(QLatin1String( "reloadPolicy" ));
 
    return reply.isValid();
 }
 
 bool ClearSavedClipboardContentsAction::action()
 {
-   if(!QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.klipper")) {
-      KConfig *c = new KConfig("klipperrc", KConfig::NoGlobals);
+   if(!QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String( "org.kde.klipper" ))) {
+      KConfig *c = new KConfig(QLatin1String( "klipperrc" ), KConfig::NoGlobals);
       KConfigGroup group(c, "General");
       group.deleteEntry("ClipboardData");
       c->sync();
@@ -115,8 +115,8 @@ bool ClearSavedClipboardContentsAction::action()
       delete c;
       return true;
    }
-   QDBusInterface klipper("org.kde.klipper", "/klipper", "org.kde.klipper.klipper");
-   QDBusReply<void> reply = klipper.call("clearClipboardHistory");
+   QDBusInterface klipper(QLatin1String( "org.kde.klipper" ), QLatin1String( "/klipper" ), QLatin1String( "org.kde.klipper.klipper" ));
+   QDBusReply<void> reply = klipper.call(QLatin1String( "clearClipboardHistory" ));
    return reply.isValid();
 }
 
@@ -125,7 +125,7 @@ bool ClearFormCompletionAction::action()
    bool status;
 
    // try to delete the file, if it exists
-   QFile completionFile(KStandardDirs::locateLocal("data", "khtml/formcompletions"));
+   QFile completionFile(KStandardDirs::locateLocal("data", QLatin1String( "khtml/formcompletions" )));
    (completionFile.exists() ? status = completionFile.remove() : status = true);
 
    if (!status) {
@@ -138,8 +138,8 @@ bool ClearFormCompletionAction::action()
 bool ClearWebCacheAction::action()
 {
    QStringList lst;
-   lst << "--clear-all";
-   return QProcess::startDetached(KStandardDirs::findExe("kio_http_cache_cleaner"),lst);
+   lst << QLatin1String( "--clear-all" );
+   return QProcess::startDetached(KStandardDirs::findExe(QLatin1String( "kio_http_cache_cleaner" )),lst);
 }
 
 bool ClearRecentDocumentsAction::action()
@@ -151,7 +151,7 @@ bool ClearRecentDocumentsAction::action()
 bool ClearWebHistoryAction::action()
 {
    // Clear the history from the memory of the running konquerors
-   QDBusMessage message = QDBusMessage::createSignal("/KonqHistoryManager", "org.kde.Konqueror.HistoryManager", "notifyClear" );
+   QDBusMessage message = QDBusMessage::createSignal(QLatin1String( "/KonqHistoryManager" ), QLatin1String( "org.kde.Konqueror.HistoryManager" ), QLatin1String( "notifyClear" ) );
    (void) QDBusConnection::sessionBus().send(message);
 
    // Delete the file
@@ -162,13 +162,13 @@ bool ClearWebHistoryAction::action()
 
 bool ClearFaviconsAction::action()
 {
-   QDir favIconDir(KGlobal::dirs()->saveLocation( "cache", "favicons/" ));
+   QDir favIconDir(KGlobal::dirs()->saveLocation( "cache", QLatin1String( "favicons/" ) ));
    QStringList saveTheseFavicons;
    KBookmarkManager* konqiBookmarkMgr;
 
    konqiBookmarkMgr =
       KBookmarkManager::managerForFile(KStandardDirs::locateLocal("data",
-            QLatin1String("konqueror/bookmarks.xml")), "konqueror");
+            QLatin1String("konqueror/bookmarks.xml")), QLatin1String( "konqueror" ));
    kDebug() << "saving the favicons that are in konqueror bookmarks" ;
    kDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() ;
 
@@ -181,10 +181,10 @@ bool ClearFaviconsAction::action()
    while (!bookmark.isNull()) {
       if ((bookmark.icon()).startsWith(QLatin1String("favicons/"))) {
          // pick out the name, throw .png on the end, and store the filename
-         QRegExp regex("favicons/(.*)");
+         QRegExp regex(QLatin1String( "favicons/(.*)" ));
          regex.indexIn(bookmark.icon(), 0);
-         kDebug() << "will save " << (regex.cap(1) + ".png") ;
-         saveTheseFavicons << (regex.cap(1) + ".png");
+         kDebug() << "will save " << (regex.cap(1) + QLatin1String( ".png" )) ;
+         saveTheseFavicons << (regex.cap(1) + QLatin1String( ".png" ));
       }
       bookmark = konqiBookmarks.next(bookmark);
    }
@@ -211,7 +211,7 @@ bool ClearFaviconsAction::action()
 bool ClearRecentApplicationAction::action()
 {
     QDBusMessage message =
-        QDBusMessage::createSignal("/kickoff/RecentAppDoc", "org.kde.plasma", "clearRecentDocumentsAndApplications");
+        QDBusMessage::createSignal(QLatin1String( "/kickoff/RecentAppDoc" ), QLatin1String( "org.kde.plasma" ), QLatin1String( "clearRecentDocumentsAndApplications" ));
     QDBusConnection::sessionBus().send(message);
 
     return true;
