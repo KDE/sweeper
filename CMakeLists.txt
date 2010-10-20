@@ -25,7 +25,7 @@ install(TARGETS sweeper  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### install files ###############
 
-install( FILES sweeper.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
+install( PROGRAMS sweeper.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
 install( FILES sweeperui.rc  DESTINATION ${DATA_INSTALL_DIR}/sweeper)
 install( FILES org.kde.sweeper.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
 
