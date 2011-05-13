@@ -1,5 +1,8 @@
 project(sweeper)
 
+find_package(KDE4)
+include( KDE4Defaults )
+include_directories(${KDE4_INCLUDES})
 
 ########### next target ###############
 
