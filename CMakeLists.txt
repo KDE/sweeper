@@ -32,3 +32,4 @@ install( PROGRAMS sweeper.desktop  DESTINATION ${XDG_APPS_INSTALL_DIR})
 install( FILES sweeperui.rc  DESTINATION ${DATA_INSTALL_DIR}/sweeper)
 install( FILES org.kde.sweeper.xml DESTINATION ${DBUS_INTERFACES_INSTALL_DIR} )
 
+add_subdirectory(doc)
