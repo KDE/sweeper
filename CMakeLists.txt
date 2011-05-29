@@ -1,8 +1,10 @@
 project(sweeper)
 
-find_package(KDE4)
-include( KDE4Defaults )
-include_directories(${KDE4_INCLUDES})
+if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
+    find_package(KDE4)
+    include( KDE4Defaults )
+    include_directories(${KDE4_INCLUDES})
+endif()
 
 ########### next target ###############
 
