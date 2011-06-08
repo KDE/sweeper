@@ -75,7 +75,7 @@ bool ClearThumbnailsAction::action()
 
 bool ClearRunCommandHistoryAction::action()
 {
-   QDBusInterface krunner(QLatin1String( "org.kde.krunner" ), QLatin1String( "/Interface" ), QLatin1String( "org.kde.krunner.Interface" ));
+   QDBusInterface krunner(QLatin1String( "org.kde.krunner" ), QLatin1String( "/App" ), QLatin1String( "org.kde.krunner.App" ));
    QDBusReply<void> reply = krunner.call(QLatin1String( "clearHistory" ));
    return reply.isValid();
 }
