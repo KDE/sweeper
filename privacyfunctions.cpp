@@ -157,6 +157,13 @@ bool ClearWebHistoryAction::action()
    // Delete the file
    const QString file = KStandardDirs::locateLocal("data", QLatin1String("konqueror/konq_history"));
    QFile::remove(file);
+
+   const QDBusMessage message2 = QDBusMessage::createSignal(QLatin1String( "/KonqUndoManager" ), QLatin1String( "org.kde.Konqueror.UndoManager" ), QLatin1String( "notifyRemove" ) );
+   (void) QDBusConnection::sessionBus().send(message2);
+
+   // Delete the file
+   const QString file2 = KStandardDirs::locateLocal("data", QLatin1String("konqueror/closeditems_saved"));
+   QFile::remove(file2);
    return true;
 }
 
