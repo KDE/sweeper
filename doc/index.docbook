@@ -8,7 +8,7 @@
   <!ENTITY % English "INCLUDE">
 ]>
 
-<article lang="&language;">
+<article id="sweeper" lang="&language;">
 
 <articleinfo>
 <title>Sweeper</title>
