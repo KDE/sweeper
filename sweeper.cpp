@@ -30,6 +30,7 @@
 #include <kmessagebox.h>
 #include <QtDBus/QtDBus>
 #include <kactioncollection.h>
+#include <KSharedConfig>
 
 Sweeper::Sweeper(bool automatic)
    : KXmlGuiWindow(0)

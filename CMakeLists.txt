@@ -1,22 +1,27 @@
+cmake_minimum_required(VERSION 2.8.12)
+
 project(sweeper)
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
-    find_package(KDE4)
-    include( KDE4Defaults )
-    include_directories(${KDE4_INCLUDES})
+include(FeatureSummary)
+find_package(Qt5 REQUIRED COMPONENTS Core DBus Widgets)
+find_package(ECM 1.7.0 NO_MODULE REQUIRED)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
-    add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
-    add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
+include(ECMAddAppIcon)
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings)
 
-    # If definitions like -D_GNU_SOURCE are needed for these checks they
-    # should be added to _KDE4_PLATFORM_DEFINITIONS when it is originally
-    # defined outside this file.  Here we include these definitions in
-    # CMAKE_REQUIRED_DEFINITIONS so they will be included in the build of
-    # checks below.
-    set( CMAKE_REQUIRED_DEFINITIONS ${_KDE4_PLATFORM_DEFINITIONS} )
-endif()
-
-########### next target ###############
+find_package(KF5 REQUIRED COMPONENTS
+    I18n
+    Crash
+    Config
+    ConfigWidgets
+    CoreAddons
+    DocTools
+    KDELibs4Support
+)
+include_directories (${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
 
 set(sweeper_SRCS 
    main.cpp 
@@ -25,15 +30,21 @@ set(sweeper_SRCS
    privacyaction.cpp ) 
 
 
-qt4_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
+qt5_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
 		
-kde4_add_app_icon(sweeper_SRCS "${KDE4_INSTALL_DIR}/share/icons/oxygen/*/actions/trash-empty.png")
+# file(GLOB ICONS_SRCS "${KDE4_INSTALL_DIR}/share/icons/oxygen/*/actions/trash-empty.png")
+# ecm_add_app_icon(sweeper_SRCS ICONS ${ICONS_SRCS})
 
-kde4_add_ui_files(sweeper_SRCS sweeperdialog.ui )
+ki18n_wrap_ui(sweeper_SRCS sweeperdialog.ui )
 
-kde4_add_executable(sweeper ${sweeper_SRCS})
+add_executable(sweeper ${sweeper_SRCS})
 
-target_link_libraries(sweeper ${KDE4_KIO_LIBS})
+target_link_libraries(sweeper
+   Qt5::Core
+   Qt5::DBus
+   Qt5::Widgets
+   KF5::KIOCore
+   KF5::KDELibs4Support)
 
 install(TARGETS sweeper  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 

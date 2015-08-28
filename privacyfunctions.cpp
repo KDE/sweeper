@@ -36,6 +36,7 @@
 #include <kconfiggroup.h>
 #include <QProcess>
 #include <QLatin1String>
+#include <QStandardPaths>
 
 bool ClearThumbnailsAction::action()
 {
@@ -125,7 +126,7 @@ bool ClearFormCompletionAction::action()
    bool status;
 
    // try to delete the file, if it exists
-   QFile completionFile(KStandardDirs::locateLocal("data", QLatin1String( "khtml/formcompletions" )));
+   QFile completionFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/khtml/formcompletions" ));
    (completionFile.exists() ? status = completionFile.remove() : status = true);
 
    if (!status) {
@@ -155,21 +156,21 @@ bool ClearWebHistoryAction::action()
    (void) QDBusConnection::sessionBus().send(message);
 
    // Delete the file
-   const QString file = KStandardDirs::locateLocal("data", QLatin1String("konqueror/konq_history"));
+   const QString file = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/konqueror/konq_history");
    QFile::remove(file);
 
    const QDBusMessage message2 = QDBusMessage::createSignal(QLatin1String( "/KonqUndoManager" ), QLatin1String( "org.kde.Konqueror.UndoManager" ), QLatin1String( "notifyRemove" ) );
    (void) QDBusConnection::sessionBus().send(message2);
 
    // Delete the file
-   const QString file2 = KStandardDirs::locateLocal("data", QLatin1String("konqueror/closeditems_saved"));
+   const QString file2 = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/konqueror/closeditems_saved");
    QFile::remove(file2);
    return true;
 }
 
 bool ClearFaviconsAction::action()
 {
-   QDir favIconDir(KGlobal::dirs()->saveLocation( "cache", QLatin1String( "favicons/" ) ));
+   QDir favIconDir(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QLatin1Char('/') + QLatin1String( "favicons/" ));
    QStringList saveTheseFavicons;
    KBookmarkManager* konqiBookmarkMgr;
 

@@ -18,16 +18,16 @@
 
 #include "sweeper.h"
 
-#include <kaboutdata.h>
+#include <k4aboutdata.h>
 #include <kapplication.h>
 #include <kcmdlineargs.h>
 #include <klocale.h>
 
 int main(int argc, char *argv[])
 {
-   KAboutData aboutData("sweeper", 0, ki18n("Sweeper"), "1.9",
+   K4AboutData aboutData("sweeper", 0, ki18n("Sweeper"), "1.9",
                         ki18n("Helps clean unwanted traces the user leaves on the system."),
-                        KAboutData::License_LGPL, ki18n("(c) 2003-2005, Ralf Hoelzer"), KLocalizedString(),
+                        K4AboutData::License_LGPL, ki18n("(c) 2003-2005, Ralf Hoelzer"), KLocalizedString(),
                         "http://utils.kde.org/projects/sweeper");
 
    aboutData.addAuthor(ki18n("Ralf Hoelzer"), ki18n("Original author"), "ralf@well.com");
