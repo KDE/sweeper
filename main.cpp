@@ -36,6 +36,8 @@ int main(int argc, char *argv[])
 
    aboutData.setProgramIconName(QLatin1String( "trash-empty" ));
 
+   KLocalizedString::setApplicationDomain("sweeper");
+
    // command line
    KCmdLineArgs::init(argc, argv, &aboutData);
    KCmdLineOptions options;
