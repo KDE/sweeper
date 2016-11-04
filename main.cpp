@@ -22,12 +22,19 @@
 #include <QCommandLineParser>
 
 #include <KAboutData>
+#include <Kdelibs4ConfigMigrator>
 #include <KLocalizedString>
 
 int main(int argc, char *argv[])
 {
    QApplication a(argc, argv);
    KLocalizedString::setApplicationDomain("sweeper");
+
+    Kdelibs4ConfigMigrator migrator(QStringLiteral("sweeper"));
+    migrator.setConfigFiles(QStringList() << QStringLiteral("sweeperrc"));
+    migrator.setConfigFiles(QStringList() << QStringLiteral("kprivacyrc"));
+    migrator.setUiFiles(QStringList() << QStringLiteral("sweeperui.rc"));
+    migrator.migrate();
 
    KAboutData aboutData(QStringLiteral("sweeper"), i18n("Sweeper"),
                         QStringLiteral("1.9"),
