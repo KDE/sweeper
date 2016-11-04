@@ -12,14 +12,23 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 
+add_definitions(
+    -DQT_NO_CAST_TO_ASCII
+    -DQT_NO_CAST_FROM_ASCII
+    -DQT_NO_URL_CAST_FROM_STRING
+)
+
 find_package(KF5 REQUIRED COMPONENTS
-    I18n
+    Bookmarks
     Crash
     Config
     ConfigWidgets
     CoreAddons
     DocTools
-    KDELibs4Support
+    I18n
+    KIO
+    TextWidgets
+    XmlGui
 )
 include_directories (${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
 
@@ -47,8 +56,12 @@ target_link_libraries(sweeper
    Qt5::Core
    Qt5::DBus
    Qt5::Widgets
+   KF5::Bookmarks
+   KF5::I18n
    KF5::KIOCore
-   KF5::KDELibs4Support)
+   KF5::TextWidgets
+   KF5::XmlGui
+)
 
 install(TARGETS sweeper  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
