@@ -23,7 +23,6 @@
 #include <ktoolinvocation.h>
 #include <kconfig.h>
 #include <kglobal.h>
-#include <kdebug.h>
 #include <krecentdocument.h>
 #include <kstandarddirs.h>
 #include <kbookmarkmanager.h>
@@ -94,7 +93,7 @@ bool ClearAllCookiesPoliciesAction::action()
    KConfig cfg(QLatin1String( "kcookiejarrc" ));
    KConfigGroup group = cfg.group("Cookie Policy");
 
-   kDebug() << "removing all saved cookie policies" ;
+   qDebug() << "removing all saved cookie policies" ;
    group.deleteEntry("CookieDomainAdvice");
    cfg.sync();
 
@@ -177,8 +176,8 @@ bool ClearFaviconsAction::action()
    konqiBookmarkMgr =
       KBookmarkManager::managerForFile(KStandardDirs::locateLocal("data",
             QLatin1String("konqueror/bookmarks.xml")), QLatin1String( "konqueror" ));
-   kDebug() << "saving the favicons that are in konqueror bookmarks" ;
-   kDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() ;
+   qDebug() << "saving the favicons that are in konqueror bookmarks" ;
+   qDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() ;
 
    // get the entire slew of bookmarks
    KBookmarkGroup konqiBookmarks = konqiBookmarkMgr->root();
@@ -191,7 +190,7 @@ bool ClearFaviconsAction::action()
          // pick out the name, throw .png on the end, and store the filename
          QRegExp regex(QLatin1String( "favicons/(.*)" ));
          regex.indexIn(bookmark.icon(), 0);
-         kDebug() << "will save " << (regex.cap(1) + QLatin1String( ".png" )) ;
+         qDebug() << "will save " << (regex.cap(1) + QLatin1String( ".png" )) ;
          saveTheseFavicons << (regex.cap(1) + QLatin1String( ".png" ));
       }
       bookmark = konqiBookmarks.next(bookmark);
@@ -205,7 +204,7 @@ bool ClearFaviconsAction::action()
    for( QStringList::const_iterator it = entries.begin() ; it != entries.end() ; ++it) {
       // ...if we're not supposed to save them, of course
       if (!saveTheseFavicons.contains(*it)) {
-         kDebug() << "removing " << *it ;
+         qDebug() << "removing " << *it ;
          if(!favIconDir.remove(*it)) {
             errMsg = i18n("A favicon could not be removed.");
             return false;
