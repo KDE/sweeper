@@ -23,6 +23,10 @@ find_package(KF5 REQUIRED COMPONENTS
 )
 include_directories (${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
 
+configure_file(config-sweeper.h.cmake
+    ${CMAKE_CURRENT_BINARY_DIR}/config-sweeper.h
+)
+
 set(sweeper_SRCS 
    main.cpp 
    sweeper.cpp 

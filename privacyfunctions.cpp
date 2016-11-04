@@ -22,11 +22,8 @@
 
 #include <ktoolinvocation.h>
 #include <kconfig.h>
-#include <kglobal.h>
 #include <krecentdocument.h>
-#include <kstandarddirs.h>
 #include <kbookmarkmanager.h>
-#include <klocale.h>
 #include <QtDBus/QtDBus>
 
 #include <qstringlist.h>
@@ -36,6 +33,8 @@
 #include <QProcess>
 #include <QLatin1String>
 #include <QStandardPaths>
+
+#include "config-sweeper.h"
 
 bool ClearThumbnailsAction::action()
 {
@@ -139,7 +138,7 @@ bool ClearWebCacheAction::action()
 {
    QStringList lst;
    lst << QLatin1String( "--clear-all" );
-   return QProcess::startDetached(KStandardDirs::findExe(QLatin1String( "kio_http_cache_cleaner" )),lst);
+   return QProcess::startDetached(QFile::decodeName(KDE_INSTALL_FULL_LIBEXECDIR_KF5 "/kio_http_cache_cleaner"), lst);
 }
 
 bool ClearRecentDocumentsAction::action()
@@ -173,9 +172,11 @@ bool ClearFaviconsAction::action()
    QStringList saveTheseFavicons;
    KBookmarkManager* konqiBookmarkMgr;
 
+   const QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+      + QLatin1String("/konqueror/bookmarks.xml");
+   QDir().mkpath(path);
    konqiBookmarkMgr =
-      KBookmarkManager::managerForFile(KStandardDirs::locateLocal("data",
-            QLatin1String("konqueror/bookmarks.xml")), QLatin1String( "konqueror" ));
+      KBookmarkManager::managerForFile(path, QStringLiteral("konqueror"));
    qDebug() << "saving the favicons that are in konqueror bookmarks" ;
    qDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() ;
 
