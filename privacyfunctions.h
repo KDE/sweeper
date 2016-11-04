@@ -23,7 +23,8 @@
 
 #include "privacyaction.h"
 
-#include <klocale.h>
+#include <KLocalizedString>
+
 
 /**
 @author Ralf Hoelzer
