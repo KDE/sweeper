@@ -18,37 +18,43 @@
 
 #include "sweeper.h"
 
-#include <k4aboutdata.h>
-#include <kapplication.h>
-#include <kcmdlineargs.h>
-#include <klocale.h>
+#include <QApplication>
+#include <QCommandLineParser>
+
+#include <KAboutData>
+#include <KLocalizedString>
 
 int main(int argc, char *argv[])
 {
-   K4AboutData aboutData("sweeper", 0, ki18n("Sweeper"), "1.9",
-                        ki18n("Helps clean unwanted traces the user leaves on the system."),
-                        K4AboutData::License_LGPL, ki18n("(c) 2003-2005, Ralf Hoelzer"), KLocalizedString(),
-                        "http://utils.kde.org/projects/sweeper");
-
-   aboutData.addAuthor(ki18n("Ralf Hoelzer"), ki18n("Original author"), "ralf@well.com");
-   aboutData.addAuthor(ki18n("Brian S. Stephan"), ki18n("Maintainer"), "bssteph@irtonline.org");
-   aboutData.addAuthor(ki18n("Benjamin Meyer"), ki18n("Thumbnail Cache"), "ben+kdeprivacy@meyerhome.net");
-
-   aboutData.setProgramIconName(QLatin1String( "trash-empty" ));
-
+   QApplication a(argc, argv);
    KLocalizedString::setApplicationDomain("sweeper");
 
+   KAboutData aboutData(QStringLiteral("sweeper"), i18n("Sweeper"),
+                        QStringLiteral("1.9"),
+                        i18n("Helps clean unwanted traces the user leaves on the system."),
+                        KAboutLicense::LGPL,
+                        i18n("(c) 2003-2005, Ralf Hoelzer"),
+                        QString(),
+                        QStringLiteral("http://utils.kde.org/projects/sweeper"));
+
+   aboutData.addAuthor(i18n("Ralf Hoelzer"), i18n("Original author"), QStringLiteral("ralf@well.com"));
+   aboutData.addAuthor(i18n("Brian S. Stephan"), i18n("Maintainer"), QStringLiteral("bssteph@irtonline.org"));
+   aboutData.addAuthor(i18n("Benjamin Meyer"), i18n("Thumbnail Cache"), QStringLiteral("ben+kdeprivacy@meyerhome.net"));
+
    // command line
-   KCmdLineArgs::init(argc, argv, &aboutData);
-   KCmdLineOptions options;
-   options.add("automatic", ki18n("Sweeps without user interaction"));
-   KCmdLineArgs::addCmdLineOptions(options);
-   KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+   QCommandLineParser parser;
+   KAboutData::setApplicationData(aboutData);
+   parser.addVersionOption();
+   parser.addHelpOption();
+   parser.addOption(QCommandLineOption(QStringLiteral("automatic"),
+                    i18n("Sweeps without user interaction")));
+   aboutData.setupCommandLine(&parser);
+   parser.process(a);
+   aboutData.processCommandLine(&parser);
 
    // Application
-   KApplication a(true);
    Sweeper *app;
-   if(args->isSet("automatic")) {
+   if(parser.isSet(QStringLiteral("automatic"))) {
       app = new Sweeper(true);
    } else {
       app = new Sweeper(false);
