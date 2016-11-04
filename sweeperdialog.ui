@@ -53,14 +53,14 @@
    <item>
     <layout class="QHBoxLayout" >
      <item>
-      <widget class="KPushButton" name="selectAllButton" >
+      <widget class="QPushButton" name="selectAllButton" >
        <property name="text" >
         <string>Select &amp;All</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="KPushButton" name="selectNoneButton" >
+      <widget class="QPushButton" name="selectNoneButton" >
        <property name="text" >
         <string>Select &amp;None</string>
        </property>
@@ -83,7 +83,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="KPushButton" name="cleanupButton" >
+      <widget class="QPushButton" name="cleanupButton" >
        <property name="whatsThis" >
         <string>Immediately performs the cleanup actions selected above</string>
        </property>
@@ -98,18 +98,12 @@
  </widget>
   <customwidgets>
   <customwidget>
-   <class>KPushButton</class>
-   <extends>QPushButton</extends>
-   <header>kpushbutton.h</header>
-  </customwidget>
-  <customwidget>
    <class>KTextEdit</class>
    <extends>QTextEdit</extends>
    <header>ktextedit.h</header>
   </customwidget>
  </customwidgets>
  <includes>
-  <include location="local" >kpushbutton.h</include>
   <include location="local" >ktextedit.h</include>
  </includes>
  <resources/>
