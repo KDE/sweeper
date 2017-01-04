@@ -1,6 +1,6 @@
 [Desktop Entry]
 X-DocPath=
-Icon=trash-empty
+Icon=sweeper
 Exec=sweeper
 Type=Application
 Terminal=false
