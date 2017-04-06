@@ -20,6 +20,7 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QIcon>
 
 #include <KAboutData>
 #include <Kdelibs4ConfigMigrator>
@@ -51,6 +52,8 @@ int main(int argc, char *argv[])
    // command line
    QCommandLineParser parser;
    KAboutData::setApplicationData(aboutData);
+   a.setWindowIcon(QIcon::fromTheme(QLatin1String("trash-empty")));
+
    parser.addVersionOption();
    parser.addHelpOption();
    parser.addOption(QCommandLineOption(QStringLiteral("automatic"),
