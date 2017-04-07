@@ -83,9 +83,12 @@ bool ClearRunCommandHistoryAction::action()
 
 bool ClearAllCookiesAction::action()
 {
-   QDBusInterface mediamanager(QLatin1String( "org.kde.kded" ), QLatin1String( "/modules/kcookiejar" ), QLatin1String( "org.kde.KCookieServer" ));
-   QDBusReply<void> reply = mediamanager.call(QLatin1String( "deleteAllCookies" ));
-   return reply.isValid();
+    QDBusInterface cookiejar(QStringLiteral("org.kde.kcookiejar5"),
+        QStringLiteral("/modules/kcookiejar" ),
+        QStringLiteral("org.kde.KCookieServer"),
+        QDBusConnection::sessionBus());
+    QDBusReply<void> reply = cookiejar.call(QStringLiteral("deleteAllCookies"));
+    return reply.isValid();
 }
 
 bool ClearAllCookiesPoliciesAction::action()
