@@ -38,10 +38,10 @@ class Sweeper: public KXmlGuiWindow
       Sweeper(bool automatic);
       ~Sweeper();
       
-   public slots:
+   public Q_SLOTS:
       void cleanup();
       
-   private slots:
+   private Q_SLOTS:
       void selectAll();
       void selectNone();
       
