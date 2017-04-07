@@ -153,8 +153,8 @@ void Sweeper::InitActions() {
     // store all entries in a list for easy access later on
    checklist.append(new ClearSavedClipboardContentsAction(generalCLI));
    checklist.append(new ClearRecentDocumentsAction(generalCLI));
-#ifdef Q_WS_X11
    checklist.append(new ClearRunCommandHistoryAction(generalCLI));
+#ifdef Q_WS_X11
    checklist.append( new ClearRecentApplicationAction( generalCLI ) );
 #endif
    checklist.append(new ClearThumbnailsAction(generalCLI));

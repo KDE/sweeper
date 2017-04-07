@@ -74,9 +74,11 @@ bool ClearThumbnailsAction::action()
 
 bool ClearRunCommandHistoryAction::action()
 {
-   QDBusInterface krunner(QLatin1String( "org.kde.krunner" ), QLatin1String( "/App" ), QLatin1String( "org.kde.krunner.App" ));
-   QDBusReply<void> reply = krunner.call(QLatin1String( "clearHistory" ));
-   return reply.isValid();
+    KConfig cfg(QLatin1String("krunnerrc"));
+    KConfigGroup configGroup = cfg.group("General");
+    configGroup.writeEntry("history", QStringList());
+    configGroup.sync();
+    return true;
 }
 
 bool ClearAllCookiesAction::action()
