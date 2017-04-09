@@ -93,17 +93,19 @@ bool ClearAllCookiesAction::action()
 
 bool ClearAllCookiesPoliciesAction::action()
 {
-   // load the config file and section
-   KConfig cfg(QLatin1String( "kcookiejarrc" ));
-   KConfigGroup group = cfg.group("Cookie Policy");
+    // load the config file and section
+    KConfig cfg(QLatin1String( "kcookiejarrc" ));
+    KConfigGroup group = cfg.group("Cookie Policy");
 
-   qDebug() << "removing all saved cookie policies" ;
-   group.deleteEntry("CookieDomainAdvice");
-   cfg.sync();
+    qDebug() << "removing all saved cookie policies" ;
+    group.deleteEntry("CookieDomainAdvice");
+    cfg.sync();
 
-   // inform the cookie jar we pillaged it
-   QDBusInterface kcookiejar(QLatin1String( "org.kde.kded" ), QLatin1String( "/modules/kcookiejar" ), QLatin1String( "org.kde.KCookieServer" ));
-   QDBusReply<void> reply = kcookiejar.call(QLatin1String( "reloadPolicy" ));
+    // inform the cookie jar we pillaged it
+    QDBusInterface kcookiejar(QStringLiteral("org.kde.kcookiejar5" ),
+        QStringLiteral("/modules/kcookiejar" ),
+        QStringLiteral( "org.kde.KCookieServer" ));
+    QDBusReply<void> reply = kcookiejar.call(QStringLiteral("reloadPolicy"));
 
    return reply.isValid();
 }
