@@ -154,9 +154,9 @@ void Sweeper::InitActions() {
    checklist.append(new ClearSavedClipboardContentsAction(generalCLI));
    checklist.append(new ClearRecentDocumentsAction(generalCLI));
    checklist.append(new ClearRunCommandHistoryAction(generalCLI));
-#ifdef Q_WS_X11
-   checklist.append( new ClearRecentApplicationAction( generalCLI ) );
-#endif
+   if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.ActivityManager"))) {
+        checklist.append( new ClearRecentApplicationAction( generalCLI ) );
+   }
    checklist.append(new ClearThumbnailsAction(generalCLI));
 
    checklist.append(new ClearAllCookiesAction(webbrowsingCLI));

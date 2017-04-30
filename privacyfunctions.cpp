@@ -25,6 +25,10 @@
 #include <KConfigGroup>
 #include <KRecentDocument>
 #include <KToolInvocation>
+#include <KActivities/Stats/Cleaning>
+#include <KActivities/Stats/ResultSet>
+#include <KActivities/Stats/Terms>
+
 
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
@@ -38,6 +42,11 @@
 #include <QStringList>
 
 #include "config-sweeper.h"
+
+namespace KAStats = KActivities::Stats;
+
+using namespace KAStats;
+using namespace KAStats::Terms;
 
 bool ClearThumbnailsAction::action()
 {
@@ -153,6 +162,13 @@ bool ClearWebCacheAction::action()
 
 bool ClearRecentDocumentsAction::action()
 {
+   auto query = UsedResources
+               | Agent::any()
+               | Type::any()
+               | Url::file();
+
+   KAStats::forgetResources(query);
+
    KRecentDocument::clear();
    return KRecentDocument::recentDocuments().isEmpty();
 }
@@ -228,9 +244,11 @@ bool ClearFaviconsAction::action()
 
 bool ClearRecentApplicationAction::action()
 {
-    QDBusMessage message =
-        QDBusMessage::createSignal(QLatin1String( "/kickoff/RecentAppDoc" ), QLatin1String( "org.kde.plasma" ), QLatin1String( "clearRecentDocumentsAndApplications" ));
-    QDBusConnection::sessionBus().send(message);
+    auto query = UsedResources
+                | Agent::any()
+                | Type::any()
+                | Url::startsWith(QStringLiteral("applications:"));
+    KAStats::forgetResources(query);
 
     return true;
 }

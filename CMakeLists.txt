@@ -19,6 +19,7 @@ add_definitions(
 )
 
 find_package(KF5 5.23.0 REQUIRED COMPONENTS
+    ActivitiesStats
     Bookmarks
     Crash
     Config
@@ -56,6 +57,7 @@ target_link_libraries(sweeper
    Qt5::Core
    Qt5::DBus
    Qt5::Widgets
+   KF5::ActivitiesStats
    KF5::Bookmarks
    KF5::Crash
    KF5::I18n
