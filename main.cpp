@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
    // command line
    QCommandLineParser parser;
    KAboutData::setApplicationData(aboutData);
-   a.setWindowIcon(QIcon::fromTheme(QLatin1String("trash-empty")));
+   a.setWindowIcon(QIcon::fromTheme(QStringLiteral("trash-empty")));
 
    parser.addVersionOption();
    parser.addHelpOption();

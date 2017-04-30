@@ -38,7 +38,7 @@ class ClearAllCookiesAction : public PrivacyAction
                          i18n("Clears all stored cookies set by websites")) { }
 
       bool action();
-      /* reimp */ QString configKey() const { return QLatin1String( "ClearAllCookies" ); }
+      /* reimp */ QString configKey() const { return QStringLiteral("ClearAllCookies"); }
 };
 
 class ClearAllCookiesPoliciesAction : public PrivacyAction
@@ -48,7 +48,7 @@ class ClearAllCookiesPoliciesAction : public PrivacyAction
          : PrivacyAction(parent, i18n("Cookie Policies"),
                          i18n("Clears the cookie policies for all visited websites")) { }
       bool action();
-      /* reimp */ QString configKey() const { return QLatin1String( "ClearAllCookiesPolicies" ); }
+      /* reimp */ QString configKey() const { return QStringLiteral("ClearAllCookiesPolicies"); }
 };
 
 class ClearSavedClipboardContentsAction : public PrivacyAction
@@ -58,7 +58,7 @@ class ClearSavedClipboardContentsAction : public PrivacyAction
          : PrivacyAction(parent, i18n("Saved Clipboard Contents"),
                          i18n("Clears the clipboard contents stored by Klipper")) { }
       bool action();
-      /* reimp */ QString configKey() const { return QLatin1String( "ClearSavedClipboardContents" ); }
+      /* reimp */ QString configKey() const { return QStringLiteral("ClearSavedClipboardContents"); }
 };
 
 class ClearThumbnailsAction : public PrivacyAction
@@ -68,7 +68,7 @@ class ClearThumbnailsAction : public PrivacyAction
          : PrivacyAction(parent, i18n("Thumbnail Cache"),
                          i18n("Clears all cached thumbnails")) { }
       bool action();
-      /* reimp */ QString configKey() const { return QLatin1String( "ClearThumbnails" ); }
+      /* reimp */ QString configKey() const { return QStringLiteral("ClearThumbnails"); }
 };
 
 class ClearRunCommandHistoryAction : public PrivacyAction
@@ -78,7 +78,7 @@ class ClearRunCommandHistoryAction : public PrivacyAction
          : PrivacyAction(parent, i18n("Run Command History"),
                          i18n("Clears the history of commands run through the Run Command tool on the desktop")) { }
       bool action();
-      /* reimp */ QString configKey() const { return QLatin1String( "ClearRunCommandHistory" ); }
+      /* reimp */ QString configKey() const { return QStringLiteral("ClearRunCommandHistory"); }
 };
 
 class ClearFormCompletionAction : public PrivacyAction
@@ -88,7 +88,7 @@ class ClearFormCompletionAction : public PrivacyAction
          : PrivacyAction(parent, i18n("Form Completion Entries"),
                          i18n("Clears values which were entered into forms on websites")) { }
       bool action();
-      /* reimp */ QString configKey() const { return QLatin1String( "ClearFormCompletion" ); }
+      /* reimp */ QString configKey() const { return QStringLiteral("ClearFormCompletion"); }
 };
 
 class ClearWebHistoryAction : public PrivacyAction
@@ -98,7 +98,7 @@ class ClearWebHistoryAction : public PrivacyAction
          : PrivacyAction(parent, i18n("Web History"),
                          i18n("Clears the history of visited websites")) { }
       bool action();
-      /* reimp */ QString configKey() const { return QLatin1String( "ClearWebHistory" ); }
+      /* reimp */ QString configKey() const { return QStringLiteral("ClearWebHistory"); }
 };
 
 class ClearWebCacheAction : public PrivacyAction
@@ -108,7 +108,7 @@ class ClearWebCacheAction : public PrivacyAction
          : PrivacyAction(parent, i18n("Web Cache"),
                          i18n("Clears the temporary cache of websites visited")) { }
       bool action();
-      /* reimp */ QString configKey() const { return QLatin1String( "ClearWebCache" ); }
+      /* reimp */ QString configKey() const { return QStringLiteral("ClearWebCache"); }
 };
 
 class ClearRecentDocumentsAction : public PrivacyAction
@@ -118,7 +118,7 @@ class ClearRecentDocumentsAction : public PrivacyAction
          : PrivacyAction(parent, i18n("Recent Documents"),
                          i18n("Clears the list of recently used documents from the KDE applications menu")) { }
       bool action();
-      /* reimp */ QString configKey() const { return QLatin1String( "ClearRecentDocuments" ); }
+      /* reimp */ QString configKey() const { return QStringLiteral("ClearRecentDocuments"); }
 };
 
 class ClearFaviconsAction : public PrivacyAction
@@ -128,7 +128,7 @@ class ClearFaviconsAction : public PrivacyAction
          : PrivacyAction(parent, i18n("Favorite Icons"),
                          i18n("Clears the FavIcons cached from visited websites")) { }
       bool action();
-      /* reimp */ QString configKey() const { return QLatin1String( "ClearFavIcons" ); }
+      /* reimp */ QString configKey() const { return QStringLiteral("ClearFavIcons"); }
 };
 
 class ClearRecentApplicationAction : public PrivacyAction
@@ -138,7 +138,7 @@ class ClearRecentApplicationAction : public PrivacyAction
          : PrivacyAction(parent, i18n("Recent Applications"),
                          i18n("Clears the list of recently used applications from KDE menu")) { }
       bool action();
-      /* reimp */ QString configKey() const { return QLatin1String( "ClearQuickStartMenu" ); }
+      /* reimp */ QString configKey() const { return QStringLiteral("ClearQuickStartMenu"); }
 };
 
 
