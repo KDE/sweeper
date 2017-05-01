@@ -32,6 +32,7 @@
 #include <kconfiggroup.h>
 #include <QProcess>
 #include <QLatin1String>
+#include <QRegularExpression>
 #include <QStandardPaths>
 
 #include "config-sweeper.h"
@@ -196,10 +197,10 @@ bool ClearFaviconsAction::action()
    while (!bookmark.isNull()) {
       if ((bookmark.icon()).startsWith(QLatin1String("favicons/"))) {
          // pick out the name, throw .png on the end, and store the filename
-         QRegExp regex(QLatin1String( "favicons/(.*)" ));
-         regex.indexIn(bookmark.icon(), 0);
-         qDebug() << "will save " << (regex.cap(1)) ;
-         saveTheseFavicons << (regex.cap(1));
+         QRegularExpression regex(QStringLiteral("favicons/(.*)"));
+         QRegularExpressionMatch match = regex.match(bookmark.icon());
+         qDebug() << "will save " << (match.captured(1)) ;
+         saveTheseFavicons << (match.captured(1));
       }
       bookmark = konqiBookmarks.next(bookmark);
    }
