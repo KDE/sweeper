@@ -175,7 +175,7 @@ bool ClearWebHistoryAction::action()
 
 bool ClearFaviconsAction::action()
 {
-   QDir favIconDir(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QLatin1Char('/') + QLatin1String( "favicons/" ));
+   QDir favIconDir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + QLatin1Char('/') + QLatin1String( "favicons/" ));
    QStringList saveTheseFavicons;
    KBookmarkManager* konqiBookmarkMgr;
 
@@ -194,12 +194,12 @@ bool ClearFaviconsAction::action()
    KBookmark bookmark = konqiBookmarks.first();
 
    while (!bookmark.isNull()) {
-      if ((bookmark.icon()).startsWith(QStringLiteral("favicons/"))) {
+      if ((bookmark.icon()).startsWith(QLatin1String("favicons/"))) {
          // pick out the name, throw .png on the end, and store the filename
          QRegExp regex(QLatin1String( "favicons/(.*)" ));
          regex.indexIn(bookmark.icon(), 0);
-         qDebug() << "will save " << (regex.cap(1) + QLatin1String( ".png" )) ;
-         saveTheseFavicons << (regex.cap(1) + QLatin1String( ".png" ));
+         qDebug() << "will save " << (regex.cap(1)) ;
+         saveTheseFavicons << (regex.cap(1));
       }
       bookmark = konqiBookmarks.next(bookmark);
    }
