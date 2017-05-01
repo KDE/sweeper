@@ -18,7 +18,7 @@ add_definitions(
     -DQT_NO_URL_CAST_FROM_STRING
 )
 
-find_package(KF5 REQUIRED COMPONENTS
+find_package(KF5 5.15.0 REQUIRED COMPONENTS
     Bookmarks
     Crash
     Config
@@ -57,6 +57,7 @@ target_link_libraries(sweeper
    Qt5::DBus
    Qt5::Widgets
    KF5::Bookmarks
+   KF5::Crash
    KF5::I18n
    KF5::KIOCore
    KF5::TextWidgets

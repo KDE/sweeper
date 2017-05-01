@@ -23,6 +23,7 @@
 #include <QIcon>
 
 #include <KAboutData>
+#include <KCrash>
 #include <Kdelibs4ConfigMigrator>
 #include <KLocalizedString>
 
@@ -61,6 +62,8 @@ int main(int argc, char *argv[])
    aboutData.setupCommandLine(&parser);
    parser.process(a);
    aboutData.processCommandLine(&parser);
+
+   KCrash::initialize();
 
    // Application
    Sweeper *app;
