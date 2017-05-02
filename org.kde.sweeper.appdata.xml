@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<component type="desktop">
+  <id>org.kde.sweeper.desktop</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>LGPL-2.1+</project_license>
+  <name>Sweeper</name>
+  <summary>System cleaning utility</summary>
+  <description>
+    <p>
+      Sweeper helps to clean unwanted traces the user leaves on the system. It
+      can remove cookies and clean out caches, for example.
+    </p>
+  </description>
+  <url type="homepage">http://utils.kde.org/projects/sweeper/</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=sweeper</url>
+  <url type="help">http://docs.kde.org/?application=sweeper</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>http://kde.org/images/screenshots/sweeper.png</image>
+    </screenshot>
+  </screenshots>
+  <project_group>KDE</project_group>
+  <provides>
+    <binary>sweeper</binary>
+  </provides>
+</component>

@@ -72,6 +72,7 @@ install(TARGETS sweeper  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 install( PROGRAMS org.kde.sweeper.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
 install( FILES sweeperui.rc  DESTINATION ${KXMLGUI_INSTALL_DIR}/sweeper)
 install( FILES org.kde.sweeper.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
+install( FILES org.kde.sweeper.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 add_subdirectory(doc)
 
