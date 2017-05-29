@@ -131,4 +131,5 @@ GenericName[wa]=Netieu do sistinme
 GenericName[x-test]=xxSystem Cleanerxx
 GenericName[zh_CN]=系统清理器
 GenericName[zh_TW]=系統清除器
+Comment=Helps to clean unwanted traces the user leaves on the system and to regain disk space removing unused temporary files
 X-DBUS-ServiceName=org.kde.sweeper
