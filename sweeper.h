@@ -19,8 +19,8 @@
 #ifndef SWEEPER_H
 #define SWEEPER_H
 
-#include <kconfiggroup.h>
-#include <kxmlguiwindow.h>
+#include <KConfigGroup>
+#include <KXmlGuiWindow>
 
 #include <QLinkedList>
 

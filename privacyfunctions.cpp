@@ -20,20 +20,20 @@
 
 #include "privacyfunctions.h"
 
-#include <ktoolinvocation.h>
-#include <kconfig.h>
-#include <krecentdocument.h>
-#include <kbookmarkmanager.h>
-#include <QtDBus/QtDBus>
+#include <KBookmarkManager>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KRecentDocument>
+#include <KToolInvocation>
 
-#include <qstringlist.h>
-#include <QFile>
 #include <QDir>
-#include <kconfiggroup.h>
-#include <QProcess>
+#include <QFile>
 #include <QLatin1String>
+#include <QProcess>
 #include <QRegularExpression>
 #include <QStandardPaths>
+#include <QStringList>
+#include <QtDBus>
 
 #include "config-sweeper.h"
 
