@@ -18,7 +18,7 @@ add_definitions(
     -DQT_NO_URL_CAST_FROM_STRING
 )
 
-find_package(KF5 5.15.0 REQUIRED COMPONENTS
+find_package(KF5 5.23.0 REQUIRED COMPONENTS
     Bookmarks
     Crash
     Config

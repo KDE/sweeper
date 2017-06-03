@@ -31,39 +31,35 @@ class QTreeWidgetItem;
 
 class Sweeper: public KXmlGuiWindow
 {
-   Q_OBJECT
-   
    public:
       // if automatic is true, no user interaction is required
       Sweeper(bool automatic);
       ~Sweeper();
-      
-   public Q_SLOTS:
+
       void cleanup();
-      
-   private Q_SLOTS:
+
+   private:
       void selectAll();
       void selectNone();
-      
-   private:
+
       /**
        * methods
        */
       void load();
       void save();
-      
+
       /**
        * Set up all the actions we are going to manage.
        */
       void InitActions();
-      
+
       /**
        * attributes
        */
       Ui::SweeperDialog ui;
-      
+
       QLinkedList<PrivacyAction*> checklist;
-      
+
       QTreeWidgetItem *generalCLI;
       QTreeWidgetItem *webbrowsingCLI;
 

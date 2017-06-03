@@ -22,12 +22,12 @@
 #include "privacyfunctions.h"
 #include "sweeperadaptor.h"
 
-#include <kstandardaction.h>
-#include <kconfig.h>
-#include <kmessagebox.h>
-#include <QtDBus/QtDBus>
-#include <kactioncollection.h>
+#include <KActionCollection>
+#include <KConfig>
+#include <KMessageBox>
 #include <KSharedConfig>
+#include <KStandardAction>
+#include <QtDBus/QtDBus>
 
 Sweeper::Sweeper(bool automatic)
    : KXmlGuiWindow(0)
@@ -40,7 +40,7 @@ Sweeper::Sweeper(bool automatic)
 
    QTreeWidget *sw = ui.privacyListView;
 
-   KStandardAction::quit(this, SLOT(close()), actionCollection());
+   KStandardAction::quit(this, &Sweeper::close, actionCollection());
 
    createGUI(QStringLiteral("sweeperui.rc"));
 
@@ -57,9 +57,9 @@ Sweeper::Sweeper(bool automatic)
    this->InitActions();
 
 
-   connect(ui.cleanupButton, SIGNAL(clicked()), SLOT(cleanup()));
-   connect(ui.selectAllButton, SIGNAL(clicked()), SLOT(selectAll()));
-   connect(ui.selectNoneButton, SIGNAL(clicked()), SLOT(selectNone()));
+   connect(ui.cleanupButton, &QPushButton::clicked, this, &Sweeper::cleanup);
+   connect(ui.selectAllButton, &QPushButton::clicked, this, &Sweeper::selectAll);
+   connect(ui.selectNoneButton, &QPushButton::clicked, this, &Sweeper::selectNone);
 
    new KsweeperAdaptor(this);
    QDBusConnection::sessionBus().registerObject(QStringLiteral("/ksweeper"), this);
@@ -168,7 +168,5 @@ void Sweeper::InitActions() {
 
    ui.privacyListView->resizeColumnToContents(0);
 }
-
-#include "sweeper.moc"
 
 // kate: tab-width 3; indent-mode cstyle; replace-tabs true;
