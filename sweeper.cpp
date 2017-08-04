@@ -27,7 +27,7 @@
 #include <KMessageBox>
 #include <KSharedConfig>
 #include <KStandardAction>
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
 
 Sweeper::Sweeper(bool automatic)
    : KXmlGuiWindow(0)

@@ -26,6 +26,9 @@
 #include <KRecentDocument>
 #include <KToolInvocation>
 
+#include <QDBusConnectionInterface>
+#include <QDBusInterface>
+#include <QDebug>
 #include <QDir>
 #include <QFile>
 #include <QLatin1String>
@@ -33,7 +36,6 @@
 #include <QRegularExpression>
 #include <QStandardPaths>
 #include <QStringList>
-#include <QtDBus>
 
 #include "config-sweeper.h"
 
