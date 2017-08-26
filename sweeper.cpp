@@ -151,7 +151,9 @@ void Sweeper::cleanup()
 
 void Sweeper::InitActions() {
     // store all entries in a list for easy access later on
-   checklist.append(new ClearSavedClipboardContentsAction(generalCLI));
+   if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.klipper"))) {
+        checklist.append(new ClearSavedClipboardContentsAction(generalCLI));
+   }
    checklist.append(new ClearRecentDocumentsAction(generalCLI));
    checklist.append(new ClearRunCommandHistoryAction(generalCLI));
    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.ActivityManager"))) {
