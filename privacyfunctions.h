@@ -33,7 +33,7 @@
 class ClearAllCookiesAction : public PrivacyAction
 {
    public:
-      ClearAllCookiesAction(QTreeWidgetItem * parent)
+      explicit ClearAllCookiesAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Cookies"),
                          i18n("Clears all stored cookies set by websites")) { }
 
@@ -44,7 +44,7 @@ class ClearAllCookiesAction : public PrivacyAction
 class ClearAllCookiesPoliciesAction : public PrivacyAction
 {
    public:
-      ClearAllCookiesPoliciesAction(QTreeWidgetItem * parent)
+      explicit ClearAllCookiesPoliciesAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Cookie Policies"),
                          i18n("Clears the cookie policies for all visited websites")) { }
       bool action();
@@ -54,7 +54,7 @@ class ClearAllCookiesPoliciesAction : public PrivacyAction
 class ClearSavedClipboardContentsAction : public PrivacyAction
 {
    public:
-      ClearSavedClipboardContentsAction(QTreeWidgetItem * parent)
+      explicit ClearSavedClipboardContentsAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Saved Clipboard Contents"),
                          i18n("Clears the clipboard contents stored by Klipper")) { }
       bool action();
@@ -64,7 +64,7 @@ class ClearSavedClipboardContentsAction : public PrivacyAction
 class ClearThumbnailsAction : public PrivacyAction
 {
    public:
-      ClearThumbnailsAction(QTreeWidgetItem * parent)
+      explicit ClearThumbnailsAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Thumbnail Cache"),
                          i18n("Clears all cached thumbnails")) { }
       bool action();
@@ -74,7 +74,7 @@ class ClearThumbnailsAction : public PrivacyAction
 class ClearRunCommandHistoryAction : public PrivacyAction
 {
    public:
-      ClearRunCommandHistoryAction(QTreeWidgetItem * parent)
+      explicit ClearRunCommandHistoryAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Run Command History"),
                          i18n("Clears the history of commands run through the Run Command tool on the desktop")) { }
       bool action();
@@ -84,7 +84,7 @@ class ClearRunCommandHistoryAction : public PrivacyAction
 class ClearFormCompletionAction : public PrivacyAction
 {
    public:
-      ClearFormCompletionAction(QTreeWidgetItem * parent)
+      explicit ClearFormCompletionAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Form Completion Entries"),
                          i18n("Clears values which were entered into forms on websites")) { }
       bool action();
@@ -94,7 +94,7 @@ class ClearFormCompletionAction : public PrivacyAction
 class ClearWebHistoryAction : public PrivacyAction
 {
    public:
-      ClearWebHistoryAction(QTreeWidgetItem * parent)
+      explicit ClearWebHistoryAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Web History"),
                          i18n("Clears the history of visited websites")) { }
       bool action();
@@ -104,7 +104,7 @@ class ClearWebHistoryAction : public PrivacyAction
 class ClearWebCacheAction : public PrivacyAction
 {
    public:
-      ClearWebCacheAction(QTreeWidgetItem * parent)
+      explicit ClearWebCacheAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Web Cache"),
                          i18n("Clears the temporary cache of websites visited")) { }
       bool action();
@@ -114,7 +114,7 @@ class ClearWebCacheAction : public PrivacyAction
 class ClearRecentDocumentsAction : public PrivacyAction
 {
    public:
-      ClearRecentDocumentsAction(QTreeWidgetItem * parent)
+      explicit ClearRecentDocumentsAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Recent Documents"),
                          i18n("Clears the list of recently used documents from the KDE applications menu")) { }
       bool action();
@@ -124,7 +124,7 @@ class ClearRecentDocumentsAction : public PrivacyAction
 class ClearFaviconsAction : public PrivacyAction
 {
    public:
-      ClearFaviconsAction(QTreeWidgetItem * parent)
+      explicit ClearFaviconsAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Favorite Icons"),
                          i18n("Clears the FavIcons cached from visited websites")) { }
       bool action();
@@ -134,7 +134,7 @@ class ClearFaviconsAction : public PrivacyAction
 class ClearRecentApplicationAction : public PrivacyAction
 {
    public:
-      ClearRecentApplicationAction(QTreeWidgetItem * parent)
+      explicit ClearRecentApplicationAction(QTreeWidgetItem * parent)
          : PrivacyAction(parent, i18n("Recent Applications"),
                          i18n("Clears the list of recently used applications from KDE menu")) { }
       bool action();

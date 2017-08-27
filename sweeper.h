@@ -33,7 +33,7 @@ class Sweeper: public KXmlGuiWindow
 {
    public:
       // if automatic is true, no user interaction is required
-      Sweeper(bool automatic);
+      explicit Sweeper(bool automatic);
       ~Sweeper();
 
       void cleanup();
