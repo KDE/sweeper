@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
     migrator.migrate();
 
    KAboutData aboutData(QStringLiteral("sweeper"), i18n("Sweeper"),
-                        QStringLiteral("1.9"),
+                        QStringLiteral("1.10"),
                         i18n("Helps clean unwanted traces the user leaves on the system."),
                         KAboutLicense::LGPL,
                         i18n("(c) 2003-2005, Ralf Hoelzer"),
