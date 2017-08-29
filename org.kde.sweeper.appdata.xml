@@ -4,12 +4,14 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>LGPL-2.1+</project_license>
   <name>Sweeper</name>
+  <name xml:lang="ca">Escombraire</name>
   <name xml:lang="nl">Sweeper</name>
   <name xml:lang="pt">Sweeper</name>
   <name xml:lang="sv">Sweeper</name>
   <name xml:lang="uk">Sweeper</name>
   <name xml:lang="x-test">xxSweeperxx</name>
   <summary>System cleaning utility</summary>
+  <summary xml:lang="ca">Utilitat per a netejar el sistema</summary>
   <summary xml:lang="nl">Hulpmiddel voor opschonen van het systeem</summary>
   <summary xml:lang="pt">Utilitário de limpeza do sistema</summary>
   <summary xml:lang="sv">Systemrensningsverktyg</summary>
@@ -20,6 +22,7 @@
       Sweeper helps to clean unwanted traces the user leaves on the system. It
       can remove cookies and clean out caches, for example.
     </p>
+    <p xml:lang="ca">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Esborra les galetes i neteja les memòries cau, per exemple.</p>
     <p xml:lang="nl">Sweeper helpt bij het uitwissen van ongewenste sporen die de gebruiker op het systeem achterlaat. Het kan bijvoorbeeld cookies verwijderen en caches opschonen.</p>
     <p xml:lang="pt">O Sweeper ajuda a limpar os vestígios indesejados que o utilizador deixa no sistema. Poderá remover os 'cookies' e limpar as 'caches', por exemplo.</p>
     <p xml:lang="sv">Sweeper hjälper till att rensa oönskade spår som användaren lämnar i systemet. Det kan exempelvis ta bort kakor och tömma cachar.</p>
