@@ -6,6 +6,7 @@
   <name>Sweeper</name>
   <name xml:lang="ca">Escombraire</name>
   <name xml:lang="ca-valencia">Escombraire</name>
+  <name xml:lang="cs">Sweeper</name>
   <name xml:lang="es">Sweeper</name>
   <name xml:lang="nl">Sweeper</name>
   <name xml:lang="pt">Sweeper</name>
@@ -15,6 +16,7 @@
   <summary>System cleaning utility</summary>
   <summary xml:lang="ca">Utilitat per a netejar el sistema</summary>
   <summary xml:lang="ca-valencia">Utilitat per a netejar el sistema</summary>
+  <summary xml:lang="cs">Nástroj pro úklid systému</summary>
   <summary xml:lang="es">Utilidad de limpieza del sistema</summary>
   <summary xml:lang="nl">Hulpmiddel voor opschonen van het systeem</summary>
   <summary xml:lang="pt">Utilitário de limpeza do sistema</summary>
@@ -28,6 +30,7 @@
     </p>
     <p xml:lang="ca">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Esborra les galetes i neteja les memòries cau, per exemple.</p>
     <p xml:lang="ca-valencia">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Esborra les galetes i neteja les memòries cau, per exemple.</p>
+    <p xml:lang="cs">Sweeper pomáhá smazat nechtěné stopy zanechané uživatelem v systému. Například může mazat cookies a mezipaměť.</p>
     <p xml:lang="es">Sweeper ayuda a borrar el rastro no deseado que deja el usuario en el sistema. Puede eliminar cookies y borrar cachés, por ejemplo.</p>
     <p xml:lang="nl">Sweeper helpt bij het uitwissen van ongewenste sporen die de gebruiker op het systeem achterlaat. Het kan bijvoorbeeld cookies verwijderen en caches opschonen.</p>
     <p xml:lang="pt">O Sweeper ajuda a limpar os vestígios indesejados que o utilizador deixa no sistema. Poderá remover os 'cookies' e limpar as 'caches', por exemplo.</p>
