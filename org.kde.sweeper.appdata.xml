@@ -9,7 +9,13 @@
   <name xml:lang="cs">Sweeper</name>
   <name xml:lang="es">Sweeper</name>
   <name xml:lang="nl">Sweeper</name>
+  <name xml:lang="nn">Sweeper</name>
+  <name xml:lang="pl">Czyściciel</name>
   <name xml:lang="pt">Sweeper</name>
+  <name xml:lang="sr">Чистач</name>
+  <name xml:lang="sr-Latn">Čistač</name>
+  <name xml:lang="sr-ijekavian">Чистач</name>
+  <name xml:lang="sr-ijekavianlatin">Čistač</name>
   <name xml:lang="sv">Sweeper</name>
   <name xml:lang="uk">Sweeper</name>
   <name xml:lang="x-test">xxSweeperxx</name>
@@ -19,7 +25,13 @@
   <summary xml:lang="cs">Nástroj pro úklid systému</summary>
   <summary xml:lang="es">Utilidad de limpieza del sistema</summary>
   <summary xml:lang="nl">Hulpmiddel voor opschonen van het systeem</summary>
+  <summary xml:lang="nn">Verktøy for dataopprydding</summary>
+  <summary xml:lang="pl">Narzędzie do czyszczenia systemu</summary>
   <summary xml:lang="pt">Utilitário de limpeza do sistema</summary>
+  <summary xml:lang="sr">Алатка за чишћење система</summary>
+  <summary xml:lang="sr-Latn">Alatka za čišćenje sistema</summary>
+  <summary xml:lang="sr-ijekavian">Алатка за чишћење система</summary>
+  <summary xml:lang="sr-ijekavianlatin">Alatka za čišćenje sistema</summary>
   <summary xml:lang="sv">Systemrensningsverktyg</summary>
   <summary xml:lang="uk">Програма для чищення системи</summary>
   <summary xml:lang="x-test">xxSystem cleaning utilityxx</summary>
@@ -28,12 +40,18 @@
       Sweeper helps to clean unwanted traces the user leaves on the system. It
       can remove cookies and clean out caches, for example.
     </p>
-    <p xml:lang="ca">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Esborra les galetes i neteja les memòries cau, per exemple.</p>
+    <p xml:lang="ca">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Elimina les galetes i neteja les memòries cau, per exemple.</p>
     <p xml:lang="ca-valencia">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Esborra les galetes i neteja les memòries cau, per exemple.</p>
     <p xml:lang="cs">Sweeper pomáhá smazat nechtěné stopy zanechané uživatelem v systému. Například může mazat cookies a mezipaměť.</p>
     <p xml:lang="es">Sweeper ayuda a borrar el rastro no deseado que deja el usuario en el sistema. Puede eliminar cookies y borrar cachés, por ejemplo.</p>
     <p xml:lang="nl">Sweeper helpt bij het uitwissen van ongewenste sporen die de gebruiker op het systeem achterlaat. Het kan bijvoorbeeld cookies verwijderen en caches opschonen.</p>
+    <p xml:lang="nn">Sweeper hjelper deg å fjerna uønskte spor på datamaskina. Du kan blant anna bruka det til å fjerna infokapslar og mellom-/snøgglager.</p>
+    <p xml:lang="pl">Czyściciel pomaga zatrzeć niechciane ślady, które użytkownik zostawia na systemie. Może na przykład usunąć ciasteczka, a także wyczyścić pamięci podręczne.</p>
     <p xml:lang="pt">O Sweeper ajuda a limpar os vestígios indesejados que o utilizador deixa no sistema. Poderá remover os 'cookies' e limpar as 'caches', por exemplo.</p>
+    <p xml:lang="sr">Чистач помаже у отклањању нежељених трагова које корисник остави на систему. На пример, може да уклања колачиће и чисти кешеве.</p>
+    <p xml:lang="sr-Latn">Čistač pomaže u otklanjanju neželjenih tragova koje korisnik ostavi na sistemu. Na primer, može da uklanja kolačiće i čisti keševe.</p>
+    <p xml:lang="sr-ijekavian">Чистач помаже у отклањању нежељених трагова које корисник остави на систему. На пример, може да уклања колачиће и чисти кешеве.</p>
+    <p xml:lang="sr-ijekavianlatin">Čistač pomaže u otklanjanju neželjenih tragova koje korisnik ostavi na sistemu. Na primer, može da uklanja kolačiće i čisti keševe.</p>
     <p xml:lang="sv">Sweeper hjälper till att rensa oönskade spår som användaren lämnar i systemet. Det kan exempelvis ta bort kakor och tömma cachar.</p>
     <p xml:lang="uk">Sweeper допомагає позбутися небажаних слідів роботи користувача у системі. Зокрема, програма може вилучати записи кук та спорожняти кеш.</p>
     <p xml:lang="x-test">xxSweeper helps to clean unwanted traces the user leaves on the system. It can remove cookies and clean out caches, for example.xx</p>
