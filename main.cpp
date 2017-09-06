@@ -27,6 +27,8 @@
 #include <Kdelibs4ConfigMigrator>
 #include <KLocalizedString>
 
+#include "config-sweeper.h"
+
 int main(int argc, char *argv[])
 {
    QApplication a(argc, argv);
@@ -39,7 +41,7 @@ int main(int argc, char *argv[])
     migrator.migrate();
 
    KAboutData aboutData(QStringLiteral("sweeper"), i18n("Sweeper"),
-                        QStringLiteral("1.10"),
+                        QStringLiteral(SWEEPER_VERSION),
                         i18n("Helps clean unwanted traces the user leaves on the system."),
                         KAboutLicense::LGPL,
                         i18n("(c) 2003-2005, Ralf Hoelzer"),

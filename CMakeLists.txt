@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.0)
 
-project(sweeper)
+set(SWEEPER_VERSION "1.10")
+project(sweeper VERSION ${SWEEPER_VERSION})
 
 include(FeatureSummary)
 find_package(Qt5 REQUIRED COMPONENTS Core DBus Widgets)
