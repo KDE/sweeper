@@ -8,6 +8,7 @@
   <name xml:lang="ca-valencia">Escombraire</name>
   <name xml:lang="cs">Sweeper</name>
   <name xml:lang="de">Sweeper</name>
+  <name xml:lang="el">Sweeper</name>
   <name xml:lang="es">Sweeper</name>
   <name xml:lang="fr">Sweeper</name>
   <name xml:lang="nl">Sweeper</name>
@@ -22,12 +23,14 @@
   <name xml:lang="sv">Sweeper</name>
   <name xml:lang="uk">Sweeper</name>
   <name xml:lang="x-test">xxSweeperxx</name>
+  <name xml:lang="zh-CN">Sweeper</name>
   <summary>System cleaning utility</summary>
   <summary xml:lang="ast">Utilidá de llimpieza del sistema</summary>
   <summary xml:lang="ca">Utilitat per a netejar el sistema</summary>
   <summary xml:lang="ca-valencia">Utilitat per a netejar el sistema</summary>
   <summary xml:lang="cs">Nástroj pro úklid systému</summary>
   <summary xml:lang="de">Dienstprogramm zum Bereinigen des Systems</summary>
+  <summary xml:lang="el">Εργαλείο καθαρισμού του συστήματος</summary>
   <summary xml:lang="es">Utilidad de limpieza del sistema</summary>
   <summary xml:lang="nl">Hulpmiddel voor opschonen van het systeem</summary>
   <summary xml:lang="nn">Verktøy for dataopprydding</summary>
@@ -41,6 +44,7 @@
   <summary xml:lang="sv">Systemrensningsverktyg</summary>
   <summary xml:lang="uk">Програма для чищення системи</summary>
   <summary xml:lang="x-test">xxSystem cleaning utilityxx</summary>
+  <summary xml:lang="zh-CN">系统清洁实用程序</summary>
   <description>
     <p>
       Sweeper helps to clean unwanted traces the user leaves on the system. It
@@ -50,6 +54,7 @@
     <p xml:lang="ca-valencia">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Elimina les galetes i neteja les memòries cau, per exemple.</p>
     <p xml:lang="cs">Sweeper pomáhá smazat nechtěné stopy zanechané uživatelem v systému. Například může mazat cookies a mezipaměť.</p>
     <p xml:lang="de">Sweeper hilft dem Benutzer ungewollte Spuren im System zu verwischen und kann zum Beispiel Cookies und Zwischenspeicher bereinigen.</p>
+    <p xml:lang="el">Το Sweeper βοηθάει στον καθαρισμό ανεπιθύμητων ιχνών που ο χρήστης αφήνει στο σύστημα. Μπορεί να αφαιρέσει cookies και να καθαρίσει προσωρινές μνήμες, για παράδειγμα.</p>
     <p xml:lang="es">Sweeper ayuda a borrar el rastro no deseado que deja el usuario en el sistema. Puede eliminar cookies y borrar cachés, por ejemplo.</p>
     <p xml:lang="nl">Sweeper helpt bij het uitwissen van ongewenste sporen die de gebruiker op het systeem achterlaat. Het kan bijvoorbeeld cookies verwijderen en caches opschonen.</p>
     <p xml:lang="nn">Sweeper hjelper deg å fjerna uønskte spor på datamaskina. Du kan blant anna bruka det til å fjerna infokapslar og mellom-/snøgglager.</p>
@@ -63,6 +68,7 @@
     <p xml:lang="sv">Sweeper hjälper till att rensa oönskade spår som användaren lämnar i systemet. Det kan exempelvis ta bort kakor och tömma cachar.</p>
     <p xml:lang="uk">Sweeper допомагає позбутися небажаних слідів роботи користувача у системі. Зокрема, програма може вилучати записи кук та спорожняти кеш.</p>
     <p xml:lang="x-test">xxSweeper helps to clean unwanted traces the user leaves on the system. It can remove cookies and clean out caches, for example.xx</p>
+    <p xml:lang="zh-CN">Sweeper 帮助用户清理留在系统上的不需要的痕迹。例如，它能移除 Cookie 和清理缓存。</p>
   </description>
   <url type="homepage">http://utils.kde.org/projects/sweeper/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=sweeper</url>
