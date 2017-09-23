@@ -32,6 +32,7 @@
   <summary xml:lang="de">Dienstprogramm zum Bereinigen des Systems</summary>
   <summary xml:lang="el">Εργαλείο καθαρισμού του συστήματος</summary>
   <summary xml:lang="es">Utilidad de limpieza del sistema</summary>
+  <summary xml:lang="fr">Utilitaire de nettoyage du système</summary>
   <summary xml:lang="nl">Hulpmiddel voor opschonen van het systeem</summary>
   <summary xml:lang="nn">Verktøy for dataopprydding</summary>
   <summary xml:lang="pl">Narzędzie do czyszczenia systemu</summary>
@@ -56,6 +57,7 @@
     <p xml:lang="de">Sweeper hilft dem Benutzer ungewollte Spuren im System zu verwischen und kann zum Beispiel Cookies und Zwischenspeicher bereinigen.</p>
     <p xml:lang="el">Το Sweeper βοηθάει στον καθαρισμό ανεπιθύμητων ιχνών που ο χρήστης αφήνει στο σύστημα. Μπορεί να αφαιρέσει cookies και να καθαρίσει προσωρινές μνήμες, για παράδειγμα.</p>
     <p xml:lang="es">Sweeper ayuda a borrar el rastro no deseado que deja el usuario en el sistema. Puede eliminar cookies y borrar cachés, por ejemplo.</p>
+    <p xml:lang="fr">Sweeper aide à effacer les traces indésirables laissées par l'utilisateur sur le système. Il peut supprimer les cookies et vider les caches, par exemple.</p>
     <p xml:lang="nl">Sweeper helpt bij het uitwissen van ongewenste sporen die de gebruiker op het systeem achterlaat. Het kan bijvoorbeeld cookies verwijderen en caches opschonen.</p>
     <p xml:lang="nn">Sweeper hjelper deg å fjerna uønskte spor på datamaskina. Du kan blant anna bruka det til å fjerna infokapslar og mellom-/snøgglager.</p>
     <p xml:lang="pl">Czyściciel pomaga zatrzeć niechciane ślady, które użytkownik zostawia na systemie. Może na przykład usunąć ciasteczka, a także wyczyścić pamięci podręczne.</p>
