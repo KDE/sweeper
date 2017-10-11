@@ -57,8 +57,6 @@ int main(int argc, char *argv[])
    KAboutData::setApplicationData(aboutData);
    a.setWindowIcon(QIcon::fromTheme(QStringLiteral("trash-empty")));
 
-   parser.addVersionOption();
-   parser.addHelpOption();
    parser.addOption(QCommandLineOption(QStringLiteral("automatic"),
                     i18n("Sweeps without user interaction")));
    aboutData.setupCommandLine(&parser);
