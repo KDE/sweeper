@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-set(SWEEPER_VERSION "1.10")
+set(SWEEPER_VERSION "1.11")
 project(sweeper VERSION ${SWEEPER_VERSION})
 
 include(FeatureSummary)
