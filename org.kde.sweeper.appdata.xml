@@ -18,6 +18,7 @@
   <name xml:lang="nn">Sweeper</name>
   <name xml:lang="pl">Czyściciel</name>
   <name xml:lang="pt">Sweeper</name>
+  <name xml:lang="pt-BR">Sweeper</name>
   <name xml:lang="ru">Sweeper</name>
   <name xml:lang="sk">Zametač</name>
   <name xml:lang="sr">Чистач</name>
@@ -44,6 +45,7 @@
   <summary xml:lang="nn">Verktøy for dataopprydding</summary>
   <summary xml:lang="pl">Narzędzie do czyszczenia systemu</summary>
   <summary xml:lang="pt">Utilitário de limpeza do sistema</summary>
+  <summary xml:lang="pt-BR">Utilitário de limpeza do sistema</summary>
   <summary xml:lang="sk">Nástroj na čistenie systému</summary>
   <summary xml:lang="sr">Алатка за чишћење система</summary>
   <summary xml:lang="sr-Latn">Alatka za čišćenje sistema</summary>
@@ -72,6 +74,7 @@
     <p xml:lang="nn">Sweeper hjelper deg å fjerna uønskte spor på datamaskina. Du kan blant anna bruka det til å fjerna infokapslar og mellom-/snøgglager.</p>
     <p xml:lang="pl">Czyściciel pomaga zatrzeć niechciane ślady, które użytkownik zostawia na systemie. Może na przykład usunąć ciasteczka, a także wyczyścić pamięci podręczne.</p>
     <p xml:lang="pt">O Sweeper ajuda a limpar os vestígios indesejados que o utilizador deixa no sistema. Poderá remover os 'cookies' e limpar as 'caches', por exemplo.</p>
+    <p xml:lang="pt-BR">O Sweeper ajuda você a limpar traços indesejados que o usuário deixa no sistema. Ele pode remover cookies e limpar caches, por exemplo.</p>
     <p xml:lang="sk">Zametač vám pomôže vyčistiť neželané stopy, ktoré používateľ zanecháva v systéme. Môže napríklad odstrániť cookies a vyčistiť vyrovnávacie pamäte.</p>
     <p xml:lang="sr">Чистач помаже у отклањању нежељених трагова које корисник остави на систему. На пример, може да уклања колачиће и чисти кешеве.</p>
     <p xml:lang="sr-Latn">Čistač pomaže u otklanjanju neželjenih tragova koje korisnik ostavi na sistemu. Na primer, može da uklanja kolačiće i čisti keševe.</p>
