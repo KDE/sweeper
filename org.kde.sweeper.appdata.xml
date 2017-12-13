@@ -12,6 +12,7 @@
   <name xml:lang="el">Sweeper</name>
   <name xml:lang="en-GB">Sweeper</name>
   <name xml:lang="es">Sweeper</name>
+  <name xml:lang="fi">Sweeper</name>
   <name xml:lang="fr">Sweeper</name>
   <name xml:lang="it">Spazzino</name>
   <name xml:lang="ko">Sweeper</name>
@@ -40,6 +41,7 @@
   <summary xml:lang="el">Εργαλείο καθαρισμού του συστήματος</summary>
   <summary xml:lang="en-GB">System cleaning utility</summary>
   <summary xml:lang="es">Utilidad de limpieza del sistema</summary>
+  <summary xml:lang="fi">Järjestelmän siivoustyökalu</summary>
   <summary xml:lang="fr">Utilitaire de nettoyage du système</summary>
   <summary xml:lang="it">Utilità per la pulizia del sistema</summary>
   <summary xml:lang="ko">시스템 청소 도구</summary>
@@ -70,6 +72,7 @@
     <p xml:lang="el">Το Sweeper βοηθάει στον καθαρισμό ανεπιθύμητων ιχνών που ο χρήστης αφήνει στο σύστημα. Μπορεί να αφαιρέσει cookies και να καθαρίσει προσωρινές μνήμες, για παράδειγμα.</p>
     <p xml:lang="en-GB">Sweeper helps to clean unwanted traces the user leaves on the system. It can remove cookies and clean out caches, for example.</p>
     <p xml:lang="es">Sweeper ayuda a borrar el rastro no deseado que deja el usuario en el sistema. Puede eliminar cookies y borrar cachés, por ejemplo.</p>
+    <p xml:lang="fi">Sweeper auttaa poistamaan käyttäjän järjestelmään jättämät turhat jäljet. Se osaa esimerkiksi poistaa evästeet ja tyhjentää välimuistit.</p>
     <p xml:lang="fr">Sweeper aide à effacer les traces indésirables laissées par l'utilisateur sur le système. Il peut supprimer les cookies et vider les caches, par exemple.</p>
     <p xml:lang="it">Lo spazzino aiuta a cancellare le tracce indesiderate che l'utente lascia nel sistema, ad esempio può rimuovere i cookie e ripulire la cache.</p>
     <p xml:lang="ko">Sweeper는 시스템에 남아 있는 사용자의 과거 기록을 청소합니다. 쿠키와 캐시 등 데이터를 지울 수 있습니다.</p>
