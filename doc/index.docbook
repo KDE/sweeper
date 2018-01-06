@@ -1,8 +1,5 @@
 <?xml version="1.0" ?>
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY sweeper "<application>Sweeper</application>">
-  <!ENTITY kappname "&ksweeper;">
-  <!ENTITY package "kdeutils">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE">
 ]>
@@ -17,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2013-05-25</date>
-<releaseinfo>1.9 (&kde; 4.11)</releaseinfo>
+<date>2018-01-03</date>
+<releaseinfo>1.11 (Applications 17.12)</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -27,7 +24,7 @@
 </keywordset>
 </articleinfo>
 
-<para>&sweeper; helps to clean unwanted traces from &kde; applications users leave on the system.
+<para>&sweeper; helps to clean unwanted traces from &plasma; and &kde; applications users leave on the system.
 
 </para>
 
@@ -48,14 +45,14 @@ items from the two groups <guilabel>General</guilabel> and <guilabel>Web Browsin
 </para>
 
 <para>
-If you are satisfied with your selection click the <guibutton>Clean Up</guibutton> button, 
+If you are satisfied with your selection click the <guibutton>Clean Up</guibutton> button,
 which immediately performs the cleanup actions you selected.
 </para>
 
 <note><para>
-&sweeper; deletes the cached data used by &kde; applications from the &kde; cache folder. 
-To see the location of this folder enter <userinput><command>kde4-config</command> 
-<option>--path cache</option></userinput> in &konsole;. Cleaning up your cached data with
+&sweeper; deletes the cached data used by &plasma; and &kde; applications from the &kde; cache folder.
+To see the location of this folder enter <userinput><command>qtpaths</command>
+<option>--paths GenericCacheLocation</option></userinput> in &konsole;. Cleaning up your cached data with
 &sweeper; makes it only impossible to read them &eg; using a filemanager, but it is possible  
 to read the raw data, which is still on the disk, using a low level disk tool.
 </para>
