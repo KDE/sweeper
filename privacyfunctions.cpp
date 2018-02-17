@@ -50,10 +50,10 @@ using namespace KAStats::Terms;
 
 bool ClearThumbnailsAction::action()
 {
-   // http://freedesktop.org/Standards/Home
-   // http://triq.net/~jens/thumbnail-spec/index.html
+   // https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
+   // https://specifications.freedesktop.org/thumbnail-spec/thumbnail-spec-latest.html
 
-   QDir thumbnailDir( QDir::homePath() + QLatin1String( "/.thumbnails/normal" ));
+   QDir thumbnailDir( QDir::homePath() + QLatin1String( "/.cache/thumbnails/normal" ));
    thumbnailDir.setFilter( QDir::Files );
    const QStringList entries = thumbnailDir.entryList();
    for( QStringList::const_iterator it = entries.begin() ; it != entries.end() ; ++it) {
@@ -63,7 +63,7 @@ bool ClearThumbnailsAction::action()
       }
    }
 
-   thumbnailDir.setPath(QDir::homePath() + QLatin1String( "/.thumbnails/large" ));
+   thumbnailDir.setPath(QDir::homePath() + QLatin1String( "/.cache/thumbnails/large" ));
    const QStringList entries2 = thumbnailDir.entryList();
    for( QStringList::const_iterator it = entries2.begin() ; it != entries2.end() ; ++it) {
       if(!thumbnailDir.remove(*it)) {
@@ -72,7 +72,7 @@ bool ClearThumbnailsAction::action()
       }
    }
 
-   thumbnailDir.setPath(QDir::homePath() + QLatin1String( "/.thumbnails/fail" ));
+   thumbnailDir.setPath(QDir::homePath() + QLatin1String( "/.cache/thumbnails/fail" ));
    const QStringList entries3 = thumbnailDir.entryList();
    for( QStringList::const_iterator it = entries3.begin() ; it != entries3.end() ; ++it) {
       if(!thumbnailDir.remove(*it)) {
