@@ -161,4 +161,5 @@ Comment[tr]=Kullanıcının sistemden ayırdığı istenmeyen izleri temizlemeni
 Comment[uk]=Допомагає позбутися небажаних слідів роботи користувача у системі і звільнити місце на диску вилученням зайвих тимчасових файлів
 Comment[x-test]=xxHelps to clean unwanted traces the user leaves on the system and to regain disk space removing unused temporary filesxx
 Comment[zh_CN]=帮助清理用户在系统留下的不想要的痕迹，通过移除不用的临时文件来恢复磁盘空间
+Comment[zh_TW]=協助清理不想要的系統使用痕跡、並透過移除不需要的暫存文件以恢復磁碟空間。
 X-DBUS-ServiceName=org.kde.sweeper
