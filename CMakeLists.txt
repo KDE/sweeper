@@ -3,9 +3,11 @@ cmake_minimum_required(VERSION 3.0)
 set(SWEEPER_VERSION "1.12")
 project(sweeper VERSION ${SWEEPER_VERSION})
 
+set(KF5_VERSION "5.23.0")
+
 include(FeatureSummary)
 find_package(Qt5 REQUIRED COMPONENTS Core DBus Widgets)
-find_package(ECM 1.7.0 NO_MODULE REQUIRED)
+find_package(ECM ${KF5_VERSION} NO_MODULE REQUIRED)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 include(ECMAddAppIcon)
@@ -19,7 +21,7 @@ add_definitions(
     -DQT_NO_URL_CAST_FROM_STRING
 )
 
-find_package(KF5 5.23.0 REQUIRED COMPONENTS
+find_package(KF5 ${KF5_VERSION} REQUIRED COMPONENTS
     ActivitiesStats
     Bookmarks
     Crash
