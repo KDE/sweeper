@@ -30,7 +30,7 @@
 #include <QDBusConnection>
 
 Sweeper::Sweeper(bool automatic)
-   : KXmlGuiWindow(0)
+   : KXmlGuiWindow(nullptr)
    , m_privacyConfGroup(KSharedConfig::openConfig(QStringLiteral("kprivacyrc"), KConfig::NoGlobals), "Cleaning")
    , m_automatic(automatic)
 {
