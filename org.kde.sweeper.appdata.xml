@@ -22,6 +22,7 @@
   <name xml:lang="nn">Sweeper</name>
   <name xml:lang="pl">Czyściciel</name>
   <name xml:lang="pt">Sweeper</name>
+  <name xml:lang="pt-BR">Sweeper</name>
   <name xml:lang="ru">Sweeper</name>
   <name xml:lang="sk">Zametač</name>
   <name xml:lang="sl">Sweeper</name>
@@ -53,6 +54,7 @@
   <summary xml:lang="nn">Verktøy for dataopprydding</summary>
   <summary xml:lang="pl">Narzędzie do czyszczenia systemu</summary>
   <summary xml:lang="pt">Utilitário de limpeza do sistema</summary>
+  <summary xml:lang="pt-BR">Utilitário de limpeza do sistema</summary>
   <summary xml:lang="sk">Nástroj na čistenie systému</summary>
   <summary xml:lang="sl">Orodje za čiščenje sistema</summary>
   <summary xml:lang="sr">Алатка за чишћење система</summary>
