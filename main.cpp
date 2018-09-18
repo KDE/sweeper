@@ -27,7 +27,7 @@
 #include <Kdelibs4ConfigMigrator>
 #include <KLocalizedString>
 
-#include "config-sweeper.h"
+#include <config-sweeper.h>
 
 int main(int argc, char *argv[])
 {

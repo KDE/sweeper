@@ -41,7 +41,7 @@
 #include <QStandardPaths>
 #include <QStringList>
 
-#include "config-sweeper.h"
+#include <config-sweeper.h>
 
 namespace KAStats = KActivities::Stats;
 
