@@ -107,6 +107,7 @@
   <url type="homepage">http://utils.kde.org/projects/sweeper/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=sweeper</url>
   <url type="help">http://docs.kde.org/?application=sweeper</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=sweeper&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
       <image>http://kde.org/images/screenshots/sweeper.png</image>
