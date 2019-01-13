@@ -36,6 +36,7 @@
   <name xml:lang="uk">Sweeper</name>
   <name xml:lang="x-test">xxSweeperxx</name>
   <name xml:lang="zh-CN">Sweeper</name>
+  <name xml:lang="zh-TW">Sweeper</name>
   <summary>System cleaning utility</summary>
   <summary xml:lang="ca">Utilitat per a netejar el sistema</summary>
   <summary xml:lang="ca-valencia">Utilitat per a netejar el sistema</summary>
@@ -69,6 +70,7 @@
   <summary xml:lang="uk">Програма для чищення системи</summary>
   <summary xml:lang="x-test">xxSystem cleaning utilityxx</summary>
   <summary xml:lang="zh-CN">系统清洁实用程序</summary>
+  <summary xml:lang="zh-TW">系統清理工具</summary>
   <description>
     <p>
       Sweeper helps to clean unwanted traces the user leaves on the system. It
