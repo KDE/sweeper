@@ -22,6 +22,7 @@
   <name xml:lang="ko">Sweeper</name>
   <name xml:lang="nl">Sweeper</name>
   <name xml:lang="nn">Sweeper</name>
+  <name xml:lang="pa">ਸਵੀਪਰ</name>
   <name xml:lang="pl">Czyściciel</name>
   <name xml:lang="pt">Sweeper</name>
   <name xml:lang="pt-BR">Sweeper</name>
@@ -56,6 +57,7 @@
   <summary xml:lang="ko">시스템 청소 도구</summary>
   <summary xml:lang="nl">Hulpmiddel voor opschonen van het systeem</summary>
   <summary xml:lang="nn">Verktøy for dataopprydding</summary>
+  <summary xml:lang="pa">ਸਿਸਟਮ ਸਫ਼ਾਈ ਸਹੂਲਤ</summary>
   <summary xml:lang="pl">Narzędzie do czyszczenia systemu</summary>
   <summary xml:lang="pt">Utilitário de limpeza do sistema</summary>
   <summary xml:lang="pt-BR">Utilitário de limpeza do sistema</summary>
