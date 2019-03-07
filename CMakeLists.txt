@@ -17,9 +17,12 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 
 add_definitions(
-    -DQT_DISABLE_DEPRECATED_BEFORE=0x050400
     -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT
 )
+
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050d00)
+add_definitions(-DQT_NO_FOREACH)
+
 
 find_package(KF5 ${REQUIRED_KF5_MIN_VERSION} REQUIRED COMPONENTS
     ActivitiesStats
