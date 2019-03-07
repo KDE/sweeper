@@ -21,7 +21,6 @@ add_definitions(
 )
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050d00)
-add_definitions(-DQT_NO_FOREACH)
 
 
 find_package(KF5 ${REQUIRED_KF5_MIN_VERSION} REQUIRED COMPONENTS
@@ -37,6 +36,13 @@ find_package(KF5 ${REQUIRED_KF5_MIN_VERSION} REQUIRED COMPONENTS
     TextWidgets
     XmlGui
 )
+
+if (${KF5Config_VERSION} STRGREATER "5.56.0")
+        add_definitions(-DQT_NO_FOREACH)
+        MESSAGE(STATUS "compile without foreach")
+endif()
+
+
 include_directories (${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
 
 configure_file(config-sweeper.h.cmake
