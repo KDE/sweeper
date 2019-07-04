@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
                         QStringLiteral(SWEEPER_VERSION),
                         i18n("Helps clean unwanted traces the user leaves on the system."),
                         KAboutLicense::LGPL,
-                        i18n("(c) 2003-2005, Ralf Hoelzer"),
+                        i18n("© 2003-2005, Ralf Hoelzer"),
                         QString(),
                         QStringLiteral("http://utils.kde.org/projects/sweeper"));
 
