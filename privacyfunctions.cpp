@@ -24,7 +24,6 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KRecentDocument>
-#include <KToolInvocation>
 #include <KActivities/Stats/Cleaning>
 #include <KActivities/Stats/ResultSet>
 #include <KActivities/Stats/Terms>
