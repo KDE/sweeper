@@ -12,6 +12,7 @@
   <name xml:lang="el">Sweeper</name>
   <name xml:lang="en-GB">Sweeper</name>
   <name xml:lang="es">Sweeper</name>
+  <name xml:lang="et">Sweeper</name>
   <name xml:lang="eu">Sweeper</name>
   <name xml:lang="fi">Sweeper</name>
   <name xml:lang="fr">Sweeper</name>
@@ -47,6 +48,7 @@
   <summary xml:lang="el">Εργαλείο καθαρισμού του συστήματος</summary>
   <summary xml:lang="en-GB">System cleaning utility</summary>
   <summary xml:lang="es">Utilidad de limpieza del sistema</summary>
+  <summary xml:lang="et">Süsteemi puhastamise tööriist</summary>
   <summary xml:lang="eu">Sistema garbitzeko baliagarritasuna</summary>
   <summary xml:lang="fi">Järjestelmän siivoustyökalu</summary>
   <summary xml:lang="fr">Utilitaire de nettoyage du système</summary>
@@ -86,6 +88,7 @@
     <p xml:lang="el">Το Sweeper βοηθάει στον καθαρισμό ανεπιθύμητων ιχνών που ο χρήστης αφήνει στο σύστημα. Μπορεί να αφαιρέσει cookies και να καθαρίσει προσωρινές μνήμες, για παράδειγμα.</p>
     <p xml:lang="en-GB">Sweeper helps to clean unwanted traces the user leaves on the system. It can remove cookies and clean out caches, for example.</p>
     <p xml:lang="es">Sweeper ayuda a borrar el rastro no deseado que deja el usuario en el sistema. Puede eliminar cookies y borrar cachés, por ejemplo.</p>
+    <p xml:lang="et">Sweeper aitab kõrvaldada soovimatud jäljed, mida kasutaja süsteemi jätab. Näiteks võib see eemaldada küpsised ja puhastada puhvrid.</p>
     <p xml:lang="eu">Sweeperrek erabiltzaileak sisteman uzten dituen nahigabeko arrastoak garbitzen ditu. Kukiak kendu ditzake eta cacheak garbitu, esaterako.</p>
     <p xml:lang="fi">Sweeper auttaa poistamaan käyttäjän järjestelmään jättämät turhat jäljet. Se osaa esimerkiksi poistaa evästeet ja tyhjentää välimuistit.</p>
     <p xml:lang="fr">Sweeper aide à effacer les traces indésirables laissées par l'utilisateur sur le système. Il peut supprimer les cookies et vider les caches, par exemple.</p>
