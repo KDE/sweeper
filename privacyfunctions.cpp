@@ -202,8 +202,8 @@ bool ClearFaviconsAction::action()
    QDir().mkpath(path);
    konqiBookmarkMgr =
       KBookmarkManager::managerForFile(path, QStringLiteral("konqueror"));
-   qDebug() << "saving the favicons that are in konqueror bookmarks" ;
-   qDebug() << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() ;
+   qDebug() << "saving the favicons that are in konqueror bookmarks"
+            << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() ;
 
    // get the entire slew of bookmarks
    KBookmarkGroup konqiBookmarks = konqiBookmarkMgr->root();
