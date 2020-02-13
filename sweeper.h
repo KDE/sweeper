@@ -60,8 +60,8 @@ class Sweeper: public KXmlGuiWindow
 
       QVector<PrivacyAction*> checklist;
 
-      QTreeWidgetItem *generalCLI;
-      QTreeWidgetItem *webbrowsingCLI;
+      QTreeWidgetItem * const generalCLI;
+      QTreeWidgetItem * const webbrowsingCLI;
 
       KConfigGroup m_privacyConfGroup;
 

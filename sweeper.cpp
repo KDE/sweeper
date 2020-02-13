@@ -31,6 +31,8 @@
 
 Sweeper::Sweeper(bool automatic)
    : KXmlGuiWindow(nullptr)
+   , generalCLI(new QTreeWidgetItem(QStringList(i18nc("General system content", "General"))))
+   , webbrowsingCLI(new QTreeWidgetItem(QStringList(i18nc("Web browsing content", "Web Browsing"))))
    , m_privacyConfGroup(KSharedConfig::openConfig(QStringLiteral("kprivacyrc"), KConfig::NoGlobals), "Cleaning")
    , m_automatic(automatic)
 {
@@ -46,9 +48,7 @@ Sweeper::Sweeper(bool automatic)
 
    setAutoSaveSettings();
 
-   generalCLI     = new QTreeWidgetItem(QStringList() << i18nc("General system content", "General"));
    sw->addTopLevelItem(generalCLI);
-   webbrowsingCLI = new QTreeWidgetItem(QStringList() << i18nc("Web browsing content", "Web Browsing"));
    sw->addTopLevelItem(webbrowsingCLI);
 
    generalCLI->setExpanded(true);
