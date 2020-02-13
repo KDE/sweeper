@@ -25,7 +25,7 @@ class PrivacyAction : public QTreeWidgetItem
 {
    public:
       PrivacyAction(QTreeWidgetItem * parent, const QString &name, const QString &desc = QString());
-      ~PrivacyAction();
+      ~PrivacyAction() override = default;
       
       QString getErrMsg() const { return errMsg; }
       

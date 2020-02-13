@@ -28,9 +28,4 @@ PrivacyAction::PrivacyAction(QTreeWidgetItem * parent, const QString &name, cons
    setCheckState(0, Qt::Unchecked);
 }
 
-PrivacyAction::~PrivacyAction()
-{
-   // nothing to do
-}
-
 // kate: tab-width 3; indent-mode cstyle; replace-tabs true;
