@@ -55,8 +55,8 @@ bool ClearThumbnailsAction::action()
    QDir thumbnailDir( QDir::homePath() + QLatin1String( "/.cache/thumbnails/normal" ));
    thumbnailDir.setFilter( QDir::Files );
    const QStringList entries = thumbnailDir.entryList();
-   for( QStringList::const_iterator it = entries.begin() ; it != entries.end() ; ++it) {
-      if(!thumbnailDir.remove(*it)) {
+   for(const QString &entry: entries) {
+      if(!thumbnailDir.remove(entry)) {
          errMsg = i18n("A thumbnail could not be removed.");
          return false;
       }
@@ -64,8 +64,8 @@ bool ClearThumbnailsAction::action()
 
    thumbnailDir.setPath(QDir::homePath() + QLatin1String( "/.cache/thumbnails/large" ));
    const QStringList entries2 = thumbnailDir.entryList();
-   for( QStringList::const_iterator it = entries2.begin() ; it != entries2.end() ; ++it) {
-      if(!thumbnailDir.remove(*it)) {
+   for(const QString &entry: entries2) {
+      if(!thumbnailDir.remove(entry)) {
          errMsg = i18n("A thumbnail could not be removed.");
          return false;
       }
@@ -73,8 +73,8 @@ bool ClearThumbnailsAction::action()
 
    thumbnailDir.setPath(QDir::homePath() + QLatin1String( "/.cache/thumbnails/fail" ));
    const QStringList entries3 = thumbnailDir.entryList();
-   for( QStringList::const_iterator it = entries3.begin() ; it != entries3.end() ; ++it) {
-      if(!thumbnailDir.remove(*it)) {
+   for(const QString &entry: entries3) {
+      if(!thumbnailDir.remove(entry)) {
          errMsg = i18n("A thumbnail could not be removed.");
          return false;
       }
@@ -227,11 +227,11 @@ bool ClearFaviconsAction::action()
    const QStringList entries = favIconDir.entryList();
 
    // erase all files in favicon directory...
-   for( QStringList::const_iterator it = entries.begin() ; it != entries.end() ; ++it) {
+   for(const QString &entry: entries) {
       // ...if we're not supposed to save them, of course
-      if (!saveTheseFavicons.contains(*it)) {
-         qDebug() << "removing " << *it ;
-         if(!favIconDir.remove(*it)) {
+      if (!saveTheseFavicons.contains(entry)) {
+         qDebug() << "removing " << entry ;
+         if(!favIconDir.remove(entry)) {
             errMsg = i18n("A favicon could not be removed.");
             return false;
          }
