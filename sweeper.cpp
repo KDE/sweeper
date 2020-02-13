@@ -81,7 +81,7 @@ Sweeper::~Sweeper()
 
 void Sweeper::load()
 {
-   QLinkedList<PrivacyAction*>::iterator itr;
+   QVector<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       (*itr)->setCheckState(0, m_privacyConfGroup.readEntry((*itr)->configKey(), true) ? Qt::Checked : Qt::Unchecked);
@@ -90,7 +90,7 @@ void Sweeper::load()
 
 void Sweeper::save()
 {
-   QLinkedList<PrivacyAction*>::iterator itr;
+   QVector<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       m_privacyConfGroup.writeEntry((*itr)->configKey(), (*itr)->checkState(0) == Qt::Checked);
@@ -101,7 +101,7 @@ void Sweeper::save()
 
 void Sweeper::selectAll()
 {
-   QLinkedList<PrivacyAction*>::iterator itr;
+   QVector<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       (*itr)->setCheckState(0, Qt::Checked);
@@ -111,7 +111,7 @@ void Sweeper::selectAll()
 
 void Sweeper::selectNone()
 {
-   QLinkedList<PrivacyAction*>::iterator itr;
+   QVector<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       (*itr)->setCheckState(0, Qt::Unchecked);
@@ -131,7 +131,7 @@ void Sweeper::cleanup()
    ui.statusTextEdit->clear();
    ui.statusTextEdit->setText(i18n("Starting cleanup..."));
 
-   QLinkedList<PrivacyAction*>::iterator itr;
+   QVector<PrivacyAction*>::iterator itr;
 
    for (itr = checklist.begin(); itr != checklist.end(); ++itr) {
       if((*itr)->checkState(0) == Qt::Checked) {
