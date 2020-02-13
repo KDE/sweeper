@@ -124,7 +124,7 @@ bool ClearAllCookiesPoliciesAction::action()
 bool ClearSavedClipboardContentsAction::action()
 {
    if(!QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.klipper"))) {
-      KConfig *c = new KConfig(QStringLiteral("klipperrc"), KConfig::NoGlobals);
+      auto c = new KConfig(QStringLiteral("klipperrc"), KConfig::NoGlobals);
       KConfigGroup group(c, "General");
       group.deleteEntry("ClipboardData");
       c->sync();

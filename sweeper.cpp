@@ -36,7 +36,7 @@ Sweeper::Sweeper(bool automatic)
    , m_privacyConfGroup(KSharedConfig::openConfig(QStringLiteral("kprivacyrc"), KConfig::NoGlobals), "Cleaning")
    , m_automatic(automatic)
 {
-   QWidget *mainWidget = new QWidget(this);
+   auto mainWidget = new QWidget(this);
    ui.setupUi(mainWidget);
    setCentralWidget(mainWidget);
 
