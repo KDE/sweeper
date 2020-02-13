@@ -154,8 +154,7 @@ bool ClearFormCompletionAction::action()
 
 bool ClearWebCacheAction::action()
 {
-   QStringList lst;
-   lst << QStringLiteral("--clear-all");
+   const QStringList lst { QStringLiteral("--clear-all") };
    return QProcess::startDetached(QFile::decodeName(KDE_INSTALL_FULL_LIBEXECDIR_KF5 "/kio_http_cache_cleaner"), lst);
 }
 
