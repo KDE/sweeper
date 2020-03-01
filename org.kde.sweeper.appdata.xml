@@ -111,13 +111,13 @@
     <p xml:lang="x-test">xxSweeper helps to clean unwanted traces the user leaves on the system. It can remove cookies and clean out caches, for example.xx</p>
     <p xml:lang="zh-CN">Sweeper 帮助用户清理留在系统上的不需要的痕迹。例如，它能移除 Cookie 和清理缓存。</p>
   </description>
-  <url type="homepage">http://utils.kde.org/projects/sweeper/</url>
+  <url type="homepage">https://utils.kde.org/projects/sweeper/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=sweeper</url>
-  <url type="help">http://docs.kde.org/?application=sweeper</url>
+  <url type="help">https://docs.kde.org/?application=sweeper</url>
   <url type="donation">https://www.kde.org/community/donations/?app=sweeper&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
-      <image>http://kde.org/images/screenshots/sweeper.png</image>
+      <image>https://cdn.kde.org/screenshots/sweeper/sweeper.png</image>
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>
