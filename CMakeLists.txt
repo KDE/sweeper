@@ -26,11 +26,6 @@ add_definitions(
     -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT
 )
 
-if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
-   add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x060000)
-endif()
-
-
 find_package(KF5 ${REQUIRED_KF5_MIN_VERSION} REQUIRED COMPONENTS
     ActivitiesStats
     Bookmarks
