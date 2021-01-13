@@ -31,8 +31,8 @@
 
 Sweeper::Sweeper(bool automatic)
    : KXmlGuiWindow(nullptr)
-   , generalCLI(new QTreeWidgetItem(QStringList(i18nc("General system content", "General"))))
-   , webbrowsingCLI(new QTreeWidgetItem(QStringList(i18nc("Web browsing content", "Web Browsing"))))
+   , m_generalCLI(new QTreeWidgetItem(QStringList(i18nc("General system content", "General"))))
+   , m_webbrowsingCLI(new QTreeWidgetItem(QStringList(i18nc("Web browsing content", "Web Browsing"))))
    , m_privacyConfGroup(KSharedConfig::openConfig(QStringLiteral("kprivacyrc"), KConfig::NoGlobals), "Cleaning")
    , m_automatic(automatic)
 {
@@ -48,11 +48,11 @@ Sweeper::Sweeper(bool automatic)
 
    setAutoSaveSettings();
 
-   sw->addTopLevelItem(generalCLI);
-   sw->addTopLevelItem(webbrowsingCLI);
+   sw->addTopLevelItem(m_generalCLI);
+   sw->addTopLevelItem(m_webbrowsingCLI);
 
-   generalCLI->setExpanded(true);
-   webbrowsingCLI->setExpanded(true);
+   m_generalCLI->setExpanded(true);
+   m_webbrowsingCLI->setExpanded(true);
 
    this->InitActions();
 
@@ -139,21 +139,21 @@ void Sweeper::cleanup()
 void Sweeper::InitActions() {
     // store all entries in a list for easy access later on
    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.klipper"))) {
-        checklist.append(new ClearSavedClipboardContentsAction(generalCLI));
+        checklist.append(new ClearSavedClipboardContentsAction(m_generalCLI));
    }
-   checklist.append(new ClearRecentDocumentsAction(generalCLI));
-   checklist.append(new ClearRunCommandHistoryAction(generalCLI));
+   checklist.append(new ClearRecentDocumentsAction(m_generalCLI));
+   checklist.append(new ClearRunCommandHistoryAction(m_generalCLI));
    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.ActivityManager"))) {
-        checklist.append( new ClearRecentApplicationAction( generalCLI ) );
+        checklist.append( new ClearRecentApplicationAction( m_generalCLI ) );
    }
-   checklist.append(new ClearThumbnailsAction(generalCLI));
+   checklist.append(new ClearThumbnailsAction(m_generalCLI));
 
-   checklist.append(new ClearAllCookiesAction(webbrowsingCLI));
-   checklist.append(new ClearFaviconsAction(webbrowsingCLI));
-   checklist.append(new ClearWebHistoryAction(webbrowsingCLI));
-   checklist.append(new ClearWebCacheAction(webbrowsingCLI));
-   checklist.append(new ClearFormCompletionAction(webbrowsingCLI));
-   checklist.append(new ClearAllCookiesPoliciesAction(webbrowsingCLI));
+   checklist.append(new ClearAllCookiesAction(m_webbrowsingCLI));
+   checklist.append(new ClearFaviconsAction(m_webbrowsingCLI));
+   checklist.append(new ClearWebHistoryAction(m_webbrowsingCLI));
+   checklist.append(new ClearWebCacheAction(m_webbrowsingCLI));
+   checklist.append(new ClearFormCompletionAction(m_webbrowsingCLI));
+   checklist.append(new ClearAllCookiesPoliciesAction(m_webbrowsingCLI));
 
    ui.privacyListView->resizeColumnToContents(0);
 }
