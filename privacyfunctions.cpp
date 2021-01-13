@@ -19,6 +19,7 @@
  */
 
 #include "privacyfunctions.h"
+#include "sweeper_debug.h"
 
 #include <KBookmarkManager>
 #include <KConfig>
@@ -31,7 +32,6 @@
 
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
-#include <QDebug>
 #include <QDir>
 #include <QFile>
 #include <QLatin1String>
@@ -108,7 +108,7 @@ bool ClearAllCookiesPoliciesAction::action()
     KConfig cfg(QStringLiteral("kcookiejarrc"));
     KConfigGroup group = cfg.group("Cookie Policy");
 
-    qDebug() << "removing all saved cookie policies" ;
+    qCDebug(SWEEPER_LOG) << "removing all saved cookie policies" ;
     group.deleteEntry("CookieDomainAdvice");
     cfg.sync();
 
@@ -201,7 +201,7 @@ bool ClearFaviconsAction::action()
    QDir().mkpath(path);
    konqiBookmarkMgr =
       KBookmarkManager::managerForFile(path, QStringLiteral("konqueror"));
-   qDebug() << "saving the favicons that are in konqueror bookmarks"
+   qCDebug(SWEEPER_LOG) << "saving the favicons that are in konqueror bookmarks"
             << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() ;
 
    // get the entire slew of bookmarks
@@ -215,7 +215,7 @@ bool ClearFaviconsAction::action()
          // pick out the name, throw .png on the end, and store the filename
          QRegularExpression regex(QStringLiteral("favicons/(.*)"));
          QRegularExpressionMatch match = regex.match(bookmark.icon());
-         qDebug() << "will save " << (match.captured(1)) ;
+         qCDebug(SWEEPER_LOG) << "will save " << (match.captured(1)) ;
          saveTheseFavicons << (match.captured(1));
       }
       bookmark = konqiBookmarks.next(bookmark);
@@ -229,7 +229,7 @@ bool ClearFaviconsAction::action()
    for(const QString &entry: entries) {
       // ...if we're not supposed to save them, of course
       if (!saveTheseFavicons.contains(entry)) {
-         qDebug() << "removing " << entry ;
+         qCDebug(SWEEPER_LOG) << "removing " << entry ;
          if(!favIconDir.remove(entry)) {
             errMsg = i18n("A favicon could not be removed.");
             return false;

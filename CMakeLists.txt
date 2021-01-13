@@ -20,6 +20,7 @@ include(ECMAddAppIcon)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
+include(ECMQtDeclareLoggingCategory)
 
 add_definitions(
 	-DQT_DISABLE_DEPRECATED_BEFORE=0x050C00
@@ -58,6 +59,7 @@ set(sweeper_SRCS
    sweeper.cpp 
    privacyfunctions.cpp 
    privacyaction.cpp ) 
+ecm_qt_declare_logging_category(sweeper_SRCS HEADER sweeper_debug.h IDENTIFIER SWEEPER_LOG CATEGORY_NAME org.kde.sweeper DESCRIPTION "sweeper" EXPORT SWEEPER)
 
 
 qt5_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
@@ -93,6 +95,10 @@ install( FILES org.kde.sweeper.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 install( FILES org.kde.sweeper.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 add_subdirectory(doc)
-
+ecm_qt_install_logging_categories(
+        EXPORT SWEEPER
+        FILE sweeper.categories
+        DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+        )
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
