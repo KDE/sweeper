@@ -42,10 +42,7 @@ find_package(KF5 ${REQUIRED_KF5_MIN_VERSION} REQUIRED COMPONENTS
     XmlGui
 )
 
-if (KF5Config_VERSION VERSION_GREATER "5.56.0")
-        add_definitions(-DQT_NO_FOREACH)
-        MESSAGE(STATUS "compile without foreach")
-endif()
+add_definitions(-DQT_NO_FOREACH)
 
 
 include_directories (${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
