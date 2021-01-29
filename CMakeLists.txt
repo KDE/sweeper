@@ -81,7 +81,7 @@ target_link_libraries(sweeper
    KF5::XmlGui
 )
 
-install(TARGETS sweeper  ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS sweeper  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### install files ###############
