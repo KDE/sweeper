@@ -59,7 +59,7 @@ set(sweeper_SRCS
 ecm_qt_declare_logging_category(sweeper_SRCS HEADER sweeper_debug.h IDENTIFIER SWEEPER_LOG CATEGORY_NAME org.kde.sweeper DESCRIPTION "sweeper" EXPORT SWEEPER)
 
 
-qt5_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
+qt_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
 		
 # file(GLOB ICONS_SRCS "${KDE4_INSTALL_DIR}/share/icons/oxygen/*/actions/trash-empty.png")
 # ecm_add_app_icon(sweeper_SRCS ICONS ${ICONS_SRCS})
@@ -69,9 +69,9 @@ ki18n_wrap_ui(sweeper_SRCS sweeperdialog.ui )
 add_executable(sweeper ${sweeper_SRCS})
 
 target_link_libraries(sweeper
-   Qt5::Core
-   Qt5::DBus
-   Qt5::Widgets
+   Qt::Core
+   Qt::DBus
+   Qt::Widgets
    KF5::ActivitiesStats
    KF5::Bookmarks
    KF5::Crash
