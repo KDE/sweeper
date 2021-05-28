@@ -22,11 +22,8 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
 
-add_definitions(
-	-DQT_DISABLE_DEPRECATED_BEFORE=0x050C00
-    -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT
-    -DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054400
-)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055300)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     ActivitiesStats
@@ -61,9 +58,6 @@ ecm_qt_declare_logging_category(sweeper_SRCS HEADER sweeper_debug.h IDENTIFIER S
 
 qt_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
 		
-# file(GLOB ICONS_SRCS "${KDE4_INSTALL_DIR}/share/icons/oxygen/*/actions/trash-empty.png")
-# ecm_add_app_icon(sweeper_SRCS ICONS ${ICONS_SRCS})
-
 ki18n_wrap_ui(sweeper_SRCS sweeperdialog.ui )
 
 add_executable(sweeper ${sweeper_SRCS})
