@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
 # KDE Application Version, managed by release script
 set (RELEASE_SERVICE_VERSION_MAJOR "21")
@@ -8,12 +8,12 @@ set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE
 
 project(sweeper VERSION ${RELEASE_SERVICE_VERSION})
 
-set(REQUIRED_KF5_MIN_VERSION "5.68.0")
-set(REQUIRED_QT_VERSION "5.12.0")
+set(QT_MIN_VERSION "5.15.0")
+set(KF5_MIN_VERSION "5.83.0")
 
 include(FeatureSummary)
-find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED COMPONENTS Core DBus Widgets)
-find_package(ECM ${REQUIRED_KF5_MIN_VERSION} NO_MODULE REQUIRED)
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core DBus Widgets)
+find_package(ECM ${KF5_MIN_VERSION} NO_MODULE REQUIRED)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 
 include(ECMAddAppIcon)
@@ -28,7 +28,7 @@ add_definitions(
     -DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054400
 )
 
-find_package(KF5 ${REQUIRED_KF5_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     ActivitiesStats
     Bookmarks
     Crash
