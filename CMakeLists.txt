@@ -48,19 +48,20 @@ configure_file(config-sweeper.h.cmake
     ${CMAKE_CURRENT_BINARY_DIR}/config-sweeper.h
 )
 
-set(sweeper_SRCS 
+add_executable(sweeper)
+target_sources(sweeper PRIVATE
    main.cpp 
    sweeper.cpp 
    privacyfunctions.cpp 
    privacyaction.cpp ) 
-ecm_qt_declare_logging_category(sweeper_SRCS HEADER sweeper_debug.h IDENTIFIER SWEEPER_LOG CATEGORY_NAME org.kde.sweeper DESCRIPTION "sweeper" EXPORT SWEEPER)
+ecm_qt_declare_logging_category(sweeper HEADER sweeper_debug.h IDENTIFIER SWEEPER_LOG CATEGORY_NAME org.kde.sweeper DESCRIPTION "sweeper" EXPORT SWEEPER)
 
 
 qt_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
+target_sources(sweeper PRIVATE ${sweeper_SRCS})
 		
-ki18n_wrap_ui(sweeper_SRCS sweeperdialog.ui )
+ki18n_wrap_ui(sweeper sweeperdialog.ui )
 
-add_executable(sweeper ${sweeper_SRCS})
 
 target_link_libraries(sweeper
    Qt::Core
