@@ -4,6 +4,7 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>LGPL-2.1+</project_license>
   <name>Sweeper</name>
+  <name xml:lang="ar">الكناس</name>
   <name xml:lang="ca">Escombraire</name>
   <name xml:lang="ca-valencia">Escombraire</name>
   <name xml:lang="cs">Sweeper</name>
@@ -42,6 +43,7 @@
   <name xml:lang="zh-CN">Sweeper</name>
   <name xml:lang="zh-TW">Sweeper</name>
   <summary>System cleaning utility</summary>
+  <summary xml:lang="ar">أداة تنظيف النظام</summary>
   <summary xml:lang="ca">Utilitat per a netejar el sistema</summary>
   <summary xml:lang="ca-valencia">Utilitat per a netejar el sistema</summary>
   <summary xml:lang="cs">Nástroj pro úklid systému</summary>
@@ -84,6 +86,7 @@
       Sweeper helps to clean unwanted traces the user leaves on the system. It
       can remove cookies and clean out caches, for example.
     </p>
+    <p xml:lang="ar">الكناس يساعد في تنظيف الأثآر غير المرغوبة التي يتركها المستخدم في النظام. على سبيل المثال يمكنه إزالة الكعكات (ملفات التعريف) وينظف الخبيئة.</p>
     <p xml:lang="ca">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Elimina les galetes i neteja les memòries cau, per exemple.</p>
     <p xml:lang="ca-valencia">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Elimina les galetes i neteja les memòries cau, per exemple.</p>
     <p xml:lang="cs">Sweeper pomáhá smazat nechtěné stopy zanechané uživatelem v systému. Například může mazat cookies a mezipaměť.</p>
