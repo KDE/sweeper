@@ -15,4 +15,4 @@ Dependencies:
     'frameworks/ktextwidgets': '@stable'
     'frameworks/kxmlgui': '@stable'
     'frameworks/kbookmarks': '@stable'
-    'frameworks/kactivitiesstats': '@stable'
+    'frameworks/kactivities-stats': '@stable'
