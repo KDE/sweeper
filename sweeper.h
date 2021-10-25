@@ -22,7 +22,7 @@ class Sweeper: public KXmlGuiWindow
    public:
       // if automatic is true, no user interaction is required
       explicit Sweeper(bool automatic);
-      ~Sweeper();
+      ~Sweeper() override;
 
       void cleanup();
 
