@@ -53,7 +53,11 @@ target_sources(sweeper PRIVATE
    main.cpp 
    sweeper.cpp 
    privacyfunctions.cpp 
-   privacyaction.cpp ) 
+   privacyaction.cpp
+   privacyaction.h
+   sweeper.h
+   privacyfunctions.h
+   )
 ecm_qt_declare_logging_category(sweeper HEADER sweeper_debug.h IDENTIFIER SWEEPER_LOG CATEGORY_NAME org.kde.sweeper DESCRIPTION "sweeper" EXPORT SWEEPER)
 
 
