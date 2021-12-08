@@ -11,19 +11,18 @@ project(sweeper VERSION ${RELEASE_SERVICE_VERSION})
 set(QT_MIN_VERSION "5.15.0")
 set(KF5_MIN_VERSION "5.88.0")
 
-include(FeatureSummary)
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core DBus Widgets)
 find_package(ECM ${KF5_MIN_VERSION} NO_MODULE REQUIRED)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 
-include(ECMAddAppIcon)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
-include(ECMQtDeclareLoggingCategory)
+include(KDECompilerSettings NO_POLICY_SCOPE)
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055800)
+include(ECMAddAppIcon)
+include(ECMQtDeclareLoggingCategory)
+include(FeatureSummary)
+
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core DBus Widgets)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     ActivitiesStats
@@ -39,8 +38,12 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     XmlGui
 )
 
-add_definitions(-DQT_NO_FOREACH)
-
+add_definitions(
+    -DQT_DISABLE_DEPRECATED_BEFORE=0x050f00
+    -DQT_DEPRECATED_WARNINGS_SINCE=0x060000
+    -DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055800
+    -DKF_DEPRECATED_WARNINGS_SINCE=0x060000
+)
 
 include_directories (${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
 
@@ -65,7 +68,6 @@ qt_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
 target_sources(sweeper PRIVATE ${sweeper_SRCS})
 		
 ki18n_wrap_ui(sweeper sweeperdialog.ui )
-
 
 target_link_libraries(sweeper
    Qt::Core
@@ -96,5 +98,5 @@ ecm_qt_install_logging_categories(
         FILE sweeper.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
         )
-feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
