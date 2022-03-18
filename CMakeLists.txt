@@ -97,6 +97,7 @@ install( FILES sweeperui.rc  DESTINATION ${KDE_INSTALL_KXMLGUIDIR}/sweeper)
 install( FILES org.kde.sweeper.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 install( FILES org.kde.sweeper.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
+ki18n_install(po)
 if(KF5DocTools_FOUND)
     kdoctools_install(po)
     add_subdirectory(doc)
