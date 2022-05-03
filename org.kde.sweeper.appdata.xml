@@ -6,7 +6,7 @@
   <name>Sweeper</name>
   <name xml:lang="ar">الكناس</name>
   <name xml:lang="ca">Escombraire</name>
-  <name xml:lang="ca-valencia">Escombraire</name>
+  <name xml:lang="ca-valencia">Agranador</name>
   <name xml:lang="cs">Sweeper</name>
   <name xml:lang="da">Sweeper</name>
   <name xml:lang="de">Sweeper</name>
@@ -90,7 +90,7 @@
     </p>
     <p xml:lang="ar">الكناس يساعد في تنظيف الأثآر غير المرغوبة التي يتركها المستخدم في النظام. على سبيل المثال يمكنه إزالة الكعكات (ملفات التعريف) وينظف الخبيئة.</p>
     <p xml:lang="ca">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Elimina les galetes i neteja les memòries cau, per exemple.</p>
-    <p xml:lang="ca-valencia">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Elimina les galetes i neteja les memòries cau, per exemple.</p>
+    <p xml:lang="ca-valencia">L'agranador ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Elimina les galetes i neteja les memòries cau, per exemple.</p>
     <p xml:lang="cs">Sweeper pomáhá smazat nechtěné stopy zanechané uživatelem v systému. Například může mazat cookies a mezipaměť.</p>
     <p xml:lang="da">Sweeper hjælper med at rydde op i uønskede spor som brugeren har efterladt på systemet. Den fjerner f.eks. cookies og rydder op i cacher.</p>
     <p xml:lang="de">Sweeper hilft dem Benutzer ungewollte Spuren im System zu verwischen und kann zum Beispiel Cookies und Zwischenspeicher bereinigen.</p>
