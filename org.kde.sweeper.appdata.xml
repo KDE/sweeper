@@ -39,6 +39,7 @@
   <name xml:lang="sr-ijekavian">Чистач</name>
   <name xml:lang="sr-ijekavianlatin">Čistač</name>
   <name xml:lang="sv">Sweeper</name>
+  <name xml:lang="tr">Süpürücü</name>
   <name xml:lang="uk">Sweeper</name>
   <name xml:lang="x-test">xxSweeperxx</name>
   <name xml:lang="zh-CN">Sweeper</name>
@@ -79,6 +80,7 @@
   <summary xml:lang="sr-ijekavian">Алатка за чишћење система</summary>
   <summary xml:lang="sr-ijekavianlatin">Alatka za čišćenje sistema</summary>
   <summary xml:lang="sv">Systemrensningsverktyg</summary>
+  <summary xml:lang="tr">Sistem temizleme izlencesi</summary>
   <summary xml:lang="uk">Програма для чищення системи</summary>
   <summary xml:lang="x-test">xxSystem cleaning utilityxx</summary>
   <summary xml:lang="zh-CN">系统清洁实用程序</summary>
@@ -122,6 +124,7 @@
     <p xml:lang="sr-ijekavian">Чистач помаже у отклањању нежељених трагова које корисник остави на систему. На пример, може да уклања колачиће и чисти кешеве.</p>
     <p xml:lang="sr-ijekavianlatin">Čistač pomaže u otklanjanju neželjenih tragova koje korisnik ostavi na sistemu. Na primer, može da uklanja kolačiće i čisti keševe.</p>
     <p xml:lang="sv">Sweeper hjälper till att rensa oönskade spår som användaren lämnar i systemet. Det kan exempelvis ta bort kakor och tömma cachar.</p>
+    <p xml:lang="tr">Süpürücü, kullanıcının sistemde bıraktığı istenmeyen izleri temizlemenize yardımcı olur. Örneğin, çerezleri kaldırır ve önbellekleri boşaltır.</p>
     <p xml:lang="uk">Sweeper допомагає позбутися небажаних слідів роботи користувача у системі. Зокрема, програма може вилучати записи кук та спорожняти кеш.</p>
     <p xml:lang="x-test">xxSweeper helps to clean unwanted traces the user leaves on the system. It can remove cookies and clean out caches, for example.xx</p>
     <p xml:lang="zh-CN">Sweeper 帮助用户清理留在系统上的不需要的痕迹。例如，它能移除 Cookie 和清理缓存。</p>
