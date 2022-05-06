@@ -16,3 +16,5 @@ Dependencies:
     'frameworks/kxmlgui': '@stable'
     'frameworks/kbookmarks': '@stable'
     'frameworks/kactivities-stats': '@stable'
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD']
