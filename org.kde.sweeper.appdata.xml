@@ -133,6 +133,7 @@
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=sweeper</url>
   <url type="help">https://docs.kde.org/?application=sweeper</url>
   <url type="donation">https://www.kde.org/community/donations/?app=sweeper&amp;source=appdata</url>
+  <content_rating type="oars-1.1"/>
   <screenshots>
     <screenshot type="default">
       <image>https://cdn.kde.org/screenshots/sweeper/sweeper.png</image>
