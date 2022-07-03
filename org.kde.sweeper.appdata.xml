@@ -5,6 +5,7 @@
   <project_license>LGPL-2.1+</project_license>
   <name>Sweeper</name>
   <name xml:lang="ar">الكناس</name>
+  <name xml:lang="bg">Sweeper</name>
   <name xml:lang="ca">Escombraire</name>
   <name xml:lang="ca-valencia">Agranador</name>
   <name xml:lang="cs">Sweeper</name>
@@ -41,10 +42,11 @@
   <name xml:lang="sv">Sweeper</name>
   <name xml:lang="uk">Sweeper</name>
   <name xml:lang="x-test">xxSweeperxx</name>
-  <name xml:lang="zh-CN">Sweeper</name>
+  <name xml:lang="zh-CN">Sweeper 系统清理工具</name>
   <name xml:lang="zh-TW">Sweeper</name>
   <summary>System cleaning utility</summary>
   <summary xml:lang="ar">أداة تنظيف النظام</summary>
+  <summary xml:lang="bg">Инструмент за почистване на системата</summary>
   <summary xml:lang="ca">Utilitat de neteja del sistema</summary>
   <summary xml:lang="ca-valencia">Utilitat de neteja del sistema</summary>
   <summary xml:lang="cs">Nástroj pro úklid systému</summary>
@@ -81,7 +83,7 @@
   <summary xml:lang="sv">Systemrensningsverktyg</summary>
   <summary xml:lang="uk">Програма для чищення системи</summary>
   <summary xml:lang="x-test">xxSystem cleaning utilityxx</summary>
-  <summary xml:lang="zh-CN">系统清洁实用程序</summary>
+  <summary xml:lang="zh-CN">系统清理工具</summary>
   <summary xml:lang="zh-TW">系統清理工具</summary>
   <description>
     <p>
@@ -89,6 +91,7 @@
       can remove cookies and clean out caches, for example.
     </p>
     <p xml:lang="ar">الكناس يساعد في تنظيف الأثآر غير المرغوبة التي يتركها المستخدم في النظام. على سبيل المثال يمكنه إزالة الكعكات (ملفات التعريف) وينظف الخبيئة.</p>
+    <p xml:lang="bg">Sweeper е програма, която помага да се почистят нежеланите следи, които потребителят оставя в системата. Тя може да например да премахва бисквитки и да почиства кеша.</p>
     <p xml:lang="ca">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Elimina les galetes i neteja les memòries cau, per exemple.</p>
     <p xml:lang="ca-valencia">L'agranador ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Elimina les galetes i neteja les memòries cau, per exemple.</p>
     <p xml:lang="cs">Sweeper pomáhá smazat nechtěné stopy zanechané uživatelem v systému. Například může mazat cookies a mezipaměť.</p>
@@ -124,7 +127,7 @@
     <p xml:lang="sv">Sweeper hjälper till att rensa oönskade spår som användaren lämnar i systemet. Det kan exempelvis ta bort kakor och tömma cachar.</p>
     <p xml:lang="uk">Sweeper допомагає позбутися небажаних слідів роботи користувача у системі. Зокрема, програма може вилучати записи кук та спорожняти кеш.</p>
     <p xml:lang="x-test">xxSweeper helps to clean unwanted traces the user leaves on the system. It can remove cookies and clean out caches, for example.xx</p>
-    <p xml:lang="zh-CN">Sweeper 帮助用户清理留在系统上的不需要的痕迹。例如，它能移除 Cookie 和清理缓存。</p>
+    <p xml:lang="zh-CN">Sweeper 可以清理系统中的用户使用记录，例如 Cookies 缓存等。</p>
   </description>
   <url type="homepage">https://utils.kde.org/projects/sweeper/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=sweeper</url>
