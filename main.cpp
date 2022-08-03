@@ -48,8 +48,8 @@ int main(int argc, char *argv[])
    KAboutData::setApplicationData(aboutData);
    a.setWindowIcon(QIcon::fromTheme(QStringLiteral("trash-empty")));
 
-   parser.addOption(QCommandLineOption(QStringLiteral("automatic"),
-                    i18n("Sweeps without user interaction")));
+   const QCommandLineOption automaticOption(QStringLiteral("automatic"), i18n("Sweeps without user interaction"));
+   parser.addOption(automaticOption);
    aboutData.setupCommandLine(&parser);
    parser.process(a);
    aboutData.processCommandLine(&parser);
@@ -58,11 +58,11 @@ int main(int argc, char *argv[])
 
    // Application
    Sweeper *app;
-   if(parser.isSet(QStringLiteral("automatic"))) {
-      app = new Sweeper(true);
+   if (parser.isSet(automaticOption)) {
+       app = new Sweeper(true);
    } else {
-      app = new Sweeper(false);
-      app->show();
+       app = new Sweeper(false);
+       app->show();
    }
    return a.exec();
 }
