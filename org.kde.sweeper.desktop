@@ -3,7 +3,6 @@ X-DocPath=
 Icon=sweeper
 Exec=sweeper
 Type=Application
-Terminal=false
 X-KDE-StartupNotify=true
 X-DBUS-StartupType=Multi
 Categories=Qt;KDE;Utility;
