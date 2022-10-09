@@ -199,7 +199,7 @@ msgstr "Icones favorites"
 #, kde-format
 msgid "Clears the FavIcons cached from visited websites"
 msgstr ""
-"Neteja les icones de web guardades a la memòria cau dels llocs web visitats"
+"Neteja les icones de web guardades en la memòria cau dels llocs web visitats"
 
 #: privacyfunctions.h:124
 #, kde-format
