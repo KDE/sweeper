@@ -24,6 +24,7 @@
   <name xml:lang="ia">Sweeper</name>
   <name xml:lang="id">Sweeper</name>
   <name xml:lang="it">Spazzino</name>
+  <name xml:lang="ka">Sweeper</name>
   <name xml:lang="ko">Sweeper</name>
   <name xml:lang="lt">Išvalymo įrankis</name>
   <name xml:lang="nl">Sweeper</name>
@@ -66,6 +67,7 @@
   <summary xml:lang="ia">Utilitate per nettar le systema</summary>
   <summary xml:lang="id">Utilitas pembersihan sistem</summary>
   <summary xml:lang="it">Utilità per la pulizia del sistema</summary>
+  <summary xml:lang="ka">სისტემის გასუფთავების პროგრამა</summary>
   <summary xml:lang="ko">시스템 청소 도구</summary>
   <summary xml:lang="lt">Sistemos išvalymo paslaugų programa</summary>
   <summary xml:lang="nl">Hulpmiddel voor opschonen van het systeem</summary>
