@@ -23,6 +23,7 @@
   <name xml:lang="hu">Sweeper</name>
   <name xml:lang="ia">Sweeper</name>
   <name xml:lang="id">Sweeper</name>
+  <name xml:lang="ie">Sweeper</name>
   <name xml:lang="is">Sweeper</name>
   <name xml:lang="it">Spazzino</name>
   <name xml:lang="ka">Sweeper</name>
@@ -67,6 +68,7 @@
   <summary xml:lang="hu">Rendszertisztító segédprogram</summary>
   <summary xml:lang="ia">Utilitate per nettar le systema</summary>
   <summary xml:lang="id">Utilitas pembersihan sistem</summary>
+  <summary xml:lang="ie">Utensile de nettation del sistema</summary>
   <summary xml:lang="is">Kerfishreinsunarartól</summary>
   <summary xml:lang="it">Utilità per la pulizia del sistema</summary>
   <summary xml:lang="ka">სისტემის გასუფთავების პროგრამა</summary>
@@ -115,6 +117,7 @@
     <p xml:lang="hu">A Sweeper segít a nem kívánt nyomok törlésében a rendszerből. Többek között eltávolítja a sütiket és kiüríti a gyorsítótárakat.</p>
     <p xml:lang="ia">Sweeper adjuta nettar tracias non volite que le usator lassa in le systema. Il pote remover cookies e nettar caches pro exemplo.</p>
     <p xml:lang="id">Sweeper membantu membersihkan jejak yang tidak diinginkan yang ditinggalkan pengguna pada sistem. Itu dapat menghapus cookie dan membersihkan cache, misalnya.</p>
+    <p xml:lang="ie">Sweeper efacia índesirat tracies quel li usator lassa in li sistema. Por exemple, it posse remover cookies e caches.</p>
     <p xml:lang="is">Sweeper hjálpar til við að hreinsa óþarfar slóðir sem notandinn skilur eftir á kerfinu. Það getur endurheimt diskpláss með því t.d. að fjarlægja vefkökur og ónotaðar bráðabirgðaskrár.</p>
     <p xml:lang="it">Lo spazzino aiuta a cancellare le tracce indesiderate che l'utente lascia nel sistema, ad esempio può rimuovere i cookie e ripulire la cache.</p>
     <p xml:lang="ko">Sweeper는 시스템에 남아 있는 사용자의 과거 기록을 청소합니다. 쿠키와 캐시 등 데이터를 지울 수 있습니다.</p>
