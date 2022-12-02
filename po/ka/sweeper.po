@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-04 00:49+0000\n"
-"PO-Revision-Date: 2022-10-06 19:45+0200\n"
+"PO-Revision-Date: 2022-12-01 23:12+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,11 +37,12 @@ msgstr "Sweeper"
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr ""
+"დაგეხმარებათ სისტემა მომხმარებლის მიერ დატოვებული კვალისგან გაასუფთავოთ."
 
 #: main.cpp:38
 #, kde-format
 msgid "© 2003-2005, Ralf Hoelzer"
-msgstr ""
+msgstr "© 2003-2005, Ralf Hoelzer"
 
 #: main.cpp:42
 #, kde-format
@@ -76,22 +77,22 @@ msgstr "მინიატურის ქეში"
 #: main.cpp:51
 #, kde-format
 msgid "Sweeps without user interaction"
-msgstr ""
+msgstr "გასუფთავება მომხმარებლის ჩარევის გარეშე"
 
 #: privacyfunctions.cpp:46 privacyfunctions.cpp:55 privacyfunctions.cpp:64
 #, kde-format
 msgid "A thumbnail could not be removed."
-msgstr ""
+msgstr "მინიატურის წაშლის შეცდომა."
 
 #: privacyfunctions.cpp:135
 #, kde-format
 msgid "The file exists but could not be removed."
-msgstr ""
+msgstr "ფაილი არსებობს, მაგრამ მიწი წაშლა შეუძლებელია."
 
 #: privacyfunctions.cpp:220
 #, kde-format
 msgid "A favicon could not be removed."
-msgstr ""
+msgstr "Favicon -ის წაშლა შეუძლებელია."
 
 #: privacyfunctions.h:23
 #, kde-format
@@ -101,54 +102,54 @@ msgstr "Cookie ფაილები"
 #: privacyfunctions.h:24
 #, kde-format
 msgid "Clears all stored cookies set by websites"
-msgstr ""
+msgstr "ვებსაიტების მიერ დაყენებული ქუქიების გასუფტავება"
 
 #: privacyfunctions.h:34
 #, kde-format
 msgid "Cookie Policies"
-msgstr ""
+msgstr "ქუქიების პოლიტიკები"
 
 #: privacyfunctions.h:35
 #, kde-format
 msgid "Clears the cookie policies for all visited websites"
-msgstr ""
+msgstr "ნანახი ვებსაიტების მიერ დაყენებული ქუქის პოლიტიკების გასუფთავება"
 
 #: privacyfunctions.h:44
 #, kde-format
 msgid "Saved Clipboard Contents"
-msgstr ""
+msgstr "ბუფერის შენახული შემცველობები"
 
 #: privacyfunctions.h:45
 #, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
-msgstr ""
+msgstr "Klipper-ის მიერ დამახსოვრებული ბუფერის შემცველობების წაშლა"
 
 #: privacyfunctions.h:55
 #, kde-format
 msgid "Clears all cached thumbnails"
-msgstr ""
+msgstr "დაქეშილი მინიატურების გასუფთავება"
 
 #: privacyfunctions.h:64
 #, kde-format
 msgid "Run Command History"
-msgstr ""
+msgstr "ბრძანებების გაშვების ისტორია"
 
 #: privacyfunctions.h:65
 #, kde-format
 msgid ""
 "Clears the history of commands run through the Run Command tool on the "
 "desktop"
-msgstr ""
+msgstr "სამუშაო მაგიაზე ბრძანების გაშვების ზოლის ისტორიის გასუფთავება"
 
 #: privacyfunctions.h:74
 #, kde-format
 msgid "Form Completion Entries"
-msgstr ""
+msgstr "ფორმის დასრულების ჩანაწერები"
 
 #: privacyfunctions.h:75
 #, kde-format
 msgid "Clears values which were entered into forms on websites"
-msgstr ""
+msgstr "ვებგვერდების ფორმებში შეყვანილი მნიშვნელობების წაშა"
 
 #: privacyfunctions.h:84
 #, kde-format
@@ -158,7 +159,7 @@ msgstr "ვების ისტორია"
 #: privacyfunctions.h:85
 #, kde-format
 msgid "Clears the history of visited websites"
-msgstr ""
+msgstr "ბრაუზერის ისტორიის გასუფთავება"
 
 #: privacyfunctions.h:94
 #, kde-format
@@ -168,7 +169,7 @@ msgstr "ვების ქეში"
 #: privacyfunctions.h:95
 #, kde-format
 msgid "Clears the temporary cache of websites visited"
-msgstr ""
+msgstr "ნანახი ვებსაიტების დროებითი ქეშის გასუფთავება"
 
 #: privacyfunctions.h:104
 #, kde-format
@@ -180,6 +181,7 @@ msgstr "ახლახანს გასნილი დოკუმენტ�
 msgid ""
 "Clears the list of recently used documents from the KDE applications menu"
 msgstr ""
+"KDE-ის აპლიკაციის მენიუდან ახლახანს გამოყენებული დოკუმენტების სიის წაშლა"
 
 #: privacyfunctions.h:114
 #, kde-format
@@ -189,7 +191,7 @@ msgstr "რჩეული ხატულები"
 #: privacyfunctions.h:115
 #, kde-format
 msgid "Clears the FavIcons cached from visited websites"
-msgstr ""
+msgstr "ნანახი ვებგვერდების ქეშირებული Favicon-ების გასუფავება"
 
 #: privacyfunctions.h:124
 #, kde-format
@@ -199,7 +201,7 @@ msgstr "ახლახანს გამოყენებული აპლ�
 #: privacyfunctions.h:125
 #, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
-msgstr ""
+msgstr "KDE-ის მენიუდან ახალხანს გაშვებული აპლიკაციების სიის წაშლა"
 
 #: sweeper.cpp:22
 #, kde-format
@@ -218,11 +220,13 @@ msgstr "ვების ბრაუზინგი"
 msgid ""
 "You are deleting data that is potentially valuable to you. Are you sure?"
 msgstr ""
+"შლით ფაილებს, რომელიც შეიძლება თქვენთვის მნიშვნელოვანი აღმოჩნდეს. "
+"დარწმუნებული ბრძანდებით?"
 
 #: sweeper.cpp:109
 #, kde-format
 msgid "Starting cleanup..."
-msgstr ""
+msgstr "მოსუფთავების დაწყება..."
 
 #: sweeper.cpp:113
 #, kde-format
@@ -246,6 +250,8 @@ msgid ""
 "Check all cleanup actions you would like to perform. These will be executed "
 "by pressing the button below."
 msgstr ""
+"მონიშნეთ ყველა მოსუფთავების ქმედება, რომლის გაშვებაც გნებავთ. ისინი ქვემოთ "
+"ღილაკის დაჭერით შესრულდება."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, privacyListView)
 #: sweeperdialog.ui:37
@@ -275,7 +281,7 @@ msgstr "მონიშვნის &მოხსნა"
 #: sweeperdialog.ui:88
 #, kde-format
 msgid "Immediately performs the cleanup actions selected above"
-msgstr ""
+msgstr "ზემოთ მონიშნული ქმედებების დაუყოვნებლივი შესრულება"
 
 #. i18n: ectx: property (text), widget (QPushButton, cleanupButton)
 #: sweeperdialog.ui:91
