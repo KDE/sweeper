@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-04 00:49+0000\n"
-"PO-Revision-Date: 2022-12-01 09:40+0100\n"
+"PO-Revision-Date: 2022-12-02 23:33+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,6 +37,7 @@ msgstr "Sweeper"
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr ""
+"დაგეხმარებათ სისტემა მომხმარებლის მიერ დატოვებული კვალისგან გაასუფთავოთ."
 
 #: main.cpp:38
 #, kde-format
@@ -138,7 +139,7 @@ msgstr "ბრძანებების გაშვების ისტო�
 msgid ""
 "Clears the history of commands run through the Run Command tool on the "
 "desktop"
-msgstr ""
+msgstr "სამუშაო მაგიაზე ბრძანების გაშვების ზოლის ისტორიის გასუფთავება"
 
 #: privacyfunctions.h:74
 #, kde-format
@@ -249,6 +250,8 @@ msgid ""
 "Check all cleanup actions you would like to perform. These will be executed "
 "by pressing the button below."
 msgstr ""
+"მონიშნეთ ყველა მოსუფთავების ქმედება, რომლის გაშვებაც გნებავთ. ისინი ქვემოთ "
+"ღილაკის დაჭერით შესრულდება."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, privacyListView)
 #: sweeperdialog.ui:37
@@ -278,7 +281,7 @@ msgstr "მონიშვნის &მოხსნა"
 #: sweeperdialog.ui:88
 #, kde-format
 msgid "Immediately performs the cleanup actions selected above"
-msgstr ""
+msgstr "ზემოთ მონიშნული ქმედებების დაუყოვნებლივი შესრულება"
 
 #. i18n: ectx: property (text), widget (QPushButton, cleanupButton)
 #: sweeperdialog.ui:91
