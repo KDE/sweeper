@@ -22,10 +22,16 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(FeatureSummary)
 include(ECMDeprecationSettings)
-
+if (QT_MAJOR_VERSION STREQUAL "6")
+    set(QT_REQUIRED_VERSION "6.4.0")
+    set(KF_MIN_VERSION "5.240.0")
+    set(KF_MAJOR_VERSION "6")
+else()
+    set(KF_MAJOR_VERSION "5")
+endif()
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Core DBus Widgets)
 
-find_package(KF5 ${KF_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
     ActivitiesStats
     Bookmarks
     Crash
@@ -37,8 +43,8 @@ find_package(KF5 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     TextWidgets
     XmlGui
 )
-find_package(KF5DocTools ${KF_MIN_VERSION})
-set_package_properties(KF5DocTools PROPERTIES DESCRIPTION
+find_package(KF${KF_MAJOR_VERSION}DocTools ${KF_MIN_VERSION})
+set_package_properties(KF${KF_MAJOR_VERSION}DocTools PROPERTIES DESCRIPTION
     "Tools to generate documentation"
     TYPE OPTIONAL
 )
@@ -73,13 +79,13 @@ target_link_libraries(sweeper
    Qt${QT_MAJOR_VERSION}::Core
    Qt${QT_MAJOR_VERSION}::DBus
    Qt${QT_MAJOR_VERSION}::Widgets
-   KF5::ActivitiesStats
-   KF5::Bookmarks
-   KF5::Crash
-   KF5::I18n
-   KF5::KIOCore
-   KF5::TextWidgets
-   KF5::XmlGui
+   KF${KF_MAJOR_VERSION}::ActivitiesStats
+   KF${KF_MAJOR_VERSION}::Bookmarks
+   KF${KF_MAJOR_VERSION}::Crash
+   KF${KF_MAJOR_VERSION}::I18n
+   KF${KF_MAJOR_VERSION}::KIOCore
+   KF${KF_MAJOR_VERSION}::TextWidgets
+   KF${KF_MAJOR_VERSION}::XmlGui
 )
 
 install(TARGETS sweeper  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
