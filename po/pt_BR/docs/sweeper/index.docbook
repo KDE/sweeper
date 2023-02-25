@@ -1,11 +1,5 @@
 <?xml version="1.0" ?>
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-
-  <!ENTITY sweeper "<application
->Sweeper</application
->">
-  <!ENTITY kappname "&ksweeper;">
-  <!ENTITY package "kdeutils">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % Brazilian-Portuguese "INCLUDE">
 ]>
@@ -37,9 +31,9 @@
 </authorgroup>
 
 <date
->25/05/2013</date>
+>03/01/2018</date>
 <releaseinfo
->1.9 (&kde; 4.11)</releaseinfo>
+>1.11 (Applications 17.12)</releaseinfo>
 
 <keywordset>
 <keyword
@@ -52,7 +46,7 @@
 </articleinfo>
 
 <para
->O &sweeper; ajuda a limpar traços indesejados dos aplicativos do &kde;, que os usuários deixam no sistema. </para>
+>O &sweeper; ajuda a limpar traços indesejados dos aplicativos do &plasma; e &kde;, que os usuários deixam no sistema. </para>
 
 <para>
 <screenshot>
@@ -82,11 +76,11 @@
 
 <note
 ><para
->O &sweeper; apaga os dados em 'cache' que são usados pelas aplicações do &kde; na pasta de 'cache' do &kde;. Para ver a localização desta pasta, execute <userinput
+>O &sweeper; apaga os dados em 'cache' que são usados pelas aplicações do &plasma; e &kde; na pasta de 'cache' do &kde;. Para ver a localização desta pasta, digite <userinput
 ><command
->kde4-config</command
+>qtpaths</command
 > <option
->--path cache</option
+>--paths GenericCacheLocation</option
 ></userinput
 > no &konsole;. A limpeza dos seus dados em 'cache' com o &sweeper; só os impossibilita de lê-los &eg; com um gerenciador de arquivos, mas é possível ler os dados brutos, o que está ainda no disco, usando uma ferramenta de disco de baixo nível. </para>
 </note>
