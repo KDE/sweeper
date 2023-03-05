@@ -208,7 +208,7 @@ msgstr "التطبيقات الحديثة"
 #: privacyfunctions.h:125
 #, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
-msgstr "يمحي لائحة التطبيقات  المستخدمة  مؤخراً من قائمة تطبيقات كدي"
+msgstr "يمحي لائحة التطبيقات  المستخدمة  مؤخراً من قائمة تطبيقات كِيدِي"
 
 #: sweeper.cpp:22
 #, kde-format
