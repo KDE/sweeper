@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: privacy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-04 00:49+0000\n"
-"PO-Revision-Date: 2007-03-01 09:39+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-03-25 16:19+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -36,10 +36,9 @@ msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr ""
 
 #: main.cpp:38
-#, fuzzy, kde-format
-#| msgid "(c) 2003 Ralf Hoelzer"
+#, kde-format
 msgid "© 2003-2005, Ralf Hoelzer"
-msgstr "© 2003 Ralf Hoelzer"
+msgstr ""
 
 #: main.cpp:42
 #, kde-format
@@ -102,16 +101,14 @@ msgid "Clears all stored cookies set by websites"
 msgstr "Ĝi forigas ciujn konservitajn kuketojn"
 
 #: privacyfunctions.h:34
-#, fuzzy, kde-format
-#| msgid "Cookies"
+#, kde-format
 msgid "Cookie Policies"
-msgstr "Kuketoj"
+msgstr ""
 
 #: privacyfunctions.h:35
-#, fuzzy, kde-format
-#| msgid "Clears the history of visited websites"
+#, kde-format
 msgid "Clears the cookie policies for all visited websites"
-msgstr "Ĝi forigias la liston de vizititaj ttt-serviloj"
+msgstr ""
 
 #: privacyfunctions.h:44
 #, kde-format
@@ -197,11 +194,9 @@ msgid "Recent Applications"
 msgstr ""
 
 #: privacyfunctions.h:125
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clears the list of recently used documents from the KDE applications menu"
+#, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
-msgstr "Ĝi forigas la liston de lastlaboritaj dokumentoj el la aplikaĵa menuo"
+msgstr ""
 
 #: sweeper.cpp:22
 #, kde-format
@@ -232,9 +227,9 @@ msgid "Clearing %1..."
 msgstr "Forigas %1"
 
 #: sweeper.cpp:118
-#, fuzzy, kde-format
+#, kde-format
 msgid "Clearing of %1 failed: %2"
-msgstr "Forigo de %1 fiaskis"
+msgstr ""
 
 #: sweeper.cpp:124
 #, kde-format
@@ -243,16 +238,11 @@ msgstr "Forigo finis."
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, privacyListView)
 #: sweeperdialog.ui:27
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check all cleanup actions you would like to perform. These will be "
-#| "executed by pressing the button below"
+#, kde-format
 msgid ""
 "Check all cleanup actions you would like to perform. These will be executed "
 "by pressing the button below."
 msgstr ""
-"Marku ĉiujn formetagojn, kiujn vi volas. Ĉi tiuj estos farataj per premo de "
-"la malsupra butono."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, privacyListView)
 #: sweeperdialog.ui:37
@@ -286,125 +276,6 @@ msgstr "Tuj faru la supre elektitajn formetagojn"
 
 #. i18n: ectx: property (text), widget (QPushButton, cleanupButton)
 #: sweeperdialog.ui:91
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Clean Up"
-msgstr "Forigu"
-
-#~ msgid "Network privacy level:"
-#~ msgstr "Reta privatnivelo:"
-
-#~ msgid "Low"
-#~ msgstr "Malalta"
-
-#~ msgid "Medium"
-#~ msgstr "Meza"
-
-#~ msgid "High"
-#~ msgstr "Alta"
-
-#~ msgid "Custom"
-#~ msgstr "Propra"
-
-#~ msgid "Financial Information"
-#~ msgstr "Financaj informoj"
-
-#~ msgid ""
-#~ "Warn me when I visit a site that uses my financial or purchase "
-#~ "information:"
-#~ msgstr ""
-#~ "Avertu min, se mi vizitas servilon, kiu uzas miajn financan aŭ aĉetan "
-#~ "informojn:"
-
-#~ msgid "For marketing or advertising purposes"
-#~ msgstr "Por varbaj celoj"
-
-#~ msgid "To share with other companies"
-#~ msgstr "Por komuna uzo kun aliaj entreprenoj"
-
-#~ msgid "Health Information"
-#~ msgstr "Sanecaj informoj"
-
-#~ msgid ""
-#~ "Warn me when I visit a site that uses my health or medical information: "
-#~ msgstr ""
-#~ "Avertu min, se mi vizitas servilon, kiu uzas miajn saneca aŭ mdecina "
-#~ "informoj:"
-
-#~ msgid "Demographics"
-#~ msgstr "Demografeco"
-
-#~ msgid ""
-#~ "Warn me when I visit a site that uses my non-personally identifiable "
-#~ "information:"
-#~ msgstr ""
-#~ "Avertu min, se mi vizitas servilon, kiu uzas miajn neprivate identigeblaj "
-#~ "informoj:"
-
-#~ msgid "To determine my interests, habits or general behavior"
-#~ msgstr "Por determini miajn interesojn, kutimojn aŭ ĝenerala agmaniero"
-
-#~ msgid ""
-#~ "Warn me when I visit a site that shares my personal information with "
-#~ "other companies"
-#~ msgstr ""
-#~ "Avertu min, se mi vizitas servilon, kiu komune uzas miajn personajn "
-#~ "informojn kun aliaj entreprenoj"
-
-#~ msgid ""
-#~ "Warn me when I visit a site that does not let me know what information "
-#~ "they have about me"
-#~ msgstr ""
-#~ "Avertu min, se mi vizitas servilon, kiu ne diras al mi la informojn, "
-#~ "kiujn ĝi havas pri mi"
-
-#~ msgid "Personal Information"
-#~ msgstr "Personaj informoj"
-
-#~ msgid ""
-#~ "Warn me when I visit a site that may contact me about other products or "
-#~ "services:"
-#~ msgstr ""
-#~ "Avertu min, se mi vizitas servilon, kiu povus kontakti min pri aliaj "
-#~ "produktoj aŭ serviloj:"
-
-#~ msgid "Warn me when I visit a site that may use my personal information to:"
-#~ msgstr ""
-#~ "Avertu min, se mi vizitas servilon, kiu povus uzi miajn personajn "
-#~ "informojn por:"
-
-#~ msgid "Determine my habits, interests or general behavior"
-#~ msgstr "Determini miajn kutimojn, interesojn aŭ ĝenerala agmaniero"
-
-#~ msgid "Via telephone"
-#~ msgstr "Telefone"
-
-#~ msgid "Via mail"
-#~ msgstr "Poŝte"
-
-#~ msgid "Via email"
-#~ msgstr "Retpoŝte"
-
-#~ msgid "And do not allow me to remove my contact information"
-#~ msgstr "Kaj ne permesas al mi forigi miajn kontaktinformojn"
-
-#~ msgid "Quick Start Menu"
-#~ msgstr "Rapidstartmenuo"
-
-#~ msgid "Clears the entries from the list of recently started applications"
-#~ msgstr "Ĝi forigas la enigojn de la listo de startitaj aplikaĵoj"
-
-#~ msgid ""
-#~ "The privacy module allows a user to erase traces which KDE leaves on the "
-#~ "system, such as command histories or browser caches."
-#~ msgstr ""
-#~ "La modulo por privataj aferoj eblas al uzanto forigi spurojn , kiuj KDE "
-#~ "postlasas, kiel komandlistoj kaj tenejoj."
-
-#~ msgid "kcm_privacy"
-#~ msgstr "kcm_privatafero"
-
-#~ msgid "KDE Privacy Control Module"
-#~ msgstr "KDE-privatafera stirmodulo"
-
-#~ msgid "Privacy"
-#~ msgstr "Privataj aferoj"
+msgstr ""
