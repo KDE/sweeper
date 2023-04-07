@@ -1,32 +1,52 @@
 <?xml version="1.0" ?>
 <!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % English "INCLUDE">
+  <!ENTITY % Turkish "INCLUDE">
 ]>
 
 <article id="sweeper" lang="&language;">
 
 <articleinfo>
-<title>Sweeper</title>
+<title
+>Süpürücü</title>
 <authorgroup>
-<author>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
 
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+<othercredit role="translator"
+><firstname
+>Kaan</firstname
+><surname
+>Özdinçer</surname
+><affiliation
+><address
+><email
+>kaanozdincer@gmail.com</email
+></address
+></affiliation
+><contrib
+>Çeviri</contrib
+></othercredit
+> 
 </authorgroup>
 
-<date>2018-01-03</date>
-<releaseinfo>1.11 (Applications 17.12)</releaseinfo>
+<date
+>2018-01-03</date>
+<releaseinfo
+>1.11 (Uygulamalar 17.12)</releaseinfo>
 
 <keywordset>
-<keyword>KDE</keyword>
-<keyword>privacy</keyword>
-<keyword>security</keyword>
+<keyword
+>KDE</keyword>
+<keyword
+>gizlilik</keyword>
+<keyword
+>güvenlik</keyword>
 </keywordset>
 </articleinfo>
 
-<para>&sweeper; helps to clean unwanted traces from &plasma; and &kde; applications users leave on the system.
-
-</para>
+<para
+>&sweeper;, &kde; ve &plasma; uygulamalarına sistemdeki kullanıcılar tarafından bırakılmış, istenmeyen izlerin temizlenmesine yardımcı olur. </para>
 
 <para>
 <screenshot>
@@ -38,24 +58,31 @@
 </screenshot>
 </para>
 
-<para>
-Check all cleanup actions you would like to perform using the <guibutton>Select All</guibutton>
-and <guibutton>Select None</guibutton> buttons or by selecting/deselecting individual
-items from the two groups <guilabel>General</guilabel> and <guilabel>Web Browsing</guilabel>
-</para>
+<para
+><guibutton
+>Tümünü Seç</guibutton
+> ve <guibutton
+>Hiçbirini Seçme</guibutton
+> düğmelerini kullanarak veya <guilabel
+>Genel</guilabel
+> ve <guilabel
+>Web Tarama</guilabel
+> gruplarından, ögeleri tek tek seçerek, gerçekleştirmek istediğiniz tüm temizleme işlemlerini işaretleyin </para>
 
-<para>
-If you are satisfied with your selection click the <guibutton>Clean Up</guibutton> button,
-which immediately performs the cleanup actions you selected.
-</para>
+<para
+>Seçimlerinizden memnunsanız seçtiğiniz temizleme işlemlerini hemen gerçekleştirecek olan <guibutton
+>Temizle</guibutton
+> düğmesine tıklayın. </para>
 
-<note><para>
-&sweeper; deletes the cached data used by &plasma; and &kde; applications from the &kde; cache folder.
-To see the location of this folder enter <userinput><command>qtpaths</command>
-<option>--paths GenericCacheLocation</option></userinput> in &konsole;. Cleaning up your cached data with
-&sweeper; makes it only impossible to read them &eg; using a filemanager, but it is possible  
-to read the raw data, which is still on the disk, using a low level disk tool.
-</para>
+<note
+><para
+>&sweeper;, &plasma; ve &kde; uygulamaları tarafından kullanılan &kde; önbellek klasörünü temizleyecektir. Bu klasörün konumunu görmek için, &konsole;'a <userinput
+><command
+>qtpaths</command
+> <option
+>--paths GenericCacheLocation</option
+></userinput
+> komutunu girin. Önbelleğe alınan verilerinizi &sweeper; ile temizlemek; örneğin bir dosya yöneticisi kullanarak bunları okumayı olanaksız duruma getirir; ancak düşük düzeyli bir disk aracı kullanarak hala diskte bulunan ham verileri okumak olanaklıdır. </para>
 </note>
 
 </article>
