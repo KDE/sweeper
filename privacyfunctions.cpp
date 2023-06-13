@@ -152,9 +152,12 @@ bool ClearRecentDocumentsAction::action()
                | Url::file();
 
    KAStats::forgetResources(query);
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
    KRecentDocument::clear();
    return KRecentDocument::recentDocuments().isEmpty();
+#else
+   return true;
+#endif
 }
 
 bool ClearWebHistoryAction::action()
