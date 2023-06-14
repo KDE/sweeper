@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: privacy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"POT-Creation-Date: 2023-06-14 00:50+0000\n"
 "PO-Revision-Date: 2020-07-08 10:27+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -93,7 +93,7 @@ msgstr "Sličice ni bilo mogoče odstraniti."
 msgid "The file exists but could not be removed."
 msgstr "Datoteka obstaja, a je ni bilo mogoče odstraniti."
 
-#: privacyfunctions.cpp:220
+#: privacyfunctions.cpp:223
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Ikone zaznamka ni bilo mogoče odstraniti."

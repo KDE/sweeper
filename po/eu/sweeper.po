@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"POT-Creation-Date: 2023-06-14 00:50+0000\n"
 "PO-Revision-Date: 2019-07-05 23:39+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -99,7 +99,7 @@ msgstr "Ezin izan da koadro txiki bat kendu."
 msgid "The file exists but could not be removed."
 msgstr "Fitxategia badago, baina ezin izan da kendu."
 
-#: privacyfunctions.cpp:220
+#: privacyfunctions.cpp:223
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Ezin izan da kendu gogikono bat."

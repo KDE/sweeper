@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: privacy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-04 00:49+0000\n"
+"POT-Creation-Date: 2023-06-14 00:50+0000\n"
 "PO-Revision-Date: 2022-04-04 17:13+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -90,7 +90,7 @@ msgstr "O miniatură nu a putut fi eliminată."
 msgid "The file exists but could not be removed."
 msgstr "Fișierul există dar nu a putut fi eliminat."
 
-#: privacyfunctions.cpp:220
+#: privacyfunctions.cpp:223
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Un favicon nu a putut fi eliminat."
