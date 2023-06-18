@@ -13,6 +13,7 @@
   <name xml:lang="de">Sweeper</name>
   <name xml:lang="el">Sweeper</name>
   <name xml:lang="en-GB">Sweeper</name>
+  <name xml:lang="eo">Sweeper</name>
   <name xml:lang="es">Sweeper</name>
   <name xml:lang="et">Sweeper</name>
   <name xml:lang="eu">Sweeper</name>
@@ -58,6 +59,7 @@
   <summary xml:lang="de">Dienstprogramm zum Bereinigen des Systems</summary>
   <summary xml:lang="el">Εργαλείο καθαρισμού του συστήματος</summary>
   <summary xml:lang="en-GB">System cleaning utility</summary>
+  <summary xml:lang="eo">Sistempuriga utilaĵo</summary>
   <summary xml:lang="es">Utilidad de limpieza del sistema</summary>
   <summary xml:lang="et">Süsteemi puhastamise tööriist</summary>
   <summary xml:lang="eu">Sistema garbitzeko baliagarritasuna</summary>
