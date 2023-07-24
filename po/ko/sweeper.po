@@ -71,7 +71,7 @@ msgstr "Benjamin Meyer"
 #: main.cpp:44 privacyfunctions.h:54
 #, kde-format
 msgid "Thumbnail Cache"
-msgstr "축소판 캐시"
+msgstr "섬네일 캐시"
 
 #: main.cpp:51
 #, kde-format
@@ -81,7 +81,7 @@ msgstr "사용자 입력 없이 실행하기"
 #: privacyfunctions.cpp:46 privacyfunctions.cpp:55 privacyfunctions.cpp:64
 #, kde-format
 msgid "A thumbnail could not be removed."
-msgstr "축소판을 삭제할 수 없습니다."
+msgstr "섬네일을 삭제할 수 없습니다."
 
 #: privacyfunctions.cpp:135
 #, kde-format
@@ -126,7 +126,7 @@ msgstr "Klipper가 저장하고 있는 클립보드 내용 삭제"
 #: privacyfunctions.h:55
 #, kde-format
 msgid "Clears all cached thumbnails"
-msgstr "모든 캐시된 축소판 삭제"
+msgstr "모든 캐시된 섬네일 삭제"
 
 #: privacyfunctions.h:64
 #, kde-format
@@ -179,7 +179,7 @@ msgstr "최근 문서"
 #, kde-format
 msgid ""
 "Clears the list of recently used documents from the KDE applications menu"
-msgstr "KDE 프로그램 메뉴에서 최근에 사용되었던 문서 목록을 삭제합니다"
+msgstr "KDE 앱 메뉴에서 최근에 사용되었던 문서 목록을 삭제합니다"
 
 #: privacyfunctions.h:114
 #, kde-format
@@ -194,12 +194,12 @@ msgstr "방문한 웹사이트의 캐시된 파비콘을 삭제합니다"
 #: privacyfunctions.h:124
 #, kde-format
 msgid "Recent Applications"
-msgstr "최근 프로그램"
+msgstr "최근 앱"
 
 #: privacyfunctions.h:125
 #, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
-msgstr "KDE 메뉴에서 최근에 사용되었던 프로그램 목록을 삭제합니다"
+msgstr "KDE 메뉴에서 최근에 사용되었던 앱 목록을 삭제합니다"
 
 #: sweeper.cpp:22
 #, kde-format
