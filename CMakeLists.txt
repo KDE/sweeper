@@ -66,6 +66,7 @@ target_sources(sweeper PRIVATE
    privacyaction.h
    sweeper.h
    privacyfunctions.h
+   sweeper.qrc
    )
 ecm_qt_declare_logging_category(sweeper HEADER sweeper_debug.h IDENTIFIER SWEEPER_LOG CATEGORY_NAME org.kde.sweeper DESCRIPTION "sweeper" EXPORT SWEEPER)
 
@@ -94,7 +95,6 @@ install(TARGETS sweeper  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 ########### install files ###############
 
 install( PROGRAMS org.kde.sweeper.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
-install( FILES sweeperui.rc  DESTINATION ${KDE_INSTALL_KXMLGUIDIR}/sweeper)
 install( FILES org.kde.sweeper.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 install( FILES org.kde.sweeper.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
