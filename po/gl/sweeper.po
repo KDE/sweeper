@@ -262,7 +262,7 @@ msgstr ""
 #: sweeperdialog.ui:37
 #, kde-format
 msgid "Privacy Settings"
-msgstr "Opcións de intimidade"
+msgstr "Opcións de privacidade"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, privacyListView)
 #: sweeperdialog.ui:42
