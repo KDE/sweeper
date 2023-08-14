@@ -188,8 +188,13 @@ bool ClearFaviconsAction::action()
    const QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
       + QLatin1String("/konqueror/bookmarks.xml");
    QDir().mkpath(path);
+#if QT_VERSION_MAJOR < 6
    konqiBookmarkMgr =
       KBookmarkManager::managerForFile(path, QStringLiteral("konqueror"));
+#else
+    konqiBookmarkMgr =
+      KBookmarkManager::managerForFile(path);
+#endif
    qCDebug(SWEEPER_LOG) << "saving the favicons that are in konqueror bookmarks"
             << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() ;
 
