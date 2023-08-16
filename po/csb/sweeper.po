@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: privacy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 00:50+0000\n"
+"POT-Creation-Date: 2023-08-16 00:49+0000\n"
 "PO-Revision-Date: 2007-03-21 19:10+0100\n"
 "Last-Translator: Michôł Òstrowsczi <michol@linuxcsb.org>\n"
 "Language-Team: Kashubian\n"
@@ -89,7 +89,7 @@ msgstr "Nie mòże rëmnąc miniaturczi."
 msgid "The file exists but could not be removed."
 msgstr "Lopk òbstoji leno nie mòżé òstac rëmniãti."
 
-#: privacyfunctions.cpp:223
+#: privacyfunctions.cpp:228
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Ikòna favicon nie mòże òstac rëmniãtô."

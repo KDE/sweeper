@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 00:50+0000\n"
+"POT-Creation-Date: 2023-08-16 00:49+0000\n"
 "PO-Revision-Date: 2019-07-07 10:24-0300\n"
 "Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
@@ -91,7 +91,7 @@ msgstr "Não foi possível remover uma miniatura."
 msgid "The file exists but could not be removed."
 msgstr "O arquivo existe mas não pode ser excluído."
 
-#: privacyfunctions.cpp:223
+#: privacyfunctions.cpp:228
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Não foi possível remover um favicon."

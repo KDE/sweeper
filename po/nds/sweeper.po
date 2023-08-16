@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-14 00:50+0000\n"
+"POT-Creation-Date: 2023-08-16 00:49+0000\n"
 "PO-Revision-Date: 2010-05-29 06:59+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -94,7 +94,7 @@ msgstr "En Vöransicht lett sik nich wegmaken."
 msgid "The file exists but could not be removed."
 msgstr "Dat gifft de Datei, man se lett sik nich wegmaken."
 
-#: privacyfunctions.cpp:223
+#: privacyfunctions.cpp:228
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "En Nettsiet-Lüttbild lett sik nich wegmaken."
