@@ -8,8 +8,8 @@ set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE
 
 project(sweeper VERSION ${RELEASE_SERVICE_VERSION})
 
-set(QT_MIN_VERSION "5.15.2")
-set(KF_MIN_VERSION "5.92.0")
+set(QT_REQUIRED_VERSION "6.5.0")
+set(KF_MIN_VERSION "5.240.0")
 
 find_package(ECM ${KF_MIN_VERSION} NO_MODULE REQUIRED)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
@@ -22,16 +22,9 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(FeatureSummary)
 include(ECMDeprecationSettings)
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.5.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Core DBus Widgets)
+find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core DBus Widgets)
 
-find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     ActivitiesStats
     Bookmarks
     Crash
@@ -43,8 +36,8 @@ find_package(KF${KF_MAJOR_VERSION} ${KF_MIN_VERSION} REQUIRED COMPONENTS
     TextWidgets
     XmlGui
 )
-find_package(KF${KF_MAJOR_VERSION}DocTools ${KF_MIN_VERSION})
-set_package_properties(KF${KF_MAJOR_VERSION}DocTools PROPERTIES DESCRIPTION
+find_package(KF6DocTools ${KF_MIN_VERSION})
+set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
     "Tools to generate documentation"
     TYPE OPTIONAL
 )
@@ -71,22 +64,22 @@ target_sources(sweeper PRIVATE
 ecm_qt_declare_logging_category(sweeper HEADER sweeper_debug.h IDENTIFIER SWEEPER_LOG CATEGORY_NAME org.kde.sweeper DESCRIPTION "sweeper" EXPORT SWEEPER)
 
 
-qt_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
+qt6_add_dbus_adaptor( sweeper_SRCS org.kde.sweeper.xml sweeper.h Sweeper)
 target_sources(sweeper PRIVATE ${sweeper_SRCS})
 		
 ki18n_wrap_ui(sweeper sweeperdialog.ui )
 
 target_link_libraries(sweeper
-   Qt${QT_MAJOR_VERSION}::Core
-   Qt${QT_MAJOR_VERSION}::DBus
-   Qt${QT_MAJOR_VERSION}::Widgets
-   KF${KF_MAJOR_VERSION}::ActivitiesStats
-   KF${KF_MAJOR_VERSION}::Bookmarks
-   KF${KF_MAJOR_VERSION}::Crash
-   KF${KF_MAJOR_VERSION}::I18n
-   KF${KF_MAJOR_VERSION}::KIOCore
-   KF${KF_MAJOR_VERSION}::TextWidgets
-   KF${KF_MAJOR_VERSION}::XmlGui
+   Qt6::Core
+   Qt6::DBus
+   Qt6::Widgets
+   KF6::ActivitiesStats
+   KF6::Bookmarks
+   KF6::Crash
+   KF6::I18n
+   KF6::KIOCore
+   KF6::TextWidgets
+   KF6::XmlGui
 )
 
 install(TARGETS sweeper  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
@@ -99,7 +92,7 @@ install( FILES org.kde.sweeper.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 install( FILES org.kde.sweeper.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 ki18n_install(po)
-if(KF5DocTools_FOUND)
+if(KF6DocTools_FOUND)
     kdoctools_install(po)
     add_subdirectory(doc)
 endif()
