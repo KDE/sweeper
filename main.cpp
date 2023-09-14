@@ -12,9 +12,6 @@
 
 #include <KAboutData>
 #include <KCrash>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <Kdelibs4ConfigMigrator>
-#endif
 #include <KLocalizedString>
 
 #include <config-sweeper.h>
@@ -23,13 +20,6 @@ int main(int argc, char *argv[])
 {
    QApplication a(argc, argv);
    KLocalizedString::setApplicationDomain("sweeper");
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Kdelibs4ConfigMigrator migrator(QStringLiteral("sweeper"));
-    migrator.setConfigFiles(QStringList() << QStringLiteral("sweeperrc"));
-    migrator.setConfigFiles(QStringList() << QStringLiteral("kprivacyrc"));
-    migrator.setUiFiles(QStringList() << QStringLiteral("sweeperui.rc"));
-    migrator.migrate();
-#endif
 
    KAboutData aboutData(QStringLiteral("sweeper"), i18n("Sweeper"),
                         QStringLiteral(SWEEPER_VERSION),
