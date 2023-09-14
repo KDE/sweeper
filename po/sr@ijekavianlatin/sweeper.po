@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-02-14 03:28+0100\n"
+"POT-Creation-Date: 2023-08-16 00:49+0000\n"
 "PO-Revision-Date: 2016-03-20 15:25+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -33,115 +33,115 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mirkoiv@verat.net,toptan@kde.org.yu,roske@kde.org.yu,tiron@beotel.yu"
 
-#: main.cpp:43
+#: main.cpp:34
 #, kde-format
 msgid "Sweeper"
 msgstr "Čistač"
 
-#: main.cpp:45
+#: main.cpp:36
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr "Uklanjanje neželjenih tragova koje korisnik ostavlja na sistemu."
 
-#: main.cpp:47
+#: main.cpp:38
 #, fuzzy, kde-format
 #| msgid "(c) 2003-2005, Ralf Hoelzer"
 msgid "© 2003-2005, Ralf Hoelzer"
 msgstr "© 2003–2005, Ralf Helcer"
 
-#: main.cpp:51
+#: main.cpp:42
 #, kde-format
 msgid "Ralf Hoelzer"
 msgstr "Ralf Helcer"
 
-#: main.cpp:51
+#: main.cpp:42
 #, kde-format
 msgid "Original author"
 msgstr "Prvobitni autor"
 
-#: main.cpp:52
+#: main.cpp:43
 #, kde-format
 msgid "Brian S. Stephan"
 msgstr "Brajan S. Stiven"
 
-#: main.cpp:52
+#: main.cpp:43
 #, kde-format
 msgid "Maintainer"
 msgstr "Održavalac"
 
-#: main.cpp:53
+#: main.cpp:44
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Bendžamin K. Mejer"
 
-#: main.cpp:53 privacyfunctions.h:68
+#: main.cpp:44 privacyfunctions.h:54
 #, kde-format
 msgid "Thumbnail Cache"
 msgstr "keš sličica|/|$[svojstva gen 'keša sličica']"
 
-#: main.cpp:61
+#: main.cpp:51
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr "Čisti bez zapitkivanja korisnika."
 
-#: privacyfunctions.cpp:60 privacyfunctions.cpp:69 privacyfunctions.cpp:78
+#: privacyfunctions.cpp:46 privacyfunctions.cpp:55 privacyfunctions.cpp:64
 #, kde-format
 msgid "A thumbnail could not be removed."
 msgstr "Sličica se ne može ukloniti."
 
-#: privacyfunctions.cpp:149
+#: privacyfunctions.cpp:135
 #, kde-format
 msgid "The file exists but could not be removed."
 msgstr "Fajl postoji, ali se ne može ukloniti."
 
-#: privacyfunctions.cpp:234
+#: privacyfunctions.cpp:228
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Favikonica se ne može ukloniti."
 
-#: privacyfunctions.h:37
+#: privacyfunctions.h:23
 #, kde-format
 msgid "Cookies"
 msgstr "Kolačići|/|$[svojstva gen 'kolačića']"
 
-#: privacyfunctions.h:38
+#: privacyfunctions.h:24
 #, kde-format
 msgid "Clears all stored cookies set by websites"
 msgstr "Čisti sve kolačiće koje su postavili veb sajtovi."
 
-#: privacyfunctions.h:48
+#: privacyfunctions.h:34
 #, kde-format
 msgid "Cookie Policies"
 msgstr "Smernice kolačića|/|$[svojstva gen 'smernica kolačića']"
 
-#: privacyfunctions.h:49
+#: privacyfunctions.h:35
 #, kde-format
 msgid "Clears the cookie policies for all visited websites"
 msgstr "Čisti smijernice kolačića za sve posjećene veb sajtove."
 
-#: privacyfunctions.h:58
+#: privacyfunctions.h:44
 #, kde-format
 msgid "Saved Clipboard Contents"
 msgstr ""
 "Sačuvani sadržaji klipborda|/|$[svojstva gen 'sačuvanih sadržaja klipborda']"
 
-#: privacyfunctions.h:59
+#: privacyfunctions.h:45
 #, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
 msgstr "Čisti sadržaje klipborda sačuvane u Klipperu."
 
-#: privacyfunctions.h:69
+#: privacyfunctions.h:55
 #, kde-format
 msgid "Clears all cached thumbnails"
 msgstr "Čisti sve keširane sličice."
 
-#: privacyfunctions.h:78
+#: privacyfunctions.h:64
 #, kde-format
 msgid "Run Command History"
 msgstr ""
 "Istorijat izvršenih naredbi|/|$[svojstva gen 'istorijata izvršenih naredbi']"
 
-#: privacyfunctions.h:79
+#: privacyfunctions.h:65
 #, kde-format
 msgid ""
 "Clears the history of commands run through the Run Command tool on the "
@@ -149,102 +149,102 @@ msgid ""
 msgstr ""
 "Čisti istorijat naredbi izdatih alatkom „izvršavanje naredbi“ na površi."
 
-#: privacyfunctions.h:88
+#: privacyfunctions.h:74
 #, kde-format
 msgid "Form Completion Entries"
 msgstr "Dopune formulara|/|$[svojstva gen 'dopuna formulara']"
 
-#: privacyfunctions.h:89
+#: privacyfunctions.h:75
 #, kde-format
 msgid "Clears values which were entered into forms on websites"
 msgstr "Čisti vrijednosti unesene u formulare na veb sajtovima."
 
-#: privacyfunctions.h:98
+#: privacyfunctions.h:84
 #, kde-format
 msgid "Web History"
 msgstr "Veb istorijat|/|$[svojstva gen 'veb istorijata']"
 
-#: privacyfunctions.h:99
+#: privacyfunctions.h:85
 #, kde-format
 msgid "Clears the history of visited websites"
 msgstr "Čisti istorijat posjećenih veb sajtova."
 
-#: privacyfunctions.h:108
+#: privacyfunctions.h:94
 #, kde-format
 msgid "Web Cache"
 msgstr "Veb keš|/|$[svojstva gen 'veb keša']"
 
-#: privacyfunctions.h:109
+#: privacyfunctions.h:95
 #, kde-format
 msgid "Clears the temporary cache of websites visited"
 msgstr "Čisti privremeni keš posjećenih veb sajtova."
 
-#: privacyfunctions.h:118
+#: privacyfunctions.h:104
 #, kde-format
 msgid "Recent Documents"
 msgstr "Nedavni dokumenti|/|$[svojstva gen 'nedavnih dokumenata']"
 
-#: privacyfunctions.h:119
+#: privacyfunctions.h:105
 #, kde-format
 msgid ""
 "Clears the list of recently used documents from the KDE applications menu"
 msgstr ""
 "Čisti spisak skoro korišćenih dokumenata iz KDE‑ovog programskog menija."
 
-#: privacyfunctions.h:128
+#: privacyfunctions.h:114
 #, kde-format
 msgid "Favorite Icons"
 msgstr "Omiljene ikonice|/|$[svojstva gen 'omiljenih ikonica']"
 
-#: privacyfunctions.h:129
+#: privacyfunctions.h:115
 #, kde-format
 msgid "Clears the FavIcons cached from visited websites"
 msgstr "Čisti favikonice keširane pri posjetama veb sajtovima"
 
-#: privacyfunctions.h:138
+#: privacyfunctions.h:124
 #, kde-format
 msgid "Recent Applications"
 msgstr "Nedavni programi|/|$[svojstva gen 'nedavnih programa']"
 
-#: privacyfunctions.h:139
+#: privacyfunctions.h:125
 #, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
 msgstr "Čisti spisak skoro korišćenih programa iz KDE‑ovog menija."
 
-#: sweeper.cpp:34
+#: sweeper.cpp:22
 #, kde-format
 msgctxt "General system content"
 msgid "General"
 msgstr "Opšte"
 
-#: sweeper.cpp:35
+#: sweeper.cpp:23
 #, kde-format
 msgctxt "Web browsing content"
 msgid "Web Browsing"
 msgstr "Pregledanje Weba"
 
-#: sweeper.cpp:115
+#: sweeper.cpp:103
 #, kde-format
 msgid ""
 "You are deleting data that is potentially valuable to you. Are you sure?"
 msgstr "Obrisaćete podatke koji vam mogu biti od značaja. Jeste li sigurni?"
 
-#: sweeper.cpp:121
+#: sweeper.cpp:109
 #, kde-format
 msgid "Starting cleanup..."
 msgstr "Otpočinjem čišćenje..."
 
-#: sweeper.cpp:125
+#: sweeper.cpp:113
 #, kde-format
 msgid "Clearing %1..."
 msgstr "Čistim %1..."
 
-#: sweeper.cpp:130
+#: sweeper.cpp:118
 #, kde-format
 msgid "Clearing of %1 failed: %2"
 msgstr "Čišćenje %1 nije uspelo: %2|/|Čišćenje $[gen %1] nije uspelo: %2"
 
-#: sweeper.cpp:136
+#: sweeper.cpp:124
 #, kde-format
 msgid "Clean up finished."
 msgstr "Čišćenje je završeno."
