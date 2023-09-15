@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 00:49+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2010-05-29 06:59+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -31,55 +31,55 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
 
-#: main.cpp:34
+#: main.cpp:24
 #, kde-format
 msgid "Sweeper"
 msgstr "Leuwagen"
 
-#: main.cpp:36
+#: main.cpp:26
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr ""
 "Hölpt bi't Wegmaken vun Sporen, de Brukers op't Systeem nalaat, ahn dat se "
 "dat wüllt."
 
-#: main.cpp:38
+#: main.cpp:28
 #, fuzzy, kde-format
 #| msgid "(c) 2003-2005, Ralf Hoelzer"
 msgid "© 2003-2005, Ralf Hoelzer"
 msgstr "© 2003-2005, Ralf Hoelzer"
 
-#: main.cpp:42
+#: main.cpp:32
 #, kde-format
 msgid "Ralf Hoelzer"
 msgstr "Ralf Hoelzer"
 
-#: main.cpp:42
+#: main.cpp:32
 #, kde-format
 msgid "Original author"
 msgstr "Orginaalautor"
 
-#: main.cpp:43
+#: main.cpp:33
 #, kde-format
 msgid "Brian S. Stephan"
 msgstr "Brian S. Stephan"
 
-#: main.cpp:43
+#: main.cpp:33
 #, kde-format
 msgid "Maintainer"
 msgstr "Pleger"
 
-#: main.cpp:44
+#: main.cpp:34
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:44 privacyfunctions.h:54
+#: main.cpp:34 privacyfunctions.h:54
 #, kde-format
 msgid "Thumbnail Cache"
 msgstr "Vöransichten-Twischenspieker"
 
-#: main.cpp:51
+#: main.cpp:41
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr "Ahn Bruker-Nafraag schier maken"
@@ -94,7 +94,7 @@ msgstr "En Vöransicht lett sik nich wegmaken."
 msgid "The file exists but could not be removed."
 msgstr "Dat gifft de Datei, man se lett sik nich wegmaken."
 
-#: privacyfunctions.cpp:228
+#: privacyfunctions.cpp:217
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "En Nettsiet-Lüttbild lett sik nich wegmaken."

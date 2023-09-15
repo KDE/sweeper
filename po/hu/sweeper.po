@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 00:49+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2022-02-22 10:42+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -27,52 +27,52 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@fsf.hu"
 
-#: main.cpp:34
+#: main.cpp:24
 #, kde-format
 msgid "Sweeper"
 msgstr "Sweeper"
 
-#: main.cpp:36
+#: main.cpp:26
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr "Eltávolítja a nem kívánt személyes fájlokat a rendszerből."
 
-#: main.cpp:38
+#: main.cpp:28
 #, kde-format
 msgid "© 2003-2005, Ralf Hoelzer"
 msgstr "© Ralf Hoelzer, 2003-2005."
 
-#: main.cpp:42
+#: main.cpp:32
 #, kde-format
 msgid "Ralf Hoelzer"
 msgstr "Ralf Hoelzer"
 
-#: main.cpp:42
+#: main.cpp:32
 #, kde-format
 msgid "Original author"
 msgstr "Eredeti szerző"
 
-#: main.cpp:43
+#: main.cpp:33
 #, kde-format
 msgid "Brian S. Stephan"
 msgstr "Brian S. Stephan"
 
-#: main.cpp:43
+#: main.cpp:33
 #, kde-format
 msgid "Maintainer"
 msgstr "Karbantartó"
 
-#: main.cpp:44
+#: main.cpp:34
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:44 privacyfunctions.h:54
+#: main.cpp:34 privacyfunctions.h:54
 #, kde-format
 msgid "Thumbnail Cache"
 msgstr "Bélyegkép gyorsítótár"
 
-#: main.cpp:51
+#: main.cpp:41
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr "Felhasználói beavatkozás nélkül töröl"
@@ -87,7 +87,7 @@ msgstr "Nem sikerült eltávolítani egy bélyegképet."
 msgid "The file exists but could not be removed."
 msgstr "A fájl létezik, de nem sikerült eltávolítani."
 
-#: privacyfunctions.cpp:228
+#: privacyfunctions.cpp:217
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Nem sikerült eltávolítani egy favikont."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 00:49+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2009-03-01 12:43+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -29,54 +29,54 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raviratlami@aol.in,"
 
-#: main.cpp:34
+#: main.cpp:24
 #, kde-format
 msgid "Sweeper"
 msgstr "स्वीपर"
 
-#: main.cpp:36
+#: main.cpp:26
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr ""
 "अवांछित ट्रेसेस ल जऊन ल कमइया सिसटम मं छोड़ देथे  ओ मन ल साफ करे मं सहायता प्रदान करथे ."
 
-#: main.cpp:38
+#: main.cpp:28
 #, fuzzy, kde-format
 #| msgid "(c) 2003-2005, Ralf Hoelzer"
 msgid "© 2003-2005, Ralf Hoelzer"
 msgstr "(c) 2003 - 2005, राल्फ हाल्जर"
 
-#: main.cpp:42
+#: main.cpp:32
 #, kde-format
 msgid "Ralf Hoelzer"
 msgstr "राल्फ हाल्जर"
 
-#: main.cpp:42
+#: main.cpp:32
 #, kde-format
 msgid "Original author"
 msgstr "मूल लेखक"
 
-#: main.cpp:43
+#: main.cpp:33
 #, kde-format
 msgid "Brian S. Stephan"
 msgstr "ब्रायन एस. स्टीफन"
 
-#: main.cpp:43
+#: main.cpp:33
 #, kde-format
 msgid "Maintainer"
 msgstr "मेंटेनर"
 
-#: main.cpp:44
+#: main.cpp:34
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "बेंजामिन मेयर"
 
-#: main.cpp:44 privacyfunctions.h:54
+#: main.cpp:34 privacyfunctions.h:54
 #, kde-format
 msgid "Thumbnail Cache"
 msgstr "थम्बनेल कैस"
 
-#: main.cpp:51
+#: main.cpp:41
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr ""
@@ -91,7 +91,7 @@ msgstr "छोटेफोटू मिटाय नइ जा सके."
 msgid "The file exists but could not be removed."
 msgstr "फाइल मौजूद हे, फेर एला मेटाय नइ जा सके."
 
-#: privacyfunctions.cpp:228
+#: privacyfunctions.cpp:217
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "फेविकोन मिटाय नइ जा सके."

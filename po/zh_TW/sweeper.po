@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 00:49+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2019-07-09 14:11+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -30,52 +30,52 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "jupiter@ocool.org,wmtuen@gmail.com, franklin@goodhorse.idv.tw"
 
-#: main.cpp:34
+#: main.cpp:24
 #, kde-format
 msgid "Sweeper"
 msgstr "Sweeper"
 
-#: main.cpp:36
+#: main.cpp:26
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr "協助您清除使用者在系統中留下的不需要的東西。"
 
-#: main.cpp:38
+#: main.cpp:28
 #, kde-format
 msgid "© 2003-2005, Ralf Hoelzer"
 msgstr "© 2003-2005, Ralf Hoelzer"
 
-#: main.cpp:42
+#: main.cpp:32
 #, kde-format
 msgid "Ralf Hoelzer"
 msgstr "Ralf Hoelzer"
 
-#: main.cpp:42
+#: main.cpp:32
 #, kde-format
 msgid "Original author"
 msgstr "原始作者"
 
-#: main.cpp:43
+#: main.cpp:33
 #, kde-format
 msgid "Brian S. Stephan"
 msgstr "Brian S. Stephan"
 
-#: main.cpp:43
+#: main.cpp:33
 #, kde-format
 msgid "Maintainer"
 msgstr "維護者"
 
-#: main.cpp:44
+#: main.cpp:34
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:44 privacyfunctions.h:54
+#: main.cpp:34 privacyfunctions.h:54
 #, kde-format
 msgid "Thumbnail Cache"
 msgstr "縮圖快取"
 
-#: main.cpp:51
+#: main.cpp:41
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr "清除時不與使用者互動"
@@ -90,7 +90,7 @@ msgstr "無法移除縮圖。"
 msgid "The file exists but could not be removed."
 msgstr "檔案存在，但無法被移除。"
 
-#: privacyfunctions.cpp:228
+#: privacyfunctions.cpp:217
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "無法移除圖示。"

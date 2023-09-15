@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: privacy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-16 00:49+0000\n"
+"POT-Creation-Date: 2023-09-15 01:54+0000\n"
 "PO-Revision-Date: 2007-03-21 19:10+0100\n"
 "Last-Translator: Michôł Òstrowsczi <michol@linuxcsb.org>\n"
 "Language-Team: Kashubian\n"
@@ -27,54 +27,54 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mark@linuxcsb.org, michol@linuxcsb.org"
 
-#: main.cpp:34
+#: main.cpp:24
 #, kde-format
 msgid "Sweeper"
 msgstr "Sweeper"
 
-#: main.cpp:36
+#: main.cpp:26
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr "Pòmôgô czëszczëc niechcóné szlachë brëkòwnika òstówioné w systemie."
 
-#: main.cpp:38
+#: main.cpp:28
 #, fuzzy, kde-format
 #| msgid "(c) 2003 Ralf Hoelzer"
 msgid "© 2003-2005, Ralf Hoelzer"
 msgstr "(c) 2003 Ralf Hoelzer"
 
-#: main.cpp:42
+#: main.cpp:32
 #, fuzzy, kde-format
 #| msgid "(c) 2003 Ralf Hoelzer"
 msgid "Ralf Hoelzer"
 msgstr "(c) 2003 Ralf Hoelzer"
 
-#: main.cpp:42
+#: main.cpp:32
 #, kde-format
 msgid "Original author"
 msgstr "Pierszi ùsôdzca"
 
-#: main.cpp:43
+#: main.cpp:33
 #, kde-format
 msgid "Brian S. Stephan"
 msgstr ""
 
-#: main.cpp:43
+#: main.cpp:33
 #, kde-format
 msgid "Maintainer"
 msgstr "Òpiekùn"
 
-#: main.cpp:44
+#: main.cpp:34
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr ""
 
-#: main.cpp:44 privacyfunctions.h:54
+#: main.cpp:34 privacyfunctions.h:54
 #, kde-format
 msgid "Thumbnail Cache"
 msgstr "Bùfora miniaturów"
 
-#: main.cpp:51
+#: main.cpp:41
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr ""
@@ -89,7 +89,7 @@ msgstr "Nie mòże rëmnąc miniaturczi."
 msgid "The file exists but could not be removed."
 msgstr "Lopk òbstoji leno nie mòżé òstac rëmniãti."
 
-#: privacyfunctions.cpp:228
+#: privacyfunctions.cpp:217
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Ikòna favicon nie mòże òstac rëmniãtô."
