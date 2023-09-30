@@ -62,7 +62,7 @@
 
 <note
 ><para
->El &sweeper; suprimirà les dades emmagatzemades en la memòria cau que utilitzen el &plasma; i les aplicacions &kde; des de la carpeta de memòria cau del &kde;. Per veure la ubicació d'aquesta carpeta introduïu <userinput
+>El &sweeper; suprimirà les dades emmagatzemades en la memòria cau que utilitzen el &plasma; i les aplicacions &kde; des de la carpeta de memòria cau del &kde;. Per a veure la ubicació d'aquesta carpeta introduïu <userinput
 ><command
 >qtpaths</command
 > <option
