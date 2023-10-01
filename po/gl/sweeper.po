@@ -85,7 +85,7 @@ msgstr "Varre automaticamente."
 #: privacyfunctions.cpp:46 privacyfunctions.cpp:55 privacyfunctions.cpp:64
 #, kde-format
 msgid "A thumbnail could not be removed."
-msgstr "Non se puido retirar unha miniatura."
+msgstr "Non foi posíbel retirar unha miniatura."
 
 #: privacyfunctions.cpp:135
 #, kde-format
@@ -95,7 +95,7 @@ msgstr "O ficheiro existe, pero non se puido retirar."
 #: privacyfunctions.cpp:217
 #, kde-format
 msgid "A favicon could not be removed."
-msgstr "Non se puido retirar unha icona de páxina."
+msgstr "Non foi posíbel retirar unha icona de páxina."
 
 #: privacyfunctions.h:23
 #, kde-format
@@ -231,12 +231,12 @@ msgstr ""
 #: sweeper.cpp:109
 #, kde-format
 msgid "Starting cleanup..."
-msgstr "Estase a comezar a limpeza…"
+msgstr "Comezando a limpeza…"
 
 #: sweeper.cpp:113
 #, kde-format
 msgid "Clearing %1..."
-msgstr "Estase a limpar %1…"
+msgstr "Limpando %1…"
 
 #: sweeper.cpp:118
 #, kde-format
