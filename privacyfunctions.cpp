@@ -178,17 +178,16 @@ bool ClearFaviconsAction::action()
 {
    QDir favIconDir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + QLatin1Char('/') + QLatin1String( "favicons/" ));
    QStringList saveTheseFavicons;
-   KBookmarkManager* konqiBookmarkMgr;
 
    const QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
       + QLatin1String("/konqueror/bookmarks.xml");
    QDir().mkpath(path);
-   konqiBookmarkMgr = KBookmarkManager::managerForFile(path);
+   KBookmarkManager konqiBookmarkMgr(path);
    qCDebug(SWEEPER_LOG) << "saving the favicons that are in konqueror bookmarks"
-            << "opened konqueror bookmarks at " << konqiBookmarkMgr->path() ;
+            << "opened konqueror bookmarks at " << konqiBookmarkMgr.path() ;
 
    // get the entire slew of bookmarks
-   KBookmarkGroup konqiBookmarks = konqiBookmarkMgr->root();
+   KBookmarkGroup konqiBookmarks = konqiBookmarkMgr.root();
 
    // walk through the bookmarks, if they have a favicon we should keep it
    KBookmark bookmark = konqiBookmarks.first();
