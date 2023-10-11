@@ -46,7 +46,7 @@ ecm_set_disabled_deprecation_versions(QT 6.5 KF 5.240.0)
 
 include_directories (${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
 
-configure_file(config-sweeper.h.cmake
+configure_file(config-sweeper.h.in
     ${CMAKE_CURRENT_BINARY_DIR}/config-sweeper.h
 )
 
