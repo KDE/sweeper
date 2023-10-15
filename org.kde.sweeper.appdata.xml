@@ -20,6 +20,7 @@
   <name xml:lang="fi">Sweeper</name>
   <name xml:lang="fr">Sweeper</name>
   <name xml:lang="gl">Sweeper</name>
+  <name xml:lang="he">מנקה</name>
   <name xml:lang="hi">स्वीपर</name>
   <name xml:lang="hu">Sweeper</name>
   <name xml:lang="ia">Sweeper</name>
@@ -66,6 +67,7 @@
   <summary xml:lang="fi">Järjestelmän siivoustyökalu</summary>
   <summary xml:lang="fr">Utilitaire de nettoyage du système</summary>
   <summary xml:lang="gl">Utilidade de limpeza do sistema.</summary>
+  <summary xml:lang="he">כלי עזר לניקוי המערכת</summary>
   <summary xml:lang="hi">तंत्र सफाई उपयोगिता</summary>
   <summary xml:lang="hu">Rendszertisztító segédprogram</summary>
   <summary xml:lang="ia">Utilitate per nettar le systema</summary>
@@ -116,6 +118,7 @@
     <p xml:lang="fi">Sweeper auttaa poistamaan käyttäjän järjestelmään jättämät turhat jäljet. Se osaa esimerkiksi poistaa evästeet ja tyhjentää välimuistit.</p>
     <p xml:lang="fr">Sweeper aide à effacer les traces indésirables laissées par l'utilisateur sur le système. Il peut supprimer les cookies et vider les caches, par exemple.</p>
     <p xml:lang="gl">Sweeper axuda a limpar os restos sen usar que o usuario deixa no sistema. Pode eliminar cookies e cachés, por exemplo.</p>
+    <p xml:lang="he">המנקה מסייע בניקוי עקבות לא רצויים שנשארים כחלק מהשימוש השוטף במערכת. הוא יכול להסיר עוגיות ולנקות את המטמונים השונים, למשל.</p>
     <p xml:lang="hi">स्वीपर उपयोक्ता द्वारा तंत्र पर छोड़े गए अवांछित निशानों को साफ करने में मदद करता है। उदाहरण के लिए, यह कुकीज़ को हटा सकता है और कैश को साफ कर सकता है।</p>
     <p xml:lang="hu">A Sweeper segít a nem kívánt nyomok törlésében a rendszerből. Többek között eltávolítja a sütiket és kiüríti a gyorsítótárakat.</p>
     <p xml:lang="ia">Sweeper adjuta nettar tracias non volite que le usator lassa in le systema. Il pote remover cookies e nettar caches pro exemplo.</p>
