@@ -10,7 +10,7 @@
 #include <KConfigGroup>
 #include <KXmlGuiWindow>
 
-#include <QVector>
+#include <QList>
 
 #include "ui_sweeperdialog.h"
 
@@ -46,7 +46,7 @@ class Sweeper: public KXmlGuiWindow
        */
       Ui::SweeperDialog ui;
 
-      QVector<PrivacyAction*> checklist;
+      QList<PrivacyAction*> checklist;
 
       QTreeWidgetItem * const m_generalCLI;
       QTreeWidgetItem * const m_webbrowsingCLI;
