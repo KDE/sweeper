@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-10-21 01:40+0000\n"
 "PO-Revision-Date: 2019-11-18 11:02+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -87,7 +87,7 @@ msgstr "Náhľady sa nepodarilo odstrániť."
 msgid "The file exists but could not be removed."
 msgstr "Súbor existuje, ale nepodaril sa odstrániť."
 
-#: privacyfunctions.cpp:217
+#: privacyfunctions.cpp:216
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Nepodarilo sa odstrániť favicon."

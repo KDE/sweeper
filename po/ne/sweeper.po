@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-10-21 01:40+0000\n"
 "PO-Revision-Date: 2007-09-09 14:13+0545\n"
 "Last-Translator: Narayan Kumar Magar <narayan@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -93,7 +93,7 @@ msgstr "थम्बनेल हटाउन सकेन ।"
 msgid "The file exists but could not be removed."
 msgstr "फाइल अवस्थित छ तर हटाउन सकेन ।"
 
-#: privacyfunctions.cpp:217
+#: privacyfunctions.cpp:216
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "फेभिकन हटाउन सकेन ।"

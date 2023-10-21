@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: privacy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-10-21 01:40+0000\n"
 "PO-Revision-Date: 2021-01-11 13:56+0200\n"
 "Last-Translator: Yasen Pramatarov <yasen@lindeas.com>\n"
 "Language-Team: Bulgarian <dict@ludost.net>\n"
@@ -88,7 +88,7 @@ msgstr "Грешка при премахване на миниатюра"
 msgid "The file exists but could not be removed."
 msgstr "Файлът съществува, но не може да се премахне."
 
-#: privacyfunctions.cpp:217
+#: privacyfunctions.cpp:216
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Грешка при премахване на икона на сайт"

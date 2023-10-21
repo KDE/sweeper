@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-15 01:54+0000\n"
+"POT-Creation-Date: 2023-10-21 01:40+0000\n"
 "PO-Revision-Date: 2019-07-30 23:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -97,7 +97,7 @@ msgstr "Esikatselukuvaketta ei voitu poistaa."
 msgid "The file exists but could not be removed."
 msgstr "Tiedosto on olemassa, mutta sitä ei voitu poistaa."
 
-#: privacyfunctions.cpp:217
+#: privacyfunctions.cpp:216
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Sivustokuvaketta ei voitu poistaa."
