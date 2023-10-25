@@ -19,7 +19,7 @@
 int main(int argc, char *argv[])
 {
    QApplication a(argc, argv);
-   KLocalizedString::setApplicationDomain("sweeper");
+   KLocalizedString::setApplicationDomain(QByteArrayLiteral("sweeper"));
 
    KAboutData aboutData(QStringLiteral("sweeper"), i18n("Sweeper"),
                         QStringLiteral(SWEEPER_VERSION),
