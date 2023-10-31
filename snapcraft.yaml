@@ -46,6 +46,8 @@ plugs:
         target: $SNAP/kf5
 environment:
     SNAP_DESKTOP_RUNTIME: $SNAP/kf5
+    XDG_DATA_HOME: $SNAP_REAL_HOME/.local/share
+    XDG_CONFIG_HOME: $SNAP_REAL_HOME
 hooks:
     configure:
         plugs:
