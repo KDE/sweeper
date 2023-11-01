@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-21 01:40+0000\n"
-"PO-Revision-Date: 2023-10-25 10:16+0200\n"
+"PO-Revision-Date: 2023-10-31 21:18+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
 "Language: ast\n"
@@ -95,7 +95,7 @@ msgstr ""
 #: privacyfunctions.h:23
 #, kde-format
 msgid "Cookies"
-msgstr ""
+msgstr "Cookies"
 
 #: privacyfunctions.h:24
 #, kde-format
@@ -120,7 +120,7 @@ msgstr ""
 #: privacyfunctions.h:45
 #, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
-msgstr ""
+msgstr "Llimpia'l conteníu del cartafueyu qu'atroxa Klipper"
 
 #: privacyfunctions.h:55
 #, kde-format
@@ -152,7 +152,7 @@ msgstr ""
 #: privacyfunctions.h:84
 #, kde-format
 msgid "Web History"
-msgstr ""
+msgstr "Historial web"
 
 #: privacyfunctions.h:85
 #, kde-format
@@ -162,7 +162,7 @@ msgstr ""
 #: privacyfunctions.h:94
 #, kde-format
 msgid "Web Cache"
-msgstr ""
+msgstr "Caché web"
 
 #: privacyfunctions.h:95
 #, kde-format
@@ -172,7 +172,7 @@ msgstr ""
 #: privacyfunctions.h:104
 #, kde-format
 msgid "Recent Documents"
-msgstr ""
+msgstr "Documentos de recién"
 
 #: privacyfunctions.h:105
 #, kde-format
@@ -193,7 +193,7 @@ msgstr ""
 #: privacyfunctions.h:124
 #, kde-format
 msgid "Recent Applications"
-msgstr ""
+msgstr "Aplicaciones de recién"
 
 #: privacyfunctions.h:125
 #, kde-format
@@ -204,7 +204,7 @@ msgstr ""
 #, kde-format
 msgctxt "General system content"
 msgid "General"
-msgstr ""
+msgstr "Xeneral"
 
 #: sweeper.cpp:23
 #, kde-format
@@ -256,7 +256,7 @@ msgstr ""
 #: sweeperdialog.ui:42
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #. i18n: ectx: property (text), widget (QPushButton, selectAllButton)
 #: sweeperdialog.ui:58
