@@ -21,7 +21,7 @@ Sweeper::Sweeper(bool automatic)
    : KXmlGuiWindow(nullptr)
    , m_generalCLI(new QTreeWidgetItem(QStringList(i18nc("General system content", "General"))))
    , m_webbrowsingCLI(new QTreeWidgetItem(QStringList(i18nc("Web browsing content", "Web Browsing"))))
-   , m_privacyConfGroup(KSharedConfig::openConfig(QStringLiteral("kprivacyrc"), KConfig::NoGlobals), "Cleaning")
+   , m_privacyConfGroup(KSharedConfig::openConfig(QStringLiteral("kprivacyrc"), KConfig::NoGlobals), QStringLiteral("Cleaning"))
    , m_automatic(automatic)
 {
    auto mainWidget = new QWidget(this);

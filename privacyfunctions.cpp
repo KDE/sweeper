@@ -72,7 +72,7 @@ bool ClearThumbnailsAction::action()
 bool ClearRunCommandHistoryAction::action()
 {
     KConfig cfg(QStringLiteral("krunnerrc"));
-    KConfigGroup configGroup = cfg.group("General");
+    KConfigGroup configGroup = cfg.group(QStringLiteral("General"));
     configGroup.writeEntry("history", QStringList());
     configGroup.sync();
     return true;
@@ -92,7 +92,7 @@ bool ClearAllCookiesPoliciesAction::action()
 {
     // load the config file and section
     KConfig cfg(QStringLiteral("kcookiejarrc"));
-    KConfigGroup group = cfg.group("Cookie Policy");
+    KConfigGroup group = cfg.group(QStringLiteral("Cookie Policy"));
 
     qCDebug(SWEEPER_LOG) << "removing all saved cookie policies" ;
     group.deleteEntry("CookieDomainAdvice");
@@ -111,7 +111,7 @@ bool ClearSavedClipboardContentsAction::action()
 {
    if(!QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.klipper"))) {
       auto c = new KConfig(QStringLiteral("klipperrc"), KConfig::NoGlobals);
-      KConfigGroup group(c, "General");
+      KConfigGroup group(c, QStringLiteral("General"));
       group.deleteEntry("ClipboardData");
       c->sync();
 
