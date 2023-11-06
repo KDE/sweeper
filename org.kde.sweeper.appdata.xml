@@ -5,6 +5,7 @@
   <project_license>LGPL-2.1+</project_license>
   <name>Sweeper</name>
   <name xml:lang="ar">الكناس</name>
+  <name xml:lang="ast">Barrenderu</name>
   <name xml:lang="bg">Sweeper</name>
   <name xml:lang="ca">Escombraire</name>
   <name xml:lang="ca-valencia">Agranador</name>
@@ -52,6 +53,7 @@
   <name xml:lang="zh-TW">Sweeper</name>
   <summary>System cleaning utility</summary>
   <summary xml:lang="ar">أداة تنظيف النظام</summary>
+  <summary xml:lang="ast">Utilidá pa llimpiar el sistema</summary>
   <summary xml:lang="bg">Инструмент за почистване на системата</summary>
   <summary xml:lang="ca">Utilitat de neteja del sistema</summary>
   <summary xml:lang="ca-valencia">Utilitat de neteja del sistema</summary>
@@ -103,6 +105,7 @@
       can remove cookies and clean out caches, for example.
     </p>
     <p xml:lang="ar">الكناس يساعد في تنظيف الأثآر غير المرغوبة التي يتركها المستخدم في النظام. على سبيل المثال يمكنه إزالة الكعكات (ملفات التعريف) وينظف الخبيئة.</p>
+    <p xml:lang="ast">Barrenderu ayúdate a llimpiar el rastru indeseáu que l'usuariu dexa nel sistema. Pue desaniciar cookies ya llimpiar les cachés, por exemplu.</p>
     <p xml:lang="bg">Sweeper е програма, която помага да се почистят нежеланите следи, които потребителят оставя в системата. Тя може да например да премахва бисквитки и да почиства кеша.</p>
     <p xml:lang="ca">L'escombraire ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Elimina les galetes i neteja les memòries cau, per exemple.</p>
     <p xml:lang="ca-valencia">L'agranador ajuda a netejar el rastre no desitjat que va deixant l'usuari al sistema. Elimina les galetes i neteja les memòries cau, per exemple.</p>
