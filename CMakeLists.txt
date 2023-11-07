@@ -25,7 +25,6 @@ include(ECMDeprecationSettings)
 find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core DBus Widgets)
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
-    ActivitiesStats
     Bookmarks
     Crash
     Config
@@ -41,6 +40,8 @@ set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
     "Tools to generate documentation"
     TYPE OPTIONAL
 )
+
+find_package(KF6ActivitiesStats REQUIRED)
 
 ecm_set_disabled_deprecation_versions(QT 6.6 KF 5.240.0)
 
