@@ -10,7 +10,6 @@
 #include <KBookmarkManager>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KRecentDocument>
 #include <KActivities/Stats/Cleaning>
 #include <KActivities/Stats/ResultSet>
 #include <KActivities/Stats/Terms>

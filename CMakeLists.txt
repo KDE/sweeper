@@ -31,7 +31,6 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     ConfigWidgets
     CoreAddons
     I18n
-    KIO
     TextWidgets
     XmlGui
 )
@@ -76,9 +75,9 @@ target_link_libraries(sweeper
    Qt6::Widgets
    KF6::ActivitiesStats
    KF6::Bookmarks
+   KF6::CoreAddons
    KF6::Crash
    KF6::I18n
-   KF6::KIOCore
    KF6::TextWidgets
    KF6::XmlGui
 )
