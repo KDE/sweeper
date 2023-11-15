@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-21 01:40+0000\n"
+"POT-Creation-Date: 2023-11-15 01:40+0000\n"
 "PO-Revision-Date: 2019-07-09 14:11+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -80,17 +80,17 @@ msgstr "縮圖快取"
 msgid "Sweeps without user interaction"
 msgstr "清除時不與使用者互動"
 
-#: privacyfunctions.cpp:46 privacyfunctions.cpp:55 privacyfunctions.cpp:64
+#: privacyfunctions.cpp:45 privacyfunctions.cpp:54 privacyfunctions.cpp:63
 #, kde-format
 msgid "A thumbnail could not be removed."
 msgstr "無法移除縮圖。"
 
-#: privacyfunctions.cpp:135
+#: privacyfunctions.cpp:134
 #, kde-format
 msgid "The file exists but could not be removed."
 msgstr "檔案存在，但無法被移除。"
 
-#: privacyfunctions.cpp:216
+#: privacyfunctions.cpp:215
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "無法移除圖示。"

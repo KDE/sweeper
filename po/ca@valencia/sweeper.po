@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-21 01:40+0000\n"
+"POT-Creation-Date: 2023-11-15 01:40+0000\n"
 "PO-Revision-Date: 2021-10-24 18:40+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -83,17 +83,17 @@ msgstr "Memòria cau de les miniatures"
 msgid "Sweeps without user interaction"
 msgstr "Granera sense la interacció de l'usuari"
 
-#: privacyfunctions.cpp:46 privacyfunctions.cpp:55 privacyfunctions.cpp:64
+#: privacyfunctions.cpp:45 privacyfunctions.cpp:54 privacyfunctions.cpp:63
 #, kde-format
 msgid "A thumbnail could not be removed."
 msgstr "No s'ha pogut suprimir una miniatura."
 
-#: privacyfunctions.cpp:135
+#: privacyfunctions.cpp:134
 #, kde-format
 msgid "The file exists but could not be removed."
 msgstr "El fitxer existix, però no s'ha pogut eliminar."
 
-#: privacyfunctions.cpp:216
+#: privacyfunctions.cpp:215
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "No s'ha pogut eliminar una icona de web."

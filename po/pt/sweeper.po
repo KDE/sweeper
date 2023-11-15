@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: privacy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-21 01:40+0000\n"
+"POT-Creation-Date: 2023-11-15 01:40+0000\n"
 "PO-Revision-Date: 2022-07-06 12:28+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -75,17 +75,17 @@ msgstr "'Cache' de Miniaturas"
 msgid "Sweeps without user interaction"
 msgstr "Limpa sem qualquer interacção do utilizador"
 
-#: privacyfunctions.cpp:46 privacyfunctions.cpp:55 privacyfunctions.cpp:64
+#: privacyfunctions.cpp:45 privacyfunctions.cpp:54 privacyfunctions.cpp:63
 #, kde-format
 msgid "A thumbnail could not be removed."
 msgstr "Não foi possível remover uma miniatura."
 
-#: privacyfunctions.cpp:135
+#: privacyfunctions.cpp:134
 #, kde-format
 msgid "The file exists but could not be removed."
 msgstr "O ficheiro existe mas não pode ser removido."
 
-#: privacyfunctions.cpp:216
+#: privacyfunctions.cpp:215
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Não foi possível remover um 'favicon'."
