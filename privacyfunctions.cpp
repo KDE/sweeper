@@ -10,9 +10,9 @@
 #include <KBookmarkManager>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KActivities/Stats/Cleaning>
-#include <KActivities/Stats/ResultSet>
-#include <KActivities/Stats/Terms>
+#include <PlasmaActivities/Stats/Cleaning>
+#include <PlasmaActivities/Stats/ResultSet>
+#include <PlasmaActivities/Stats/Terms>
 
 
 #include <QDBusConnectionInterface>

@@ -40,7 +40,7 @@ set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
     TYPE OPTIONAL
 )
 
-find_package(KF6ActivitiesStats REQUIRED)
+find_package(PlasmaActivitiesStats REQUIRED)
 
 ecm_set_disabled_deprecation_versions(QT 6.6 KF 5.240.0)
 
@@ -73,7 +73,7 @@ target_link_libraries(sweeper
    Qt6::Core
    Qt6::DBus
    Qt6::Widgets
-   KF6::ActivitiesStats
+   Plasma::ActivitiesStats
    KF6::Bookmarks
    KF6::CoreAddons
    KF6::Crash
