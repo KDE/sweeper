@@ -15,7 +15,7 @@ Dependencies:
     'frameworks/ktextwidgets': '@stable'
     'frameworks/kxmlgui': '@stable'
     'frameworks/kbookmarks': '@stable'
-    'plasma/kactivities-stats': '@stable'
+    'plasma/plasma-activities-stats': '@stable'
 
 - 'on': ['Linux/Qt6', 'FreeBSD/Qt6', 'Windows/Qt6']
   'require':
@@ -30,7 +30,7 @@ Dependencies:
     'frameworks/ktextwidgets': '@latest-kf6'
     'frameworks/kxmlgui': '@latest-kf6'
     'frameworks/kbookmarks': '@latest-kf6'
-    'plasma/kactivities-stats': '@latest-kf6'
+    'plasma/plasma-activities-stats': '@latest-kf6'
 
 Options:
   require-passing-tests-on: [ 'Linux', 'FreeBSD']
