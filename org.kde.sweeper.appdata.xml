@@ -149,6 +149,7 @@
     <p xml:lang="uk">Sweeper допомагає позбутися небажаних слідів роботи користувача у системі. Зокрема, програма може вилучати записи кук та спорожняти кеш.</p>
     <p xml:lang="x-test">xxSweeper helps to clean unwanted traces the user leaves on the system. It can remove cookies and clean out caches, for example.xx</p>
     <p xml:lang="zh-CN">Sweeper 可以清理系统中的用户使用记录，例如 Cookies 缓存等。</p>
+    <p xml:lang="zh-TW">Sweeper 幫助清理使用者在系統上留下的不要的痕跡。舉例來說，它可以移除 cookie 並清空快取。</p>
   </description>
   <url type="homepage">https://utils.kde.org/projects/sweeper/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=sweeper</url>
