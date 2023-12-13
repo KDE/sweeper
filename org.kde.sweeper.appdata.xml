@@ -151,7 +151,7 @@
     <p xml:lang="zh-CN">Sweeper 可以清理系统中的用户使用记录，例如 Cookies 缓存等。</p>
     <p xml:lang="zh-TW">Sweeper 幫助清理使用者在系統上留下的不要的痕跡。舉例來說，它可以移除 cookie 並清空快取。</p>
   </description>
-  <url type="homepage">https://utils.kde.org/projects/sweeper/</url>
+  <url type="homepage">https://apps.kde.org/sweeper</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=sweeper</url>
   <url type="help">https://docs.kde.org/?application=sweeper</url>
   <url type="donation">https://www.kde.org/community/donations/?app=sweeper&amp;source=appdata</url>
