@@ -121,12 +121,12 @@ msgstr "Neteja la política de les galetes de tots els llocs web visitats"
 #: privacyfunctions.h:44
 #, kde-format
 msgid "Saved Clipboard Contents"
-msgstr "Contingut guardat al porta-retalls"
+msgstr "Contingut guardat a dins del porta-retalls"
 
 #: privacyfunctions.h:45
 #, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
-msgstr "Neteja el contingut guardat al porta-retalls per Klipper"
+msgstr "Neteja el contingut guardat a dins del porta-retalls per Klipper"
 
 #: privacyfunctions.h:55
 #, kde-format
