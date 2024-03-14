@@ -42,7 +42,7 @@ set_package_properties(KF6DocTools PROPERTIES DESCRIPTION
 
 find_package(PlasmaActivitiesStats REQUIRED)
 
-ecm_set_disabled_deprecation_versions(QT 6.6 KF 5.240.0)
+ecm_set_disabled_deprecation_versions(QT 6.6 KF 6.0.0)
 
 include_directories (${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
 
