@@ -82,7 +82,7 @@
 > <option
 >--paths GenericCacheLocation</option
 ></userinput
-> komutunu girin. Önbelleğe alınan verilerinizi &sweeper; ile temizlemek; örneğin bir dosya yöneticisi kullanarak bunları okumayı olanaksız duruma getirir; ancak düşük düzeyli bir disk aracı kullanarak hala diskte bulunan ham verileri okumak olanaklıdır. </para>
+> komutunu girin. Önbelleğe alınan verilerinizi &sweeper; ile temizlemek; örneğin bir dosya yöneticisi kullanarak bunları okumayı olanaksız duruma getirir; ancak düşük düzeyli bir disk aracı kullanarak hâlâ diskte bulunan ham verileri okumak olanaklıdır. </para>
 </note>
 
 </article>
