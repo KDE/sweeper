@@ -6,31 +6,32 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
 # Maris Nartiss <maris.kde@gmail.com>, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# SPDX-FileCopyrightText: 2024 Toms Trasūns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:40+0000\n"
-"PO-Revision-Date: 2009-06-07 20:54+0300\n"
-"Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-03-25 09:00+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Rihards Priedītis"
+msgstr "Rihards Priedītis, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "RPrieditis@inbox.lv"
+msgstr "RPrieditis@inbox.lv, toms.trasuns@posteo.net"
 
 #: main.cpp:24
 #, kde-format
@@ -40,13 +41,12 @@ msgstr "Sweeper"
 #: main.cpp:26
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
-msgstr "Palīdz notīrīt nevajadzīgās pēdas sistēmā, kuras atstāj lietotājs."
+msgstr "Notīra nevajadzīgās lietotāja atstātās pēdas sistēmā."
 
 #: main.cpp:28
-#, fuzzy, kde-format
-#| msgid "(c) 2003-2005, Ralf Hoelzer"
+#, kde-format
 msgid "© 2003-2005, Ralf Hoelzer"
-msgstr "(c) 2003-2005, Ralf Hoelzer"
+msgstr "© 2003—2005, Ralf Hoelzer"
 
 #: main.cpp:32
 #, kde-format
@@ -81,7 +81,7 @@ msgstr "Sīktēlu kešatmiņa"
 #: main.cpp:41
 #, kde-format
 msgid "Sweeps without user interaction"
-msgstr ""
+msgstr "Notīra, neprasot lietotāja mijiedarbošanos"
 
 #: privacyfunctions.cpp:45 privacyfunctions.cpp:54 privacyfunctions.cpp:63
 #, kde-format
@@ -91,12 +91,12 @@ msgstr "Nevarēja noņemt sīktēlu."
 #: privacyfunctions.cpp:134
 #, kde-format
 msgid "The file exists but could not be removed."
-msgstr "Fails eksistē, bet nevar noņemt."
+msgstr "Datne eksistē, bet to nevar noņemt."
 
 #: privacyfunctions.cpp:215
 #, kde-format
 msgid "A favicon could not be removed."
-msgstr "Nevar noņemt favicon."
+msgstr "Nevar noņemt tīmekļa vietnes ikonu."
 
 #: privacyfunctions.h:23
 #, kde-format
@@ -111,12 +111,12 @@ msgstr "Notīra visas tīmekļa vietņu saglabātās sīkdatnes"
 #: privacyfunctions.h:34
 #, kde-format
 msgid "Cookie Policies"
-msgstr "Sīkdatņu politikas"
+msgstr "Sīkdatņu politika"
 
 #: privacyfunctions.h:35
 #, kde-format
 msgid "Clears the cookie policies for all visited websites"
-msgstr "Notīra sīkdatņu politikas visām apmeklētajām tīmekļa lapām"
+msgstr "Notīra sīkdatņu politiku visām apmeklētajām tīmekļa lapām"
 
 #: privacyfunctions.h:44
 #, kde-format
@@ -126,7 +126,7 @@ msgstr "Saglabātais starpliktuves saturs"
 #: privacyfunctions.h:45
 #, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
-msgstr "Notīra Klipper starpliktuvē saglabāto saturu"
+msgstr "Notīra „Klipper“ starpliktuvē saglabāto saturu"
 
 #: privacyfunctions.h:55
 #, kde-format
@@ -136,7 +136,7 @@ msgstr "Notīra sīktēlu glabātuvi"
 #: privacyfunctions.h:64
 #, kde-format
 msgid "Run Command History"
-msgstr "Izpildīto komandu vēsturi"
+msgstr "Izpildīto komandu vēsture"
 
 #: privacyfunctions.h:65
 #, kde-format
@@ -144,18 +144,17 @@ msgid ""
 "Clears the history of commands run through the Run Command tool on the "
 "desktop"
 msgstr ""
-"Notīra komandu vēsturi, kuras izsauktas izmantojot darbvirsmas komandu "
-"darbināšanas rīku"
+"Notīra komandu vēsturi, kas palaistas caur darbvirsmas „Palaist komandu“ rīku"
 
 #: privacyfunctions.h:74
 #, kde-format
 msgid "Form Completion Entries"
-msgstr "Formas pabeigšanas ierakstus"
+msgstr "Formu aizpildīšanas ieraksti"
 
 #: privacyfunctions.h:75
 #, kde-format
 msgid "Clears values which were entered into forms on websites"
-msgstr "Notīra vērtibas, kuras tiek ievadītas mājas lapu formās"
+msgstr "Notīra vērtības, kuras tiek automātiski ievadītas mājas lapu formās"
 
 #: privacyfunctions.h:84
 #, kde-format
@@ -175,7 +174,7 @@ msgstr "Tīmekļa kešatmiņa"
 #: privacyfunctions.h:95
 #, kde-format
 msgid "Clears the temporary cache of websites visited"
-msgstr "Notīra apmeklēto tīmekļa lapu glabātuvi"
+msgstr "Notīra apmeklēto tīmekļa vietņu krātuvi"
 
 #: privacyfunctions.h:104
 #, kde-format
@@ -197,7 +196,7 @@ msgstr "Grāmatzīmju ikonas"
 #: privacyfunctions.h:115
 #, kde-format
 msgid "Clears the FavIcons cached from visited websites"
-msgstr "Notīra apmeklēto tīmekļa lapu ikonu glabātuvi"
+msgstr "Notīra apmeklēto tīmekļa lapu ikonu krātuvi"
 
 #: privacyfunctions.h:124
 #, kde-format
@@ -207,7 +206,7 @@ msgstr "Nesenās lietotnes"
 #: privacyfunctions.h:125
 #, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
-msgstr "Notīra sarakstu ar nesen izmantotajām lietotnēm no KDE izvēlnes"
+msgstr "Notīra KDE izvēlnes sarakstu ar nesen izmantotajām lietotnēm"
 
 #: sweeper.cpp:22
 #, kde-format
@@ -225,7 +224,8 @@ msgstr "Tīmekļa pārlūkošana"
 #, kde-format
 msgid ""
 "You are deleting data that is potentially valuable to you. Are you sure?"
-msgstr "Jūs dzēšat datus, kuri ir vērtīgi jums. Vai esat drošs?"
+msgstr ""
+"Iespējams, ka dzēšat potenciāli jums vērtīgus datus. Vai vēlaties turpināt?"
 
 #: sweeper.cpp:109
 #, kde-format
@@ -254,8 +254,8 @@ msgid ""
 "Check all cleanup actions you would like to perform. These will be executed "
 "by pressing the button below."
 msgstr ""
-"Atzīmējiet visas veicamās uzkopšanas darbības. Tās tiks izpildītas pēc "
-"apakšējās pogas nospiešanas."
+"Atzīmējiet visas veicamās uzkopšanas darbības. Programma uzsāks tīrīšanu pēc "
+"pogas nospiešanas."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, privacyListView)
 #: sweeperdialog.ui:37
@@ -273,19 +273,19 @@ msgstr "Apraksts"
 #: sweeperdialog.ui:58
 #, kde-format
 msgid "Select &All"
-msgstr "Izvēlēties &visu"
+msgstr "Atlasīt &visu"
 
 #. i18n: ectx: property (text), widget (QPushButton, selectNoneButton)
 #: sweeperdialog.ui:65
 #, kde-format
 msgid "Select &None"
-msgstr "&Notīrīt izvēli"
+msgstr "&Noņemt atlasi"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, cleanupButton)
 #: sweeperdialog.ui:88
 #, kde-format
 msgid "Immediately performs the cleanup actions selected above"
-msgstr "Uzreiz izpildīt izvēlētās uzkopšanas darbības"
+msgstr "Nekavējoties izpildīt izvēlētās uzkopšanas darbības"
 
 #. i18n: ectx: property (text), widget (QPushButton, cleanupButton)
 #: sweeperdialog.ui:91
