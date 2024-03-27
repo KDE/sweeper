@@ -32,6 +32,7 @@
   <name xml:lang="ka">Sweeper</name>
   <name xml:lang="ko">Sweeper</name>
   <name xml:lang="lt">Išvalymo įrankis</name>
+  <name xml:lang="lv">Sweeper</name>
   <name xml:lang="nl">Sweeper</name>
   <name xml:lang="nn">Sweeper</name>
   <name xml:lang="pa">ਸਵੀਪਰ</name>
@@ -81,6 +82,7 @@
   <summary xml:lang="ka">სისტემის გასუფთავების პროგრამა</summary>
   <summary xml:lang="ko">시스템 청소 도구</summary>
   <summary xml:lang="lt">Sistemos išvalymo paslaugų programa</summary>
+  <summary xml:lang="lv">Sistēmas sakopšanas programma</summary>
   <summary xml:lang="nl">Hulpmiddel voor opschonen van het systeem</summary>
   <summary xml:lang="nn">Verktøy for dataopprydding</summary>
   <summary xml:lang="pa">ਸਿਸਟਮ ਸਫ਼ਾਈ ਸਹੂਲਤ</summary>
@@ -134,6 +136,7 @@
     <p xml:lang="ka">Sweeper დაგეხმარებათ მომხმარებლის მიერ სისტემაში დატოვებული არასასურველი კვალი მოასუფთავოთ. მას, მაგალითად, ქუქიების წაშლა და ქეშების გასუფთავება შეუძლია.</p>
     <p xml:lang="ko">Sweeper는 시스템에 남아 있는 사용자의 과거 기록을 청소합니다. 쿠키와 캐시 등 데이터를 지울 수 있습니다.</p>
     <p xml:lang="lt">Išvalymo įrankis padeda išvalyti nepageidaujamus pėdsakus, kuriuos naudotojas palieka sistemoje. Šis įrankis, pavyzdžiui, gali pašalinti slapukus ir išvalyti podėlius.</p>
+    <p xml:lang="lv">„Sweeper“ palīdz notīrīt nevajadzīgās lietotāja atstātās pēdas sistēmā. Piemēram, programma spēj dzēst sīkdatnes un iztīrīt kešatmiņas.</p>
     <p xml:lang="nl">Sweeper helpt bij het uitwissen van ongewenste sporen die de gebruiker op het systeem achterlaat. Het kan bijvoorbeeld cookies verwijderen en caches opschonen.</p>
     <p xml:lang="nn">Sweeper hjelper deg å fjerna uønskte spor på datamaskina. Du kan blant anna bruka det til å fjerna infokapslar og mellom-/snøgglager.</p>
     <p xml:lang="pl">Czyściciel pomaga zatrzeć niechciane ślady, które użytkownik zostawia na systemie. Może na przykład usunąć ciasteczka, a także wyczyścić pamięci podręczne.</p>
