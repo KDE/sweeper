@@ -233,12 +233,12 @@ msgstr "Suprimireu dades que són potencialment valuoses. N'esteu segur?"
 #: sweeper.cpp:109
 #, kde-format
 msgid "Starting cleanup..."
-msgstr "S'està iniciant la neteja..."
+msgstr "S'està iniciant la neteja…"
 
 #: sweeper.cpp:113
 #, kde-format
 msgid "Clearing %1..."
-msgstr "S'està netejant %1..."
+msgstr "S'està netejant %1…"
 
 #: sweeper.cpp:118
 #, kde-format
