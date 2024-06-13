@@ -1,14 +1,12 @@
-# translation of privacy.po to Belarusian
-#
 # Darafei Praliaskouski <symbol@akeeri.tk>, 2006.
 # Pavel Piatruk <berserker@neolocation.com>, 2007.
 # Siarhei Liantsevich <serzh.by@gmail.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: privacy\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:40+0000\n"
-"PO-Revision-Date: 2007-01-04 06:30+0100\n"
+"PO-Revision-Date: 2024-06-12 08:11\n"
 "Last-Translator: Siarhei Liantsevich <serzh.by@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -19,119 +17,125 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/sweeper/sweeper.po\n"
+"X-Crowdin-File-ID: 10948\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Дарафей Праляскоўскі, Павел Пятрук, Сяржук Лянцэвіч"
+msgstr "Дарафей Праляскоўскі, Андрэйчанка Анастасія, Сталярчук Іван, Antikruk"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "symbol@akeeri.tk, berserker@neolocation.com, serzh.by@gmail.com"
+msgstr ""
+"komzpa@licei2.com, bashybuzuk@tut.by, ivan.telkontar@gmail.com, "
+"nashtlumach@gmail.com"
 
 #: main.cpp:24
 #, kde-format
 msgid "Sweeper"
-msgstr ""
+msgstr "Sweeper"
 
 #: main.cpp:26
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr ""
+"Дапамагае выдаліць непатрэбныя рэшткі файлаў праграм, якія карыстальнік "
+"пакідае ў сістэме."
 
 #: main.cpp:28
-#, fuzzy, kde-format
-#| msgid "(c) 2003 Ralf Hoelzer"
+#, kde-format
 msgid "© 2003-2005, Ralf Hoelzer"
-msgstr "(c) 2003 Ralf Hoelzer"
+msgstr "© 2003-2005, Ralf Hoelzer"
 
 #: main.cpp:32
-#, fuzzy, kde-format
-#| msgid "(c) 2003 Ralf Hoelzer"
+#, kde-format
 msgid "Ralf Hoelzer"
-msgstr "(c) 2003 Ralf Hoelzer"
+msgstr "Ralf Hoelzer"
 
 #: main.cpp:32
 #, kde-format
 msgid "Original author"
-msgstr ""
+msgstr "Першапачатковы стваральнік"
 
 #: main.cpp:33
 #, kde-format
 msgid "Brian S. Stephan"
-msgstr ""
+msgstr "Brian S. Stephan"
 
 #: main.cpp:33
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Суправаджальнік"
 
 #: main.cpp:34
 #, kde-format
 msgid "Benjamin Meyer"
-msgstr ""
+msgstr "Benjamin Meyer"
 
 #: main.cpp:34 privacyfunctions.h:54
 #, kde-format
 msgid "Thumbnail Cache"
-msgstr "Кэш мініятур"
+msgstr "Кэш мініяцюр"
 
 #: main.cpp:41
 #, kde-format
 msgid "Sweeps without user interaction"
-msgstr ""
+msgstr "Ачышчэнне без узаемадзеяння з карыстальнікам"
 
 #: privacyfunctions.cpp:45 privacyfunctions.cpp:54 privacyfunctions.cpp:63
 #, kde-format
 msgid "A thumbnail could not be removed."
-msgstr ""
+msgstr "Не ўдалося выдаліць мініяцюру."
 
 #: privacyfunctions.cpp:134
 #, kde-format
 msgid "The file exists but could not be removed."
-msgstr ""
+msgstr "Файл існуе, але яго нельга выдаліць."
 
 #: privacyfunctions.cpp:215
 #, kde-format
 msgid "A favicon could not be removed."
-msgstr ""
+msgstr "Не ўдалося выдаліць значок."
 
 #: privacyfunctions.h:23
 #, kde-format
 msgid "Cookies"
-msgstr ""
+msgstr "Файлы cookie"
 
 #: privacyfunctions.h:24
 #, kde-format
 msgid "Clears all stored cookies set by websites"
-msgstr "Ачышчае ўсе захаваныя cookies, усталяваныя веб-сайтамі"
+msgstr "Ачышчэнне ўсіх захаваных cookies з вэб-сайтаў"
 
 #: privacyfunctions.h:34
 #, kde-format
 msgid "Cookie Policies"
-msgstr ""
+msgstr "Палітыка файлаў cookie"
 
 #: privacyfunctions.h:35
-#, fuzzy, kde-format
-#| msgid "Clears the history of visited websites"
+#, kde-format
 msgid "Clears the cookie policies for all visited websites"
-msgstr "Ачышчае гісторыю наведаных веб-сайтаў"
+msgstr "Ачышчэнне палітыкі файлаў cookie для ўсіх наведаных вэб-сайтаў"
 
 #: privacyfunctions.h:44
 #, kde-format
 msgid "Saved Clipboard Contents"
-msgstr "Захаванае месціва буфера абмену"
+msgstr "Захаванае змесціва буфера абмену"
 
 #: privacyfunctions.h:45
 #, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
-msgstr "Ачышчае змесціва буфера абмену, захаванага Klipper'ам"
+msgstr "Ачышчэнне змесціва буфера абмену, якое захоўвае Klipper"
 
 #: privacyfunctions.h:55
 #, kde-format
 msgid "Clears all cached thumbnails"
-msgstr "Ачышчае ўсе кэшаваныя мініятуры"
+msgstr "Ачышчэнне ўсіх кэшаваных мініяцюр"
 
 #: privacyfunctions.h:64
 #, kde-format
@@ -144,17 +148,17 @@ msgid ""
 "Clears the history of commands run through the Run Command tool on the "
 "desktop"
 msgstr ""
-"Ачышчае гісторыю каманд, запушчаных праз дэсктопны сродак Выканаць Каманду"
+"Ачышчэнне гісторыі каманд, запушчаных праз сістэмны сродак запуску каманд"
 
 #: privacyfunctions.h:74
 #, kde-format
 msgid "Form Completion Entries"
-msgstr "Элементы дадання форм"
+msgstr "Запісы аўтазапаўнення формаў"
 
 #: privacyfunctions.h:75
 #, kde-format
 msgid "Clears values which were entered into forms on websites"
-msgstr "Ачышчае значэнні, што былі ўведзены ў формы на веб-сайтах"
+msgstr "Ачышчэнне значэнняў, што былі ўведзеныя ў формы на вэб-сайтах"
 
 #: privacyfunctions.h:84
 #, kde-format
@@ -164,7 +168,7 @@ msgstr "Гісторыя сеціва"
 #: privacyfunctions.h:85
 #, kde-format
 msgid "Clears the history of visited websites"
-msgstr "Ачышчае гісторыю наведаных веб-сайтаў"
+msgstr "Ачышчэнне гісторыі наведаных вэб-сайтаў"
 
 #: privacyfunctions.h:94
 #, kde-format
@@ -174,7 +178,7 @@ msgstr "Кэш сеціва"
 #: privacyfunctions.h:95
 #, kde-format
 msgid "Clears the temporary cache of websites visited"
-msgstr "Ачышчае часовы кэш наведаных веб-сайтаў"
+msgstr "Ачышчэнне кэшу наведаных вэб-сайтаў"
 
 #: privacyfunctions.h:104
 #, kde-format
@@ -185,82 +189,75 @@ msgstr "Нядаўнія дакументы"
 #, kde-format
 msgid ""
 "Clears the list of recently used documents from the KDE applications menu"
-msgstr "Ачышчае спіс нядаўна выкарыстованых дакументаў праз меню праграм KDE"
+msgstr "Ачышчэнне спіса нядаўна выкарыстаных дакументаў у меню KDE"
 
 #: privacyfunctions.h:114
 #, kde-format
 msgid "Favorite Icons"
-msgstr "Улюбёныя значкі"
+msgstr "Значкі"
 
 #: privacyfunctions.h:115
 #, kde-format
 msgid "Clears the FavIcons cached from visited websites"
-msgstr "Ачышчае FavIcons, кэшаваныя з наведаных веб-сайтаў"
+msgstr "Ачышчэнне FavIcons з наведаных веб-сайтаў"
 
 #: privacyfunctions.h:124
 #, kde-format
 msgid "Recent Applications"
-msgstr ""
+msgstr "Нядаўнія праграмы"
 
 #: privacyfunctions.h:125
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clears the list of recently used documents from the KDE applications menu"
+#, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
-msgstr "Ачышчае спіс нядаўна выкарыстованых дакументаў праз меню праграм KDE"
+msgstr "Ачышчэнне спіса нядаўна выкарыстаных праграм у меню KDE"
 
 #: sweeper.cpp:22
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "General system content"
 msgid "General"
-msgstr "Агульныя"
+msgstr "Асноўныя налады"
 
 #: sweeper.cpp:23
-#, fuzzy, kde-format
-#| msgid "Web Browsing"
+#, kde-format
 msgctxt "Web browsing content"
 msgid "Web Browsing"
-msgstr "Вандроўка па Сеціве"
+msgstr "Вэб-агляд"
 
 #: sweeper.cpp:103
 #, kde-format
 msgid ""
 "You are deleting data that is potentially valuable to you. Are you sure?"
-msgstr "Вы выдаляеце дадзеныя, што могуць быць важнымі для вас. Вы ўпэўнены?"
+msgstr "Вы выдаляеце даныя, што могуць быць важнымі для вас. Вы ўпэўнены?"
 
 #: sweeper.cpp:109
 #, kde-format
 msgid "Starting cleanup..."
-msgstr "Стартуецца ачыстка..."
+msgstr "Запуск ачышчэння..."
 
 #: sweeper.cpp:113
 #, kde-format
 msgid "Clearing %1..."
-msgstr "Ачышчаецца %1..."
+msgstr "Ачышчэнне %1..."
 
 #: sweeper.cpp:118
-#, fuzzy, kde-format
+#, kde-format
 msgid "Clearing of %1 failed: %2"
-msgstr "Ачыстка %1 не атрымалася"
+msgstr "Не ўдалося ачысціць %1: %2"
 
 #: sweeper.cpp:124
 #, kde-format
 msgid "Clean up finished."
-msgstr "Ачыстка завершана."
+msgstr "Ачышчэнне завершана."
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, privacyListView)
 #: sweeperdialog.ui:27
-#, fuzzy, kde-format
-#| msgid ""
-#| "Check all cleanup actions you would like to perform. These will be "
-#| "executed by pressing the button below"
+#, kde-format
 msgid ""
 "Check all cleanup actions you would like to perform. These will be executed "
 "by pressing the button below."
 msgstr ""
-"Адзначце ўсе дзеянні ачысткі, што хочаце правесці. Яны будуць выкананыя "
-"шляхам націску кнопкі ніжэй"
+"Адзначце ўсе дзеянні ачышчэння, якія хочаце выканаць. Яны выканаюцца, калі "
+"вы націснеце кнопку ніжэй."
 
 #. i18n: ectx: property (text), widget (QTreeWidget, privacyListView)
 #: sweeperdialog.ui:37
@@ -276,27 +273,27 @@ msgstr "Апісанне"
 
 #. i18n: ectx: property (text), widget (QPushButton, selectAllButton)
 #: sweeperdialog.ui:58
-#, fuzzy, kde-format
+#, kde-format
 msgid "Select &All"
-msgstr "Скінуць вылучэнне"
+msgstr "Абраць &усё"
 
 #. i18n: ectx: property (text), widget (QPushButton, selectNoneButton)
 #: sweeperdialog.ui:65
-#, fuzzy, kde-format
+#, kde-format
 msgid "Select &None"
-msgstr "Скінуць вылучэнне"
+msgstr "Адкінуць &выбар"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, cleanupButton)
 #: sweeperdialog.ui:88
 #, kde-format
 msgid "Immediately performs the cleanup actions selected above"
-msgstr "Неадкладна правесці дзеянні ачысткі, вызначаныя вышэй"
+msgstr "Неадкладна правесці дзеянні па ачышчэнні, абраныя вышэй"
 
 #. i18n: ectx: property (text), widget (QPushButton, cleanupButton)
 #: sweeperdialog.ui:91
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Clean Up"
-msgstr "Ачысціць"
+msgstr "&Ачысціць"
 
 #~ msgid "Network privacy level:"
 #~ msgstr "Узровень сеціўнай прыватнасці:"
