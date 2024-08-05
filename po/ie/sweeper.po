@@ -1,22 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the sweeper package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2024 OIS <mistresssilvara@hotmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:40+0000\n"
-"PO-Revision-Date: 2022-11-03 06:57+0700\n"
+"PO-Revision-Date: 2024-08-04 16:18+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
-"Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
+"Language-Team: Interlingue <>\n"
 "Language: ie\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,9 +33,9 @@ msgid "Sweeper"
 msgstr ""
 
 #: main.cpp:26
-#, kde-format
+#, fuzzy, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
-msgstr ""
+msgstr "N&ettar"
 
 #: main.cpp:28
 #, kde-format
@@ -76,22 +75,22 @@ msgstr "Cache de miniaturas"
 #: main.cpp:41
 #, fuzzy, kde-format
 msgid "Sweeps without user interaction"
-msgstr "Cambiar li usator sin monstrar li dialog de clusion"
+msgstr "Selecter un usator"
 
 #: privacyfunctions.cpp:45 privacyfunctions.cpp:54 privacyfunctions.cpp:63
 #, fuzzy, kde-format
 msgid "A thumbnail could not be removed."
-msgstr "Removet"
+msgstr "Cache de miniaturas"
 
 #: privacyfunctions.cpp:134
 #, fuzzy, kde-format
 msgid "The file exists but could not be removed."
-msgstr "File ja existe"
+msgstr "File"
 
 #: privacyfunctions.cpp:215
 #, fuzzy, kde-format
 msgid "A favicon could not be removed."
-msgstr "Null favicon trovat por %1"
+msgstr "Removet: %1, totale: %2, ignorat: %3"
 
 #: privacyfunctions.h:23
 #, kde-format
@@ -99,9 +98,9 @@ msgid "Cookies"
 msgstr "Cookies"
 
 #: privacyfunctions.h:24
-#, kde-format
+#, fuzzy, kde-format
 msgid "Clears all stored cookies set by websites"
-msgstr ""
+msgstr "Cookies"
 
 #: privacyfunctions.h:34
 #, fuzzy, kde-format
@@ -116,49 +115,49 @@ msgstr ""
 #: privacyfunctions.h:44
 #, fuzzy, kde-format
 msgid "Saved Clipboard Contents"
-msgstr "Coll&ar li contenete del Paperiere"
+msgstr "Contenete de terminal"
 
 #: privacyfunctions.h:45
-#, kde-format
+#, fuzzy, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
-msgstr ""
+msgstr "Collar ex li Paperiere"
 
 #: privacyfunctions.h:55
 #, fuzzy, kde-format
 msgid "Clears all cached thumbnails"
-msgstr "Sollen alle Minitatur-Vorschaubilder gelöscht werden?"
+msgstr "Selecter &omni"
 
 #: privacyfunctions.h:64
 #, fuzzy, kde-format
 msgid "Run Command History"
-msgstr "_Gardar correspondenties in li diarium"
+msgstr "Comande"
 
 #: privacyfunctions.h:65
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "Clears the history of commands run through the Run Command tool on the "
 "desktop"
-msgstr ""
+msgstr "Comande"
 
 #: privacyfunctions.h:74
 #, fuzzy, kde-format
 msgid "Form Completion Entries"
-msgstr "null inscritiones"
+msgstr "Inscritiones SSH"
 
 #: privacyfunctions.h:75
-#, kde-format
+#, fuzzy, kde-format
 msgid "Clears values which were entered into forms on websites"
-msgstr ""
+msgstr "Compresser li selectet files a un nov."
 
 #: privacyfunctions.h:84
 #, fuzzy, kde-format
 msgid "Web History"
-msgstr "Web"
+msgstr "Cache Web"
 
 #: privacyfunctions.h:85
-#, kde-format
+#, fuzzy, kde-format
 msgid "Clears the history of visited websites"
-msgstr ""
+msgstr "Supporte de Solaris e li diarium"
 
 #: privacyfunctions.h:94
 #, kde-format
@@ -166,9 +165,9 @@ msgid "Web Cache"
 msgstr "Cache Web"
 
 #: privacyfunctions.h:95
-#, kde-format
+#, fuzzy, kde-format
 msgid "Clears the temporary cache of websites visited"
-msgstr ""
+msgstr "Cache de miniaturas"
 
 #: privacyfunctions.h:104
 #, kde-format
@@ -176,20 +175,20 @@ msgid "Recent Documents"
 msgstr "Documentes recent"
 
 #: privacyfunctions.h:105
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "Clears the list of recently used documents from the KDE applications menu"
-msgstr ""
+msgstr "Documentes recent"
 
 #: privacyfunctions.h:114
 #, fuzzy, kde-format
 msgid "Favorite Icons"
-msgstr "Pre_feret"
+msgstr "Icones"
 
 #: privacyfunctions.h:115
-#, kde-format
+#, fuzzy, kde-format
 msgid "Clears the FavIcons cached from visited websites"
-msgstr ""
+msgstr "De"
 
 #: privacyfunctions.h:124
 #, kde-format
@@ -197,61 +196,61 @@ msgid "Recent Applications"
 msgstr "Applicationes recent"
 
 #: privacyfunctions.h:125
-#, kde-format
+#, fuzzy, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
-msgstr ""
+msgstr "Applicationes recent"
 
 #: sweeper.cpp:22
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "General system content"
 msgid "General"
 msgstr "General"
 
 #: sweeper.cpp:23
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Web browsing content"
 msgid "Web Browsing"
 msgstr "Navigation Web"
 
 #: sweeper.cpp:103
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "You are deleting data that is potentially valuable to you. Are you sure?"
-msgstr ""
+msgstr "Esque vu vole obliviar «%1»?"
 
 #: sweeper.cpp:109
 #, fuzzy, kde-format
 msgid "Starting cleanup..."
-msgstr "Nettation:"
+msgstr "Lansante"
 
 #: sweeper.cpp:113
-#, fuzzy, kde-format
+#, kde-format
 msgid "Clearing %1..."
-msgstr "== %1 =="
+msgstr "Nettante %1..."
 
 #: sweeper.cpp:118
 #, fuzzy, kde-format
 msgid "Clearing of %1 failed: %2"
-msgstr "Ne successat aperter «%1»:<nl/>%2"
+msgstr "Nettante %1..."
 
 #: sweeper.cpp:124
 #, fuzzy, kde-format
 msgid "Clean up finished."
-msgstr "_Ordinar secun nómine"
+msgstr "N&ettar"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeWidget, privacyListView)
 #: sweeperdialog.ui:27
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "Check all cleanup actions you would like to perform. These will be executed "
 "by pressing the button below."
-msgstr ""
+msgstr "Will Stephenson"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, privacyListView)
 #: sweeperdialog.ui:37
 #, fuzzy, kde-format
 msgid "Privacy Settings"
-msgstr "Parametres de privatie de Cinnamon"
+msgstr "Parametres"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, privacyListView)
 #: sweeperdialog.ui:42
@@ -273,9 +272,9 @@ msgstr "Selecter &necos"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, cleanupButton)
 #: sweeperdialog.ui:88
-#, kde-format
+#, fuzzy, kde-format
 msgid "Immediately performs the cleanup actions selected above"
-msgstr ""
+msgstr "Selectet files: <b>%1</b>"
 
 #. i18n: ectx: property (text), widget (QPushButton, cleanupButton)
 #: sweeperdialog.ui:91
