@@ -11,17 +11,20 @@
 
 class PrivacyAction : public QTreeWidgetItem
 {
-   public:
-      PrivacyAction(QTreeWidgetItem * parent, const QString &name, const QString &desc = QString());
-      ~PrivacyAction() override = default;
-      
-      QString getErrMsg() const { return errMsg; }
-      
-      virtual bool action() = 0;
-      virtual QString configKey() const = 0;
-      
-   protected:
-      QString errMsg;
+public:
+    PrivacyAction(QTreeWidgetItem *parent, const QString &name, const QString &desc = QString());
+    ~PrivacyAction() override = default;
+
+    QString getErrMsg() const
+    {
+        return errMsg;
+    }
+
+    virtual bool action() = 0;
+    virtual QString configKey() const = 0;
+
+protected:
+    QString errMsg;
 };
 
 #endif

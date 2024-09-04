@@ -17,43 +17,43 @@
 class PrivacyAction;
 class QTreeWidgetItem;
 
-class Sweeper: public KXmlGuiWindow
+class Sweeper : public KXmlGuiWindow
 {
-   public:
-      // if automatic is true, no user interaction is required
-      explicit Sweeper(bool automatic);
-      ~Sweeper() override;
+public:
+    // if automatic is true, no user interaction is required
+    explicit Sweeper(bool automatic);
+    ~Sweeper() override;
 
-      void cleanup();
+    void cleanup();
 
-   private:
-      void selectAll();
-      void selectNone();
+private:
+    void selectAll();
+    void selectNone();
 
-      /**
-       * methods
-       */
-      void load();
-      void save();
+    /**
+     * methods
+     */
+    void load();
+    void save();
 
-      /**
-       * Set up all the actions we are going to manage.
-       */
-      void InitActions();
+    /**
+     * Set up all the actions we are going to manage.
+     */
+    void InitActions();
 
-      /**
-       * attributes
-       */
-      Ui::SweeperDialog ui;
+    /**
+     * attributes
+     */
+    Ui::SweeperDialog ui;
 
-      QList<PrivacyAction*> checklist;
+    QList<PrivacyAction *> checklist;
 
-      QTreeWidgetItem * const m_generalCLI;
-      QTreeWidgetItem * const m_webbrowsingCLI;
+    QTreeWidgetItem *const m_generalCLI;
+    QTreeWidgetItem *const m_webbrowsingCLI;
 
-      KConfigGroup m_privacyConfGroup;
+    KConfigGroup m_privacyConfGroup;
 
-      bool m_automatic;
+    bool m_automatic;
 };
 
 #endif
