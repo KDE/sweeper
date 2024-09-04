@@ -22,6 +22,11 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(FeatureSummary)
 include(ECMDeprecationSettings)
+include(KDEGitCommitHooks)
+include(KDEClangFormat)
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h *.c)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
+
 find_package(Qt6 ${QT_REQUIRED_VERSION} REQUIRED COMPONENTS Core DBus Widgets)
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
@@ -101,5 +106,5 @@ ecm_qt_install_logging_categories(
         FILE sweeper.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
         )
-
+kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
