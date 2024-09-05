@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:40+0000\n"
+"POT-Creation-Date: 2024-09-05 00:43+0000\n"
 "PO-Revision-Date: 2019-07-09 07:16+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -28,114 +28,114 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "thd@kde.org"
 
-#: main.cpp:24
+#: main.cpp:25
 #, kde-format
 msgid "Sweeper"
 msgstr "Sweeper"
 
-#: main.cpp:26
+#: main.cpp:27
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr "Hilft dem Benutzer ungewollte Spuren im System zu verwischen."
 
-#: main.cpp:28
+#: main.cpp:29
 #, kde-format
 msgid "© 2003-2005, Ralf Hoelzer"
 msgstr "© 2003–2005, Ralf Hoelzer"
 
-#: main.cpp:32
+#: main.cpp:33
 #, kde-format
 msgid "Ralf Hoelzer"
 msgstr "Ralf Hoelzer"
 
-#: main.cpp:32
+#: main.cpp:33
 #, kde-format
 msgid "Original author"
 msgstr "Ursprünglicher Autor"
 
-#: main.cpp:33
+#: main.cpp:34
 #, kde-format
 msgid "Brian S. Stephan"
 msgstr "Brian S. Stephan"
 
-#: main.cpp:33
+#: main.cpp:34
 #, kde-format
 msgid "Maintainer"
 msgstr "Aktueller Betreuer"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:34 privacyfunctions.h:54
+#: main.cpp:35 privacyfunctions.h:65
 #, kde-format
 msgid "Thumbnail Cache"
 msgstr "Zwischenspeicher für Minivorschau"
 
-#: main.cpp:41
+#: main.cpp:42
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr "Bereinigung des Zwischenspeichers ohne Eingriffe des Benutzers"
 
-#: privacyfunctions.cpp:45 privacyfunctions.cpp:54 privacyfunctions.cpp:63
+#: privacyfunctions.cpp:44 privacyfunctions.cpp:53 privacyfunctions.cpp:62
 #, kde-format
 msgid "A thumbnail could not be removed."
 msgstr "Eine Vorschau-Datei lässt sich nicht entfernen."
 
-#: privacyfunctions.cpp:134
+#: privacyfunctions.cpp:131
 #, kde-format
 msgid "The file exists but could not be removed."
 msgstr "Die Datei existiert, kann aber nicht entfernt werden."
 
-#: privacyfunctions.cpp:215
+#: privacyfunctions.cpp:210
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Ein Favicon lässt sich nicht entfernen."
 
-#: privacyfunctions.h:23
+#: privacyfunctions.h:22
 #, kde-format
 msgid "Cookies"
 msgstr "Cookies"
 
-#: privacyfunctions.h:24
+#: privacyfunctions.h:22
 #, kde-format
 msgid "Clears all stored cookies set by websites"
 msgstr "Löscht alle von Webseiten übermittelten Cookies"
 
-#: privacyfunctions.h:34
+#: privacyfunctions.h:37
 #, kde-format
 msgid "Cookie Policies"
 msgstr "Cookie-Regelung"
 
-#: privacyfunctions.h:35
+#: privacyfunctions.h:37
 #, kde-format
 msgid "Clears the cookie policies for all visited websites"
 msgstr "Löscht die Regeleinstellungen bei Cookies für alle besuchten Webseiten"
 
-#: privacyfunctions.h:44
+#: privacyfunctions.h:51
 #, kde-format
 msgid "Saved Clipboard Contents"
 msgstr "Gespeicherte Inhalte der Zwischenablage"
 
-#: privacyfunctions.h:45
+#: privacyfunctions.h:51
 #, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
 msgstr ""
 "Löscht alle Inhalte der Zwischenablage, die von dem Programm Klipper "
 "gespeichert wurden"
 
-#: privacyfunctions.h:55
+#: privacyfunctions.h:65
 #, kde-format
 msgid "Clears all cached thumbnails"
 msgstr "Löscht alle Minivorschaubilder im Zwischenspeicher"
 
-#: privacyfunctions.h:64
+#: privacyfunctions.h:79
 #, kde-format
 msgid "Run Command History"
 msgstr "Befehlsspeicher"
 
-#: privacyfunctions.h:65
+#: privacyfunctions.h:79
 #, kde-format
 msgid ""
 "Clears the history of commands run through the Run Command tool on the "
@@ -144,64 +144,64 @@ msgstr ""
 "Leert den Speicher für alle Eingaben im Dialog „Befehl ausführen“ der "
 "Arbeitsfläche"
 
-#: privacyfunctions.h:74
+#: privacyfunctions.h:93
 #, kde-format
 msgid "Form Completion Entries"
 msgstr "Einträge zum automatischen Ausfüllen von Formularen"
 
-#: privacyfunctions.h:75
+#: privacyfunctions.h:93
 #, kde-format
 msgid "Clears values which were entered into forms on websites"
 msgstr "Leert den Speicher für sämtliche bisherigen Eingaben in Web-Formulare"
 
-#: privacyfunctions.h:84
+#: privacyfunctions.h:107
 #, kde-format
 msgid "Web History"
 msgstr "Aufgerufene Webseiten"
 
-#: privacyfunctions.h:85
+#: privacyfunctions.h:107
 #, kde-format
 msgid "Clears the history of visited websites"
 msgstr "Leert den Verlaufsspeicher der besuchten Webseiten"
 
-#: privacyfunctions.h:94
+#: privacyfunctions.h:121
 #, kde-format
 msgid "Web Cache"
 msgstr "Zwischenspeicher für Webseiten"
 
-#: privacyfunctions.h:95
+#: privacyfunctions.h:121
 #, kde-format
 msgid "Clears the temporary cache of websites visited"
 msgstr "Leert den Zwischenspeicher für sämtliche besuchte Webseiten"
 
-#: privacyfunctions.h:104
+#: privacyfunctions.h:135
 #, kde-format
 msgid "Recent Documents"
 msgstr "Zuletzt geöffnete Dokumente"
 
-#: privacyfunctions.h:105
+#: privacyfunctions.h:135
 #, kde-format
 msgid ""
 "Clears the list of recently used documents from the KDE applications menu"
 msgstr "Leert den Speicher der zuletzt geöffneten Dokumente im K-Menü"
 
-#: privacyfunctions.h:114
+#: privacyfunctions.h:149
 #, kde-format
 msgid "Favorite Icons"
 msgstr "Webseiten-Symbole (FavIcons)"
 
-#: privacyfunctions.h:115
+#: privacyfunctions.h:149
 #, kde-format
 msgid "Clears the FavIcons cached from visited websites"
 msgstr ""
 "Leert den Zwischenspeicher für Webseiten-Symbole der besuchten Webseiten"
 
-#: privacyfunctions.h:124
+#: privacyfunctions.h:163
 #, kde-format
 msgid "Recent Applications"
 msgstr "Zuletzt benutzte Anwendungen"
 
-#: privacyfunctions.h:125
+#: privacyfunctions.h:163
 #, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
 msgstr "Leert die Liste der zuletzt geöffneten Anwendungen im K-Menü"
@@ -218,7 +218,7 @@ msgctxt "Web browsing content"
 msgid "Web Browsing"
 msgstr "Webbrowser"
 
-#: sweeper.cpp:103
+#: sweeper.cpp:100
 #, kde-format
 msgid ""
 "You are deleting data that is potentially valuable to you. Are you sure?"
@@ -226,22 +226,22 @@ msgstr ""
 "Sie sind im Begriff, Daten zu löschen, die möglicherweise wichtig für Sie "
 "sind. Möchten Sie fortfahren?"
 
-#: sweeper.cpp:109
+#: sweeper.cpp:107
 #, kde-format
 msgid "Starting cleanup..."
 msgstr "Bereinigung wird gestartet ..."
 
-#: sweeper.cpp:113
+#: sweeper.cpp:111
 #, kde-format
 msgid "Clearing %1..."
 msgstr "Wird bereinigt: %1"
 
-#: sweeper.cpp:118
+#: sweeper.cpp:116
 #, kde-format
 msgid "Clearing of %1 failed: %2"
 msgstr "Bereinigen von %1 ist fehlgeschlagen: %2"
 
-#: sweeper.cpp:124
+#: sweeper.cpp:122
 #, kde-format
 msgid "Clean up finished."
 msgstr "Bereinigung abgeschlossen"

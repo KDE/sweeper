@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:40+0000\n"
+"POT-Creation-Date: 2024-09-05 00:43+0000\n"
 "PO-Revision-Date: 2021-12-14 12:13+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -27,113 +27,113 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "g.sora@tiscali.it"
 
-#: main.cpp:24
+#: main.cpp:25
 #, kde-format
 msgid "Sweeper"
 msgstr "Sweeper"
 
-#: main.cpp:26
+#: main.cpp:27
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr "Il adjuta nettar tracias non volite que le usator lassa in le systema."
 
-#: main.cpp:28
+#: main.cpp:29
 #, kde-format
 msgid "© 2003-2005, Ralf Hoelzer"
 msgstr "(c)2003-2005, Ralf Hoelzer"
 
-#: main.cpp:32
+#: main.cpp:33
 #, kde-format
 msgid "Ralf Hoelzer"
 msgstr "Ralf Hoelzer"
 
-#: main.cpp:32
+#: main.cpp:33
 #, kde-format
 msgid "Original author"
 msgstr "Autor original"
 
-#: main.cpp:33
+#: main.cpp:34
 #, kde-format
 msgid "Brian S. Stephan"
 msgstr "Brian S.Stephan"
 
-#: main.cpp:33
+#: main.cpp:34
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantenitor"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:34 privacyfunctions.h:54
+#: main.cpp:35 privacyfunctions.h:65
 #, kde-format
 msgid "Thumbnail Cache"
 msgstr "Cache de miniatura"
 
-#: main.cpp:41
+#: main.cpp:42
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr "Il scopa sin interaction de usator"
 
-#: privacyfunctions.cpp:45 privacyfunctions.cpp:54 privacyfunctions.cpp:63
+#: privacyfunctions.cpp:44 privacyfunctions.cpp:53 privacyfunctions.cpp:62
 #, kde-format
 msgid "A thumbnail could not be removed."
 msgstr "Un miniatura non pote esser removite"
 
-#: privacyfunctions.cpp:134
+#: privacyfunctions.cpp:131
 #, kde-format
 msgid "The file exists but could not be removed."
 msgstr "Le file existe ma il non pote esser removite"
 
-#: privacyfunctions.cpp:215
+#: privacyfunctions.cpp:210
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "Un favicon non pote esser removite"
 
-#: privacyfunctions.h:23
+#: privacyfunctions.h:22
 #, kde-format
 msgid "Cookies"
 msgstr "Cookies"
 
-#: privacyfunctions.h:24
+#: privacyfunctions.h:22
 #, kde-format
 msgid "Clears all stored cookies set by websites"
 msgstr "Il netta tote le cookies fixate per sitos web"
 
-#: privacyfunctions.h:34
+#: privacyfunctions.h:37
 #, kde-format
 msgid "Cookie Policies"
 msgstr "Politicas de cookies"
 
-#: privacyfunctions.h:35
+#: privacyfunctions.h:37
 #, kde-format
 msgid "Clears the cookie policies for all visited websites"
 msgstr "Il netta le politicas de cookies pro omne sitos web visitate"
 
-#: privacyfunctions.h:44
+#: privacyfunctions.h:51
 #, kde-format
 msgid "Saved Clipboard Contents"
 msgstr "Contentos de Area de Transferentia salveguardate"
 
-#: privacyfunctions.h:45
+#: privacyfunctions.h:51
 #, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
 msgstr ""
 "Il netta le contentos de area de transferentia immagazinate per Klipper"
 
-#: privacyfunctions.h:55
+#: privacyfunctions.h:65
 #, kde-format
 msgid "Clears all cached thumbnails"
 msgstr "Il netta omne miniaturas ponite in cache"
 
-#: privacyfunctions.h:64
+#: privacyfunctions.h:79
 #, kde-format
 msgid "Run Command History"
 msgstr "Exeque chronologia de commando"
 
-#: privacyfunctions.h:65
+#: privacyfunctions.h:79
 #, kde-format
 msgid ""
 "Clears the history of commands run through the Run Command tool on the "
@@ -142,42 +142,42 @@ msgstr ""
 "Il netta le chronologia de commandos executate per le instrumento de Executa "
 "Commando sur le scriptorio"
 
-#: privacyfunctions.h:74
+#: privacyfunctions.h:93
 #, kde-format
 msgid "Form Completion Entries"
 msgstr "Entratas de completion de formulario"
 
-#: privacyfunctions.h:75
+#: privacyfunctions.h:93
 #, kde-format
 msgid "Clears values which were entered into forms on websites"
 msgstr "Il netta valores que esseva insertate in formularios sur sitos web"
 
-#: privacyfunctions.h:84
+#: privacyfunctions.h:107
 #, kde-format
 msgid "Web History"
 msgstr "Chronologia de web"
 
-#: privacyfunctions.h:85
+#: privacyfunctions.h:107
 #, kde-format
 msgid "Clears the history of visited websites"
 msgstr "Il netta le chronologia de sitos web visitate"
 
-#: privacyfunctions.h:94
+#: privacyfunctions.h:121
 #, kde-format
 msgid "Web Cache"
 msgstr "Cache de Web"
 
-#: privacyfunctions.h:95
+#: privacyfunctions.h:121
 #, kde-format
 msgid "Clears the temporary cache of websites visited"
 msgstr "Il netta le cache temporari de sitos web visitate"
 
-#: privacyfunctions.h:104
+#: privacyfunctions.h:135
 #, kde-format
 msgid "Recent Documents"
 msgstr "Documentos Recente"
 
-#: privacyfunctions.h:105
+#: privacyfunctions.h:135
 #, kde-format
 msgid ""
 "Clears the list of recently used documents from the KDE applications menu"
@@ -185,22 +185,22 @@ msgstr ""
 "Il netta le lista de documentos usate recentemente ab le menu de "
 "applicationes de KDE"
 
-#: privacyfunctions.h:114
+#: privacyfunctions.h:149
 #, kde-format
 msgid "Favorite Icons"
 msgstr "Icones favorite"
 
-#: privacyfunctions.h:115
+#: privacyfunctions.h:149
 #, kde-format
 msgid "Clears the FavIcons cached from visited websites"
 msgstr "Il netta le favicons ponite in cache ex sitos web visitate"
 
-#: privacyfunctions.h:124
+#: privacyfunctions.h:163
 #, kde-format
 msgid "Recent Applications"
 msgstr "Netta Applicationes recente"
 
-#: privacyfunctions.h:125
+#: privacyfunctions.h:163
 #, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
 msgstr "Il netta le lista de applicationes usate recentemente ex menu de KDE"
@@ -217,28 +217,28 @@ msgctxt "Web browsing content"
 msgid "Web Browsing"
 msgstr "Navigation Web"
 
-#: sweeper.cpp:103
+#: sweeper.cpp:100
 #, kde-format
 msgid ""
 "You are deleting data that is potentially valuable to you. Are you sure?"
 msgstr "Tu es delente datos que pote esser de valor pro te. Tu es secur?"
 
-#: sweeper.cpp:109
+#: sweeper.cpp:107
 #, kde-format
 msgid "Starting cleanup..."
 msgstr "Initiante nettamento..."
 
-#: sweeper.cpp:113
+#: sweeper.cpp:111
 #, kde-format
 msgid "Clearing %1..."
 msgstr "Nettante %1..."
 
-#: sweeper.cpp:118
+#: sweeper.cpp:116
 #, kde-format
 msgid "Clearing of %1 failed: %2"
 msgstr "Nettamento de %1 falleva %2"
 
-#: sweeper.cpp:124
+#: sweeper.cpp:122
 #, kde-format
 msgid "Clean up finished."
 msgstr "Nettamento terminava"

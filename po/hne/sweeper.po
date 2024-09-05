@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:40+0000\n"
+"POT-Creation-Date: 2024-09-05 00:43+0000\n"
 "PO-Revision-Date: 2009-03-01 12:43+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -29,177 +29,177 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raviratlami@aol.in,"
 
-#: main.cpp:24
+#: main.cpp:25
 #, kde-format
 msgid "Sweeper"
 msgstr "स्वीपर"
 
-#: main.cpp:26
+#: main.cpp:27
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr ""
 "अवांछित ट्रेसेस ल जऊन ल कमइया सिसटम मं छोड़ देथे  ओ मन ल साफ करे मं सहायता प्रदान करथे ."
 
-#: main.cpp:28
+#: main.cpp:29
 #, fuzzy, kde-format
 #| msgid "(c) 2003-2005, Ralf Hoelzer"
 msgid "© 2003-2005, Ralf Hoelzer"
 msgstr "(c) 2003 - 2005, राल्फ हाल्जर"
 
-#: main.cpp:32
+#: main.cpp:33
 #, kde-format
 msgid "Ralf Hoelzer"
 msgstr "राल्फ हाल्जर"
 
-#: main.cpp:32
+#: main.cpp:33
 #, kde-format
 msgid "Original author"
 msgstr "मूल लेखक"
 
-#: main.cpp:33
+#: main.cpp:34
 #, kde-format
 msgid "Brian S. Stephan"
 msgstr "ब्रायन एस. स्टीफन"
 
-#: main.cpp:33
+#: main.cpp:34
 #, kde-format
 msgid "Maintainer"
 msgstr "मेंटेनर"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "बेंजामिन मेयर"
 
-#: main.cpp:34 privacyfunctions.h:54
+#: main.cpp:35 privacyfunctions.h:65
 #, kde-format
 msgid "Thumbnail Cache"
 msgstr "थम्बनेल कैस"
 
-#: main.cpp:41
+#: main.cpp:42
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr ""
 
-#: privacyfunctions.cpp:45 privacyfunctions.cpp:54 privacyfunctions.cpp:63
+#: privacyfunctions.cpp:44 privacyfunctions.cpp:53 privacyfunctions.cpp:62
 #, kde-format
 msgid "A thumbnail could not be removed."
 msgstr "छोटेफोटू मिटाय नइ जा सके."
 
-#: privacyfunctions.cpp:134
+#: privacyfunctions.cpp:131
 #, kde-format
 msgid "The file exists but could not be removed."
 msgstr "फाइल मौजूद हे, फेर एला मेटाय नइ जा सके."
 
-#: privacyfunctions.cpp:215
+#: privacyfunctions.cpp:210
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "फेविकोन मिटाय नइ जा सके."
 
-#: privacyfunctions.h:23
+#: privacyfunctions.h:22
 #, kde-format
 msgid "Cookies"
 msgstr "कुकीज"
 
-#: privacyfunctions.h:24
+#: privacyfunctions.h:22
 #, kde-format
 msgid "Clears all stored cookies set by websites"
 msgstr "वेब साइट मन से सेट करे सब्बो भंडारित कुकीज ल साफ करे"
 
-#: privacyfunctions.h:34
+#: privacyfunctions.h:37
 #, kde-format
 msgid "Cookie Policies"
 msgstr "कुकी पालिसीज"
 
-#: privacyfunctions.h:35
+#: privacyfunctions.h:37
 #, kde-format
 msgid "Clears the cookie policies for all visited websites"
 msgstr "सब्बो भ्रमन करे वेबसाइट मन बर कुकी पालिसी ल साफ करथे "
 
-#: privacyfunctions.h:44
+#: privacyfunctions.h:51
 #, kde-format
 msgid "Saved Clipboard Contents"
 msgstr "क्लिपबोर्ड के सहेजे गे चीज"
 
-#: privacyfunctions.h:45
+#: privacyfunctions.h:51
 #, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
 msgstr "क्लिपर से भंडारित क्लिपबोर्ड विसय चीज मन ल साफ करे"
 
-#: privacyfunctions.h:55
+#: privacyfunctions.h:65
 #, kde-format
 msgid "Clears all cached thumbnails"
 msgstr "सब्बो कैस करे थम्बनेल्स ल साफ करथे "
 
-#: privacyfunctions.h:64
+#: privacyfunctions.h:79
 #, kde-format
 msgid "Run Command History"
 msgstr "चलाए गे कमांड के इतिहास"
 
-#: privacyfunctions.h:65
+#: privacyfunctions.h:79
 #, kde-format
 msgid ""
 "Clears the history of commands run through the Run Command tool on the "
 "desktop"
 msgstr "डेस्कटाप मं रन कमांड औजार के साथ चलाए गे रन कमांड के इतिहास ल साफ करे"
 
-#: privacyfunctions.h:74
+#: privacyfunctions.h:93
 #, kde-format
 msgid "Form Completion Entries"
 msgstr "फारम भरे के प्रविस्टि"
 
-#: privacyfunctions.h:75
+#: privacyfunctions.h:93
 #, kde-format
 msgid "Clears values which were entered into forms on websites"
 msgstr "वेबसाइट मन के फारम मं जऊन मान भरे गिसओ मन ल साफ करे"
 
-#: privacyfunctions.h:84
+#: privacyfunctions.h:107
 #, kde-format
 msgid "Web History"
 msgstr "वेब इतिहास"
 
-#: privacyfunctions.h:85
+#: privacyfunctions.h:107
 #, kde-format
 msgid "Clears the history of visited websites"
 msgstr "भ्रमन करे वेबसाइट मन के इतिहास साफ करे"
 
-#: privacyfunctions.h:94
+#: privacyfunctions.h:121
 #, kde-format
 msgid "Web Cache"
 msgstr "वेब कैस"
 
-#: privacyfunctions.h:95
+#: privacyfunctions.h:121
 #, kde-format
 msgid "Clears the temporary cache of websites visited"
 msgstr "भ्रमन करे वेबसाइट मन के अस्थायी कैस साफ करे"
 
-#: privacyfunctions.h:104
+#: privacyfunctions.h:135
 #, kde-format
 msgid "Recent Documents"
 msgstr "हाल ही मं प्रयुक्त कागद"
 
-#: privacyfunctions.h:105
+#: privacyfunctions.h:135
 #, kde-format
 msgid ""
 "Clears the list of recently used documents from the KDE applications menu"
 msgstr "केडीई अनुपरयोग मेन्यू से वाले कागद मन के सूची साफ करे"
 
-#: privacyfunctions.h:114
+#: privacyfunctions.h:149
 #, kde-format
 msgid "Favorite Icons"
 msgstr "निसानी चिनहा"
 
-#: privacyfunctions.h:115
+#: privacyfunctions.h:149
 #, kde-format
 msgid "Clears the FavIcons cached from visited websites"
 msgstr "भ्रमन करे वेब साइट मन से कैस करे फेवआइकन्स ल साफ करथे "
 
-#: privacyfunctions.h:124
+#: privacyfunctions.h:163
 #, kde-format
 msgid "Recent Applications"
 msgstr "अभी हाल वाले अनुपरयोग"
 
-#: privacyfunctions.h:125
+#: privacyfunctions.h:163
 #, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
 msgstr "केडीई अनुपरयोग मेन्यू से हाल मं उपयोग वाले अनुपरयोग मन के सूची साफ करथे"
@@ -216,28 +216,28 @@ msgctxt "Web browsing content"
 msgid "Web Browsing"
 msgstr "वेब ब्राउजिंग"
 
-#: sweeper.cpp:103
+#: sweeper.cpp:100
 #, kde-format
 msgid ""
 "You are deleting data that is potentially valuable to you. Are you sure?"
 msgstr "आप डाटा मिटा रहे हे जऊन आप मन मूल्यवान हो सकथो . का आप मन सुनिस्चित हो?"
 
-#: sweeper.cpp:109
+#: sweeper.cpp:107
 #, kde-format
 msgid "Starting cleanup..."
 msgstr "क्लीनअप चालू करत हे..."
 
-#: sweeper.cpp:113
+#: sweeper.cpp:111
 #, kde-format
 msgid "Clearing %1..."
 msgstr "%1 साफ करत हे..."
 
-#: sweeper.cpp:118
+#: sweeper.cpp:116
 #, kde-format
 msgid "Clearing of %1 failed: %2"
 msgstr "%1 के साफ करना फेल: %2"
 
-#: sweeper.cpp:124
+#: sweeper.cpp:122
 #, kde-format
 msgid "Clean up finished."
 msgstr "साफ करना पूरा."

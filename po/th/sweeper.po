@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:40+0000\n"
+"POT-Creation-Date: 2024-09-05 00:43+0000\n"
 "PO-Revision-Date: 2010-05-01 10:12+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -27,176 +27,176 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "donga.nb@gmail.com"
 
-#: main.cpp:24
+#: main.cpp:25
 #, kde-format
 msgid "Sweeper"
 msgstr "เครื่องปัดกวาด"
 
-#: main.cpp:26
+#: main.cpp:27
 #, kde-format
 msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr "ช่วยกำจัดสิ่งต่าง ๆ ที่ไม่จำเป็นต้องใช้ที่เกิดหลังจากผู้ใช้ออกจากระบบแล้ว"
 
-#: main.cpp:28
+#: main.cpp:29
 #, fuzzy, kde-format
 #| msgid "(c) 2003-2005, Ralf Hoelzer"
 msgid "© 2003-2005, Ralf Hoelzer"
 msgstr "สงวนลิขสิทธิ์ (c) 2003-2005, Ralf Hoelzer"
 
-#: main.cpp:32
+#: main.cpp:33
 #, kde-format
 msgid "Ralf Hoelzer"
 msgstr "Ralf Hoelzer"
 
-#: main.cpp:32
+#: main.cpp:33
 #, kde-format
 msgid "Original author"
 msgstr "ผู้เขียนเดิม"
 
-#: main.cpp:33
+#: main.cpp:34
 #, kde-format
 msgid "Brian S. Stephan"
 msgstr "Brian S. Stephan"
 
-#: main.cpp:33
+#: main.cpp:34
 #, kde-format
 msgid "Maintainer"
 msgstr "ผู้ดูแล"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Benjamin Meyer"
 msgstr "Benjamin Meyer"
 
-#: main.cpp:34 privacyfunctions.h:54
+#: main.cpp:35 privacyfunctions.h:65
 #, kde-format
 msgid "Thumbnail Cache"
 msgstr "แคชเก็บภาพตัวอย่าง"
 
-#: main.cpp:41
+#: main.cpp:42
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr ""
 
-#: privacyfunctions.cpp:45 privacyfunctions.cpp:54 privacyfunctions.cpp:63
+#: privacyfunctions.cpp:44 privacyfunctions.cpp:53 privacyfunctions.cpp:62
 #, kde-format
 msgid "A thumbnail could not be removed."
 msgstr "ภาพตัวอย่างไม่สามารถที่จะลบออกได้"
 
-#: privacyfunctions.cpp:134
+#: privacyfunctions.cpp:131
 #, kde-format
 msgid "The file exists but could not be removed."
 msgstr "มีแฟ้มอยู่แต่ไม่สามารถลบออกไปได้"
 
-#: privacyfunctions.cpp:215
+#: privacyfunctions.cpp:210
 #, kde-format
 msgid "A favicon could not be removed."
 msgstr "ไอคอนของหน้าเว็บ (favicon) ไม่สามารถจะถูกลบออกได้"
 
-#: privacyfunctions.h:23
+#: privacyfunctions.h:22
 #, kde-format
 msgid "Cookies"
 msgstr "คุกกี้ต่าง ๆ"
 
-#: privacyfunctions.h:24
+#: privacyfunctions.h:22
 #, kde-format
 msgid "Clears all stored cookies set by websites"
 msgstr "ล้างคุกกี้ทั้งหมดที่ถูกจัดเก็บไว้ซึ่งถูกตั้งค่ามาจากเว็บไซต์ต่าง ๆ"
 
-#: privacyfunctions.h:34
+#: privacyfunctions.h:37
 #, kde-format
 msgid "Cookie Policies"
 msgstr "นโยบายการจัดการคุกกี้"
 
-#: privacyfunctions.h:35
+#: privacyfunctions.h:37
 #, kde-format
 msgid "Clears the cookie policies for all visited websites"
 msgstr "ล้างนโยบายการจัดการคุกกี้ของเว็บไซต์ทั้งหมดที่ไปเยี่ยมชมมาแล้ว"
 
-#: privacyfunctions.h:44
+#: privacyfunctions.h:51
 #, kde-format
 msgid "Saved Clipboard Contents"
 msgstr "เนื้อหาที่ถูกบันทึกไว้ในคลิปบอร์ด"
 
-#: privacyfunctions.h:45
+#: privacyfunctions.h:51
 #, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
 msgstr "ล้างเนื้อหาในคลิปบอร์ดที่ถูกจัดเก็บไว้โดยคลิปเปอร์-K"
 
-#: privacyfunctions.h:55
+#: privacyfunctions.h:65
 #, kde-format
 msgid "Clears all cached thumbnails"
 msgstr "ล้างแคชข้อมูลเก็บภาพตัวอย่างทั้งหมด"
 
-#: privacyfunctions.h:64
+#: privacyfunctions.h:79
 #, kde-format
 msgid "Run Command History"
 msgstr "ประวัติการเรียกใช้คำสั่ง"
 
-#: privacyfunctions.h:65
+#: privacyfunctions.h:79
 #, kde-format
 msgid ""
 "Clears the history of commands run through the Run Command tool on the "
 "desktop"
 msgstr "ล้างประวัติของคำสั่งที่เคยเรียกใช้ผ่านทางเครื่องมือประมวลผลคำสั่งบนพื้นที่ทำงาน"
 
-#: privacyfunctions.h:74
+#: privacyfunctions.h:93
 #, kde-format
 msgid "Form Completion Entries"
 msgstr "รายการเติมแบบฟอร์มให้สมบูรณ์"
 
-#: privacyfunctions.h:75
+#: privacyfunctions.h:93
 #, kde-format
 msgid "Clears values which were entered into forms on websites"
 msgstr "ล้างค่าต่าง ๆ ที่ถูกป้อนไปยังแบบฟอร์มบนหน้าเว็บต่าง ๆ"
 
-#: privacyfunctions.h:84
+#: privacyfunctions.h:107
 #, kde-format
 msgid "Web History"
 msgstr "ประวัติการท่องเว็บ"
 
-#: privacyfunctions.h:85
+#: privacyfunctions.h:107
 #, kde-format
 msgid "Clears the history of visited websites"
 msgstr "ล้างประวัติการดูเว็บไซต์ที่ไปเยี่ยมชมมา"
 
-#: privacyfunctions.h:94
+#: privacyfunctions.h:121
 #, kde-format
 msgid "Web Cache"
 msgstr "แคชของหน้าเว็บ"
 
-#: privacyfunctions.h:95
+#: privacyfunctions.h:121
 #, kde-format
 msgid "Clears the temporary cache of websites visited"
 msgstr "ล้างแคชชั่วคราวของเว็บไซต์ต่าง ๆ ที่ไปเยี่ยมชมมา"
 
-#: privacyfunctions.h:104
+#: privacyfunctions.h:135
 #, kde-format
 msgid "Recent Documents"
 msgstr "เอกสารต่าง ๆ ที่เพิ่งใช้งาน"
 
-#: privacyfunctions.h:105
+#: privacyfunctions.h:135
 #, kde-format
 msgid ""
 "Clears the list of recently used documents from the KDE applications menu"
 msgstr "ล้างรายการของเอกสารที่เพิ่งใช้งานไปออกจากเมนูโปรแกรมของ KDE"
 
-#: privacyfunctions.h:114
+#: privacyfunctions.h:149
 #, kde-format
 msgid "Favorite Icons"
 msgstr "ไอคอนของหน้าเว็บ (FavIcons)"
 
-#: privacyfunctions.h:115
+#: privacyfunctions.h:149
 #, kde-format
 msgid "Clears the FavIcons cached from visited websites"
 msgstr "ล้างแคชไอคอนของหน้าเว็บของเว็บไซต์ที่ไปเยี่ยมชมมาแล้ว"
 
-#: privacyfunctions.h:124
+#: privacyfunctions.h:163
 #, kde-format
 msgid "Recent Applications"
 msgstr "รายการโปรแกรมต่าง ๆ ที่เพิ่งใช้งาน"
 
-#: privacyfunctions.h:125
+#: privacyfunctions.h:163
 #, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
 msgstr "ล้างรายการโปรแกรมต่าง ๆ ที่เพิ่งใช้งาน ออกจากเมนูของ KDE"
@@ -213,28 +213,28 @@ msgctxt "Web browsing content"
 msgid "Web Browsing"
 msgstr "การท่องเว็บ"
 
-#: sweeper.cpp:103
+#: sweeper.cpp:100
 #, kde-format
 msgid ""
 "You are deleting data that is potentially valuable to you. Are you sure?"
 msgstr "คุณกำลังจะทำการลบข้อมูลที่อาจจะมีคุณค่าสำหรับคุณ คุณแน่ใจหรือไม่ ?"
 
-#: sweeper.cpp:109
+#: sweeper.cpp:107
 #, kde-format
 msgid "Starting cleanup..."
 msgstr "เริ่มการทำความสะอาด..."
 
-#: sweeper.cpp:113
+#: sweeper.cpp:111
 #, kde-format
 msgid "Clearing %1..."
 msgstr "กำลังล้างข้อมูล %1..."
 
-#: sweeper.cpp:118
+#: sweeper.cpp:116
 #, kde-format
 msgid "Clearing of %1 failed: %2"
 msgstr "การล้างข้อมูล %1 ล้มเหลว: %2"
 
-#: sweeper.cpp:124
+#: sweeper.cpp:122
 #, kde-format
 msgid "Clean up finished."
 msgstr "ทำความสะอาดเรียบร้อยแล้ว"
