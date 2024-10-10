@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component type="desktop-application">
-  <id>org.kde.sweeper.desktop</id>
+  <id>org.kde.sweeper</id>
   <metadata_license>FSFAP</metadata_license>
   <project_license>LGPL-2.1+</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+    <url>https://kde.org</url>
+  </developer>
   <name>Sweeper</name>
   <name xml:lang="ar">الكناس</name>
   <name xml:lang="ast">Barrenderu</name>
@@ -172,8 +176,12 @@
   </screenshots>
   <project_group>KDE</project_group>
   <provides>
+    <id>org.kde.sweeper.desktop</id>
     <binary>sweeper</binary>
   </provides>
+  <replaces>
+    <id>org.kde.sweeper.desktop</id>
+  </replaces>
   <releases>
     <release version="24.08.2" date="2024-10-10"/>
     <release version="24.08.1" date="2024-09-12"/>
@@ -186,4 +194,5 @@
     <release version="24.02.0" date="2024-02-28"/>
     <release version="23.08.5" date="2024-02-15"/>
   </releases>
+  <launchable type="desktop-id">org.kde.sweeper.desktop</launchable>
 </component>
