@@ -3,7 +3,7 @@
   <id>org.kde.sweeper</id>
   <metadata_license>FSFAP</metadata_license>
   <project_license>LGPL-2.1+</project_license>
-  <developer id="org.kde">
+  <developer id="kde.org">
     <name translate="no">KDE</name>
     <url>https://kde.org</url>
   </developer>
