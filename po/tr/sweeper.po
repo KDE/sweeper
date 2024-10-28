@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:43+0000\n"
-"PO-Revision-Date: 2024-08-06 11:46+0300\n"
+"PO-Revision-Date: 2024-10-27 19:37+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,7 +34,7 @@ msgstr "gorkem@kde.org"
 #: main.cpp:25
 #, kde-format
 msgid "Sweeper"
-msgstr "Sweeper"
+msgstr "Süpürücü"
 
 #: main.cpp:27
 #, kde-format
@@ -50,12 +50,12 @@ msgstr "© 2003–2005, Ralf Hölzer"
 #: main.cpp:33
 #, kde-format
 msgid "Ralf Hoelzer"
-msgstr "Ralf Hoelzer"
+msgstr "Ralf Hölzer"
 
 #: main.cpp:33
 #, kde-format
 msgid "Original author"
-msgstr "Asıl Yazar"
+msgstr "Özgün yazar"
 
 #: main.cpp:34
 #, kde-format
@@ -65,7 +65,7 @@ msgstr "Brian S. Stephan"
 #: main.cpp:34
 #, kde-format
 msgid "Maintainer"
-msgstr "Projeyi Yürüten"
+msgstr "Bakımcı"
 
 #: main.cpp:35
 #, kde-format
@@ -85,17 +85,17 @@ msgstr "Kullanıcı etkileşimi olmadan temizler"
 #: privacyfunctions.cpp:44 privacyfunctions.cpp:53 privacyfunctions.cpp:62
 #, kde-format
 msgid "A thumbnail could not be removed."
-msgstr "Bir küçük görsel silinemez."
+msgstr "Bir küçük görsel kaldırılamadı."
 
 #: privacyfunctions.cpp:131
 #, kde-format
 msgid "The file exists but could not be removed."
-msgstr "Dosya var ancak silinemiyor."
+msgstr "Dosya var; ancak silinemiyor."
 
 #: privacyfunctions.cpp:210
 #, kde-format
 msgid "A favicon could not be removed."
-msgstr "Bir favicon silinemez."
+msgstr "Bir site simgesi kaldırılamadı."
 
 #: privacyfunctions.h:22
 #, kde-format
@@ -115,12 +115,12 @@ msgstr "Çerez Politikası"
 #: privacyfunctions.h:37
 #, kde-format
 msgid "Clears the cookie policies for all visited websites"
-msgstr "Ziyaret edilen Web sayfalarının çerez geçmişini temizler"
+msgstr "Ziyaret edilen web sayfalarının çerez geçmişini temizler"
 
 #: privacyfunctions.h:51
 #, kde-format
 msgid "Saved Clipboard Contents"
-msgstr "Kaydedilmiş Pano İçeriği"
+msgstr "Kaydedilen Pano İçeriği"
 
 #: privacyfunctions.h:51
 #, kde-format
@@ -196,7 +196,7 @@ msgstr "Sık Kullanılan Simgeler"
 #: privacyfunctions.h:149
 #, kde-format
 msgid "Clears the FavIcons cached from visited websites"
-msgstr "Ziyaret edilen web sayfalarındaki FavIcon simgelerini temizler"
+msgstr "Ziyaret edilen web sayfalarının simgelerini temizler"
 
 #: privacyfunctions.h:163
 #, kde-format
@@ -240,7 +240,7 @@ msgstr "%1 temizleniyor…"
 #: sweeper.cpp:116
 #, kde-format
 msgid "Clearing of %1 failed: %2"
-msgstr "%1 temizlenirken bir hata oluştu: %2"
+msgstr "%1 temizlenemedi: %2"
 
 #: sweeper.cpp:122
 #, kde-format
