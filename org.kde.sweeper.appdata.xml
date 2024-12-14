@@ -46,6 +46,7 @@
   <name xml:lang="pt-BR">Sweeper</name>
   <name xml:lang="ro">Măturător</name>
   <name xml:lang="ru">Sweeper</name>
+  <name xml:lang="sa">स्वीपर</name>
   <name xml:lang="sk">Zametač</name>
   <name xml:lang="sl">Sweeper</name>
   <name xml:lang="sr">Чистач</name>
@@ -97,6 +98,7 @@
   <summary xml:lang="pt-BR">Utilitário de limpeza do sistema</summary>
   <summary xml:lang="ro">Utilitar de curățare a sistemului</summary>
   <summary xml:lang="ru">Приложение для очистки системы</summary>
+  <summary xml:lang="sa">प्रणाली सफाई उपयोगिता</summary>
   <summary xml:lang="sk">Nástroj na čistenie systému</summary>
   <summary xml:lang="sl">Orodje za čiščenje sistema</summary>
   <summary xml:lang="sr">Алатка за чишћење система</summary>
@@ -151,6 +153,7 @@
     <p xml:lang="pt-BR">O Sweeper ajuda a limpar os vestígios indesejados que o usuário deixa no sistema. Ele pode remover os cookies e apagar os 'caches', por exemplo.</p>
     <p xml:lang="ro">Măturătorul ajută la curățarea urmelor nedorite pe care utilizatorul le lasă în sistem. De exemplu, acesta poate șterge cookie-uri și curăța prestocări locale.</p>
     <p xml:lang="ru">Приложение предназначено для удаления следов работы пользователя в операционной системе, таких как файлы cookie и кешированные файлы.</p>
+    <p xml:lang="sa">स्वीपरः उपयोक्ता प्रणाल्यां त्यजन्तं अवांछितं लेशं स्वच्छं कर्तुं साहाय्यं करोति । एतत् कुकीजं निष्कासयितुं, सञ्चयं स्वच्छं कर्तुं च शक्नोति, उदाहरणार्थम् ।</p>
     <p xml:lang="sk">Zametač vám pomôže vyčistiť neželané stopy, ktoré používateľ zanecháva v systéme. Môže napríklad odstrániť cookies a vyčistiť vyrovnávacie pamäte.</p>
     <p xml:lang="sl">Sweeper pomaga pri čiščenju neželenih sledi, ki jih uporabnik pušča na sistemu. Med drugim lahko odstrani piškotke in predpomnilnike.</p>
     <p xml:lang="sr">Чистач помаже у отклањању нежељених трагова које корисник остави на систему. На пример, може да уклања колачиће и чисти кешеве.</p>
