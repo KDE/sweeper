@@ -1,0 +1,285 @@
+# Sanskrit translations for sweeper package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the sweeper package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sweeper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-09-05 00:43+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: main.cpp:25
+#, kde-format
+msgid "Sweeper"
+msgstr "स्वीपर"
+
+#: main.cpp:27
+#, kde-format
+msgid "Helps clean unwanted traces the user leaves on the system."
+msgstr "उपयोक्ता प्रणाल्यां त्यजति अवांछितानि लेशानि स्वच्छं कर्तुं साहाय्यं करोति ।"
+
+#: main.cpp:29
+#, kde-format
+msgid "© 2003-2005, Ralf Hoelzer"
+msgstr "© 2003-2005, राल्फ होएलजर"
+
+#: main.cpp:33
+#, kde-format
+msgid "Ralf Hoelzer"
+msgstr "राल्फ होएलजर"
+
+#: main.cpp:33
+#, kde-format
+msgid "Original author"
+msgstr "मूल लेखक"
+
+#: main.cpp:34
+#, kde-format
+msgid "Brian S. Stephan"
+msgstr "ब्रायन एस स्टीफन"
+
+#: main.cpp:34
+#, kde-format
+msgid "Maintainer"
+msgstr "परिपालकः"
+
+#: main.cpp:35
+#, kde-format
+msgid "Benjamin Meyer"
+msgstr "बेन्जामिन मेयर"
+
+#: main.cpp:35 privacyfunctions.h:65
+#, kde-format
+msgid "Thumbnail Cache"
+msgstr "लघुचित्र संग्रह"
+
+#: main.cpp:42
+#, kde-format
+msgid "Sweeps without user interaction"
+msgstr "उपयोक्तृपरस्परक्रियां विना स्वीपं करोति"
+
+#: privacyfunctions.cpp:44 privacyfunctions.cpp:53 privacyfunctions.cpp:62
+#, kde-format
+msgid "A thumbnail could not be removed."
+msgstr "लघुचित्रं निष्कासयितुं न शक्यते स्म ।"
+
+#: privacyfunctions.cpp:131
+#, kde-format
+msgid "The file exists but could not be removed."
+msgstr "सञ्चिका अस्ति किन्तु निष्कासयितुं न शक्यते स्म ।"
+
+#: privacyfunctions.cpp:210
+#, kde-format
+msgid "A favicon could not be removed."
+msgstr "एकः फेविकोन् अपसारयितुं न शक्तवान् ।"
+
+#: privacyfunctions.h:22
+#, kde-format
+msgid "Cookies"
+msgstr "कुकीज"
+
+#: privacyfunctions.h:22
+#, kde-format
+msgid "Clears all stored cookies set by websites"
+msgstr "वेबसाइट् द्वारा सेट् कृतानि सर्वाणि संगृहीतकुकीजं स्वच्छं करोति"
+
+#: privacyfunctions.h:37
+#, kde-format
+msgid "Cookie Policies"
+msgstr "कुकी नीतयः"
+
+#: privacyfunctions.h:37
+#, kde-format
+msgid "Clears the cookie policies for all visited websites"
+msgstr "सर्वेषां भ्रमणीयजालस्थलानां कुकीनीतयः स्वच्छं करोति"
+
+#: privacyfunctions.h:51
+#, kde-format
+msgid "Saved Clipboard Contents"
+msgstr "रक्षित क्लिपबोर्ड सामग्री"
+
+#: privacyfunctions.h:51
+#, kde-format
+msgid "Clears the clipboard contents stored by Klipper"
+msgstr "Klipper द्वारा संगृहीतं क्लिप्बोर्ड् सामग्रीं स्वच्छं करोति"
+
+#: privacyfunctions.h:65
+#, kde-format
+msgid "Clears all cached thumbnails"
+msgstr "सर्वाणि संग्रहीतानि लघुचित्रं स्वच्छं करोति"
+
+#: privacyfunctions.h:79
+#, kde-format
+msgid "Run Command History"
+msgstr "आदेश इतिहासं चालयन्तु"
+
+#: privacyfunctions.h:79
+#, kde-format
+msgid ""
+"Clears the history of commands run through the Run Command tool on the "
+"desktop"
+msgstr ""
+"डेस्कटॉप् मध्ये Run Command tool इत्यस्य माध्यमेन चालितानां आदेशानां इतिहासं स्वच्छं करोति"
+
+#: privacyfunctions.h:93
+#, kde-format
+msgid "Form Completion Entries"
+msgstr "प्रपत्र समाप्ति प्रविष्टियाँ"
+
+#: privacyfunctions.h:93
+#, kde-format
+msgid "Clears values which were entered into forms on websites"
+msgstr "मूल्यानि स्वच्छं करोति ये जालपुटेषु प्रपत्रेषु प्रविष्टाः आसन्"
+
+#: privacyfunctions.h:107
+#, kde-format
+msgid "Web History"
+msgstr "जाल इतिहास"
+
+#: privacyfunctions.h:107
+#, kde-format
+msgid "Clears the history of visited websites"
+msgstr "आगतानां जालपुटानां इतिहासं स्वच्छं करोति"
+
+#: privacyfunctions.h:121
+#, kde-format
+msgid "Web Cache"
+msgstr "Web Cache"
+
+#: privacyfunctions.h:121
+#, kde-format
+msgid "Clears the temporary cache of websites visited"
+msgstr "आगतानां वेबसाइट्-स्थानानां अस्थायी-सञ्चयं स्वच्छं करोति"
+
+#: privacyfunctions.h:135
+#, kde-format
+msgid "Recent Documents"
+msgstr "अद्यतन दस्तावेज"
+
+#: privacyfunctions.h:135
+#, kde-format
+msgid ""
+"Clears the list of recently used documents from the KDE applications menu"
+msgstr "KDE अनुप्रयोगमेनूतः सद्यः प्रयुक्तानां दस्तावेजानां सूचीं स्वच्छं करोति"
+
+#: privacyfunctions.h:149
+#, kde-format
+msgid "Favorite Icons"
+msgstr "प्रिय चिह्न"
+
+#: privacyfunctions.h:149
+#, kde-format
+msgid "Clears the FavIcons cached from visited websites"
+msgstr "आगतजालस्थलेभ्यः संग्रहीतं FavIcons स्वच्छं करोति"
+
+#: privacyfunctions.h:163
+#, kde-format
+msgid "Recent Applications"
+msgstr "हाल के आवेदन"
+
+#: privacyfunctions.h:163
+#, kde-format
+msgid "Clears the list of recently used applications from KDE menu"
+msgstr "KDE मेन्यूतः सद्यः प्रयुक्तानां अनुप्रयोगानाम् सूचीं स्वच्छं करोति"
+
+#: sweeper.cpp:22
+#, kde-format
+msgctxt "General system content"
+msgid "General"
+msgstr ""
+
+#: sweeper.cpp:23
+#, kde-format
+msgctxt "Web browsing content"
+msgid "Web Browsing"
+msgstr ""
+
+#: sweeper.cpp:100
+#, kde-format
+msgid ""
+"You are deleting data that is potentially valuable to you. Are you sure?"
+msgstr "भवन्तः भवतः कृते सम्भाव्यतया मूल्यवान् दत्तांशं विलोपयन्ति । किं त्वं निश्चिन्तः असि ?"
+
+#: sweeper.cpp:107
+#, kde-format
+msgid "Starting cleanup..."
+msgstr "सफाई आरभ्य..."
+
+#: sweeper.cpp:111
+#, kde-format
+msgid "Clearing %1..."
+msgstr "%1 स्वच्छं कुर्वन्..."
+
+#: sweeper.cpp:116
+#, kde-format
+msgid "Clearing of %1 failed: %2"
+msgstr "%1 इत्यस्य निष्कासनं विफलम्: %2"
+
+#: sweeper.cpp:122
+#, kde-format
+msgid "Clean up finished."
+msgstr "स्वच्छता समाप्तम्।"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeWidget, privacyListView)
+#: sweeperdialog.ui:27
+#, kde-format
+msgid ""
+"Check all cleanup actions you would like to perform. These will be executed "
+"by pressing the button below."
+msgstr ""
+"भवन्तः कर्तुम् इच्छन्ति सर्वाणि स्वच्छताक्रियाणि पश्यन्तु । एतानि अधोलिखितं बटन् नुत्वा "
+"निष्पादितानि भविष्यन्ति ।"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, privacyListView)
+#: sweeperdialog.ui:37
+#, kde-format
+msgid "Privacy Settings"
+msgstr "गोपनीयता सेटिंग्स्"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, privacyListView)
+#: sweeperdialog.ui:42
+#, kde-format
+msgid "Description"
+msgstr "वर्णनम्‌"
+
+#. i18n: ectx: property (text), widget (QPushButton, selectAllButton)
+#: sweeperdialog.ui:58
+#, kde-format
+msgid "Select &All"
+msgstr "&All इति चयनं कुर्वन्तु"
+
+#. i18n: ectx: property (text), widget (QPushButton, selectNoneButton)
+#: sweeperdialog.ui:65
+#, kde-format
+msgid "Select &None"
+msgstr "&None इति चिनोतु"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, cleanupButton)
+#: sweeperdialog.ui:88
+#, kde-format
+msgid "Immediately performs the cleanup actions selected above"
+msgstr "उपरि चयनितशुद्धिक्रियाः तत्क्षणमेव करोति"
+
+#. i18n: ectx: property (text), widget (QPushButton, cleanupButton)
+#: sweeperdialog.ui:91
+#, kde-format
+msgid "&Clean Up"
+msgstr "&स्वच्छता"
