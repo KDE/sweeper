@@ -19,12 +19,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: main.cpp:25
 #, kde-format
@@ -204,13 +204,13 @@ msgstr "KDE मेन्यूतः सद्यः प्रयुक्ता
 #, kde-format
 msgctxt "General system content"
 msgid "General"
-msgstr ""
+msgstr "सामान्य"
 
 #: sweeper.cpp:23
 #, kde-format
 msgctxt "Web browsing content"
 msgid "Web Browsing"
-msgstr ""
+msgstr "जाल ब्राउजिंग्"
 
 #: sweeper.cpp:100
 #, kde-format
