@@ -24,6 +24,7 @@ include(FeatureSummary)
 include(ECMDeprecationSettings)
 include(KDEGitCommitHooks)
 include(KDEClangFormat)
+include(ECMInstallIcons)
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h *.c)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
@@ -95,6 +96,11 @@ install(TARGETS sweeper  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 install( PROGRAMS org.kde.sweeper.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
 install( FILES org.kde.sweeper.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 install( FILES org.kde.sweeper.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+
+ecm_install_icons(
+    ICONS sc-apps-sweeper.svg
+    DESTINATION ${KDE_INSTALL_ICONDIR}
+)
 
 ki18n_install(po)
 if(KF6DocTools_FOUND)
