@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
     aboutData.addAuthor(i18n("Ralf Hoelzer"), i18n("Original author"), QStringLiteral("ralf@well.com"));
     aboutData.addAuthor(i18n("Brian S. Stephan"), i18n("Maintainer"), QStringLiteral("bssteph@irtonline.org"));
     aboutData.addAuthor(i18n("Benjamin Meyer"), i18n("Thumbnail Cache"), QStringLiteral("ben+kdeprivacy@meyerhome.net"));
+    aboutData.setBugAddress("https://bugs.kde.org/enter_bug.cgi?format=guided&product=sweeper");
 
     // command line
     QCommandLineParser parser;
