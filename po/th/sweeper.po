@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:43+0000\n"
+"POT-Creation-Date: 2025-03-05 00:46+0000\n"
 "PO-Revision-Date: 2010-05-01 10:12+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -73,7 +73,7 @@ msgstr "Benjamin Meyer"
 msgid "Thumbnail Cache"
 msgstr "แคชเก็บภาพตัวอย่าง"
 
-#: main.cpp:42
+#: main.cpp:43
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr ""

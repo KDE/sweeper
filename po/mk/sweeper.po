@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: privacy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:43+0000\n"
+"POT-Creation-Date: 2025-03-05 00:46+0000\n"
 "PO-Revision-Date: 2007-02-23 14:03+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -74,7 +74,7 @@ msgstr ""
 msgid "Thumbnail Cache"
 msgstr "Кеш на сликички"
 
-#: main.cpp:42
+#: main.cpp:43
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr ""

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:43+0000\n"
+"POT-Creation-Date: 2025-03-05 00:46+0000\n"
 "PO-Revision-Date: 2024-03-25 09:00+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -78,7 +78,7 @@ msgstr "Benjamin Meyer"
 msgid "Thumbnail Cache"
 msgstr "Sīktēlu kešatmiņa"
 
-#: main.cpp:42
+#: main.cpp:43
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr "Notīra, neprasot lietotāja mijiedarbošanos"

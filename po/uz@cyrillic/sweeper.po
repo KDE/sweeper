@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: privacy\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:43+0000\n"
+"POT-Creation-Date: 2025-03-05 00:46+0000\n"
 "PO-Revision-Date: 2006-10-01 21:31+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -74,7 +74,7 @@ msgstr ""
 msgid "Thumbnail Cache"
 msgstr "Миниатюра учун кэш"
 
-#: main.cpp:42
+#: main.cpp:43
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr ""

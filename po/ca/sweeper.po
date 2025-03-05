@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:43+0000\n"
+"POT-Creation-Date: 2025-03-05 00:46+0000\n"
 "PO-Revision-Date: 2021-10-24 18:40+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -78,7 +78,7 @@ msgstr "Benjamin Meyer"
 msgid "Thumbnail Cache"
 msgstr "Memòria cau de les miniatures"
 
-#: main.cpp:42
+#: main.cpp:43
 #, kde-format
 msgid "Sweeps without user interaction"
 msgstr "Escombra sense la interacció de l'usuari"
