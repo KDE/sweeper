@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     // command line
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);
-    a.setWindowIcon(QIcon::fromTheme(QStringLiteral("trash-empty")));
+    a.setWindowIcon(QIcon::fromTheme(QStringLiteral("sweeper")));
 
     const QCommandLineOption automaticOption(QStringLiteral("automatic"), i18n("Sweeps without user interaction"));
     parser.addOption(automaticOption);
