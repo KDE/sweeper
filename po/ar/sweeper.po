@@ -226,7 +226,7 @@ msgstr "تصفح الويب"
 #, kde-format
 msgid ""
 "You are deleting data that is potentially valuable to you. Are you sure?"
-msgstr "أنت تقوم بمحو بيانات ربما قد تكون ذات أهمية لك ، هل أنت متأكِّد ؟"
+msgstr "أنت تقوم بمحو بيانات ربما قد تكون ذات أهمية لك، هل أنت متأكِّد ؟"
 
 #: sweeper.cpp:107
 #, kde-format
