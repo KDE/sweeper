@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-05 00:46+0000\n"
-"PO-Revision-Date: 2025-08-14 09:10+0400\n"
+"PO-Revision-Date: 2025-08-20 21:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -78,7 +78,7 @@ msgstr "بنيامين ماير"
 #: main.cpp:35 privacyfunctions.h:65
 #, kde-format
 msgid "Thumbnail Cache"
-msgstr "خابية المصغرة"
+msgstr "خبيئة المصغرات"
 
 #: main.cpp:43
 #, kde-format
@@ -133,7 +133,7 @@ msgstr "يمحي محتويات الحافظة المخزّنة بواسطة Kli
 #: privacyfunctions.h:65
 #, kde-format
 msgid "Clears all cached thumbnails"
-msgstr "يمحي كلّ المصغرات"
+msgstr "يمحي كلّ المصغرات المخبئة"
 
 #: privacyfunctions.h:79
 #, kde-format
@@ -172,12 +172,12 @@ msgstr "يمحي سجل خط الزمن لزيارات المواقع"
 #: privacyfunctions.h:121
 #, kde-format
 msgid "Web Cache"
-msgstr "خابية الشبكة"
+msgstr "خبيئة الشبكة"
 
 #: privacyfunctions.h:121
 #, kde-format
 msgid "Clears the temporary cache of websites visited"
-msgstr "يمحي الخابية المؤقّتة لزيارات المواقع"
+msgstr "يمحي خبيئة المواقع التي زرتها"
 
 #: privacyfunctions.h:135
 #, kde-format
@@ -198,7 +198,7 @@ msgstr "الأيقونات المفضَلة"
 #: privacyfunctions.h:149
 #, kde-format
 msgid "Clears the FavIcons cached from visited websites"
-msgstr "يمحي أيقونات المواقع المخبأة من زيارات المواقع"
+msgstr "يمحي خبيئة أيقونات المواقع من المواقع التي زرتها"
 
 #: privacyfunctions.h:163
 #, kde-format
