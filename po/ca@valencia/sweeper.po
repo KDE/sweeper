@@ -276,7 +276,7 @@ msgstr "Descripció"
 #: sweeperdialog.ui:58
 #, kde-format
 msgid "Select &All"
-msgstr "Selecciona-ho &tot"
+msgstr "Tria-ho &tot"
 
 #. i18n: ectx: property (text), widget (QPushButton, selectNoneButton)
 #: sweeperdialog.ui:65
