@@ -56,7 +56,6 @@
   <name xml:lang="sv">Sweeper</name>
   <name xml:lang="tr">Süpürücü</name>
   <name xml:lang="uk">Sweeper</name>
-  <name xml:lang="x-test">xxSweeperxx</name>
   <name xml:lang="zh-CN">Sweeper 系统清理工具</name>
   <name xml:lang="zh-TW">Sweeper</name>
   <summary>System cleaning utility</summary>
@@ -108,7 +107,6 @@
   <summary xml:lang="sv">Systemrensningsverktyg</summary>
   <summary xml:lang="tr">Sistem temizleme izlencesi</summary>
   <summary xml:lang="uk">Програма для чищення системи</summary>
-  <summary xml:lang="x-test">xxSystem cleaning utilityxx</summary>
   <summary xml:lang="zh-CN">系统清理工具</summary>
   <summary xml:lang="zh-TW">系統清理工具</summary>
   <description>
@@ -163,7 +161,6 @@
     <p xml:lang="sv">Sweeper hjälper till att rensa oönskade spår som användaren lämnar i systemet. Det kan exempelvis ta bort kakor och tömma cachar.</p>
     <p xml:lang="tr">Süpürücü, kullanıcının sistemde bıraktığı istenmeyen izleri temizlemenize yardımcı olur. Örneğin, çerezleri kaldırır ve önbellekleri boşaltır.</p>
     <p xml:lang="uk">Sweeper допомагає позбутися небажаних слідів роботи користувача у системі. Зокрема, програма може вилучати записи кук та спорожняти кеш.</p>
-    <p xml:lang="x-test">xxSweeper helps to clean unwanted traces the user leaves on the system. It can remove cookies and clean out caches, for example.xx</p>
     <p xml:lang="zh-CN">Sweeper 可以清理系统中的用户使用记录，例如 Cookies 缓存等。</p>
     <p xml:lang="zh-TW">Sweeper 幫助清理使用者在系統上留下的不要的痕跡。舉例來說，它可以移除 cookie 並清空快取。</p>
   </description>
