@@ -1,11 +1,11 @@
 # Translation of sweeper.po to Catalan (Valencian)
 # Copyright (C) 2003-2021 This_file_is_part_of_KDE
 #
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2003, 2017.
-# Sebastià Pla i Sanz <sps@sastia.com>, 2004, 2005, 2006.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2014, 2017, 2019, 2021.
-# Joan Maspons <joanmaspons@gmail.com>, 2009.
-# Manuel Tortosa Moreno <manutortosa@gmail.com>, 2009.
+# SPDX-FileCopyrightText: 2003, 2017 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2004, 2005, 2006 Sebastià Pla i Sanz <sps@sastia.com>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2014, 2017, 2019, 2021 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2009 Joan Maspons <joanmaspons@gmail.com>
+# SPDX-FileCopyrightText: 2009 Manuel Tortosa Moreno <manutortosa@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
