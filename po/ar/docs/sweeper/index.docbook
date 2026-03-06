@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+
+<article id="sweeper" lang="&language;">
+
+<articleinfo>
+<title
+>الكنّاس</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>عبدالرحيم</firstname
+><surname
+>الفاخوري</surname
+><affiliation
+><address
+><email
+>abdilra7eem@yahoo.com</email
+></address
+></affiliation
+><contrib
+>مترجم</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-01-03</date>
+<releaseinfo
+>1.11 (التطبيقات 17.12)</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>الخصوصيّة</keyword>
+<keyword
+>الأمن</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>يساعد الكنّاس على تنظيف الآثار غير المرغوب فيها من تطبيقات بلازما وكيدي; التي يتركها المستخدمون على النظام. </para>
+
+<para>
+<screenshot>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="sweeper.png" format="PNG"/>
+    </imageobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>اختر كل عمليات التنظيف التي تريد تنفيذها باستخدام الزرّين <guibutton
+>اختر الكلّ</guibutton
+> و <guibutton
+>لا تختَر شيئًا</guibutton
+> أو باختيار أو إلغاء اختيار عناصر منفردة من المجموعتين <guilabel
+>عام</guilabel
+> و <guilabel
+>تصفُّح الشابكة</guilabel
+> </para>
+
+<para
+>إذا كنت راضٍ عن اختيارِك، اضغط الزرّ <guibutton
+>نَظِّف</guibutton
+>، الذي يقوم بعمليات التنظيف التي اخترتها فوراً. </para>
+
+<note
+><para
+>يحذف الكنّاس بيانات الخبيئة التي تستخدمها بلازما و تطبيقات كيدي من مجلد خبيئة كيدي. لرؤية مكان المجلد، أدخِل <userinput
+><command
+>qtpaths</command
+> <option
+>--paths GenericCacheLocation</option
+></userinput
+> في كونسول. يجعل حذف بيانات خبّيئتك باستخدام الكنّاس قراءة هذه البيانات مستحيلاً فقط باستخدام مدير الملفات مثلاً، لكن يمكن قراءة البيانات الخام، التي تبقى على القرص، باستخدام أدوات أقراص منخفضة المستوى. </para>
+</note>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
