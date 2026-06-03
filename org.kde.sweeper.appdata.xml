@@ -55,6 +55,7 @@
   <name xml:lang="sr-ijekavianlatin">Čistač</name>
   <name xml:lang="sv">Sweeper</name>
   <name xml:lang="tr">Süpürücü</name>
+  <name xml:lang="ug">سۈپۈرگۈچ</name>
   <name xml:lang="uk">Sweeper</name>
   <name xml:lang="zh-CN">Sweeper 系统清理工具</name>
   <name xml:lang="zh-TW">Sweeper</name>
@@ -106,6 +107,7 @@
   <summary xml:lang="sr-ijekavianlatin">Alatka za čišćenje sistema</summary>
   <summary xml:lang="sv">Systemrensningsverktyg</summary>
   <summary xml:lang="tr">Sistem temizleme izlencesi</summary>
+  <summary xml:lang="ug">سىستېما تازىلاش قورالى</summary>
   <summary xml:lang="uk">Програма для чищення системи</summary>
   <summary xml:lang="zh-CN">系统清理工具</summary>
   <summary xml:lang="zh-TW">系統清理工具</summary>
