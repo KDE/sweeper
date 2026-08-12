@@ -188,7 +188,7 @@ msgstr "المستندات الحديثة"
 #, kde-format
 msgid ""
 "Clears the list of recently used documents from the KDE applications menu"
-msgstr "يمحي لائحة المستندات المستخدمة مؤخراً من قائمة تطبيقات KDE"
+msgstr "يمحي لائحة المستندات المستخدمة مؤخرًا من قائمة تطبيقات KDE"
 
 #: privacyfunctions.h:149
 #, kde-format
@@ -208,7 +208,7 @@ msgstr "التطبيقات الحديثة"
 #: privacyfunctions.h:163
 #, kde-format
 msgid "Clears the list of recently used applications from KDE menu"
-msgstr "يمحي لائحة التطبيقات  المستخدمة  مؤخراً من قائمة تطبيقات كِيدِي"
+msgstr "يمحي لائحة التطبيقات  المستخدمة  مؤخرًا من قائمة تطبيقات كِيدِي"
 
 #: sweeper.cpp:22
 #, kde-format
@@ -286,7 +286,7 @@ msgstr "اختر &لا شيء"
 #: sweeperdialog.ui:88
 #, kde-format
 msgid "Immediately performs the cleanup actions selected above"
-msgstr "ينجز عمليّات التنظيف المحدّدة أعلاه فوراً"
+msgstr "ينجز عمليّات التنظيف المحدّدة أعلاه فورًا"
 
 #. i18n: ectx: property (text), widget (QPushButton, cleanupButton)
 #: sweeperdialog.ui:91
