@@ -96,17 +96,17 @@ msgstr "Очистить без взаимодействия с пользова
 #: privacyfunctions.cpp:44 privacyfunctions.cpp:53 privacyfunctions.cpp:62
 #, kde-format
 msgid "A thumbnail could not be removed."
-msgstr "Миниатюры не могут быть удалены."
+msgstr "Не удалось удалить миниатюру."
 
 #: privacyfunctions.cpp:131
 #, kde-format
 msgid "The file exists but could not be removed."
-msgstr "Файл существует, но не может быть удалён"
+msgstr "Файл существует, но удалить его не удалось."
 
 #: privacyfunctions.cpp:210
 #, kde-format
 msgid "A favicon could not be removed."
-msgstr "Значки сайтов не могут быть удалены"
+msgstr "Не удалось удалить значок сайта."
 
 #: privacyfunctions.h:22
 #, kde-format
@@ -136,7 +136,7 @@ msgstr "Сохранённое содержимое буфера обмена"
 #: privacyfunctions.h:51
 #, kde-format
 msgid "Clears the clipboard contents stored by Klipper"
-msgstr "Очистить содержимое буфера обмена, сохранённое программой Klipper"
+msgstr "Очистить содержимое буфера обмена, сохранённое приложением Klipper"
 
 #: privacyfunctions.h:65
 #, kde-format
@@ -237,12 +237,12 @@ msgstr "Вы удаляете данные, которые могут быть �
 #: sweeper.cpp:107
 #, kde-format
 msgid "Starting cleanup..."
-msgstr "Начало очистки..."
+msgstr "Начало очистки…"
 
 #: sweeper.cpp:111
 #, kde-format
 msgid "Clearing %1..."
-msgstr "Очистка %1..."
+msgstr "Очистка %1…"
 
 #: sweeper.cpp:116
 #, kde-format

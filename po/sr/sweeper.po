@@ -5,13 +5,14 @@
 # Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2009, 2010, 2016.
 # Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2010.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: sweeper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2016-03-20 15:25+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-04 23:13+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -26,12 +27,15 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Мирко Ивановић,Топлица Танасковић,Марко Росић,Тирон Андрић"
+msgstr ""
+"Мирко Ивановић,Топлица Танасковић,Марко Росић,Тирон Андрић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "mirkoiv@verat.net,toptan@kde.org.yu,roske@kde.org.yu,tiron@beotel.yu"
+msgstr ""
+"mirkoiv@verat.net,toptan@kde.org.yu,roske@kde.org.yu,tiron@beotel.yu,"
+"nemhirsl@gmail.com"
 
 #: main.cpp:25
 #, kde-format
@@ -44,8 +48,7 @@ msgid "Helps clean unwanted traces the user leaves on the system."
 msgstr "Уклањање нежељених трагова које корисник оставља на систему."
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "(c) 2003-2005, Ralf Hoelzer"
+#, kde-format
 msgid "© 2003-2005, Ralf Hoelzer"
 msgstr "© 2003–2005, Ралф Хелцер"
 
