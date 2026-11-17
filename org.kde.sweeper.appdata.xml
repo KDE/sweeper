@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>org.kde.sweeper</id>
   <metadata_license>FSFAP</metadata_license>
-  <project_license>LGPL-2.1+</project_license>
+  <project_license>LGPL-2.1-or-later</project_license>
   <developer id="kde.org">
     <name translate="no">KDE</name>
     <url>https://kde.org</url>
@@ -170,6 +170,8 @@
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=sweeper</url>
   <url type="help">https://docs.kde.org/?application=sweeper</url>
   <url type="donation">https://www.kde.org/community/donations/?app=sweeper&amp;source=appdata</url>
+  <url type="vcs-browser">https://invent.kde.org/utilities/sweeper</url>
+  <url type="contribute">https://community.kde.org/Get_Involved</url>
   <content_rating type="oars-1.1"/>
   <screenshots>
     <screenshot type="default">
