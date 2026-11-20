@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdeutils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:55+0000\n"
-"PO-Revision-Date: 2026-11-10 22:03+0300\n"
+"PO-Revision-Date: 2026-11-19 19:36+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -75,7 +75,7 @@ msgstr "Benjamin Meyer"
 #: main.cpp:35 privacyfunctions.h:65
 #, kde-format
 msgid "Thumbnail Cache"
-msgstr "Küçük Görsel Önbelleği"
+msgstr "Küçük Görsel Ön Belleği"
 
 #: main.cpp:43
 #, kde-format
@@ -130,7 +130,7 @@ msgstr "Klipper tarafından depolanan tüm pano içeriğini temizler"
 #: privacyfunctions.h:65
 #, kde-format
 msgid "Clears all cached thumbnails"
-msgstr "Tüm önbelleklenen küçük görselleri temizler"
+msgstr "Tüm ön belleğe alınan küçük görselleri temizler"
 
 #: privacyfunctions.h:79
 #, kde-format
@@ -169,12 +169,12 @@ msgstr "Ziyaret edilen web sayfalarının geçmişini temizler"
 #: privacyfunctions.h:121
 #, kde-format
 msgid "Web Cache"
-msgstr "Web Önbelleği"
+msgstr "Web Ön Belleği"
 
 #: privacyfunctions.h:121
 #, kde-format
 msgid "Clears the temporary cache of websites visited"
-msgstr "Ziyaret edilen web sayfalarının geçici önbelleğini temizler"
+msgstr "Ziyaret edilen web sayfalarının geçici ön belleğini temizler"
 
 #: privacyfunctions.h:135
 #, kde-format
