@@ -8,7 +8,7 @@
 
 <articleinfo>
 <title
->Süpürücü</title>
+>Sweeper</title>
 <authorgroup>
 <author
 >&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
@@ -76,13 +76,13 @@
 
 <note
 ><para
->&sweeper;, &plasma; ve &kde; uygulamaları tarafından kullanılan &kde; önbellek klasörünü temizleyecektir. Bu klasörün konumunu görmek için &konsole;’ye <userinput
+>&sweeper;, &plasma; ve &kde; uygulamaları tarafından kullanılan &kde; ön bellek klasörünü temizleyecektir. Bu klasörün konumunu görmek için &konsole;’ye <userinput
 ><command
 >qtpaths</command
 > <option
 >--paths GenericCacheLocation</option
 ></userinput
-> komutunu girin. Önbelleğe alınan verilerinizi &sweeper; ile temizlemek; örneğin bir dosya yöneticisi kullanarak bunları okumayı olanaksız duruma getirir; ancak düşük düzeyli bir disk aracı kullanarak hâlâ diskte bulunan ham verileri okumak olanaklıdır. </para>
+> komutunu girin. Ön belleğe alınan verilerinizi &sweeper; ile temizlemek; örneğin bir dosya yöneticisi kullanarak bunları okumayı olanaksız duruma getirir; ancak düşük düzeyli bir disk aracı kullanarak hâlâ diskte bulunan ham verileri okumak olanaklıdır. </para>
 </note>
 
 </article>
